@@ -19,8 +19,8 @@ namespace plugins {     // begin namespace plugins
 In the initialization area of the class definition start with the public pion::http::plugin_service in your [EchoService.hpp](https://github.com/splunk/pion/blob/develop/services/EchoService.hpp) file
 
 ```cpp
-class EchoService :
-    **public pion::http::plugin_service**
+class EchoService :/*initialization area comes right after the colon*/
+    public pion::http::plugin_service
 ```
 and overide the virtual () operator in your [EchoService.cpp](https://github.com/splunk/pion/blob/develop/services/EchoService.cpp) file within the same namespaces.
 
