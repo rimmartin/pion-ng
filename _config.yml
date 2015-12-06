@@ -15,7 +15,7 @@ google_analytics_id: ''
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/rimmartin/pion'
+codeurl: 'https://github.com/splunk/pion'
 
 # Default categories (in order) to appear in the navigation
 sections: [
