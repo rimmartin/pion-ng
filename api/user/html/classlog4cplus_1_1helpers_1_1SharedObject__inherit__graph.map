@@ -1,0 +1,29 @@
+<map id="log4cplus::helpers::SharedObject" name="log4cplus::helpers::SharedObject">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1Appender.html" title="log4cplus::Appender" alt="" coords="191,351,329,377"/>
+<area shape="rect" id="node18" href="$classlog4cplus_1_1spi_1_1Filter.html" title="log4cplus::spi::Filter" alt="" coords="193,836,327,863"/>
+<area shape="rect" id="node24" href="$classlog4cplus_1_1spi_1_1LoggerImpl.html" title="log4cplus::spi::LoggerImpl" alt="" coords="176,956,344,983"/>
+<area shape="rect" id="node26" href="$classlog4cplus_1_1thread_1_1AbstractThread.html" title="log4cplus::thread::\lAbstractThread" alt="" coords="198,1007,322,1049"/>
+<area shape="rect" id="node28" href="$classlog4cplus_1_1thread_1_1Queue.html" title="Single consumer, multiple producers queue. " alt="" coords="198,1073,322,1114"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1AsyncAppender.html" title="log4cplus::AsyncAppender" alt="" coords="403,5,575,32"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1CallbackAppender.html" title="log4cplus::CallbackAppender" alt="" coords="396,56,583,83"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1CLFSAppender.html" title="log4cplus::CLFSAppender" alt="" coords="404,107,575,133"/>
+<area shape="rect" id="node6" href="$classlog4cplus_1_1ConsoleAppender.html" title="log4cplus::ConsoleAppender" alt="" coords="398,157,581,184"/>
+<area shape="rect" id="node7" href="$classlog4cplus_1_1DeviceAppender.html" title="log4cplus::DeviceAppender\l\&lt; Device \&gt;" alt="" coords="401,209,577,250"/>
+<area shape="rect" id="node8" href="$classlog4cplus_1_1FileAppender.html" title="log4cplus::FileAppender" alt="" coords="410,275,569,301"/>
+<area shape="rect" id="node11" href="$classlog4cplus_1_1Log4jUdpAppender.html" title="log4cplus::Log4jUdpAppender" alt="" coords="394,325,585,352"/>
+<area shape="rect" id="node12" href="$classlog4cplus_1_1MSTTSAppender.html" title="log4cplus::MSTTSAppender" alt="" coords="398,376,581,403"/>
+<area shape="rect" id="node13" href="$classlog4cplus_1_1NullAppender.html" title="log4cplus::NullAppender" alt="" coords="410,427,569,453"/>
+<area shape="rect" id="node14" href="$classlog4cplus_1_1Qt4DebugAppender.html" title="log4cplus::Qt4DebugAppender" alt="" coords="392,477,587,504"/>
+<area shape="rect" id="node15" href="$classlog4cplus_1_1Qt5DebugAppender.html" title="log4cplus::Qt5DebugAppender" alt="" coords="392,528,587,555"/>
+<area shape="rect" id="node16" href="$classlog4cplus_1_1SocketAppender.html" title="log4cplus::SocketAppender" alt="" coords="400,579,579,605"/>
+<area shape="rect" id="node17" href="$classlog4cplus_1_1SysLogAppender.html" title="log4cplus::SysLogAppender" alt="" coords="400,629,579,656"/>
+<area shape="rect" id="node9" href="$classlog4cplus_1_1DailyRollingFileAppender.html" title="log4cplus::DailyRollingFile\lAppender" alt="" coords="648,238,819,279"/>
+<area shape="rect" id="node10" href="$classlog4cplus_1_1RollingFileAppender.html" title="log4cplus::RollingFileAppender" alt="" coords="635,304,832,331"/>
+<area shape="rect" id="node19" href="$classlog4cplus_1_1spi_1_1DenyAllFilter.html" title="log4cplus::spi::DenyAllFilter" alt="" coords="401,680,578,707"/>
+<area shape="rect" id="node20" href="$classlog4cplus_1_1spi_1_1FunctionFilter.html" title="log4cplus::spi::Function\lFilter" alt="" coords="412,731,567,773"/>
+<area shape="rect" id="node21" href="$classlog4cplus_1_1spi_1_1LogLevelMatchFilter.html" title="log4cplus::spi::LogLevel\lMatchFilter" alt="" coords="412,797,567,838"/>
+<area shape="rect" id="node22" href="$classlog4cplus_1_1spi_1_1LogLevelRangeFilter.html" title="log4cplus::spi::LogLevel\lRangeFilter" alt="" coords="412,862,567,903"/>
+<area shape="rect" id="node23" href="$classlog4cplus_1_1spi_1_1StringMatchFilter.html" title="log4cplus::spi::StringMatch\lFilter" alt="" coords="402,927,577,969"/>
+<area shape="rect" id="node25" href="$classlog4cplus_1_1spi_1_1RootLogger.html" title="log4cplus::spi::RootLogger" alt="" coords="404,993,575,1020"/>
+<area shape="rect" id="node27" href="$classlog4cplus_1_1helpers_1_1ConnectorThread.html" title="log4cplus::helpers\l::ConnectorThread" alt="" coords="426,1045,553,1086"/>
+</map>

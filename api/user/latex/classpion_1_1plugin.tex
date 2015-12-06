@@ -1,0 +1,417 @@
+\hypertarget{classpion_1_1plugin}{\section{pion\-:\-:plugin Class Reference}
+\label{classpion_1_1plugin}\index{pion\-::plugin@{pion\-::plugin}}
+}
+
+
+{\ttfamily \#include $<$plugin.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:plugin\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classpion_1_1plugin__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpion_1_1plugin_1_1data__type}{data\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1plugin_a152b386f2f25db57ac7d87afb543ed91}{$\sim$plugin} ()
+\item 
+bool \hyperlink{classpion_1_1plugin_a61186fb4cf7ec683e7d9e9f54c507df8}{is\-\_\-open} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if a shared library is loaded/open \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classpion_1_1plugin_afbb2e9290143f779b0d01d1ab925cde2}{get\-\_\-plugin\-\_\-name} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the name of the plugin that is currently open \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin_ad2f241076913d3ef35caa298992aa21d}{open} (const std\-::string \&plugin\-\_\-name)
+\item 
+void \hyperlink{classpion_1_1plugin_aa3848e4da0ef4592079a378f1d81fe12}{open\-\_\-file} (const std\-::string \&plugin\-\_\-file)
+\item 
+void \hyperlink{classpion_1_1plugin_a4de512c3cdeb3cd9dedd3a49f754cc1a}{close} (void)
+\begin{DoxyCompactList}\small\item\em closes plug-\/in library \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classpion_1_1plugin_a8bded1e5b0c6e5008fb62613bf7bed63}{find\-\_\-plugin\-\_\-file} (std\-::string \&path\-\_\-to\-\_\-file, const std\-::string \&name)
+\item 
+static bool \hyperlink{classpion_1_1plugin_a885fb365fc2fedf251853eb949fcf38a}{find\-\_\-config\-\_\-file} (std\-::string \&path\-\_\-to\-\_\-file, const std\-::string \&name)
+\item 
+static void \hyperlink{classpion_1_1plugin_a7f070e7afa7b82ee9da454495ee7d659}{add\-\_\-static\-\_\-entry\-\_\-point} (const std\-::string \&plugin\-\_\-name, void $\ast$create\-\_\-func, void $\ast$destroy\-\_\-func)
+\item 
+static void \hyperlink{classpion_1_1plugin_a424890d78c0e7fe566043b75016bf738}{check\-\_\-cygwin\-\_\-path} (boost\-::filesystem\-::path \&final\-\_\-path, const std\-::string \&path\-\_\-string)
+\item 
+static void \hyperlink{classpion_1_1plugin_aed4ab06e4aa42456df83e4e3e120dda5}{add\-\_\-plugin\-\_\-directory} (const std\-::string \&dir)
+\begin{DoxyCompactList}\small\item\em appends a directory to the plug-\/in search path \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1plugin_a797d2923f9495109290755625070f93e}{reset\-\_\-plugin\-\_\-directories} (void)
+\begin{DoxyCompactList}\small\item\em clears all directories from the plug-\/in search path \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1plugin_add067f91834b99ad73d2ec448aebe33b}{get\-\_\-all\-\_\-plugin\-\_\-names} (std\-::vector$<$ std\-::string $>$ \&plugin\-\_\-names)
+\begin{DoxyCompactList}\small\item\em returns a list of all Plugins found in all Plugin directories \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1plugin_a132d7077794fd139df56350908805f75}{plugin} (void)
+\begin{DoxyCompactList}\small\item\em default constructor is private (use \hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr} class to create objects) \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1plugin_aa651a50b3be4d9e35ade63b9c9ee66a7}{plugin} (const \hyperlink{classpion_1_1plugin}{plugin} \&p)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1plugin}{plugin} \& \hyperlink{classpion_1_1plugin_a31b0610dce244c86d80981240bdb0e62}{operator=} (const \hyperlink{classpion_1_1plugin}{plugin} \&p)
+\begin{DoxyCompactList}\small\item\em assignment operator \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classpion_1_1plugin_a8300881be4224c9331fcbdfc69beb078}{get\-\_\-create\-\_\-function} (void)
+\begin{DoxyCompactList}\small\item\em returns a pointer to the plug-\/in's \char`\"{}create object\char`\"{} function \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classpion_1_1plugin_a473f250fea6e643944aad4484db2b3c9}{get\-\_\-destroy\-\_\-function} (void)
+\begin{DoxyCompactList}\small\item\em returns a pointer to the plug-\/in's \char`\"{}destroy object\char`\"{} function \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin_a6170412055354b9d32c6551baa0bed37}{release\-\_\-data} (void)
+\begin{DoxyCompactList}\small\item\em releases the plug-\/in's shared library symbols \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin_a928793b2ab39387ec1b467ee618fbaa1}{grab\-\_\-data} (const \hyperlink{classpion_1_1plugin}{plugin} \&p)
+\begin{DoxyCompactList}\small\item\em grabs a reference to another plug-\/in's shared library symbols \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+plugin\-: base class for plug-\/in management 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1plugin_a152b386f2f25db57ac7d87afb543ed91}{\index{pion\-::plugin@{pion\-::plugin}!$\sim$plugin@{$\sim$plugin}}
+\index{$\sim$plugin@{$\sim$plugin}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{$\sim$plugin}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::plugin\-::$\sim$plugin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1plugin_a152b386f2f25db57ac7d87afb543ed91}
+\hypertarget{classpion_1_1plugin_a132d7077794fd139df56350908805f75}{\index{pion\-::plugin@{pion\-::plugin}!plugin@{plugin}}
+\index{plugin@{plugin}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{plugin}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::plugin\-::plugin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin_a132d7077794fd139df56350908805f75}
+
+
+default constructor is private (use \hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr} class to create objects) 
+
+\hypertarget{classpion_1_1plugin_aa651a50b3be4d9e35ade63b9c9ee66a7}{\index{pion\-::plugin@{pion\-::plugin}!plugin@{plugin}}
+\index{plugin@{plugin}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{plugin}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::plugin\-::plugin (
+\begin{DoxyParamCaption}
+\item[{const {\bf plugin} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin_aa651a50b3be4d9e35ade63b9c9ee66a7}
+
+
+copy constructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1plugin_aed4ab06e4aa42456df83e4e3e120dda5}{\index{pion\-::plugin@{pion\-::plugin}!add\-\_\-plugin\-\_\-directory@{add\-\_\-plugin\-\_\-directory}}
+\index{add\-\_\-plugin\-\_\-directory@{add\-\_\-plugin\-\_\-directory}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{add\-\_\-plugin\-\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::add\-\_\-plugin\-\_\-directory (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1plugin_aed4ab06e4aa42456df83e4e3e120dda5}
+
+
+appends a directory to the plug-\/in search path 
+
+
+
+References check\-\_\-cygwin\-\_\-path().
+
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config().
+
+\hypertarget{classpion_1_1plugin_a7f070e7afa7b82ee9da454495ee7d659}{\index{pion\-::plugin@{pion\-::plugin}!add\-\_\-static\-\_\-entry\-\_\-point@{add\-\_\-static\-\_\-entry\-\_\-point}}
+\index{add\-\_\-static\-\_\-entry\-\_\-point@{add\-\_\-static\-\_\-entry\-\_\-point}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{add\-\_\-static\-\_\-entry\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::add\-\_\-static\-\_\-entry\-\_\-point (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-name, }
+\item[{void $\ast$}]{create\-\_\-func, }
+\item[{void $\ast$}]{destroy\-\_\-func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1plugin_a7f070e7afa7b82ee9da454495ee7d659}
+adds an entry point for a plugin that is statically linked N\-O\-T\-E\-: U\-S\-E \hyperlink{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N()} macro instead!!!
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-name} & the name of the plugin to add \\
+\hline
+{\em create\-\_\-func} & -\/ pointer to the function to be used in to create plugin object \\
+\hline
+{\em destroy\-\_\-func} & -\/ pointer to the function to be used to release plugin object \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::plugin\-::data\-\_\-type\-::m\-\_\-create\-\_\-func, pion\-::plugin\-::data\-\_\-type\-::m\-\_\-destroy\-\_\-func, and pion\-::plugin\-::data\-\_\-type\-::m\-\_\-lib\-\_\-handle.
+
+\hypertarget{classpion_1_1plugin_a424890d78c0e7fe566043b75016bf738}{\index{pion\-::plugin@{pion\-::plugin}!check\-\_\-cygwin\-\_\-path@{check\-\_\-cygwin\-\_\-path}}
+\index{check\-\_\-cygwin\-\_\-path@{check\-\_\-cygwin\-\_\-path}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{check\-\_\-cygwin\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::check\-\_\-cygwin\-\_\-path (
+\begin{DoxyParamCaption}
+\item[{boost\-::filesystem\-::path \&}]{final\-\_\-path, }
+\item[{const std\-::string \&}]{path\-\_\-string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1plugin_a424890d78c0e7fe566043b75016bf738}
+updates path for cygwin oddities, if necessary
+
+
+\begin{DoxyParams}{Parameters}
+{\em final\-\_\-path} & path object for the file, will be modified if necessary \\
+\hline
+{\em start\-\_\-path} & original path to the file. if final\-\_\-path is not valid, this will be appended to P\-I\-O\-N\-\_\-\-C\-Y\-G\-W\-I\-N\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y to attempt attempt correction of final\-\_\-path for cygwin \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-C\-Y\-G\-W\-I\-N\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y.
+
+
+
+Referenced by add\-\_\-plugin\-\_\-directory().
+
+\hypertarget{classpion_1_1plugin_a4de512c3cdeb3cd9dedd3a49f754cc1a}{\index{pion\-::plugin@{pion\-::plugin}!close@{close}}
+\index{close@{close}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin_a4de512c3cdeb3cd9dedd3a49f754cc1a}
+
+
+closes plug-\/in library 
+
+\hypertarget{classpion_1_1plugin_a885fb365fc2fedf251853eb949fcf38a}{\index{pion\-::plugin@{pion\-::plugin}!find\-\_\-config\-\_\-file@{find\-\_\-config\-\_\-file}}
+\index{find\-\_\-config\-\_\-file@{find\-\_\-config\-\_\-file}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{find\-\_\-config\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}static bool pion\-::plugin\-::find\-\_\-config\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{path\-\_\-to\-\_\-file, }
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1plugin_a885fb365fc2fedf251853eb949fcf38a}
+searches directories for a valid plug-\/in configuration file
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\-\_\-to\-\_\-file} & if found, is set to the complete path to the file \\
+\hline
+{\em name} & the name of the configuration file to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the configuration file was found 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config().
+
+\hypertarget{classpion_1_1plugin_a8bded1e5b0c6e5008fb62613bf7bed63}{\index{pion\-::plugin@{pion\-::plugin}!find\-\_\-plugin\-\_\-file@{find\-\_\-plugin\-\_\-file}}
+\index{find\-\_\-plugin\-\_\-file@{find\-\_\-plugin\-\_\-file}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{find\-\_\-plugin\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}static bool pion\-::plugin\-::find\-\_\-plugin\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{path\-\_\-to\-\_\-file, }
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1plugin_a8bded1e5b0c6e5008fb62613bf7bed63}
+searches directories for a valid plug-\/in file
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\-\_\-to\-\_\-file} & the path to the plug-\/in file, if found \\
+\hline
+{\em the} & name name of the plug-\/in to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the plug-\/in file was found 
+\end{DoxyReturn}
+
+
+Referenced by open().
+
+\hypertarget{classpion_1_1plugin_add067f91834b99ad73d2ec448aebe33b}{\index{pion\-::plugin@{pion\-::plugin}!get\-\_\-all\-\_\-plugin\-\_\-names@{get\-\_\-all\-\_\-plugin\-\_\-names}}
+\index{get\-\_\-all\-\_\-plugin\-\_\-names@{get\-\_\-all\-\_\-plugin\-\_\-names}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{get\-\_\-all\-\_\-plugin\-\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::get\-\_\-all\-\_\-plugin\-\_\-names (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ std\-::string $>$ \&}]{plugin\-\_\-names}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1plugin_add067f91834b99ad73d2ec448aebe33b}
+
+
+returns a list of all Plugins found in all Plugin directories 
+
+
+
+References get\-\_\-plugin\-\_\-name(), pion\-::plugin\-::data\-\_\-type\-::m\-\_\-lib\-\_\-handle, and pion\-::plugin\-::data\-\_\-type\-::m\-\_\-plugin\-\_\-name.
+
+\hypertarget{classpion_1_1plugin_a8300881be4224c9331fcbdfc69beb078}{\index{pion\-::plugin@{pion\-::plugin}!get\-\_\-create\-\_\-function@{get\-\_\-create\-\_\-function}}
+\index{get\-\_\-create\-\_\-function@{get\-\_\-create\-\_\-function}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{get\-\_\-create\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ pion\-::plugin\-::get\-\_\-create\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin_a8300881be4224c9331fcbdfc69beb078}
+
+
+returns a pointer to the plug-\/in's \char`\"{}create object\char`\"{} function 
+
+
+
+Referenced by pion\-::plugin\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::create().
+
+\hypertarget{classpion_1_1plugin_a473f250fea6e643944aad4484db2b3c9}{\index{pion\-::plugin@{pion\-::plugin}!get\-\_\-destroy\-\_\-function@{get\-\_\-destroy\-\_\-function}}
+\index{get\-\_\-destroy\-\_\-function@{get\-\_\-destroy\-\_\-function}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{get\-\_\-destroy\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ pion\-::plugin\-::get\-\_\-destroy\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin_a473f250fea6e643944aad4484db2b3c9}
+
+
+returns a pointer to the plug-\/in's \char`\"{}destroy object\char`\"{} function 
+
+
+
+Referenced by pion\-::plugin\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::destroy().
+
+\hypertarget{classpion_1_1plugin_afbb2e9290143f779b0d01d1ab925cde2}{\index{pion\-::plugin@{pion\-::plugin}!get\-\_\-plugin\-\_\-name@{get\-\_\-plugin\-\_\-name}}
+\index{get\-\_\-plugin\-\_\-name@{get\-\_\-plugin\-\_\-name}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{get\-\_\-plugin\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::plugin\-::get\-\_\-plugin\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin_afbb2e9290143f779b0d01d1ab925cde2}
+
+
+returns the name of the plugin that is currently open 
+
+
+
+Referenced by get\-\_\-all\-\_\-plugin\-\_\-names(), and open\-\_\-file().
+
+\hypertarget{classpion_1_1plugin_a928793b2ab39387ec1b467ee618fbaa1}{\index{pion\-::plugin@{pion\-::plugin}!grab\-\_\-data@{grab\-\_\-data}}
+\index{grab\-\_\-data@{grab\-\_\-data}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{grab\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::grab\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{const {\bf plugin} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1plugin_a928793b2ab39387ec1b467ee618fbaa1}
+
+
+grabs a reference to another plug-\/in's shared library symbols 
+
+
+
+References pion\-::plugin\-::data\-\_\-type\-::m\-\_\-references, and release\-\_\-data().
+
+
+
+Referenced by pion\-::plugin\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::operator=().
+
+\hypertarget{classpion_1_1plugin_a61186fb4cf7ec683e7d9e9f54c507df8}{\index{pion\-::plugin@{pion\-::plugin}!is\-\_\-open@{is\-\_\-open}}
+\index{is\-\_\-open@{is\-\_\-open}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{is\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::plugin\-::is\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin_a61186fb4cf7ec683e7d9e9f54c507df8}
+
+
+returns true if a shared library is loaded/open 
+
+\hypertarget{classpion_1_1plugin_ad2f241076913d3ef35caa298992aa21d}{\index{pion\-::plugin@{pion\-::plugin}!open@{open}}
+\index{open@{open}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::open (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1plugin_ad2f241076913d3ef35caa298992aa21d}
+opens plug-\/in library within a shared object file. If the library is already being used by another plugin object, then the existing code will be re-\/used and the reference count will be increased. Beware that this does N\-O\-T check the plug-\/in's base class (Interface\-Class\-Type), so you must be careful to ensure that the namespace is unique between plug-\/ins that have different base classes. If the plug-\/in's name matches an existing plug-\/in of a different base class, the resulting behavior is undefined (it will probably crash your program).
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-name} & name of the plug-\/in library to open (without extension, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+References find\-\_\-plugin\-\_\-file(), pion\-::plugin\-::data\-\_\-type\-::m\-\_\-references, open\-\_\-file(), and release\-\_\-data().
+
+
+
+Referenced by pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::load().
+
+\hypertarget{classpion_1_1plugin_aa3848e4da0ef4592079a378f1d81fe12}{\index{pion\-::plugin@{pion\-::plugin}!open\-\_\-file@{open\-\_\-file}}
+\index{open\-\_\-file@{open\-\_\-file}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{open\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::open\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-file}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1plugin_aa3848e4da0ef4592079a378f1d81fe12}
+opens plug-\/in library within a shared object file. If the library is already being used by another plugin object, then the existing code will be re-\/used and the reference count will be increased. Beware that this does N\-O\-T check the plug-\/in's base class (Interface\-Class\-Type), so you must be careful to ensure that the namespace is unique between plug-\/ins that have different base classes. If the plug-\/in's name matches an existing plug-\/in of a different base class, the resulting behavior is undefined (it will probably crash your program).
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-file} & shared object file containing the plugin code \\
+\hline
+\end{DoxyParams}
+
+
+References get\-\_\-plugin\-\_\-name(), pion\-::plugin\-::data\-\_\-type\-::m\-\_\-plugin\-\_\-name, pion\-::plugin\-::data\-\_\-type\-::m\-\_\-references, and release\-\_\-data().
+
+
+
+Referenced by open().
+
+\hypertarget{classpion_1_1plugin_a31b0610dce244c86d80981240bdb0e62}{\index{pion\-::plugin@{pion\-::plugin}!operator=@{operator=}}
+\index{operator=@{operator=}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf plugin}\& pion\-::plugin\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf plugin} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin_a31b0610dce244c86d80981240bdb0e62}
+
+
+assignment operator 
+
+\hypertarget{classpion_1_1plugin_a6170412055354b9d32c6551baa0bed37}{\index{pion\-::plugin@{pion\-::plugin}!release\-\_\-data@{release\-\_\-data}}
+\index{release\-\_\-data@{release\-\_\-data}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{release\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::release\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1plugin_a6170412055354b9d32c6551baa0bed37}
+
+
+releases the plug-\/in's shared library symbols 
+
+
+
+References pion\-::plugin\-::data\-\_\-type\-::m\-\_\-lib\-\_\-handle, pion\-::plugin\-::data\-\_\-type\-::m\-\_\-plugin\-\_\-name, and pion\-::plugin\-::data\-\_\-type\-::m\-\_\-references.
+
+
+
+Referenced by grab\-\_\-data(), open(), and open\-\_\-file().
+
+\hypertarget{classpion_1_1plugin_a797d2923f9495109290755625070f93e}{\index{pion\-::plugin@{pion\-::plugin}!reset\-\_\-plugin\-\_\-directories@{reset\-\_\-plugin\-\_\-directories}}
+\index{reset\-\_\-plugin\-\_\-directories@{reset\-\_\-plugin\-\_\-directories}!pion::plugin@{pion\-::plugin}}
+\subsubsection[{reset\-\_\-plugin\-\_\-directories}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::plugin\-::reset\-\_\-plugin\-\_\-directories (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1plugin_a797d2923f9495109290755625070f93e}
+
+
+clears all directories from the plug-\/in search path 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{plugin_8hpp}{plugin.\-hpp}\item 
+src/\hyperlink{plugin_8cpp}{plugin.\-cpp}\end{DoxyCompactItemize}

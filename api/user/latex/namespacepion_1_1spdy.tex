@@ -1,0 +1,115 @@
+\hypertarget{namespacepion_1_1spdy}{\section{pion\-:\-:spdy Namespace Reference}
+\label{namespacepion_1_1spdy}\index{pion\-::spdy@{pion\-::spdy}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1spdy_1_1decompressor}{decompressor}
+\item 
+class \hyperlink{classpion_1_1spdy_1_1parser}{parser}
+\item 
+struct \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info}
+\begin{DoxyCompactList}\small\item\em This structure will be tied to each S\-P\-D\-Y frame. \end{DoxyCompactList}\item 
+struct \hyperlink{structpion_1_1spdy_1_1__spdy__header__info}{\-\_\-spdy\-\_\-header\-\_\-info}
+\item 
+struct \hyperlink{structpion_1_1spdy_1_1__http__protocol__info__t}{\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t}
+\begin{DoxyCompactList}\small\item\em This structure contains the H\-T\-T\-P Protocol information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classpion_1_1spdy_1_1decompressor}{decompressor} $>$ \hyperlink{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}{decompressor\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em data type for a spdy reader pointer \end{DoxyCompactList}\item 
+typedef boost\-::shared\-\_\-ptr$<$ \hyperlink{classpion_1_1spdy_1_1parser}{parser} $>$ \hyperlink{namespacepion_1_1spdy_aa2cb51d7f3735315fbac9c5823b6b5da}{parser\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em data type for a spdy reader pointer \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info} \hyperlink{namespacepion_1_1spdy_af27b192d1db7a013f86914a93c5e1904}{spdy\-\_\-control\-\_\-frame\-\_\-info}
+\begin{DoxyCompactList}\small\item\em This structure will be tied to each S\-P\-D\-Y frame. \end{DoxyCompactList}\item 
+typedef struct \\*
+\hyperlink{structpion_1_1spdy_1_1__spdy__header__info}{pion\-::spdy\-::\-\_\-spdy\-\_\-header\-\_\-info} \hyperlink{namespacepion_1_1spdy_a74229af785f47c8b3f3d29822086603a}{spdy\-\_\-header\-\_\-info}
+\item 
+typedef struct \\*
+\hyperlink{structpion_1_1spdy_1_1__http__protocol__info__t}{pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t} \hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info}
+\begin{DoxyCompactList}\small\item\em This structure contains the H\-T\-T\-P Protocol information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435ce}{spdy\-\_\-frame\-\_\-type} \{ \hyperlink{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea423101817a482a7a03d216a15d9656e5}{spdy\-\_\-data\-\_\-frame} = 1, 
+\hyperlink{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cead0688df35afe5227dfeb2ec6b575412e}{spdy\-\_\-control\-\_\-frame} = 2, 
+\hyperlink{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea22aeb6dab87b25dd07eabbacc2b236e9}{spdy\-\_\-invalid\-\_\-frame} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char const $\ast$ \hyperlink{namespacepion_1_1spdy_a270398bf30df588e2fce6e17f7619596}{rst\-\_\-stream\-\_\-status} (boost\-::uint32\-\_\-t rst\-\_\-stream\-\_\-status\-\_\-code)
+\begin{DoxyCompactList}\small\item\em R\-S\-T stream status string from code, return N\-U\-L\-L for unknown status code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}{\index{pion\-::spdy@{pion\-::spdy}!decompressor\-\_\-ptr@{decompressor\-\_\-ptr}}
+\index{decompressor\-\_\-ptr@{decompressor\-\_\-ptr}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{decompressor\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf decompressor}$>$ {\bf pion\-::spdy\-::decompressor\-\_\-ptr}}}\label{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}
+
+
+data type for a spdy reader pointer 
+
+\hypertarget{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{\index{pion\-::spdy@{pion\-::spdy}!http\-\_\-protocol\-\_\-info@{http\-\_\-protocol\-\_\-info}}
+\index{http\-\_\-protocol\-\_\-info@{http\-\_\-protocol\-\_\-info}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{http\-\_\-protocol\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t}  {\bf pion\-::spdy\-::http\-\_\-protocol\-\_\-info}}}\label{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}
+
+
+This structure contains the H\-T\-T\-P Protocol information. 
+
+\hypertarget{namespacepion_1_1spdy_aa2cb51d7f3735315fbac9c5823b6b5da}{\index{pion\-::spdy@{pion\-::spdy}!parser\-\_\-ptr@{parser\-\_\-ptr}}
+\index{parser\-\_\-ptr@{parser\-\_\-ptr}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{parser\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf parser}$>$ {\bf pion\-::spdy\-::parser\-\_\-ptr}}}\label{namespacepion_1_1spdy_aa2cb51d7f3735315fbac9c5823b6b5da}
+
+
+data type for a spdy reader pointer 
+
+\hypertarget{namespacepion_1_1spdy_af27b192d1db7a013f86914a93c5e1904}{\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-control\-\_\-frame\-\_\-info@{spdy\-\_\-control\-\_\-frame\-\_\-info}}
+\index{spdy\-\_\-control\-\_\-frame\-\_\-info@{spdy\-\_\-control\-\_\-frame\-\_\-info}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{spdy\-\_\-control\-\_\-frame\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info}  {\bf pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info}}}\label{namespacepion_1_1spdy_af27b192d1db7a013f86914a93c5e1904}
+
+
+This structure will be tied to each S\-P\-D\-Y frame. 
+
+\hypertarget{namespacepion_1_1spdy_a74229af785f47c8b3f3d29822086603a}{\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-header\-\_\-info@{spdy\-\_\-header\-\_\-info}}
+\index{spdy\-\_\-header\-\_\-info@{spdy\-\_\-header\-\_\-info}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{spdy\-\_\-header\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf pion\-::spdy\-::\-\_\-spdy\-\_\-header\-\_\-info}  {\bf pion\-::spdy\-::spdy\-\_\-header\-\_\-info}}}\label{namespacepion_1_1spdy_a74229af785f47c8b3f3d29822086603a}
+This structure will be tied to each S\-P\-D\-Y header frame. Only applies to frames containing headers\-: S\-Y\-N\-\_\-\-S\-T\-R\-E\-A\-M, S\-Y\-N\-\_\-\-R\-E\-P\-L\-Y, H\-E\-A\-D\-E\-R\-S Note that there may be multiple S\-P\-D\-Y frames in one packet. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435ce}{\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-frame\-\_\-type@{spdy\-\_\-frame\-\_\-type}}
+\index{spdy\-\_\-frame\-\_\-type@{spdy\-\_\-frame\-\_\-type}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{spdy\-\_\-frame\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf pion\-::spdy\-::spdy\-\_\-frame\-\_\-type}}}\label{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435ce}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{spdy\-\_\-data\-\_\-frame@{spdy\-\_\-data\-\_\-frame}!pion\-::spdy@{pion\-::spdy}}\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-data\-\_\-frame@{spdy\-\_\-data\-\_\-frame}}\item[{\em 
+\hypertarget{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea423101817a482a7a03d216a15d9656e5}{spdy\-\_\-data\-\_\-frame}\label{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea423101817a482a7a03d216a15d9656e5}
+}]\index{spdy\-\_\-control\-\_\-frame@{spdy\-\_\-control\-\_\-frame}!pion\-::spdy@{pion\-::spdy}}\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-control\-\_\-frame@{spdy\-\_\-control\-\_\-frame}}\item[{\em 
+\hypertarget{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cead0688df35afe5227dfeb2ec6b575412e}{spdy\-\_\-control\-\_\-frame}\label{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cead0688df35afe5227dfeb2ec6b575412e}
+}]\index{spdy\-\_\-invalid\-\_\-frame@{spdy\-\_\-invalid\-\_\-frame}!pion\-::spdy@{pion\-::spdy}}\index{pion\-::spdy@{pion\-::spdy}!spdy\-\_\-invalid\-\_\-frame@{spdy\-\_\-invalid\-\_\-frame}}\item[{\em 
+\hypertarget{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea22aeb6dab87b25dd07eabbacc2b236e9}{spdy\-\_\-invalid\-\_\-frame}\label{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435cea22aeb6dab87b25dd07eabbacc2b236e9}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacepion_1_1spdy_a270398bf30df588e2fce6e17f7619596}{\index{pion\-::spdy@{pion\-::spdy}!rst\-\_\-stream\-\_\-status@{rst\-\_\-stream\-\_\-status}}
+\index{rst\-\_\-stream\-\_\-status@{rst\-\_\-stream\-\_\-status}!pion::spdy@{pion\-::spdy}}
+\subsubsection[{rst\-\_\-stream\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}static char const$\ast$ pion\-::spdy\-::rst\-\_\-stream\-\_\-status (
+\begin{DoxyParamCaption}
+\item[{boost\-::uint32\-\_\-t}]{rst\-\_\-stream\-\_\-status\-\_\-code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{namespacepion_1_1spdy_a270398bf30df588e2fce6e17f7619596}
+
+
+R\-S\-T stream status string from code, return N\-U\-L\-L for unknown status code. 
+
+
+
+Referenced by pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-rst\-\_\-stream().
+

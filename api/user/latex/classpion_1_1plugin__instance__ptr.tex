@@ -1,0 +1,248 @@
+\hypertarget{classpion_1_1plugin__instance__ptr}{\section{pion\-:\-:plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$ Class Template Reference}
+\label{classpion_1_1plugin__instance__ptr}\index{pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$@{pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$plugin.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classpion_1_1plugin__instance__ptr__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classpion_1_1plugin__instance__ptr__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1plugin__instance__ptr_a79eb26b5a1ff329e4893c644a625dcc6}{plugin\-\_\-instance\-\_\-ptr} (void)
+\begin{DoxyCompactList}\small\item\em default constructor \& destructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1plugin__instance__ptr_a6567dda0004c26eba60a6c714d52c696}{$\sim$plugin\-\_\-instance\-\_\-ptr} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor / may be extended \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin__instance__ptr_a3c6d24f4501a0e1838e5bedd34e20372}{reset} (void)
+\begin{DoxyCompactList}\small\item\em reset the instance pointer \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin__instance__ptr_a7cc8432ad7e88298c719e9b41007e93d}{create} (const std\-::string \&plugin\-\_\-type)
+\begin{DoxyCompactList}\small\item\em create a new instance of the given plugin\-\_\-type \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1plugin__instance__ptr_ac4655ccda770223a852233c7c9ffb0d0}{empty} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if pointer is empty \end{DoxyCompactList}\item 
+Interface\-Class\-Type $\ast$ \hyperlink{classpion_1_1plugin__instance__ptr_a30f57ad0560c0cbdd0f00f345cd3a41a}{get} (void)
+\begin{DoxyCompactList}\small\item\em return a raw pointer to the instance \end{DoxyCompactList}\item 
+Interface\-Class\-Type \& \hyperlink{classpion_1_1plugin__instance__ptr_af1919987100381b912d49144f75c46fe}{operator$\ast$} (void)
+\begin{DoxyCompactList}\small\item\em return a reference to the instance \end{DoxyCompactList}\item 
+const Interface\-Class\-Type \& \hyperlink{classpion_1_1plugin__instance__ptr_a0ed2270357907c47060b5c0bd14cb6fb}{operator$\ast$} (void) const 
+\begin{DoxyCompactList}\small\item\em return a const reference to the instance \end{DoxyCompactList}\item 
+Interface\-Class\-Type $\ast$ \hyperlink{classpion_1_1plugin__instance__ptr_a84f65b0841e70a2a6017792d5749390e}{operator-\/$>$} (void)
+\begin{DoxyCompactList}\small\item\em return a reference to the instance \end{DoxyCompactList}\item 
+const Interface\-Class\-Type $\ast$ \hyperlink{classpion_1_1plugin__instance__ptr_a26b25d3a76f14a22636727ed774eac29}{operator-\/$>$} (void) const 
+\begin{DoxyCompactList}\small\item\em return a const reference to the instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr}$<$ Interface\-Class\-Type $>$ \hyperlink{classpion_1_1plugin__instance__ptr_a65856c5fbd856e3c106e3ae708369109}{m\-\_\-plugin\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em smart pointer that manages the plugin's dynamic object code \end{DoxyCompactList}\item 
+Interface\-Class\-Type $\ast$ \hyperlink{classpion_1_1plugin__instance__ptr_a414a8f8e915a41caa94aca991cbb775e}{m\-\_\-instance\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em raw pointer to the plugin instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Interface\-Class\-Type$>$class pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$}
+
+\hyperlink{classpion_1_1plugin__instance__ptr}{plugin\-\_\-instance\-\_\-ptr}\-: smart pointer that manages a plug-\/in instance 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1plugin__instance__ptr_a79eb26b5a1ff329e4893c644a625dcc6}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!plugin\-\_\-instance\-\_\-ptr@{plugin\-\_\-instance\-\_\-ptr}}
+\index{plugin\-\_\-instance\-\_\-ptr@{plugin\-\_\-instance\-\_\-ptr}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{plugin\-\_\-instance\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::{\bf plugin\-\_\-instance\-\_\-ptr} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a79eb26b5a1ff329e4893c644a625dcc6}
+
+
+default constructor \& destructor 
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a6567dda0004c26eba60a6c714d52c696}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!$\sim$plugin\-\_\-instance\-\_\-ptr@{$\sim$plugin\-\_\-instance\-\_\-ptr}}
+\index{$\sim$plugin\-\_\-instance\-\_\-ptr@{$\sim$plugin\-\_\-instance\-\_\-ptr}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{$\sim$plugin\-\_\-instance\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ virtual {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::$\sim${\bf plugin\-\_\-instance\-\_\-ptr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1plugin__instance__ptr_a6567dda0004c26eba60a6c714d52c696}
+
+
+virtual destructor / may be extended 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::reset().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1plugin__instance__ptr_a7cc8432ad7e88298c719e9b41007e93d}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!create@{create}}
+\index{create@{create}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ void {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::create (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a7cc8432ad7e88298c719e9b41007e93d}
+
+
+create a new instance of the given plugin\-\_\-type 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr, pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-plugin\-\_\-ptr, and pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::reset().
+
+\hypertarget{classpion_1_1plugin__instance__ptr_ac4655ccda770223a852233c7c9ffb0d0}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!empty@{empty}}
+\index{empty@{empty}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ bool {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::empty (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_ac4655ccda770223a852233c7c9ffb0d0}
+
+
+returns true if pointer is empty 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a30f57ad0560c0cbdd0f00f345cd3a41a}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!get@{get}}
+\index{get@{get}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ Interface\-Class\-Type$\ast$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a30f57ad0560c0cbdd0f00f345cd3a41a}
+
+
+return a raw pointer to the instance 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_af1919987100381b912d49144f75c46fe}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ Interface\-Class\-Type\& {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_af1919987100381b912d49144f75c46fe}
+
+
+return a reference to the instance 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a0ed2270357907c47060b5c0bd14cb6fb}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ const Interface\-Class\-Type\& {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a0ed2270357907c47060b5c0bd14cb6fb}
+
+
+return a const reference to the instance 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a84f65b0841e70a2a6017792d5749390e}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ Interface\-Class\-Type$\ast$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::operator-\/$>$ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a84f65b0841e70a2a6017792d5749390e}
+
+
+return a reference to the instance 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a26b25d3a76f14a22636727ed774eac29}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{operator-\/$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ const Interface\-Class\-Type$\ast$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::operator-\/$>$ (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a26b25d3a76f14a22636727ed774eac29}
+
+
+return a const reference to the instance 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr.
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a3c6d24f4501a0e1838e5bedd34e20372}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!reset@{reset}}
+\index{reset@{reset}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ void {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__instance__ptr_a3c6d24f4501a0e1838e5bedd34e20372}
+
+
+reset the instance pointer 
+
+
+
+References pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr, and pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::m\-\_\-plugin\-\_\-ptr.
+
+
+
+Referenced by pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::create(), and pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::$\sim$plugin\-\_\-instance\-\_\-ptr().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1plugin__instance__ptr_a414a8f8e915a41caa94aca991cbb775e}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!m\-\_\-instance\-\_\-ptr@{m\-\_\-instance\-\_\-ptr}}
+\index{m\-\_\-instance\-\_\-ptr@{m\-\_\-instance\-\_\-ptr}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{m\-\_\-instance\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ Interface\-Class\-Type$\ast$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::m\-\_\-instance\-\_\-ptr\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1plugin__instance__ptr_a414a8f8e915a41caa94aca991cbb775e}
+
+
+raw pointer to the plugin instance 
+
+
+
+Referenced by pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::create(), pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::empty(), pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::get(), pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::operator$\ast$(), pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::operator-\/$>$(), and pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::reset().
+
+\hypertarget{classpion_1_1plugin__instance__ptr_a65856c5fbd856e3c106e3ae708369109}{\index{pion\-::plugin\-\_\-instance\-\_\-ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}!m\-\_\-plugin\-\_\-ptr@{m\-\_\-plugin\-\_\-ptr}}
+\index{m\-\_\-plugin\-\_\-ptr@{m\-\_\-plugin\-\_\-ptr}!pion::plugin_instance_ptr@{pion\-::plugin\-\_\-instance\-\_\-ptr}}
+\subsubsection[{m\-\_\-plugin\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Interface\-Class\-Type $>$ {\bf plugin\-\_\-ptr}$<$Interface\-Class\-Type$>$ {\bf pion\-::plugin\-\_\-instance\-\_\-ptr}$<$ Interface\-Class\-Type $>$\-::m\-\_\-plugin\-\_\-ptr\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1plugin__instance__ptr_a65856c5fbd856e3c106e3ae708369109}
+
+
+smart pointer that manages the plugin's dynamic object code 
+
+
+
+Referenced by pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::create(), and pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::reset().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{plugin_8hpp}{plugin.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+<map id="log4cplus::DailyRollingFileAppender" name="log4cplus::DailyRollingFileAppender">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1FileAppender.html" title="log4cplus::FileAppender" alt="" coords="1217,400,1375,427"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1Appender.html" title="log4cplus::Appender" alt="" coords="899,265,1037,292"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title="log4cplus::helpers\l::SharedObject" alt="" coords="611,135,733,177"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1thread_1_1Mutex.html" title="log4cplus::thread::\lMutex" alt="" coords="311,135,435,177"/>
+<area shape="rect" id="node7" href="$classlog4cplus_1_1helpers_1_1LockFile.html" title="log4cplus::helpers\l::LockFile" alt="" coords="312,201,435,242"/>
+<area shape="rect" id="node9" href="$classlog4cplus_1_1ErrorHandler.html" title="log4cplus::ErrorHandler" alt="" coords="297,273,450,300"/>
+<area shape="rect" id="node11" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; Filter \&gt;" alt="" coords="585,331,759,373"/>
+<area shape="rect" id="node13" href="$classlog4cplus_1_1Layout.html" title="log4cplus::Layout" alt="" coords="313,77,433,104"/>
+<area shape="rect" id="node14" href="$classlog4cplus_1_1LogLevelManager.html" title="log4cplus::LogLevelManager" alt="" coords="6,77,189,104"/>
+<area shape="rect" id="node17" title="STL class. " alt="" coords="608,5,736,46"/>
+<area shape="rect" id="node18" title="STL class. " alt="" coords="300,12,447,39"/>
+<area shape="rect" id="node19" title="STL class. " alt="" coords="50,12,145,39"/>
+</map>

@@ -1,0 +1,84 @@
+\hypertarget{structpion_1_1process_1_1config__type}{\section{pion\-:\-:process\-:\-:config\-\_\-type Struct Reference}
+\label{structpion_1_1process_1_1config__type}\index{pion\-::process\-::config\-\_\-type@{pion\-::process\-::config\-\_\-type}}
+}
+
+
+data type for static/global process configuration information  
+
+
+
+
+{\ttfamily \#include $<$process.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpion_1_1process_1_1config__type_a89ae5c8f99282b03c22006ce00c619e2}{config\-\_\-type} ()
+\begin{DoxyCompactList}\small\item\em constructor just initializes native types \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structpion_1_1process_1_1config__type_aea142e63e9a962ffefb5c0d2091ed303}{shutdown\-\_\-now}
+\begin{DoxyCompactList}\small\item\em true if we should shutdown now \end{DoxyCompactList}\item 
+boost\-::condition \hyperlink{structpion_1_1process_1_1config__type_aec765e2fe0c8e6a474c78c2511079957}{shutdown\-\_\-cond}
+\begin{DoxyCompactList}\small\item\em triggered when it is time to shutdown \end{DoxyCompactList}\item 
+boost\-::mutex \hyperlink{structpion_1_1process_1_1config__type_aeea8f463fcb510add8cab8e5fa20f0e4}{shutdown\-\_\-mutex}
+\begin{DoxyCompactList}\small\item\em used to protect the shutdown condition \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+data type for static/global process configuration information 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structpion_1_1process_1_1config__type_a89ae5c8f99282b03c22006ce00c619e2}{\index{pion\-::process\-::config\-\_\-type@{pion\-::process\-::config\-\_\-type}!config\-\_\-type@{config\-\_\-type}}
+\index{config\-\_\-type@{config\-\_\-type}!pion::process::config_type@{pion\-::process\-::config\-\_\-type}}
+\subsubsection[{config\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::process\-::config\-\_\-type\-::config\-\_\-type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structpion_1_1process_1_1config__type_a89ae5c8f99282b03c22006ce00c619e2}
+
+
+constructor just initializes native types 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structpion_1_1process_1_1config__type_aec765e2fe0c8e6a474c78c2511079957}{\index{pion\-::process\-::config\-\_\-type@{pion\-::process\-::config\-\_\-type}!shutdown\-\_\-cond@{shutdown\-\_\-cond}}
+\index{shutdown\-\_\-cond@{shutdown\-\_\-cond}!pion::process::config_type@{pion\-::process\-::config\-\_\-type}}
+\subsubsection[{shutdown\-\_\-cond}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::condition pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-cond}}\label{structpion_1_1process_1_1config__type_aec765e2fe0c8e6a474c78c2511079957}
+
+
+triggered when it is time to shutdown 
+
+
+
+Referenced by pion\-::process\-::shutdown(), and pion\-::process\-::wait\-\_\-for\-\_\-shutdown().
+
+\hypertarget{structpion_1_1process_1_1config__type_aeea8f463fcb510add8cab8e5fa20f0e4}{\index{pion\-::process\-::config\-\_\-type@{pion\-::process\-::config\-\_\-type}!shutdown\-\_\-mutex@{shutdown\-\_\-mutex}}
+\index{shutdown\-\_\-mutex@{shutdown\-\_\-mutex}!pion::process::config_type@{pion\-::process\-::config\-\_\-type}}
+\subsubsection[{shutdown\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-mutex}}\label{structpion_1_1process_1_1config__type_aeea8f463fcb510add8cab8e5fa20f0e4}
+
+
+used to protect the shutdown condition 
+
+
+
+Referenced by pion\-::process\-::shutdown(), and pion\-::process\-::wait\-\_\-for\-\_\-shutdown().
+
+\hypertarget{structpion_1_1process_1_1config__type_aea142e63e9a962ffefb5c0d2091ed303}{\index{pion\-::process\-::config\-\_\-type@{pion\-::process\-::config\-\_\-type}!shutdown\-\_\-now@{shutdown\-\_\-now}}
+\index{shutdown\-\_\-now@{shutdown\-\_\-now}!pion::process::config_type@{pion\-::process\-::config\-\_\-type}}
+\subsubsection[{shutdown\-\_\-now}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-now}}\label{structpion_1_1process_1_1config__type_aea142e63e9a962ffefb5c0d2091ed303}
+
+
+true if we should shutdown now 
+
+
+
+Referenced by pion\-::process\-::shutdown(), and pion\-::process\-::wait\-\_\-for\-\_\-shutdown().
+
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{process_8hpp}{process.\-hpp}\end{DoxyCompactItemize}

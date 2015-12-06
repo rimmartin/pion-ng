@@ -1,0 +1,80 @@
+\hypertarget{classlog4cplus_1_1HierarchyLocker}{\section{log4cplus\-:\-:Hierarchy\-Locker Class Reference}
+\label{classlog4cplus_1_1HierarchyLocker}\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}}
+}
+
+
+{\ttfamily \#include $<$hierarchylocker.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}{Hierarchy\-Locker} (\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \&h)
+\item 
+\hyperlink{classlog4cplus_1_1HierarchyLocker_aeaa3d769d497ad444b7c0c4e7a7c1e05}{$\sim$\-Hierarchy\-Locker} ()
+\item 
+void \hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{reset\-Configuration} ()
+\item 
+\hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\-Instance} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+\hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}{get\-Instance} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name, \hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\-::\-Logger\-Factory} \&factory)
+\item 
+void \hyperlink{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}{add\-Appender} (\hyperlink{classlog4cplus_1_1Logger}{Logger} \&logger, \hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\-::\-Shared\-Appender\-Ptr} \&appender)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is used to lock a \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}. The dtor unlocks the \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!Hierarchy\-Locker@{Hierarchy\-Locker}}
+\index{Hierarchy\-Locker@{Hierarchy\-Locker}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{Hierarchy\-Locker}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Hierarchy\-Locker\-::\-Hierarchy\-Locker (
+\begin{DoxyParamCaption}
+\item[{{\bf Hierarchy} \&}]{h}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_a459a06f4edb6e72611c957300329c3b5}
+\hypertarget{classlog4cplus_1_1HierarchyLocker_aeaa3d769d497ad444b7c0c4e7a7c1e05}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!$\sim$\-Hierarchy\-Locker@{$\sim$\-Hierarchy\-Locker}}
+\index{$\sim$\-Hierarchy\-Locker@{$\sim$\-Hierarchy\-Locker}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{$\sim$\-Hierarchy\-Locker}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Hierarchy\-Locker\-::$\sim$\-Hierarchy\-Locker (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_aeaa3d769d497ad444b7c0c4e7a7c1e05}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!add\-Appender@{add\-Appender}}
+\index{add\-Appender@{add\-Appender}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{add\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Hierarchy\-Locker\-::add\-Appender (
+\begin{DoxyParamCaption}
+\item[{{\bf Logger} \&}]{logger, }
+\item[{{\bf log4cplus\-::\-Shared\-Appender\-Ptr} \&}]{appender}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_a4d3e3a53d953695b17344b5b6b4bd306}
+\hypertarget{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} log4cplus\-::\-Hierarchy\-Locker\-::get\-Instance (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}
+Calls the {\ttfamily \hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\-Instance()}} method on the locked \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}. \hypertarget{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} log4cplus\-::\-Hierarchy\-Locker\-::get\-Instance (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name, }
+\item[{{\bf spi\-::\-Logger\-Factory} \&}]{factory}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_a9a0f82b80a4f07147bedc05f55b06d45}
+Calls the {\ttfamily \hyperlink{classlog4cplus_1_1HierarchyLocker_a2ef818667eb75a4f32cc1df37a594ab4}{get\-Instance()}} method on the locked \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}. \hypertarget{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!reset\-Configuration@{reset\-Configuration}}
+\index{reset\-Configuration@{reset\-Configuration}!log4cplus::HierarchyLocker@{log4cplus\-::\-Hierarchy\-Locker}}
+\subsubsection[{reset\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Hierarchy\-Locker\-::reset\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}
+Calls the {\ttfamily \hyperlink{classlog4cplus_1_1HierarchyLocker_a1fa66bf5724ca6301b8a44423b62a9eb}{reset\-Configuration()}} method on the locked \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy}. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{hierarchylocker_8h}{hierarchylocker.\-h}\end{DoxyCompactItemize}

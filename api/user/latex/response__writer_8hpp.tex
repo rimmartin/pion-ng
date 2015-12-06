@@ -1,0 +1,53 @@
+\hypertarget{response__writer_8hpp}{\section{include/pion/http/response\-\_\-writer.hpp File Reference}
+\label{response__writer_8hpp}\index{include/pion/http/response\-\_\-writer.\-hpp@{include/pion/http/response\-\_\-writer.\-hpp}}
+}
+{\ttfamily \#include $<$boost/asio.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/bind.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/noncopyable.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/shared\-\_\-ptr.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/enable\-\_\-shared\-\_\-from\-\_\-this.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/config.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/http/writer.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/http/request.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/http/response.\-hpp$>$}\\*
+Include dependency graph for response\-\_\-writer.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{response__writer_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{response__writer_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1http_1_1response__writer}{pion\-::http\-::response\-\_\-writer}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\item 
+\hyperlink{namespacepion_1_1http}{pion\-::http}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ response\-\_\-writer $>$ \hyperlink{namespacepion_1_1http_aaf75f88dc37f535e5584e55450257e14}{pion\-::http\-::response\-\_\-writer\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em data type for a \hyperlink{classpion_1_1http_1_1response__writer}{response\-\_\-writer} pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const response\-\_\-writer\-\_\-ptr \& \hyperlink{namespacepion_1_1http_ac7d19b3180626fe21ab19eab46be37bd}{pion\-::http\-::operator$<$$<$} (const response\-\_\-writer\-\_\-ptr \&writer, const T \&data)
+\begin{DoxyCompactList}\small\item\em override operator$<$$<$ for convenience \end{DoxyCompactList}\item 
+response\-\_\-writer\-\_\-ptr \& \hyperlink{namespacepion_1_1http_a7c5d092c7456e0802179ef0e4e4a598a}{pion\-::http\-::operator$<$$<$} (response\-\_\-writer\-\_\-ptr \&writer, std\-::ostream \&($\ast$iomanip)(std\-::ostream \&))
+\end{DoxyCompactItemize}

@@ -1,0 +1,441 @@
+\hypertarget{classpion_1_1plugin__manager}{\section{pion\-:\-:plugin\-\_\-manager$<$ Plugin\-Type $>$ Class Template Reference}
+\label{classpion_1_1plugin__manager}\index{pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$@{pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$plugin\-\_\-manager.\-hpp$>$}
+
+
+
+Collaboration diagram for pion\-:\-:plugin\-\_\-manager$<$ Plugin\-Type $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classpion_1_1plugin__manager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1plugin__manager_1_1map__type}{map\-\_\-type}
+\begin{DoxyCompactList}\small\item\em data type that maps identifiers to plug-\/in objects \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::function1$<$ void, \\*
+Plugin\-Type $\ast$ $>$ \hyperlink{classpion_1_1plugin__manager_a275b88a2c9f7c89d6d737c1b444be8b2}{Plugin\-Run\-Function}
+\begin{DoxyCompactList}\small\item\em data type for a function that may be called by the \hyperlink{classpion_1_1plugin__manager_a1c2f6105acfcfcf1b742aecab122a368}{run()} method \end{DoxyCompactList}\item 
+typedef boost\-::function1\\*
+$<$ boost\-::uint64\-\_\-t, const \\*
+Plugin\-Type $\ast$ $>$ \hyperlink{classpion_1_1plugin__manager_a1e6a4223438c74e4e928401f734d2e0c}{Plugin\-Stat\-Function}
+\begin{DoxyCompactList}\small\item\em data type for a function that may be called by the get\-Stat() method \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1plugin__manager_a6f451cdb1f4ea91b954e5dd453a827d3}{plugin\-\_\-manager} (void)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1plugin__manager_aff2f27834dee6eb0087e68f2af86b9e9}{$\sim$plugin\-\_\-manager} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin__manager_ac56a5e432352d1b9c2a4853ce82a5a8c}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears all the plug-\/in objects being managed \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1plugin__manager_adee5498ef23acb797355b2a79f3fd059}{empty} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if there are no plug-\/in objects being managed \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1plugin__manager_ad017fef715f7b049513eb176e1df809b}{add} (const std\-::string \&plugin\-\_\-id, Plugin\-Type $\ast$plugin\-\_\-object\-\_\-ptr)
+\item 
+void \hyperlink{classpion_1_1plugin__manager_a2acdd8496472871d8ab881637577240d}{remove} (const std\-::string \&plugin\-\_\-id)
+\item 
+void \hyperlink{classpion_1_1plugin__manager_ab8d0b6ecfa27e23495a64d94147c4d60}{replace} (const std\-::string \&plugin\-\_\-id, Plugin\-Type $\ast$\hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr})
+\item 
+Plugin\-Type $\ast$ \hyperlink{classpion_1_1plugin__manager_abb39b6639117e8a3f557a628fa302c44}{clone} (const std\-::string \&plugin\-\_\-id)
+\item 
+Plugin\-Type $\ast$ \hyperlink{classpion_1_1plugin__manager_a3e03e5f6023f530c91464b766b2fab9e}{load} (const std\-::string \&plugin\-\_\-id, const std\-::string \&plugin\-\_\-type)
+\item 
+Plugin\-Type $\ast$ \hyperlink{classpion_1_1plugin__manager_a348da20310edf84242a2688ddc1639e9}{get} (const std\-::string \&plugin\-\_\-id)
+\item 
+const Plugin\-Type $\ast$ \hyperlink{classpion_1_1plugin__manager_a716a150691df75fb46d1f472e3eda2f6}{get} (const std\-::string \&plugin\-\_\-id) const 
+\item 
+\hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr}$<$ Plugin\-Type $>$ \hyperlink{classpion_1_1plugin__manager_abb0ab4f0a27e5739682430b8a6d06f15}{get\-\_\-lib\-\_\-ptr} (const std\-::string \&plugin\-\_\-id) const 
+\item 
+Plugin\-Type $\ast$ \hyperlink{classpion_1_1plugin__manager_ab58061848dde1682a7c013c7f468d191}{find} (const std\-::string \&resource)
+\item 
+void \hyperlink{classpion_1_1plugin__manager_a1c2f6105acfcfcf1b742aecab122a368}{run} (\hyperlink{classpion_1_1plugin__manager_a275b88a2c9f7c89d6d737c1b444be8b2}{Plugin\-Run\-Function} run\-\_\-func)
+\item 
+void \hyperlink{classpion_1_1plugin__manager_af530db568a45e50b3d8b06976c13d994}{run} (const std\-::string \&plugin\-\_\-id, \hyperlink{classpion_1_1plugin__manager_a275b88a2c9f7c89d6d737c1b444be8b2}{Plugin\-Run\-Function} run\-\_\-func)
+\item 
+boost\-::uint64\-\_\-t \hyperlink{classpion_1_1plugin__manager_a40b42b430ba69d4f0143c04ceed81f57}{get\-\_\-statistic} (\hyperlink{classpion_1_1plugin__manager_a1e6a4223438c74e4e928401f734d2e0c}{Plugin\-Stat\-Function} stat\-\_\-func) const 
+\item 
+boost\-::uint64\-\_\-t \hyperlink{classpion_1_1plugin__manager_a9a569d4782392bf94a0faed3143eedd4}{get\-\_\-statistic} (const std\-::string \&plugin\-\_\-id, \hyperlink{classpion_1_1plugin__manager_a1e6a4223438c74e4e928401f734d2e0c}{Plugin\-Stat\-Function} stat\-\_\-func) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1plugin__manager_1_1map__type}{map\-\_\-type} \hyperlink{classpion_1_1plugin__manager_a6022dd5905f5079523844d68cd89977d}{m\-\_\-plugin\-\_\-map}
+\begin{DoxyCompactList}\small\item\em collection of plug-\/in objects being managed \end{DoxyCompactList}\item 
+boost\-::mutex \hyperlink{classpion_1_1plugin__manager_a4ce56259eca75c8c88bdc4f778526ec4}{m\-\_\-plugin\-\_\-mutex}
+\begin{DoxyCompactList}\small\item\em mutex to make class thread-\/safe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Plugin\-Type$>$class pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$}
+
+\hyperlink{classpion_1_1plugin__manager}{plugin\-\_\-manager}\-: used to manage a collection of plug-\/in objects 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1plugin__manager_a275b88a2c9f7c89d6d737c1b444be8b2}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!Plugin\-Run\-Function@{Plugin\-Run\-Function}}
+\index{Plugin\-Run\-Function@{Plugin\-Run\-Function}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{Plugin\-Run\-Function}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ typedef boost\-::function1$<$void, Plugin\-Type$\ast$$>$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::{\bf Plugin\-Run\-Function}}}\label{classpion_1_1plugin__manager_a275b88a2c9f7c89d6d737c1b444be8b2}
+
+
+data type for a function that may be called by the \hyperlink{classpion_1_1plugin__manager_a1c2f6105acfcfcf1b742aecab122a368}{run()} method 
+
+\hypertarget{classpion_1_1plugin__manager_a1e6a4223438c74e4e928401f734d2e0c}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!Plugin\-Stat\-Function@{Plugin\-Stat\-Function}}
+\index{Plugin\-Stat\-Function@{Plugin\-Stat\-Function}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{Plugin\-Stat\-Function}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ typedef boost\-::function1$<$boost\-::uint64\-\_\-t, const Plugin\-Type$\ast$$>$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::{\bf Plugin\-Stat\-Function}}}\label{classpion_1_1plugin__manager_a1e6a4223438c74e4e928401f734d2e0c}
+
+
+data type for a function that may be called by the get\-Stat() method 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1plugin__manager_a6f451cdb1f4ea91b954e5dd453a827d3}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!plugin\-\_\-manager@{plugin\-\_\-manager}}
+\index{plugin\-\_\-manager@{plugin\-\_\-manager}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{plugin\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::{\bf plugin\-\_\-manager} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a6f451cdb1f4ea91b954e5dd453a827d3}
+
+
+default constructor 
+
+\hypertarget{classpion_1_1plugin__manager_aff2f27834dee6eb0087e68f2af86b9e9}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!$\sim$plugin\-\_\-manager@{$\sim$plugin\-\_\-manager}}
+\index{$\sim$plugin\-\_\-manager@{$\sim$plugin\-\_\-manager}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{$\sim$plugin\-\_\-manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ virtual {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::$\sim${\bf plugin\-\_\-manager} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1plugin__manager_aff2f27834dee6eb0087e68f2af86b9e9}
+
+
+default destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1plugin__manager_ad017fef715f7b049513eb176e1df809b}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!add@{add}}
+\index{add@{add}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::add (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id, }
+\item[{Plugin\-Type $\ast$}]{plugin\-\_\-object\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_ad017fef715f7b049513eb176e1df809b}
+adds a new plug-\/in object
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+{\em plugin\-\_\-object\-\_\-ptr} & pointer to the plug-\/in object to add \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service().
+
+\hypertarget{classpion_1_1plugin__manager_ac56a5e432352d1b9c2a4853ce82a5a8c}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!clear@{clear}}
+\index{clear@{clear}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_ac56a5e432352d1b9c2a4853ce82a5a8c}
+
+
+clears all the plug-\/in objects being managed 
+
+\hypertarget{classpion_1_1plugin__manager_abb39b6639117e8a3f557a628fa302c44}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!clone@{clone}}
+\index{clone@{clone}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ Plugin\-Type $\ast$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::clone (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_abb39b6639117e8a3f557a628fa302c44}
+clones an existing plug-\/in object (creates a new one of the same type)
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plugin\-Type$\ast$ pointer to the new plug-\/in object 
+\end{DoxyReturn}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_adee5498ef23acb797355b2a79f3fd059}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!empty@{empty}}
+\index{empty@{empty}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ bool {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::empty (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_adee5498ef23acb797355b2a79f3fd059}
+
+
+returns true if there are no plug-\/in objects being managed 
+
+
+
+Referenced by pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::map\-\_\-type\-::clear().
+
+\hypertarget{classpion_1_1plugin__manager_ab58061848dde1682a7c013c7f468d191}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!find@{find}}
+\index{find@{find}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ Plugin\-Type $\ast$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_ab58061848dde1682a7c013c7f468d191}
+finds the plug-\/in object associated with a particular resource (fuzzy match)
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & resource identifier (uri-\/stem) to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plugin\-Type$\ast$ pointer to the matching plug-\/in object or N\-U\-L\-L if not found 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::clone(), pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::get(), pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::get\-\_\-lib\-\_\-ptr(), pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::remove(), and pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::replace().
+
+\hypertarget{classpion_1_1plugin__manager_a348da20310edf84242a2688ddc1639e9}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!get@{get}}
+\index{get@{get}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ Plugin\-Type $\ast$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a348da20310edf84242a2688ddc1639e9}
+gets the plug-\/in object associated with a particular plugin\-\_\-id (exact match)
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plugin\-Type$\ast$ pointer to the matching plug-\/in object or N\-U\-L\-L if not found 
+\end{DoxyReturn}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_a716a150691df75fb46d1f472e3eda2f6}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!get@{get}}
+\index{get@{get}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ const Plugin\-Type $\ast$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a716a150691df75fb46d1f472e3eda2f6}
+gets the plug-\/in object associated with a particular plugin\-\_\-id (exact match)
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plugin\-Type$\ast$ pointer to the matching plug-\/in object or N\-U\-L\-L if not found 
+\end{DoxyReturn}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_abb0ab4f0a27e5739682430b8a6d06f15}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!get\-\_\-lib\-\_\-ptr@{get\-\_\-lib\-\_\-ptr}}
+\index{get\-\_\-lib\-\_\-ptr@{get\-\_\-lib\-\_\-ptr}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{get\-\_\-lib\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ {\bf plugin\-\_\-ptr}$<$ Plugin\-Type $>$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::get\-\_\-lib\-\_\-ptr (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_abb0ab4f0a27e5739682430b8a6d06f15}
+gets a smart pointer to the plugin shared library for a particular plugin\-\_\-id (exact match)
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+plugin\-\_\-ptr$<$\-Plugin\-Type$>$ pointer to the plugin shared library if found 
+\end{DoxyReturn}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_a40b42b430ba69d4f0143c04ceed81f57}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!get\-\_\-statistic@{get\-\_\-statistic}}
+\index{get\-\_\-statistic@{get\-\_\-statistic}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{get\-\_\-statistic}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ boost\-::uint64\-\_\-t {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::get\-\_\-statistic (
+\begin{DoxyParamCaption}
+\item[{{\bf Plugin\-Stat\-Function}}]{stat\-\_\-func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a40b42b430ba69d4f0143c04ceed81f57}
+returns a total statistic value summed for every plug-\/in being managed
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat\-\_\-func} & the statistic function to execute for each plug-\/in object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1plugin__manager_a9a569d4782392bf94a0faed3143eedd4}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!get\-\_\-statistic@{get\-\_\-statistic}}
+\index{get\-\_\-statistic@{get\-\_\-statistic}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{get\-\_\-statistic}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ boost\-::uint64\-\_\-t {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::get\-\_\-statistic (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id, }
+\item[{{\bf Plugin\-Stat\-Function}}]{stat\-\_\-func}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a9a569d4782392bf94a0faed3143eedd4}
+returns a statistic value for a particular plug-\/in
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+{\em stat\-\_\-func} & the statistic function to execute \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1plugin__manager_a3e03e5f6023f530c91464b766b2fab9e}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!load@{load}}
+\index{load@{load}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ Plugin\-Type $\ast$ {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id, }
+\item[{const std\-::string \&}]{plugin\-\_\-type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a3e03e5f6023f530c91464b766b2fab9e}
+loads a new plug-\/in object
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+{\em plugin\-\_\-type} & the name or type of the plug-\/in to load (searches plug-\/in directories and appends extensions) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plugin\-Type$\ast$ pointer to the new plug-\/in object 
+\end{DoxyReturn}
+
+
+References pion\-::plugin\-\_\-ptr$<$ Interface\-Class\-Type $>$\-::create(), and pion\-::plugin\-::open().
+
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service().
+
+\hypertarget{classpion_1_1plugin__manager_a2acdd8496472871d8ab881637577240d}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!remove@{remove}}
+\index{remove@{remove}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a2acdd8496472871d8ab881637577240d}
+removes a plug-\/in object
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_ab8d0b6ecfa27e23495a64d94147c4d60}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!replace@{replace}}
+\index{replace@{replace}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{replace}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::replace (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id, }
+\item[{Plugin\-Type $\ast$}]{plugin\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_ab8d0b6ecfa27e23495a64d94147c4d60}
+replaces an existing plug-\/in object with a new one
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+{\em \hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr}} & pointer to the new plug-\/in object which will replace the old one \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::find().
+
+\hypertarget{classpion_1_1plugin__manager_a1c2f6105acfcfcf1b742aecab122a368}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!run@{run}}
+\index{run@{run}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Plugin\-Run\-Function}}]{run\-\_\-func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_a1c2f6105acfcfcf1b742aecab122a368}
+runs a method for every plug-\/in being managed
+
+
+\begin{DoxyParams}{Parameters}
+{\em run\-\_\-func} & the function to execute for each plug-\/in object \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::set\-\_\-service\-\_\-option().
+
+\hypertarget{classpion_1_1plugin__manager_af530db568a45e50b3d8b06976c13d994}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!run@{run}}
+\index{run@{run}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type $>$ void {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::run (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{plugin\-\_\-id, }
+\item[{{\bf Plugin\-Run\-Function}}]{run\-\_\-func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1plugin__manager_af530db568a45e50b3d8b06976c13d994}
+runs a method for a particular plug-\/in
+
+
+\begin{DoxyParams}{Parameters}
+{\em plugin\-\_\-id} & unique identifier associated with the plug-\/in \\
+\hline
+{\em run\-\_\-func} & the function to execute \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1plugin__manager_a6022dd5905f5079523844d68cd89977d}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!m\-\_\-plugin\-\_\-map@{m\-\_\-plugin\-\_\-map}}
+\index{m\-\_\-plugin\-\_\-map@{m\-\_\-plugin\-\_\-map}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{m\-\_\-plugin\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ {\bf map\-\_\-type} {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::m\-\_\-plugin\-\_\-map\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1plugin__manager_a6022dd5905f5079523844d68cd89977d}
+
+
+collection of plug-\/in objects being managed 
+
+
+
+Referenced by pion\-::plugin\-\_\-manager$<$ http\-::plugin\-\_\-service $>$\-::clear(), and pion\-::plugin\-\_\-manager$<$ http\-::plugin\-\_\-service $>$\-::empty().
+
+\hypertarget{classpion_1_1plugin__manager_a4ce56259eca75c8c88bdc4f778526ec4}{\index{pion\-::plugin\-\_\-manager@{pion\-::plugin\-\_\-manager}!m\-\_\-plugin\-\_\-mutex@{m\-\_\-plugin\-\_\-mutex}}
+\index{m\-\_\-plugin\-\_\-mutex@{m\-\_\-plugin\-\_\-mutex}!pion::plugin_manager@{pion\-::plugin\-\_\-manager}}
+\subsubsection[{m\-\_\-plugin\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Plugin\-Type$>$ boost\-::mutex {\bf pion\-::plugin\-\_\-manager}$<$ Plugin\-Type $>$\-::m\-\_\-plugin\-\_\-mutex\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}}\label{classpion_1_1plugin__manager_a4ce56259eca75c8c88bdc4f778526ec4}
+
+
+mutex to make class thread-\/safe 
+
+
+
+Referenced by pion\-::plugin\-\_\-manager$<$ http\-::plugin\-\_\-service $>$\-::clear(), and pion\-::plugin\-\_\-manager$<$ http\-::plugin\-\_\-service $>$\-::empty().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{plugin__manager_8hpp}{plugin\-\_\-manager.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,452 @@
+\hypertarget{classpion_1_1spdy_1_1parser}{\section{pion\-:\-:spdy\-:\-:parser Class Reference}
+\label{classpion_1_1spdy_1_1parser}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}
+}
+
+
+{\ttfamily \#include $<$parser.\-hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{error\-\_\-category\-\_\-t}
+\begin{DoxyCompactList}\small\item\em class-\/specific error category \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915b}{error\-\_\-value\-\_\-t} \{ \\*
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bafb4a6ca9230ef0cb91b5a13b4b3034ab}{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E} = 1, 
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bab49a657c0123e1417d65286595ee68f0}{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N}, 
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba3fc66c17eb78b99779ab5453dd459596}{E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N}, 
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba093135ad8a939be1a8533bd244e19966}{E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R}, 
+\\*
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba1108f301042c4a8fa94be64f61b7a404}{E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R}, 
+\hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba5c4984c41fd05b4b70fa3491cb663cd7}{E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A}
+ \}
+\begin{DoxyCompactList}\small\item\em class-\/specific error code values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1spdy_1_1parser_a289c7ef60496f20705af20bec52d5302}{parser} ()
+\begin{DoxyCompactList}\small\item\em constructs a new parser object (default constructor) \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1spdy_1_1parser_a4cc2b6ef5639870a53ba9b7a816424fc}{$\sim$parser} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+boost\-::tribool \hyperlink{classpion_1_1spdy_1_1parser_a251c6e62b561e9ce7f8df1712b61f616}{parse} (\hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info} \&http\-\_\-headers, boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}{decompressor\-\_\-ptr} \&\hyperlink{classpion_1_1spdy_1_1decompressor}{decompressor}, const char $\ast$packet\-\_\-ptr, boost\-::uint32\-\_\-t \&length\-\_\-packet, boost\-::uint32\-\_\-t current\-\_\-stream\-\_\-count)
+\item 
+const char $\ast$ \hyperlink{classpion_1_1spdy_1_1parser_aa3822674ceaa040a6ad36189fbc58744}{get\-\_\-spdy\-\_\-data\-\_\-content} ()
+\begin{DoxyCompactList}\small\item\em Get the pointer to the first character to the spdy data contect. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classpion_1_1spdy_1_1parser_a0027e6ba54dd393ba32b1a5f8e80aa1d}{get\-\_\-spdy\-\_\-read\-\_\-pointer} ()
+\begin{DoxyCompactList}\small\item\em Get the pointer to the first character to the spdy data contect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespacepion_1_1spdy_ae477ffb44271bac96119422b364435ce}{spdy\-\_\-frame\-\_\-type} \hyperlink{classpion_1_1spdy_1_1parser_afa6e6079f12d6adc17688b38bc0727dd}{get\-\_\-spdy\-\_\-frame\-\_\-type} (const char $\ast$ptr)
+\item 
+static bool \hyperlink{classpion_1_1spdy_1_1parser_a9d162f5bb587fe627f678a9ab19dd712}{is\-\_\-spdy\-\_\-control\-\_\-frame} (const char $\ast$ptr)
+\item 
+static boost\-::uint32\-\_\-t \hyperlink{classpion_1_1spdy_1_1parser_a472c57e8a77ee5ad056ef11fe5aad50e}{get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id} (const char $\ast$ptr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_a84d142819f982415844b77f5c3d8d0bb}{set\-\_\-read\-\_\-ptr} (const char $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em resets the read pointer \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1spdy_1_1parser_aa0000b4cee0f8a2084f3e0056ab561de}{populate\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame, boost\-::uint32\-\_\-t \&length\-\_\-packet, boost\-::uint32\-\_\-t \&stream\-\_\-id, \hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info} \&http\-\_\-headers)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_a014d959f438085b36d8373ff45ae1572}{parse\-\_\-header\-\_\-payload} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}{decompressor\-\_\-ptr} \&\hyperlink{classpion_1_1spdy_1_1decompressor}{decompressor}, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame, \hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info} \&http\-\_\-headers, boost\-::uint32\-\_\-t current\-\_\-stream\-\_\-count)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_aae6750b7a90921dd6d8bc2da50cc1aa7}{parse\-\_\-spdy\-\_\-data} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame, boost\-::uint32\-\_\-t stream\-\_\-id, \hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info} \&http\-\_\-info)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_a36bd7ae76e3796cf4f99a30aa728c800}{parse\-\_\-spdy\-\_\-settings\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_ad69dd18af5afc1b6d84d743c3d21d8e0}{parse\-\_\-spdy\-\_\-rst\-\_\-stream} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_a22199322320ed1a68407b438a898d98b}{parse\-\_\-spdy\-\_\-ping\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_ae213965a7a77b4cfb385bfa8685c3e50}{parse\-\_\-spdy\-\_\-goaway\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame)
+\item 
+void \hyperlink{classpion_1_1spdy_1_1parser_a0ce476c60751c29909aec2af32b5b64e}{parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame)
+\item 
+boost\-::tribool \hyperlink{classpion_1_1spdy_1_1parser_af5bfc1663a565340d316b98fbf906b9b}{parse\-\_\-spdy\-\_\-frame} (boost\-::system\-::error\-\_\-code \&ec, const \hyperlink{namespacepion_1_1spdy_ac8512dffc9267ba133bd2c560f07fd1e}{decompressor\-\_\-ptr} \&\hyperlink{classpion_1_1spdy_1_1decompressor}{decompressor}, \hyperlink{namespacepion_1_1spdy_a5263e12cb89d30893e41f7b595cae89a}{http\-\_\-protocol\-\_\-info} \&http\-\_\-headers, boost\-::uint32\-\_\-t \&length\-\_\-packet, boost\-::uint32\-\_\-t current\-\_\-stream\-\_\-count)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classpion_1_1spdy_1_1parser_a81f25358fc4fbffeb6532cf10c6f7aa4}{create\-\_\-error\-\_\-category} (void)
+\begin{DoxyCompactList}\small\item\em creates the unique parser \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{error\-\_\-category\-\_\-t} \end{DoxyCompactList}\item 
+static \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{error\-\_\-category\-\_\-t} \& \hyperlink{classpion_1_1spdy_1_1parser_aba54c4e506d27521190271a35f020257}{get\-\_\-error\-\_\-category} (void)
+\begin{DoxyCompactList}\small\item\em returns an instance of \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{parser\-::error\-\_\-category\-\_\-t} \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1spdy_1_1parser_a8caaf3917f65aeab5feee513e8b656b5}{set\-\_\-error} (boost\-::system\-::error\-\_\-code \&ec, \hyperlink{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915b}{error\-\_\-value\-\_\-t} ev)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+parser \-: parsers and reads the S\-P\-D\-Y frames 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915b}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!error\-\_\-value\-\_\-t@{error\-\_\-value\-\_\-t}}
+\index{error\-\_\-value\-\_\-t@{error\-\_\-value\-\_\-t}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{error\-\_\-value\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf pion\-::spdy\-::parser\-::error\-\_\-value\-\_\-t}}}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915b}
+
+
+class-\/specific error code values 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E@{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E@{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bafb4a6ca9230ef0cb91b5a13b4b3034ab}{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bafb4a6ca9230ef0cb91b5a13b4b3034ab}
+}]\index{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N@{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N@{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bab49a657c0123e1417d65286595ee68f0}{E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915bab49a657c0123e1417d65286595ee68f0}
+}]\index{E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N@{E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N@{E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba3fc66c17eb78b99779ab5453dd459596}{E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba3fc66c17eb78b99779ab5453dd459596}
+}]\index{E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R@{E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R@{E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba093135ad8a939be1a8533bd244e19966}{E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba093135ad8a939be1a8533bd244e19966}
+}]\index{E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R@{E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R@{E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba1108f301042c4a8fa94be64f61b7a404}{E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba1108f301042c4a8fa94be64f61b7a404}
+}]\index{E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A@{E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A}!pion\-::spdy\-::parser@{pion\-::spdy\-::parser}}\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A@{E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba5c4984c41fd05b4b70fa3491cb663cd7}{E\-R\-R\-O\-R\-\_\-\-M\-I\-S\-S\-I\-N\-G\-\_\-\-H\-E\-A\-D\-E\-R\-\_\-\-D\-A\-T\-A}\label{classpion_1_1spdy_1_1parser_abaab54ece6835d5763900809a1d6915ba5c4984c41fd05b4b70fa3491cb663cd7}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1spdy_1_1parser_a289c7ef60496f20705af20bec52d5302}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parser@{parser}}
+\index{parser@{parser}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::spdy\-::parser\-::parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1spdy_1_1parser_a289c7ef60496f20705af20bec52d5302}
+
+
+constructs a new parser object (default constructor) 
+
+\hypertarget{classpion_1_1spdy_1_1parser_a4cc2b6ef5639870a53ba9b7a816424fc}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!$\sim$parser@{$\sim$parser}}
+\index{$\sim$parser@{$\sim$parser}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{$\sim$parser}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::spdy\-::parser\-::$\sim$parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1spdy_1_1parser_a4cc2b6ef5639870a53ba9b7a816424fc}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1spdy_1_1parser_a81f25358fc4fbffeb6532cf10c6f7aa4}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!create\-\_\-error\-\_\-category@{create\-\_\-error\-\_\-category}}
+\index{create\-\_\-error\-\_\-category@{create\-\_\-error\-\_\-category}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{create\-\_\-error\-\_\-category}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::create\-\_\-error\-\_\-category (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a81f25358fc4fbffeb6532cf10c6f7aa4}
+
+
+creates the unique parser \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{error\-\_\-category\-\_\-t} 
+
+
+
+Referenced by get\-\_\-error\-\_\-category().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a472c57e8a77ee5ad056ef11fe5aad50e}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id@{get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id}}
+\index{get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id@{get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint32\-\_\-t pion\-::spdy\-::parser\-::get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1spdy_1_1parser_a472c57e8a77ee5ad056ef11fe5aad50e}
+get the stream id for the spdy control frame
+
+\begin{DoxyReturn}{Returns}
+true if it is a control frame else returns false 
+\end{DoxyReturn}
+
+
+References pion\-::algorithm\-::to\-\_\-uint32().
+
+\hypertarget{classpion_1_1spdy_1_1parser_aba54c4e506d27521190271a35f020257}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!get\-\_\-error\-\_\-category@{get\-\_\-error\-\_\-category}}
+\index{get\-\_\-error\-\_\-category@{get\-\_\-error\-\_\-category}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{get\-\_\-error\-\_\-category}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf error\-\_\-category\-\_\-t}\& pion\-::spdy\-::parser\-::get\-\_\-error\-\_\-category (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_aba54c4e506d27521190271a35f020257}
+
+
+returns an instance of \hyperlink{classpion_1_1spdy_1_1parser_1_1error__category__t}{parser\-::error\-\_\-category\-\_\-t} 
+
+
+
+References create\-\_\-error\-\_\-category().
+
+\hypertarget{classpion_1_1spdy_1_1parser_aa3822674ceaa040a6ad36189fbc58744}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!get\-\_\-spdy\-\_\-data\-\_\-content@{get\-\_\-spdy\-\_\-data\-\_\-content}}
+\index{get\-\_\-spdy\-\_\-data\-\_\-content@{get\-\_\-spdy\-\_\-data\-\_\-content}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{get\-\_\-spdy\-\_\-data\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ pion\-::spdy\-::parser\-::get\-\_\-spdy\-\_\-data\-\_\-content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1spdy_1_1parser_aa3822674ceaa040a6ad36189fbc58744}
+
+
+Get the pointer to the first character to the spdy data contect. 
+
+\hypertarget{classpion_1_1spdy_1_1parser_afa6e6079f12d6adc17688b38bc0727dd}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!get\-\_\-spdy\-\_\-frame\-\_\-type@{get\-\_\-spdy\-\_\-frame\-\_\-type}}
+\index{get\-\_\-spdy\-\_\-frame\-\_\-type@{get\-\_\-spdy\-\_\-frame\-\_\-type}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{get\-\_\-spdy\-\_\-frame\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf spdy\-\_\-frame\-\_\-type} pion\-::spdy\-::parser\-::get\-\_\-spdy\-\_\-frame\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1spdy_1_1parser_afa6e6079f12d6adc17688b38bc0727dd}
+checks if the frame is spdy frame or not
+
+\begin{DoxyReturn}{Returns}
+true if it is a frame else returns false 
+\end{DoxyReturn}
+
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame, pion\-::spdy\-::spdy\-\_\-data\-\_\-frame, and pion\-::spdy\-::spdy\-\_\-invalid\-\_\-frame.
+
+\hypertarget{classpion_1_1spdy_1_1parser_a0027e6ba54dd393ba32b1a5f8e80aa1d}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!get\-\_\-spdy\-\_\-read\-\_\-pointer@{get\-\_\-spdy\-\_\-read\-\_\-pointer}}
+\index{get\-\_\-spdy\-\_\-read\-\_\-pointer@{get\-\_\-spdy\-\_\-read\-\_\-pointer}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{get\-\_\-spdy\-\_\-read\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ pion\-::spdy\-::parser\-::get\-\_\-spdy\-\_\-read\-\_\-pointer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1spdy_1_1parser_a0027e6ba54dd393ba32b1a5f8e80aa1d}
+
+
+Get the pointer to the first character to the spdy data contect. 
+
+\hypertarget{classpion_1_1spdy_1_1parser_a9d162f5bb587fe627f678a9ab19dd712}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!is\-\_\-spdy\-\_\-control\-\_\-frame@{is\-\_\-spdy\-\_\-control\-\_\-frame}}
+\index{is\-\_\-spdy\-\_\-control\-\_\-frame@{is\-\_\-spdy\-\_\-control\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{is\-\_\-spdy\-\_\-control\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::spdy\-::parser\-::is\-\_\-spdy\-\_\-control\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1spdy_1_1parser_a9d162f5bb587fe627f678a9ab19dd712}
+checks if the frame is spdy control frame or not
+
+\begin{DoxyReturn}{Returns}
+true if it is a control frame else returns false 
+\end{DoxyReturn}
+
+
+References S\-P\-D\-Y\-\_\-\-I\-N\-V\-A\-L\-I\-D, pion\-::algorithm\-::to\-\_\-uint16(), and log4cplus\-::version.
+
+\hypertarget{classpion_1_1spdy_1_1parser_a251c6e62b561e9ce7f8df1712b61f616}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse@{parse}}
+\index{parse@{parse}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::tribool pion\-::spdy\-::parser\-::parse (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-\_\-protocol\-\_\-info} \&}]{http\-\_\-headers, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf decompressor\-\_\-ptr} \&}]{decompressor, }
+\item[{const char $\ast$}]{packet\-\_\-ptr, }
+\item[{boost\-::uint32\-\_\-t \&}]{length\-\_\-packet, }
+\item[{boost\-::uint32\-\_\-t}]{current\-\_\-stream\-\_\-count}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1spdy_1_1parser_a251c6e62b561e9ce7f8df1712b61f616}
+parse a S\-P\-D\-Y packet
+
+\begin{DoxyReturn}{Returns}
+boost\-::tribool result of parsing\-: false = S\-P\-D\-Y frame has an error, true = finished parsing S\-P\-D\-Y frame, indeterminate = not yet finished parsing S\-P\-D\-Y frame 
+\end{DoxyReturn}
+
+
+References parse\-\_\-spdy\-\_\-frame(), and set\-\_\-read\-\_\-ptr().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a014d959f438085b36d8373ff45ae1572}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-header\-\_\-payload@{parse\-\_\-header\-\_\-payload}}
+\index{parse\-\_\-header\-\_\-payload@{parse\-\_\-header\-\_\-payload}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-header\-\_\-payload}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-header\-\_\-payload (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf decompressor\-\_\-ptr} \&}]{decompressor, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame, }
+\item[{{\bf http\-\_\-protocol\-\_\-info} \&}]{http\-\_\-headers, }
+\item[{boost\-::uint32\-\_\-t}]{current\-\_\-stream\-\_\-count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a014d959f438085b36d8373ff45ae1572}
+parses an the header payload for S\-P\-D\-Y 
+
+References E\-R\-R\-O\-R\-\_\-\-D\-E\-C\-O\-M\-P\-R\-E\-S\-S\-I\-O\-N, E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::http\-\_\-headers, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, set\-\_\-error(), S\-P\-D\-Y\-\_\-\-H\-E\-A\-D\-E\-R\-S, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-R\-E\-P\-L\-Y, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-S\-T\-R\-E\-A\-M, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::stream\-\_\-id, pion\-::algorithm\-::to\-\_\-uint16(), pion\-::algorithm\-::to\-\_\-uint32(), and pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::type.
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_aae6750b7a90921dd6d8bc2da50cc1aa7}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-data@{parse\-\_\-spdy\-\_\-data}}
+\index{parse\-\_\-spdy\-\_\-data@{parse\-\_\-spdy\-\_\-data}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame, }
+\item[{boost\-::uint32\-\_\-t}]{stream\-\_\-id, }
+\item[{{\bf http\-\_\-protocol\-\_\-info} \&}]{http\-\_\-info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_aae6750b7a90921dd6d8bc2da50cc1aa7}
+parses the data for S\-P\-D\-Y 
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::flags, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::last\-\_\-chunk, and S\-P\-D\-Y\-\_\-\-F\-L\-A\-G\-\_\-\-F\-I\-N.
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_af5bfc1663a565340d316b98fbf906b9b}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-frame@{parse\-\_\-spdy\-\_\-frame}}
+\index{parse\-\_\-spdy\-\_\-frame@{parse\-\_\-spdy\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::tribool pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf decompressor\-\_\-ptr} \&}]{decompressor, }
+\item[{{\bf http\-\_\-protocol\-\_\-info} \&}]{http\-\_\-headers, }
+\item[{boost\-::uint32\-\_\-t \&}]{length\-\_\-packet, }
+\item[{boost\-::uint32\-\_\-t}]{current\-\_\-stream\-\_\-count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_af5bfc1663a565340d316b98fbf906b9b}
+parse a S\-P\-D\-Y frame (protected implementation)
+
+\begin{DoxyReturn}{Returns}
+boost\-::tribool result of parsing\-: false = S\-P\-D\-Y frame has an error, true = finished parsing S\-P\-D\-Y frame, indeterminate = not yet finished parsing S\-P\-D\-Y frame 
+\end{DoxyReturn}
+There was an error; No need to further parse. 
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::control\-\_\-bit, E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E, E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N, H\-T\-T\-P\-\_\-\-D\-A\-T\-A, H\-T\-T\-P\-\_\-\-R\-E\-Q\-U\-E\-S\-T, H\-T\-T\-P\-\_\-\-R\-E\-S\-P\-O\-N\-S\-E, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::http\-\_\-type, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, M\-I\-N\-\_\-\-S\-P\-D\-Y\-\_\-\-V\-E\-R\-S\-I\-O\-N, parse\-\_\-header\-\_\-payload(), parse\-\_\-spdy\-\_\-data(), parse\-\_\-spdy\-\_\-goaway\-\_\-frame(), parse\-\_\-spdy\-\_\-ping\-\_\-frame(), parse\-\_\-spdy\-\_\-rst\-\_\-stream(), parse\-\_\-spdy\-\_\-settings\-\_\-frame(), parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame(), P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, populate\-\_\-frame(), set\-\_\-error(), S\-P\-D\-Y\-\_\-\-C\-O\-N\-T\-R\-O\-L, S\-P\-D\-Y\-\_\-\-C\-R\-E\-D\-E\-N\-T\-I\-A\-L, S\-P\-D\-Y\-\_\-\-D\-A\-T\-A, S\-P\-D\-Y\-\_\-\-G\-O\-A\-W\-A\-Y, S\-P\-D\-Y\-\_\-\-H\-E\-A\-D\-E\-R\-S, S\-P\-D\-Y\-\_\-\-P\-I\-N\-G, S\-P\-D\-Y\-\_\-\-R\-S\-T\-\_\-\-S\-T\-R\-E\-A\-M, S\-P\-D\-Y\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-R\-E\-P\-L\-Y, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-S\-T\-R\-E\-A\-M, S\-P\-D\-Y\-\_\-\-W\-I\-N\-D\-O\-W\-\_\-\-U\-P\-D\-A\-T\-E, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::type, and pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::version.
+
+
+
+Referenced by parse().
+
+\hypertarget{classpion_1_1spdy_1_1parser_ae213965a7a77b4cfb385bfa8685c3e50}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-goaway\-\_\-frame@{parse\-\_\-spdy\-\_\-goaway\-\_\-frame}}
+\index{parse\-\_\-spdy\-\_\-goaway\-\_\-frame@{parse\-\_\-spdy\-\_\-goaway\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-goaway\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-goaway\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_ae213965a7a77b4cfb385bfa8685c3e50}
+parses an the Go\-Away Frame for S\-P\-D\-Y 
+
+References E\-R\-R\-O\-R\-\_\-\-I\-N\-T\-E\-R\-N\-A\-L\-\_\-\-S\-P\-D\-Y\-\_\-\-E\-R\-R\-O\-R, E\-R\-R\-O\-R\-\_\-\-P\-R\-O\-T\-O\-C\-O\-L\-\_\-\-E\-R\-R\-O\-R, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, set\-\_\-error(), and pion\-::algorithm\-::to\-\_\-uint32().
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a22199322320ed1a68407b438a898d98b}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-ping\-\_\-frame@{parse\-\_\-spdy\-\_\-ping\-\_\-frame}}
+\index{parse\-\_\-spdy\-\_\-ping\-\_\-frame@{parse\-\_\-spdy\-\_\-ping\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-ping\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-ping\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a22199322320ed1a68407b438a898d98b}
+parses an the Ping Frame for S\-P\-D\-Y 
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and pion\-::algorithm\-::to\-\_\-uint32().
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_ad69dd18af5afc1b6d84d743c3d21d8e0}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-rst\-\_\-stream@{parse\-\_\-spdy\-\_\-rst\-\_\-stream}}
+\index{parse\-\_\-spdy\-\_\-rst\-\_\-stream@{parse\-\_\-spdy\-\_\-rst\-\_\-stream}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-rst\-\_\-stream}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-rst\-\_\-stream (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_ad69dd18af5afc1b6d84d743c3d21d8e0}
+parses an the R\-S\-T stream for S\-P\-D\-Y 
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::flags, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, pion\-::spdy\-::rst\-\_\-stream\-\_\-status(), and pion\-::algorithm\-::to\-\_\-uint32().
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a36bd7ae76e3796cf4f99a30aa728c800}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-settings\-\_\-frame@{parse\-\_\-spdy\-\_\-settings\-\_\-frame}}
+\index{parse\-\_\-spdy\-\_\-settings\-\_\-frame@{parse\-\_\-spdy\-\_\-settings\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-settings\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-settings\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a36bd7ae76e3796cf4f99a30aa728c800}
+parses an the Settings Frame for S\-P\-D\-Y 
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a0ce476c60751c29909aec2af32b5b64e}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame@{parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame}}
+\index{parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame@{parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-window\-\_\-update\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a0ce476c60751c29909aec2af32b5b64e}
+parses an the Window\-Update Frame for S\-P\-D\-Y 
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_aa0000b4cee0f8a2084f3e0056ab561de}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!populate\-\_\-frame@{populate\-\_\-frame}}
+\index{populate\-\_\-frame@{populate\-\_\-frame}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{populate\-\_\-frame}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::spdy\-::parser\-::populate\-\_\-frame (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{{\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame, }
+\item[{boost\-::uint32\-\_\-t \&}]{length\-\_\-packet, }
+\item[{boost\-::uint32\-\_\-t \&}]{stream\-\_\-id, }
+\item[{{\bf http\-\_\-protocol\-\_\-info} \&}]{http\-\_\-headers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_aa0000b4cee0f8a2084f3e0056ab561de}
+populates the frame for every spdy packet Returns false if there was an error else returns true 
+
+References pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::control\-\_\-bit, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::data\-\_\-offset, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::data\-\_\-size, E\-R\-R\-O\-R\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-P\-D\-Y\-\_\-\-F\-R\-A\-M\-E, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::flags, pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::length, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, set\-\_\-error(), S\-P\-D\-Y\-\_\-\-D\-A\-T\-A, S\-P\-D\-Y\-\_\-\-I\-N\-V\-A\-L\-I\-D, pion\-::spdy\-::\-\_\-http\-\_\-protocol\-\_\-info\-\_\-t\-::stream\-\_\-id, pion\-::algorithm\-::to\-\_\-uint16(), pion\-::algorithm\-::to\-\_\-uint32(), pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::type, and pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::version.
+
+
+
+Referenced by parse\-\_\-spdy\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a8caaf3917f65aeab5feee513e8b656b5}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!set\-\_\-error@{set\-\_\-error}}
+\index{set\-\_\-error@{set\-\_\-error}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{set\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}static void pion\-::spdy\-::parser\-::set\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{{\bf error\-\_\-value\-\_\-t}}]{ev}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a8caaf3917f65aeab5feee513e8b656b5}
+sets an error code
+
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & error code variable to define \\
+\hline
+{\em ev} & error value to raise \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by parse\-\_\-header\-\_\-payload(), parse\-\_\-spdy\-\_\-frame(), parse\-\_\-spdy\-\_\-goaway\-\_\-frame(), and populate\-\_\-frame().
+
+\hypertarget{classpion_1_1spdy_1_1parser_a84d142819f982415844b77f5c3d8d0bb}{\index{pion\-::spdy\-::parser@{pion\-::spdy\-::parser}!set\-\_\-read\-\_\-ptr@{set\-\_\-read\-\_\-ptr}}
+\index{set\-\_\-read\-\_\-ptr@{set\-\_\-read\-\_\-ptr}!pion::spdy::parser@{pion\-::spdy\-::parser}}
+\subsubsection[{set\-\_\-read\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::spdy\-::parser\-::set\-\_\-read\-\_\-ptr (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1parser_a84d142819f982415844b77f5c3d8d0bb}
+
+
+resets the read pointer 
+
+
+
+Referenced by parse().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/spdy/\hyperlink{spdy_2parser_8hpp}{parser.\-hpp}\item 
+src/\hyperlink{spdy__parser_8cpp}{spdy\-\_\-parser.\-cpp}\end{DoxyCompactItemize}

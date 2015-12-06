@@ -1,0 +1,10 @@
+<map id="include/pion/http/reader.hpp" name="include/pion/http/reader.hpp">
+<area shape="rect" id="node3" href="$config_8hpp.html" title="pion/config.hpp" alt="" coords="1921,411,2028,437"/>
+<area shape="rect" id="node4" href="$http_2parser_8hpp.html" title="pion/http/parser.hpp" alt="" coords="2142,80,2276,107"/>
+<area shape="rect" id="node14" href="$message_8hpp.html" title="pion/http/message.hpp" alt="" coords="1797,163,1947,189"/>
+<area shape="rect" id="node29" href="$connection_8hpp.html" title="pion/tcp/connection.hpp" alt="" coords="646,163,804,189"/>
+<area shape="rect" id="node35" href="$timer_8hpp.html" title="pion/tcp/timer.hpp" alt="" coords="1041,80,1167,107"/>
+<area shape="rect" id="node11" href="$logger_8hpp.html" title="pion/logger.hpp" alt="" coords="2777,336,2887,363"/>
+<area shape="rect" id="node23" href="$http_2types_8hpp.html" title="pion/http/types.hpp" alt="" coords="2344,253,2473,280"/>
+<area shape="rect" id="node24" href="$hash__map_8hpp.html" title="pion/hash_map.hpp" alt="" coords="2445,336,2579,363"/>
+</map>

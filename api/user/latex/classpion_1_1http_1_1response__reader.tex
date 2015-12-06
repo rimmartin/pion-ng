@@ -1,0 +1,281 @@
+\hypertarget{classpion_1_1http_1_1response__reader}{\section{pion\-:\-:http\-:\-:response\-\_\-reader Class Reference}
+\label{classpion_1_1http_1_1response__reader}\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}}
+}
+
+
+{\ttfamily \#include $<$response\-\_\-reader.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:response\-\_\-reader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classpion_1_1http_1_1response__reader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:response\-\_\-reader\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classpion_1_1http_1_1response__reader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::function3$<$ void, \\*
+\hyperlink{namespacepion_1_1http_af92bc593f2514fe8733175dafec7cd33}{http\-::response\-\_\-ptr}, \\*
+\hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr}, const \\*
+boost\-::system\-::error\-\_\-code \& $>$ \hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t}
+\begin{DoxyCompactList}\small\item\em function called after the H\-T\-T\-P message has been parsed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1http_1_1response__reader_a4917191c842368a4be4c9e72927044ce}{$\sim$response\-\_\-reader} ()
+\item 
+void \hyperlink{classpion_1_1http_1_1response__reader_acbf0d25e943c1947a928970792b6a273}{set\-\_\-headers\-\_\-parsed\-\_\-callback} (\hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t} \&h)
+\begin{DoxyCompactList}\small\item\em sets a function to be called after H\-T\-T\-P headers have been parsed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classpion_1_1http_1_1response__reader}{response\-\_\-reader} $>$ \hyperlink{classpion_1_1http_1_1response__reader_af6fc5c10d090264225b72540c2c977b8}{create} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const \hyperlink{classpion_1_1http_1_1request}{http\-::request} \&http\-\_\-request, \hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t} handler)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1response__reader_adb7aa322ee7f9073b748a28079935255}{response\-\_\-reader} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const \hyperlink{classpion_1_1http_1_1request}{http\-::request} \&http\-\_\-request, \hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t} handler)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1response__reader_a538144396cd3744d01972fe857902c06}{read\-\_\-bytes} (void)
+\begin{DoxyCompactList}\small\item\em Reads more bytes from the T\-C\-P connection. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1response__reader_a0108970a1783d3983dbfa16ba5d90e31}{finished\-\_\-parsing\-\_\-headers} (const boost\-::system\-::error\-\_\-code \&ec)
+\begin{DoxyCompactList}\small\item\em Called after we have finished parsing the H\-T\-T\-P message headers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1response__reader_a775a668c0fa10535ca7bf28103b1fdc6}{finished\-\_\-reading} (const boost\-::system\-::error\-\_\-code \&ec)
+\begin{DoxyCompactList}\small\item\em Called after we have finished reading/parsing the H\-T\-T\-P message. \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1http_1_1message}{http\-::message} \& \hyperlink{classpion_1_1http_1_1response__reader_a9bd4bf810cb215ddf36f6cec31f5d078}{get\-\_\-message} (void)
+\begin{DoxyCompactList}\small\item\em Returns a reference to the H\-T\-T\-P message being parsed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion_1_1http_af92bc593f2514fe8733175dafec7cd33}{http\-::response\-\_\-ptr} \hyperlink{classpion_1_1http_1_1response__reader_ac06fea6a8b6b5383dacd99c313b6f77d}{m\-\_\-http\-\_\-msg}
+\begin{DoxyCompactList}\small\item\em The new H\-T\-T\-P message container being created. \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t} \hyperlink{classpion_1_1http_1_1response__reader_aff7c50ffd2cb1748620b6051d8f9233c}{m\-\_\-finished}
+\begin{DoxyCompactList}\small\item\em function called after the H\-T\-T\-P message has been parsed \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{finished\-\_\-handler\-\_\-t} \hyperlink{classpion_1_1http_1_1response__reader_a1671bc073f332ea3c14a09af89c99c83}{m\-\_\-parsed\-\_\-headers}
+\begin{DoxyCompactList}\small\item\em function called after the H\-T\-T\-P message headers have been parsed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1http_1_1response__reader}{response\-\_\-reader}\-: asynchronously reads and parses H\-T\-T\-P responses 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!finished\-\_\-handler\-\_\-t@{finished\-\_\-handler\-\_\-t}}
+\index{finished\-\_\-handler\-\_\-t@{finished\-\_\-handler\-\_\-t}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{finished\-\_\-handler\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function3$<$void, {\bf http\-::response\-\_\-ptr}, {\bf tcp\-::connection\-\_\-ptr}, const boost\-::system\-::error\-\_\-code\&$>$ {\bf pion\-::http\-::response\-\_\-reader\-::finished\-\_\-handler\-\_\-t}}}\label{classpion_1_1http_1_1response__reader_a5ca8a2f566ad6c5f6c6ae264d557944e}
+
+
+function called after the H\-T\-T\-P message has been parsed 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1response__reader_a4917191c842368a4be4c9e72927044ce}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!$\sim$response\-\_\-reader@{$\sim$response\-\_\-reader}}
+\index{$\sim$response\-\_\-reader@{$\sim$response\-\_\-reader}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{$\sim$response\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::response\-\_\-reader\-::$\sim$response\-\_\-reader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response__reader_a4917191c842368a4be4c9e72927044ce}
+\hypertarget{classpion_1_1http_1_1response__reader_adb7aa322ee7f9073b748a28079935255}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!response\-\_\-reader@{response\-\_\-reader}}
+\index{response\-\_\-reader@{response\-\_\-reader}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{response\-\_\-reader}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::response\-\_\-reader\-::response\-\_\-reader (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const {\bf http\-::request} \&}]{http\-\_\-request, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1response__reader_adb7aa322ee7f9073b748a28079935255}
+protected constructor restricts creation of objects (use \hyperlink{classpion_1_1http_1_1response__reader_af6fc5c10d090264225b72540c2c977b8}{create()})
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection containing a new message to parse \\
+\hline
+{\em http\-\_\-request} & the request we are responding to \\
+\hline
+{\em handler} & function called after the message has been parsed \\
+\hline
+\end{DoxyParams}
+
+
+References m\-\_\-http\-\_\-msg, P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R, and pion\-::http\-::parser\-::set\-\_\-logger().
+
+
+
+Referenced by create().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1response__reader_af6fc5c10d090264225b72540c2c977b8}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!create@{create}}
+\index{create@{create}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::shared\-\_\-ptr$<${\bf response\-\_\-reader}$>$ pion\-::http\-::response\-\_\-reader\-::create (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const {\bf http\-::request} \&}]{http\-\_\-request, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1http_1_1response__reader_af6fc5c10d090264225b72540c2c977b8}
+creates new \hyperlink{classpion_1_1http_1_1response__reader}{response\-\_\-reader} objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection containing a new message to parse \\
+\hline
+{\em http\-\_\-request} & the request we are responding to \\
+\hline
+{\em handler} & function called after the message has been parsed \\
+\hline
+\end{DoxyParams}
+
+
+References response\-\_\-reader().
+
+\hypertarget{classpion_1_1http_1_1response__reader_a0108970a1783d3983dbfa16ba5d90e31}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!finished\-\_\-parsing\-\_\-headers@{finished\-\_\-parsing\-\_\-headers}}
+\index{finished\-\_\-parsing\-\_\-headers@{finished\-\_\-parsing\-\_\-headers}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{finished\-\_\-parsing\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-\_\-reader\-::finished\-\_\-parsing\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{const boost\-::system\-::error\-\_\-code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response__reader_a0108970a1783d3983dbfa16ba5d90e31}
+
+
+Called after we have finished parsing the H\-T\-T\-P message headers. 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1parser_abed3c66097728d826c4ec771837803ea}{pion\-::http\-::parser}.
+
+
+
+References pion\-::http\-::reader\-::get\-\_\-connection(), m\-\_\-http\-\_\-msg, and m\-\_\-parsed\-\_\-headers.
+
+\hypertarget{classpion_1_1http_1_1response__reader_a775a668c0fa10535ca7bf28103b1fdc6}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!finished\-\_\-reading@{finished\-\_\-reading}}
+\index{finished\-\_\-reading@{finished\-\_\-reading}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{finished\-\_\-reading}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-\_\-reader\-::finished\-\_\-reading (
+\begin{DoxyParamCaption}
+\item[{const boost\-::system\-::error\-\_\-code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response__reader_a775a668c0fa10535ca7bf28103b1fdc6}
+
+
+Called after we have finished reading/parsing the H\-T\-T\-P message. 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1reader_ae7d3818810df72a7d2895ff1f767be9b}{pion\-::http\-::reader}.
+
+
+
+References pion\-::http\-::reader\-::get\-\_\-connection(), m\-\_\-finished, and m\-\_\-http\-\_\-msg.
+
+\hypertarget{classpion_1_1http_1_1response__reader_a9bd4bf810cb215ddf36f6cec31f5d078}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!get\-\_\-message@{get\-\_\-message}}
+\index{get\-\_\-message@{get\-\_\-message}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{get\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf http\-::message}\& pion\-::http\-::response\-\_\-reader\-::get\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response__reader_a9bd4bf810cb215ddf36f6cec31f5d078}
+
+
+Returns a reference to the H\-T\-T\-P message being parsed. 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1reader_a6186ceb636d352cae97c33fe105bd9a3}{pion\-::http\-::reader}.
+
+
+
+References m\-\_\-http\-\_\-msg.
+
+\hypertarget{classpion_1_1http_1_1response__reader_a538144396cd3744d01972fe857902c06}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!read\-\_\-bytes@{read\-\_\-bytes}}
+\index{read\-\_\-bytes@{read\-\_\-bytes}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{read\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-\_\-reader\-::read\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response__reader_a538144396cd3744d01972fe857902c06}
+
+
+Reads more bytes from the T\-C\-P connection. 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1reader_a8a3b9767dc84fd1a6ee0e1558ec3d76e}{pion\-::http\-::reader}.
+
+
+
+References pion\-::http\-::reader\-::consume\-\_\-bytes(), and pion\-::http\-::reader\-::get\-\_\-connection().
+
+\hypertarget{classpion_1_1http_1_1response__reader_acbf0d25e943c1947a928970792b6a273}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!set\-\_\-headers\-\_\-parsed\-\_\-callback@{set\-\_\-headers\-\_\-parsed\-\_\-callback}}
+\index{set\-\_\-headers\-\_\-parsed\-\_\-callback@{set\-\_\-headers\-\_\-parsed\-\_\-callback}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{set\-\_\-headers\-\_\-parsed\-\_\-callback}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-\_\-reader\-::set\-\_\-headers\-\_\-parsed\-\_\-callback (
+\begin{DoxyParamCaption}
+\item[{{\bf finished\-\_\-handler\-\_\-t} \&}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response__reader_acbf0d25e943c1947a928970792b6a273}
+
+
+sets a function to be called after H\-T\-T\-P headers have been parsed 
+
+
+
+References m\-\_\-parsed\-\_\-headers.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1http_1_1response__reader_aff7c50ffd2cb1748620b6051d8f9233c}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!m\-\_\-finished@{m\-\_\-finished}}
+\index{m\-\_\-finished@{m\-\_\-finished}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{m\-\_\-finished}]{\setlength{\rightskip}{0pt plus 5cm}{\bf finished\-\_\-handler\-\_\-t} pion\-::http\-::response\-\_\-reader\-::m\-\_\-finished\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1response__reader_aff7c50ffd2cb1748620b6051d8f9233c}
+
+
+function called after the H\-T\-T\-P message has been parsed 
+
+
+
+Referenced by finished\-\_\-reading().
+
+\hypertarget{classpion_1_1http_1_1response__reader_ac06fea6a8b6b5383dacd99c313b6f77d}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!m\-\_\-http\-\_\-msg@{m\-\_\-http\-\_\-msg}}
+\index{m\-\_\-http\-\_\-msg@{m\-\_\-http\-\_\-msg}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{m\-\_\-http\-\_\-msg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf http\-::response\-\_\-ptr} pion\-::http\-::response\-\_\-reader\-::m\-\_\-http\-\_\-msg\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1response__reader_ac06fea6a8b6b5383dacd99c313b6f77d}
+
+
+The new H\-T\-T\-P message container being created. 
+
+
+
+Referenced by finished\-\_\-parsing\-\_\-headers(), finished\-\_\-reading(), get\-\_\-message(), and response\-\_\-reader().
+
+\hypertarget{classpion_1_1http_1_1response__reader_a1671bc073f332ea3c14a09af89c99c83}{\index{pion\-::http\-::response\-\_\-reader@{pion\-::http\-::response\-\_\-reader}!m\-\_\-parsed\-\_\-headers@{m\-\_\-parsed\-\_\-headers}}
+\index{m\-\_\-parsed\-\_\-headers@{m\-\_\-parsed\-\_\-headers}!pion::http::response_reader@{pion\-::http\-::response\-\_\-reader}}
+\subsubsection[{m\-\_\-parsed\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf finished\-\_\-handler\-\_\-t} pion\-::http\-::response\-\_\-reader\-::m\-\_\-parsed\-\_\-headers\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1response__reader_a1671bc073f332ea3c14a09af89c99c83}
+
+
+function called after the H\-T\-T\-P message headers have been parsed 
+
+
+
+Referenced by finished\-\_\-parsing\-\_\-headers(), and set\-\_\-headers\-\_\-parsed\-\_\-callback().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{response__reader_8hpp}{response\-\_\-reader.\-hpp}\end{DoxyCompactItemize}

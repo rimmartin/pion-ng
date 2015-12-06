@@ -1,0 +1,247 @@
+\hypertarget{classlog4cplus_1_1FileAppender}{\section{log4cplus\-:\-:File\-Appender Class Reference}
+\label{classlog4cplus_1_1FileAppender}\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}}
+}
+
+
+{\ttfamily \#include $<$fileappender.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1FileAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1FileAppender__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1FileAppender_a34a56fce967c5745257a29895dfe1b57}{File\-Appender} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&\hyperlink{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}{filename}, std\-::ios\-\_\-base\-::openmode mode=std\-::ios\-\_\-base\-::trunc, bool \hyperlink{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}{immediate\-Flush}=true, bool \hyperlink{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}{create\-Dirs}=false)
+\item 
+\hyperlink{classlog4cplus_1_1FileAppender_ad8419f6c44e79e297ad67c5aa13a153b}{File\-Appender} (const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \&properties, std\-::ios\-\_\-base\-::openmode mode=std\-::ios\-\_\-base\-::trunc)
+\item 
+virtual \hyperlink{classlog4cplus_1_1FileAppender_a06c5ec5269b11cb8c51b8abf7a3c2be4}{$\sim$\-File\-Appender} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1FileAppender_ab6eae1f13e1eae0db2f801e52c150e41}{close} ()
+\item 
+virtual std\-::locale \hyperlink{classlog4cplus_1_1FileAppender_a0bd339348a4808928002fe687d20c7d9}{imbue} (std\-::locale const \&loc)
+\item 
+virtual std\-::locale \hyperlink{classlog4cplus_1_1FileAppender_a847fb3110d62f11e04c890c904e7c4bd}{getloc} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1FileAppender_a47a8d23755accaf61487844f6361958f}{append} (const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\-::\-Internal\-Logging\-Event} \&event)
+\item 
+void \hyperlink{classlog4cplus_1_1FileAppender_abbb4bac90d278e50d87bec6628d4b8cc}{open} (std\-::ios\-\_\-base\-::openmode mode)
+\item 
+bool \hyperlink{classlog4cplus_1_1FileAppender_ae88bfd1b1e50df4d26479820f71726ac}{reopen} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}{immediate\-Flush}
+\item 
+bool \hyperlink{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}{create\-Dirs}
+\item 
+int \hyperlink{classlog4cplus_1_1FileAppender_a094e4ae84c02d9bcfee5e7837e681e80}{reopen\-Delay}
+\item 
+unsigned long \hyperlink{classlog4cplus_1_1FileAppender_af22fb2b65a82077a6948ba789b9b12de}{buffer\-Size}
+\item 
+std\-::unique\-\_\-ptr\\*
+$<$ \hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{log4cplus\-::tchar}\mbox{[}$\,$\mbox{]}$>$ \hyperlink{classlog4cplus_1_1FileAppender_a420584c8cc879174341da03822d4ed35}{buffer}
+\item 
+\hyperlink{namespacelog4cplus_a2f9380184debead93aa014e022fca22e}{log4cplus\-::tofstream} \hyperlink{classlog4cplus_1_1FileAppender_a34206d2d34fe3e66e1a8a623c6c22cfe}{out}
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}{filename}
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1FileAppender_a02862bbb42d5dfa02a5121d7bd25d2a0}{locale\-Name}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time} \hyperlink{classlog4cplus_1_1FileAppender_accdc4c309ec3586059ab7431690c0a2b}{reopen\-\_\-time}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Appends log events to a file.
+
+\paragraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily File} ]This property specifies output file name.
+
+
+\item[{\ttfamily Immediate\-Flush} ]When it is set true, output stream will be flushed after each appended event.
+
+
+\item[{\ttfamily Append} ]When it is set true, output file will be appended to instead of being truncated at opening.
+
+
+\item[{\ttfamily Reopen\-Delay} ]This property sets a delay after which the appender will try to reopen log file again, after last logging failure. 
+
+
+\item[{\ttfamily Buffer\-Size} ]Non-\/zero value of this property sets up buffering of output stream using a buffer of given size. 
+
+
+\item[{\ttfamily Use\-Lock\-File} ]Set this property to {\ttfamily true} if you want your output to go into a log file shared by multiple processes. When this property is set to true then \hyperlink{namespacelog4cplus}{log4cplus} uses O\-S specific facilities (e.\-g., {\ttfamily lockf()}) to provide inter-\/process file locking. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender}{Appender} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily Lock\-File} ]This property specifies lock file, file used for inter-\/process synchronization of log file access. When this property is not specified, the value is derived from {\ttfamily File} property by addition of \char`\"{}.\-lock\char`\"{} suffix. The property is only used when {\ttfamily Use\-Lock\-File} is set to true. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender}{Appender} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily Locale} ]This property specifies a locale name that will be imbued into output stream. Locale can be specified either by system specific locale name, e.\-g., {\ttfamily en\-\_\-\-U\-S.\-U\-T\-F-\/8}, or by one of four recognized keywords\-: {\ttfamily G\-L\-O\-B\-A\-L}, {\ttfamily D\-E\-F\-A\-U\-L\-T} (which is an alias for {\ttfamily G\-L\-O\-B\-A\-L}), {\ttfamily U\-S\-E\-R} and {\ttfamily C\-L\-A\-S\-S\-I\-C}. When specified locale is not available, {\ttfamily G\-L\-O\-B\-A\-L} is used instead. It is possible to register additional locale keywords by registering an instance of {\ttfamily \hyperlink{classlog4cplus_1_1spi_1_1LocaleFactory}{spi\-::\-Locale\-Factory}} in {\ttfamily \hyperlink{namespacelog4cplus_1_1spi_ae93cf5d075d4355919917879db043004}{spi\-::\-Locale\-Factory\-Registry}}. \begin{DoxySeeAlso}{See Also}
+\hyperlink{namespacelog4cplus_1_1spi_a1204090fdb7f5da78c94348e13f8c3e1}{spi\-::get\-Locale\-Factory\-Registry()} 
+\end{DoxySeeAlso}
+
+\item[{\ttfamily Create\-Dirs} ]Set this property to {\ttfamily true} if you want to create missing directories in path leading to log file and lock file.  
+\end{DoxyDescription}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1FileAppender_a34a56fce967c5745257a29895dfe1b57}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!File\-Appender@{File\-Appender}}
+\index{File\-Appender@{File\-Appender}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-File\-Appender\-::\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{filename, }
+\item[{std\-::ios\-\_\-base\-::openmode}]{mode = {\ttfamily std\-:\-:ios\-\_\-base\-:\-:trunc}, }
+\item[{bool}]{immediate\-Flush = {\ttfamily true}, }
+\item[{bool}]{create\-Dirs = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1FileAppender_a34a56fce967c5745257a29895dfe1b57}
+\hypertarget{classlog4cplus_1_1FileAppender_ad8419f6c44e79e297ad67c5aa13a153b}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!File\-Appender@{File\-Appender}}
+\index{File\-Appender@{File\-Appender}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-File\-Appender\-::\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Properties} \&}]{properties, }
+\item[{std\-::ios\-\_\-base\-::openmode}]{mode = {\ttfamily std\-:\-:ios\-\_\-base\-:\-:trunc}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1FileAppender_ad8419f6c44e79e297ad67c5aa13a153b}
+\hypertarget{classlog4cplus_1_1FileAppender_a06c5ec5269b11cb8c51b8abf7a3c2be4}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!$\sim$\-File\-Appender@{$\sim$\-File\-Appender}}
+\index{$\sim$\-File\-Appender@{$\sim$\-File\-Appender}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{$\sim$\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-File\-Appender\-::$\sim$\-File\-Appender (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1FileAppender_a06c5ec5269b11cb8c51b8abf7a3c2be4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1FileAppender_a47a8d23755accaf61487844f6361958f}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!append@{append}}
+\index{append@{append}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-File\-Appender\-::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf spi\-::\-Internal\-Logging\-Event} \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1FileAppender_a47a8d23755accaf61487844f6361958f}
+Subclasses of {\ttfamily \hyperlink{classlog4cplus_1_1Appender}{Appender}} should implement this method to perform actual logging. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\-Append} method. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\-::\-Appender}.
+
+
+
+Reimplemented in \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}{log4cplus\-::\-Daily\-Rolling\-File\-Appender}, and \hyperlink{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}{log4cplus\-::\-Rolling\-File\-Appender}.
+
+\hypertarget{classlog4cplus_1_1FileAppender_ab6eae1f13e1eae0db2f801e52c150e41}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!close@{close}}
+\index{close@{close}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-File\-Appender\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1FileAppender_ab6eae1f13e1eae0db2f801e52c150e41}
+Release any resources allocated within the appender such as file handles, network connections, etc.
+
+It is a programming error to append to a closed appender. 
+
+Implements \hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\-::\-Appender}.
+
+
+
+Reimplemented in \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}{log4cplus\-::\-Daily\-Rolling\-File\-Appender}.
+
+\hypertarget{classlog4cplus_1_1FileAppender_a847fb3110d62f11e04c890c904e7c4bd}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!getloc@{getloc}}
+\index{getloc@{getloc}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{getloc}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::locale log4cplus\-::\-File\-Appender\-::getloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1FileAppender_a847fb3110d62f11e04c890c904e7c4bd}
+\begin{DoxyReturn}{Returns}
+Locale imbued in fstream. 
+\end{DoxyReturn}
+\hypertarget{classlog4cplus_1_1FileAppender_a0bd339348a4808928002fe687d20c7d9}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!imbue@{imbue}}
+\index{imbue@{imbue}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{imbue}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::locale log4cplus\-::\-File\-Appender\-::imbue (
+\begin{DoxyParamCaption}
+\item[{std\-::locale const \&}]{loc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1FileAppender_a0bd339348a4808928002fe687d20c7d9}
+Redefine default locale for output stream. It may be a good idea to provide U\-T\-F-\/8 locale in case U\-N\-I\-C\-O\-D\-E macro is defined. \hypertarget{classlog4cplus_1_1FileAppender_abbb4bac90d278e50d87bec6628d4b8cc}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!open@{open}}
+\index{open@{open}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-File\-Appender\-::open (
+\begin{DoxyParamCaption}
+\item[{std\-::ios\-\_\-base\-::openmode}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_abbb4bac90d278e50d87bec6628d4b8cc}
+\hypertarget{classlog4cplus_1_1FileAppender_ae88bfd1b1e50df4d26479820f71726ac}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!reopen@{reopen}}
+\index{reopen@{reopen}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{reopen}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::\-File\-Appender\-::reopen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_ae88bfd1b1e50df4d26479820f71726ac}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1FileAppender_a420584c8cc879174341da03822d4ed35}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!buffer@{buffer}}
+\index{buffer@{buffer}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unique\-\_\-ptr$<${\bf log4cplus\-::tchar}\mbox{[}$\,$\mbox{]}$>$ log4cplus\-::\-File\-Appender\-::buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_a420584c8cc879174341da03822d4ed35}
+\hypertarget{classlog4cplus_1_1FileAppender_af22fb2b65a82077a6948ba789b9b12de}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!buffer\-Size@{buffer\-Size}}
+\index{buffer\-Size@{buffer\-Size}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{buffer\-Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long log4cplus\-::\-File\-Appender\-::buffer\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_af22fb2b65a82077a6948ba789b9b12de}
+\hypertarget{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!create\-Dirs@{create\-Dirs}}
+\index{create\-Dirs@{create\-Dirs}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{create\-Dirs}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::\-File\-Appender\-::create\-Dirs\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}
+When this variable is true, \hyperlink{classlog4cplus_1_1FileAppender}{File\-Appender} will try to create missing directories in path leading to log file.
+
+The {\ttfamily create\-Dirs} variable is set to {\ttfamily false} by default. \hypertarget{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!filename@{filename}}
+\index{filename@{filename}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-File\-Appender\-::filename\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}
+\hypertarget{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!immediate\-Flush@{immediate\-Flush}}
+\index{immediate\-Flush@{immediate\-Flush}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{immediate\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::\-File\-Appender\-::immediate\-Flush\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}
+Immediate flush means that the underlying writer or output stream will be flushed at the end of each append operation. Immediate flush is slower but ensures that each append request is actually written. If {\ttfamily immediate\-Flush} is set to {\ttfamily false}, then there is a good chance that the last few logs events are not actually written to persistent media if and when the application crashes.
+
+The {\ttfamily immediate\-Flush} variable is set to {\ttfamily true} by default. \hypertarget{classlog4cplus_1_1FileAppender_a02862bbb42d5dfa02a5121d7bd25d2a0}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!locale\-Name@{locale\-Name}}
+\index{locale\-Name@{locale\-Name}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{locale\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-File\-Appender\-::locale\-Name\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_a02862bbb42d5dfa02a5121d7bd25d2a0}
+\hypertarget{classlog4cplus_1_1FileAppender_a34206d2d34fe3e66e1a8a623c6c22cfe}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!out@{out}}
+\index{out@{out}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tofstream} log4cplus\-::\-File\-Appender\-::out\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_a34206d2d34fe3e66e1a8a623c6c22cfe}
+\hypertarget{classlog4cplus_1_1FileAppender_accdc4c309ec3586059ab7431690c0a2b}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!reopen\-\_\-time@{reopen\-\_\-time}}
+\index{reopen\-\_\-time@{reopen\-\_\-time}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{reopen\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::helpers\-::\-Time} log4cplus\-::\-File\-Appender\-::reopen\-\_\-time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_accdc4c309ec3586059ab7431690c0a2b}
+\hypertarget{classlog4cplus_1_1FileAppender_a094e4ae84c02d9bcfee5e7837e681e80}{\index{log4cplus\-::\-File\-Appender@{log4cplus\-::\-File\-Appender}!reopen\-Delay@{reopen\-Delay}}
+\index{reopen\-Delay@{reopen\-Delay}!log4cplus::FileAppender@{log4cplus\-::\-File\-Appender}}
+\subsubsection[{reopen\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}int log4cplus\-::\-File\-Appender\-::reopen\-Delay\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1FileAppender_a094e4ae84c02d9bcfee5e7837e681e80}
+When any append operation fails, {\ttfamily reopen\-Delay} says for how many seconds the next attempt to re-\/open the log file and resume logging will be delayed. If {\ttfamily reopen\-Delay} is zero, each failed append operation will cause log file to be re-\/opened. By default, {\ttfamily reopen\-Delay} is 1 second. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{fileappender_8h}{fileappender.\-h}\end{DoxyCompactItemize}

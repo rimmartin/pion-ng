@@ -1,0 +1,103 @@
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry}{\section{log4cplus\-:\-:spi\-:\-:Factory\-Registry$<$ T $>$ Class Template Reference}
+\label{classlog4cplus_1_1spi_1_1FactoryRegistry}\index{log4cplus\-::spi\-::\-Factory\-Registry$<$ T $>$@{log4cplus\-::spi\-::\-Factory\-Registry$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$factory.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:spi\-:\-:Factory\-Registry$<$ T $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classlog4cplus_1_1spi_1_1FactoryRegistry__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:spi\-:\-:Factory\-Registry$<$ T $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classlog4cplus_1_1spi_1_1FactoryRegistry__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}{product\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}{$\sim$\-Factory\-Registry} ()
+\item 
+bool \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{put} (std\-::unique\-\_\-ptr$<$ T $>$ object)
+\item 
+T $\ast$ \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a941bd685355ca54336103aa94e4cf986}{get} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a77accd76c66b710e4ff566692d768bf2}{delete\-Object} (void $\ast$object) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class log4cplus\-::spi\-::\-Factory\-Registry$<$ T $>$}
+
+This template class is used as a \char`\"{}\-Factory Registry\char`\"{}. Objects are \char`\"{}entered\char`\"{} into the registry with a \char`\"{}name\char`\"{} using the {\ttfamily \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{put()}} method. (The registry then owns the object.) These object can then be retrieved using the {\ttfamily \hyperlink{classlog4cplus_1_1spi_1_1FactoryRegistry_a941bd685355ca54336103aa94e4cf986}{get()}} method.
+
+{\bfseries Note\-:} This class is Thread-\/safe. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}{\index{log4cplus\-::spi\-::\-Factory\-Registry@{log4cplus\-::spi\-::\-Factory\-Registry}!product\-\_\-type@{product\-\_\-type}}
+\index{product\-\_\-type@{product\-\_\-type}!log4cplus::spi::FactoryRegistry@{log4cplus\-::spi\-::\-Factory\-Registry}}
+\subsubsection[{product\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ typedef T {\bf log4cplus\-::spi\-::\-Factory\-Registry}$<$ T $>$\-::{\bf product\-\_\-type}}}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a9c8134597fb85e45d8feac0053c7a353}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}{\index{log4cplus\-::spi\-::\-Factory\-Registry@{log4cplus\-::spi\-::\-Factory\-Registry}!$\sim$\-Factory\-Registry@{$\sim$\-Factory\-Registry}}
+\index{$\sim$\-Factory\-Registry@{$\sim$\-Factory\-Registry}!log4cplus::spi::FactoryRegistry@{log4cplus\-::spi\-::\-Factory\-Registry}}
+\subsubsection[{$\sim$\-Factory\-Registry}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual {\bf log4cplus\-::spi\-::\-Factory\-Registry}$<$ T $>$\-::$\sim${\bf Factory\-Registry} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a5b698a5c12f0bc714c52f6e4d52dcb86}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a77accd76c66b710e4ff566692d768bf2}{\index{log4cplus\-::spi\-::\-Factory\-Registry@{log4cplus\-::spi\-::\-Factory\-Registry}!delete\-Object@{delete\-Object}}
+\index{delete\-Object@{delete\-Object}!log4cplus::spi::FactoryRegistry@{log4cplus\-::spi\-::\-Factory\-Registry}}
+\subsubsection[{delete\-Object}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual void {\bf log4cplus\-::spi\-::\-Factory\-Registry}$<$ T $>$\-::delete\-Object (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{object}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a77accd76c66b710e4ff566692d768bf2}
+Deletes {\ttfamily object}. 
+
+Implements \hyperlink{classlog4cplus_1_1spi_1_1ObjectRegistryBase_ac433a6bb595f4e6147f5b7d2befeb63f}{log4cplus\-::spi\-::\-Object\-Registry\-Base}.
+
+\hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a941bd685355ca54336103aa94e4cf986}{\index{log4cplus\-::spi\-::\-Factory\-Registry@{log4cplus\-::spi\-::\-Factory\-Registry}!get@{get}}
+\index{get@{get}!log4cplus::spi::FactoryRegistry@{log4cplus\-::spi\-::\-Factory\-Registry}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T$\ast$ {\bf log4cplus\-::spi\-::\-Factory\-Registry}$<$ T $>$\-::get (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a941bd685355ca54336103aa94e4cf986}
+Used to retrieve an object from the registry. (The registry owns the returned pointer.) \hypertarget{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}{\index{log4cplus\-::spi\-::\-Factory\-Registry@{log4cplus\-::spi\-::\-Factory\-Registry}!put@{put}}
+\index{put@{put}!log4cplus::spi::FactoryRegistry@{log4cplus\-::spi\-::\-Factory\-Registry}}
+\subsubsection[{put}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf log4cplus\-::spi\-::\-Factory\-Registry}$<$ T $>$\-::put (
+\begin{DoxyParamCaption}
+\item[{std\-::unique\-\_\-ptr$<$ T $>$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1spi_1_1FactoryRegistry_a24dc4dfa2a6d49a4e489e8a963433c0a}
+Used to enter an object into the registry. (The registry now owns {\ttfamily object}.) 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/spi/\hyperlink{factory_8h}{factory.\-h}\end{DoxyCompactItemize}

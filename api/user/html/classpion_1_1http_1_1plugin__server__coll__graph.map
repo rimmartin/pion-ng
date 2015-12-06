@@ -1,0 +1,7 @@
+<map id="pion::http::plugin_server" name="pion::http::plugin_server">
+<area shape="rect" id="node2" href="$classpion_1_1http_1_1server.html" title="pion::http::server" alt="" coords="33,357,148,384"/>
+<area shape="rect" id="node3" href="$classpion_1_1tcp_1_1server.html" title="pion::tcp::server" alt="" coords="35,280,145,307"/>
+<area shape="rect" id="node5" href="$structpion_1_1logger.html" title="pion::logger" alt="" coords="123,189,209,216"/>
+<area shape="rect" id="node6" title="STL class. " alt="" coords="129,99,204,125"/>
+<area shape="rect" id="node7" title="STL class. " alt="" coords="106,6,227,47"/>
+</map>

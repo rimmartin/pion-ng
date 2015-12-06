@@ -1,0 +1,151 @@
+\hypertarget{classlog4cplus_1_1ConsoleAppender}{\section{log4cplus\-:\-:Console\-Appender Class Reference}
+\label{classlog4cplus_1_1ConsoleAppender}\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}}
+}
+
+
+{\ttfamily \#include $<$consoleappender.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:Console\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classlog4cplus_1_1ConsoleAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:Console\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1ConsoleAppender__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}{Console\-Appender} (bool \hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{log\-To\-Std\-Err}=false, bool \hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{immediate\-Flush}=false)
+\item 
+\hyperlink{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}{Console\-Appender} (const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \&properties)
+\item 
+\hyperlink{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}{$\sim$\-Console\-Appender} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1ConsoleAppender_aebb4ee6bb4fc08b361c39b16b425fde3}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \\*
+\hyperlink{classlog4cplus_1_1thread_1_1Mutex}{log4cplus\-::thread\-::\-Mutex} const \& \hyperlink{classlog4cplus_1_1ConsoleAppender_a0547bbc1d5437a9e42ccf6cc6d767bfc}{get\-Output\-Mutex} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1ConsoleAppender_a52038f78971b73fdb5650e8e1e6b1872}{append} (const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\-::\-Internal\-Logging\-Event} \&event)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{log\-To\-Std\-Err}
+\item 
+bool \hyperlink{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{immediate\-Flush}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\-Appender} appends log events to {\ttfamily std\-::cout} or {\ttfamily std\-::cerr} using a layout specified by the user. The default target is {\ttfamily std\-::cout}.
+
+\paragraph*{Properties}
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily log\-To\-Std\-Err} ]When it is set true, the output stream will be {\ttfamily std\-::cerr} instead of {\ttfamily std\-::cout}.
+
+
+\item[{\ttfamily Immediate\-Flush} ]When it is set true, output stream will be flushed after each appended event.
+
+
+\end{DoxyDescription}\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender}{Appender} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!Console\-Appender@{Console\-Appender}}
+\index{Console\-Appender@{Console\-Appender}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{Console\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Console\-Appender\-::\-Console\-Appender (
+\begin{DoxyParamCaption}
+\item[{bool}]{log\-To\-Std\-Err = {\ttfamily false}, }
+\item[{bool}]{immediate\-Flush = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1ConsoleAppender_af98d47115c88bfbc45e9b80b5038f0ec}
+\hypertarget{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!Console\-Appender@{Console\-Appender}}
+\index{Console\-Appender@{Console\-Appender}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{Console\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Console\-Appender\-::\-Console\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Properties} \&}]{properties}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1ConsoleAppender_af64dc9992e9b3487ddc962a28494e048}
+\hypertarget{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!$\sim$\-Console\-Appender@{$\sim$\-Console\-Appender}}
+\index{$\sim$\-Console\-Appender@{$\sim$\-Console\-Appender}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{$\sim$\-Console\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Console\-Appender\-::$\sim$\-Console\-Appender (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1ConsoleAppender_acce881eb7b2083c8af248dbfe857b0fb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1ConsoleAppender_a52038f78971b73fdb5650e8e1e6b1872}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!append@{append}}
+\index{append@{append}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Console\-Appender\-::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf spi\-::\-Internal\-Logging\-Event} \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1ConsoleAppender_a52038f78971b73fdb5650e8e1e6b1872}
+Subclasses of {\ttfamily \hyperlink{classlog4cplus_1_1Appender}{Appender}} should implement this method to perform actual logging. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\-Append} method. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\-::\-Appender}.
+
+\hypertarget{classlog4cplus_1_1ConsoleAppender_aebb4ee6bb4fc08b361c39b16b425fde3}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!close@{close}}
+\index{close@{close}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Console\-Appender\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1ConsoleAppender_aebb4ee6bb4fc08b361c39b16b425fde3}
+Release any resources allocated within the appender such as file handles, network connections, etc.
+
+It is a programming error to append to a closed appender. 
+
+Implements \hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\-::\-Appender}.
+
+\hypertarget{classlog4cplus_1_1ConsoleAppender_a0547bbc1d5437a9e42ccf6cc6d767bfc}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!get\-Output\-Mutex@{get\-Output\-Mutex}}
+\index{get\-Output\-Mutex@{get\-Output\-Mutex}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{get\-Output\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf log4cplus\-::thread\-::\-Mutex} const\& log4cplus\-::\-Console\-Appender\-::get\-Output\-Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classlog4cplus_1_1ConsoleAppender_a0547bbc1d5437a9e42ccf6cc6d767bfc}
+This mutex is used by \hyperlink{classlog4cplus_1_1ConsoleAppender}{Console\-Appender} and \hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{helpers\-::\-Log\-Log} classes to synchronize output to console. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!immediate\-Flush@{immediate\-Flush}}
+\index{immediate\-Flush@{immediate\-Flush}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{immediate\-Flush}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::\-Console\-Appender\-::immediate\-Flush\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1ConsoleAppender_a19df4423821530ceeca467b8f827ec02}
+Immediate flush means that the underlying output stream will be flushed at the end of each append operation. \hypertarget{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}{\index{log4cplus\-::\-Console\-Appender@{log4cplus\-::\-Console\-Appender}!log\-To\-Std\-Err@{log\-To\-Std\-Err}}
+\index{log\-To\-Std\-Err@{log\-To\-Std\-Err}!log4cplus::ConsoleAppender@{log4cplus\-::\-Console\-Appender}}
+\subsubsection[{log\-To\-Std\-Err}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::\-Console\-Appender\-::log\-To\-Std\-Err\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1ConsoleAppender_ad014a66a6af1e1d33d3a311d65122d90}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{consoleappender_8h}{consoleappender.\-h}\end{DoxyCompactItemize}

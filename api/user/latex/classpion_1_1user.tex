@@ -1,0 +1,195 @@
+\hypertarget{classpion_1_1user}{\section{pion\-:\-:user Class Reference}
+\label{classpion_1_1user}\index{pion\-::user@{pion\-::user}}
+}
+
+
+{\ttfamily \#include $<$user.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:user\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classpion_1_1user__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:user\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classpion_1_1user__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1user_a7215ae3543a0fc3c8c68e4e20f67d542}{user} (std\-::string const \&username)
+\begin{DoxyCompactList}\small\item\em construct a new user object \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1user_a0d26edcf0b01dee7e3c4457ced9108d1}{user} (std\-::string const \&username, std\-::string const \&password)
+\begin{DoxyCompactList}\small\item\em construct a new user object \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1user_adabb39ff720554fe13d8e93d7d647953}{$\sim$user} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{classpion_1_1user_abb1f00fc40a240786ca3f4f0703866e6}{get\-\_\-username} () const 
+\begin{DoxyCompactList}\small\item\em returns user name as a string \end{DoxyCompactList}\item 
+std\-::string const \& \hyperlink{classpion_1_1user_ab88146712e075ec69d9dfc4f3ba7f5ae}{get\-\_\-password} () const 
+\begin{DoxyCompactList}\small\item\em returns password for the user (encrypted if S\-S\-L is enabled) \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1user_af3f539ee4d00a29780d2c6e1c4396aaf}{match\-\_\-password} (const std\-::string \&password) const 
+\item 
+virtual void \hyperlink{classpion_1_1user_aff790ab701624dce1a686737f391b6bc}{set\-\_\-password} (const std\-::string \&password)
+\begin{DoxyCompactList}\small\item\em sets password credentials for given user \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{classpion_1_1user_a49689c1ffbdfa6a6d69fe445d290ddaa}{m\-\_\-username}
+\begin{DoxyCompactList}\small\item\em username string \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classpion_1_1user_aebf5fb3a48c950dc906ee3bfeb414562}{m\-\_\-password}
+\begin{DoxyCompactList}\small\item\em password string (actual contents depends on implementation) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+user\-: base class to store user credentials 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1user_a7215ae3543a0fc3c8c68e4e20f67d542}{\index{pion\-::user@{pion\-::user}!user@{user}}
+\index{user@{user}!pion::user@{pion\-::user}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::user\-::user (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{username}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1user_a7215ae3543a0fc3c8c68e4e20f67d542}
+
+
+construct a new user object 
+
+\hypertarget{classpion_1_1user_a0d26edcf0b01dee7e3c4457ced9108d1}{\index{pion\-::user@{pion\-::user}!user@{user}}
+\index{user@{user}!pion::user@{pion\-::user}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::user\-::user (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{username, }
+\item[{std\-::string const \&}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1user_a0d26edcf0b01dee7e3c4457ced9108d1}
+
+
+construct a new user object 
+
+
+
+References set\-\_\-password().
+
+\hypertarget{classpion_1_1user_adabb39ff720554fe13d8e93d7d647953}{\index{pion\-::user@{pion\-::user}!$\sim$user@{$\sim$user}}
+\index{$\sim$user@{$\sim$user}!pion::user@{pion\-::user}}
+\subsubsection[{$\sim$user}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::user\-::$\sim$user (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1user_adabb39ff720554fe13d8e93d7d647953}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1user_ab88146712e075ec69d9dfc4f3ba7f5ae}{\index{pion\-::user@{pion\-::user}!get\-\_\-password@{get\-\_\-password}}
+\index{get\-\_\-password@{get\-\_\-password}!pion::user@{pion\-::user}}
+\subsubsection[{get\-\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& pion\-::user\-::get\-\_\-password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1user_ab88146712e075ec69d9dfc4f3ba7f5ae}
+
+
+returns password for the user (encrypted if S\-S\-L is enabled) 
+
+
+
+References m\-\_\-password.
+
+\hypertarget{classpion_1_1user_abb1f00fc40a240786ca3f4f0703866e6}{\index{pion\-::user@{pion\-::user}!get\-\_\-username@{get\-\_\-username}}
+\index{get\-\_\-username@{get\-\_\-username}!pion::user@{pion\-::user}}
+\subsubsection[{get\-\_\-username}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& pion\-::user\-::get\-\_\-username (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1user_abb1f00fc40a240786ca3f4f0703866e6}
+
+
+returns user name as a string 
+
+
+
+References m\-\_\-username.
+
+\hypertarget{classpion_1_1user_af3f539ee4d00a29780d2c6e1c4396aaf}{\index{pion\-::user@{pion\-::user}!match\-\_\-password@{match\-\_\-password}}
+\index{match\-\_\-password@{match\-\_\-password}!pion::user@{pion\-::user}}
+\subsubsection[{match\-\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool pion\-::user\-::match\-\_\-password (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{password}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1user_af3f539ee4d00a29780d2c6e1c4396aaf}
+matches password credential for given user
+
+
+\begin{DoxyParams}{Parameters}
+{\em password} & password credentials \\
+\hline
+\end{DoxyParams}
+
+
+References m\-\_\-password.
+
+\hypertarget{classpion_1_1user_aff790ab701624dce1a686737f391b6bc}{\index{pion\-::user@{pion\-::user}!set\-\_\-password@{set\-\_\-password}}
+\index{set\-\_\-password@{set\-\_\-password}!pion::user@{pion\-::user}}
+\subsubsection[{set\-\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::user\-::set\-\_\-password (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1user_aff790ab701624dce1a686737f391b6bc}
+
+
+sets password credentials for given user 
+
+
+
+References m\-\_\-password.
+
+
+
+Referenced by user().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1user_aebf5fb3a48c950dc906ee3bfeb414562}{\index{pion\-::user@{pion\-::user}!m\-\_\-password@{m\-\_\-password}}
+\index{m\-\_\-password@{m\-\_\-password}!pion::user@{pion\-::user}}
+\subsubsection[{m\-\_\-password}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::user\-::m\-\_\-password\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1user_aebf5fb3a48c950dc906ee3bfeb414562}
+
+
+password string (actual contents depends on implementation) 
+
+
+
+Referenced by get\-\_\-password(), match\-\_\-password(), and set\-\_\-password().
+
+\hypertarget{classpion_1_1user_a49689c1ffbdfa6a6d69fe445d290ddaa}{\index{pion\-::user@{pion\-::user}!m\-\_\-username@{m\-\_\-username}}
+\index{m\-\_\-username@{m\-\_\-username}!pion::user@{pion\-::user}}
+\subsubsection[{m\-\_\-username}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string pion\-::user\-::m\-\_\-username\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1user_a49689c1ffbdfa6a6d69fe445d290ddaa}
+
+
+username string 
+
+
+
+Referenced by get\-\_\-username().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{user_8hpp}{user.\-hpp}\end{DoxyCompactItemize}

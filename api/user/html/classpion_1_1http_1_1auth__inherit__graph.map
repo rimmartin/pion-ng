@@ -1,0 +1,4 @@
+<map id="pion::http::auth" name="pion::http::auth">
+<area shape="rect" id="node3" href="$classpion_1_1http_1_1basic__auth.html" title="pion::http::basic_auth" alt="" coords="5,155,147,181"/>
+<area shape="rect" id="node4" href="$classpion_1_1http_1_1cookie__auth.html" title="pion::http::cookie_auth" alt="" coords="171,155,321,181"/>
+</map>

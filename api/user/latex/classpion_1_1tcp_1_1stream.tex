@@ -1,0 +1,298 @@
+\hypertarget{classpion_1_1tcp_1_1stream}{\section{pion\-:\-:tcp\-:\-:stream Class Reference}
+\label{classpion_1_1tcp_1_1stream}\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}}
+}
+
+
+{\ttfamily \#include $<$stream.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:tcp\-:\-:stream\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classpion_1_1tcp_1_1stream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:tcp\-:\-:stream\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{classpion_1_1tcp_1_1stream__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{classpion_1_1tcp_1_1stream_a7a1f84f71957c4d181b3956544bed706}{char\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream_a226831f2baafb1ad65259fc6c9bb511a}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream_a226831f2baafb1ad65259fc6c9bb511a}{int\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream_a035e53a0425f0f05a3c3fd6c9c8be55d}{off\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream_a035e53a0425f0f05a3c3fd6c9c8be55d}{off\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream_a9a325595e421119b0e6e6b5972863d98}{pos\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream_a9a325595e421119b0e6e6b5972863d98}{pos\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$ \hyperlink{classpion_1_1tcp_1_1stream_a6150c81c258841c753e9246b952193bb}{traits\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream_a12129bbe7550db52ca7d194908f13565}{stream} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&conn\-\_\-ptr)
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream_aee8bf2f4b4af54b0e946552bb3c42cb2}{stream} (boost\-::asio\-::io\-\_\-service \&io\-\_\-service, const bool ssl\-\_\-flag=false)
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream_a00241ca354c2f8ee48cc2f443c001464}{stream} (boost\-::asio\-::io\-\_\-service \&io\-\_\-service, \hyperlink{classpion_1_1tcp_1_1connection_a8587c35bbf48a119aa82f228e779a30e}{connection\-::ssl\-\_\-context\-\_\-type} \&ssl\-\_\-context)
+\item 
+boost\-::system\-::error\-\_\-code \hyperlink{classpion_1_1tcp_1_1stream_aa9a0601a3f0d969c795b363e9aa932a6}{accept} (boost\-::asio\-::ip\-::tcp\-::acceptor \&tcp\-\_\-acceptor)
+\item 
+boost\-::system\-::error\-\_\-code \hyperlink{classpion_1_1tcp_1_1stream_a6f420f12a9f3586dba9d9b14632e42b8}{connect} (boost\-::asio\-::ip\-::tcp\-::endpoint \&tcp\-\_\-endpoint)
+\item 
+boost\-::system\-::error\-\_\-code \hyperlink{classpion_1_1tcp_1_1stream_a81cbfbba0a2849ec2476eee75f1ff9df}{connect} (const boost\-::asio\-::ip\-::address \&remote\-\_\-addr, const unsigned int remote\-\_\-port)
+\item 
+void \hyperlink{classpion_1_1tcp_1_1stream_a5d77399767f11fe4ebd7e8ee9e41bf4c}{close} (void)
+\begin{DoxyCompactList}\small\item\em closes the tcp connection \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1tcp_1_1stream_a4e27277109a8a65e4d8824955a70f495}{is\-\_\-open} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the connection is currently open \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1tcp_1_1stream_acdd826b93ef7eb171f86f26226f293eb}{get\-\_\-ssl\-\_\-flag} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the connection is encrypted using S\-S\-L \end{DoxyCompactList}\item 
+boost\-::asio\-::ip\-::address \hyperlink{classpion_1_1tcp_1_1stream_a56bb8792fd97a8cd522a6ba2802730db}{get\-\_\-remote\-\_\-ip} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the client's I\-P address \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer}{stream\-\_\-buffer} $\ast$ \hyperlink{classpion_1_1tcp_1_1stream_a73604ddf5106fd3df9922774a05f4930}{rdbuf} (void)
+\begin{DoxyCompactList}\small\item\em returns a pointer to the stream buffer in use \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+stream\-: std\-::basic\-\_\-iostream wrapper for T\-C\-P network connections 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream_a7a1f84f71957c4d181b3956544bed706}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!char\-\_\-type@{char\-\_\-type}}
+\index{char\-\_\-type@{char\-\_\-type}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{char\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf pion\-::tcp\-::stream\-::char\-\_\-type}}}\label{classpion_1_1tcp_1_1stream_a7a1f84f71957c4d181b3956544bed706}
+\hypertarget{classpion_1_1tcp_1_1stream_a226831f2baafb1ad65259fc6c9bb511a}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!int\-\_\-type@{int\-\_\-type}}
+\index{int\-\_\-type@{int\-\_\-type}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{int\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf int\-\_\-type} {\bf pion\-::tcp\-::stream\-::int\-\_\-type}}}\label{classpion_1_1tcp_1_1stream_a226831f2baafb1ad65259fc6c9bb511a}
+\hypertarget{classpion_1_1tcp_1_1stream_a035e53a0425f0f05a3c3fd6c9c8be55d}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!off\-\_\-type@{off\-\_\-type}}
+\index{off\-\_\-type@{off\-\_\-type}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{off\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf off\-\_\-type} {\bf pion\-::tcp\-::stream\-::off\-\_\-type}}}\label{classpion_1_1tcp_1_1stream_a035e53a0425f0f05a3c3fd6c9c8be55d}
+\hypertarget{classpion_1_1tcp_1_1stream_a9a325595e421119b0e6e6b5972863d98}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!pos\-\_\-type@{pos\-\_\-type}}
+\index{pos\-\_\-type@{pos\-\_\-type}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{pos\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf pos\-\_\-type} {\bf pion\-::tcp\-::stream\-::pos\-\_\-type}}}\label{classpion_1_1tcp_1_1stream_a9a325595e421119b0e6e6b5972863d98}
+\hypertarget{classpion_1_1tcp_1_1stream_a6150c81c258841c753e9246b952193bb}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!traits\-\_\-type@{traits\-\_\-type}}
+\index{traits\-\_\-type@{traits\-\_\-type}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{traits\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$ {\bf pion\-::tcp\-::stream\-::traits\-\_\-type}}}\label{classpion_1_1tcp_1_1stream_a6150c81c258841c753e9246b952193bb}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream_a12129bbe7550db52ca7d194908f13565}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!stream@{stream}}
+\index{stream@{stream}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{stream}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-::stream (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{conn\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1tcp_1_1stream_a12129bbe7550db52ca7d194908f13565}
+constructs a T\-C\-P stream object for an existing T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn\-\_\-ptr} & pointer to the T\-C\-P connection to use for reading \& writing \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1tcp_1_1stream_aee8bf2f4b4af54b0e946552bb3c42cb2}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!stream@{stream}}
+\index{stream@{stream}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{stream}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-::stream (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-\_\-service, }
+\item[{const bool}]{ssl\-\_\-flag = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1tcp_1_1stream_aee8bf2f4b4af54b0e946552bb3c42cb2}
+constructs a T\-C\-P stream object for a new T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\-\_\-service} & asio service associated with the connection \\
+\hline
+{\em ssl\-\_\-flag} & if true then the connection will be encrypted using S\-S\-L \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1tcp_1_1stream_a00241ca354c2f8ee48cc2f443c001464}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!stream@{stream}}
+\index{stream@{stream}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{stream}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-::stream (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-\_\-service, }
+\item[{{\bf connection\-::ssl\-\_\-context\-\_\-type} \&}]{ssl\-\_\-context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a00241ca354c2f8ee48cc2f443c001464}
+constructs a T\-C\-P stream object for a new S\-S\-L/\-T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\-\_\-service} & asio service associated with the connection \\
+\hline
+{\em ssl\-\_\-context} & asio ssl context associated with the connection \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream_aa9a0601a3f0d969c795b363e9aa932a6}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!accept@{accept}}
+\index{accept@{accept}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{accept}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::system\-::error\-\_\-code pion\-::tcp\-::stream\-::accept (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::ip\-::tcp\-::acceptor \&}]{tcp\-\_\-acceptor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_aa9a0601a3f0d969c795b363e9aa932a6}
+accepts a new tcp connection and performs S\-S\-L handshake if necessary
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-acceptor} & object used to accept new connections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::system\-::error\-\_\-code contains error code if the connection fails
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+boost\-::asio\-::basic\-\_\-socket\-\_\-acceptor\-::accept() 
+\end{DoxySeeAlso}
+
+
+References pion\-::tcp\-::connection\-::accept(), pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), get\-\_\-ssl\-\_\-flag(), and pion\-::tcp\-::connection\-::handshake\-\_\-server().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a5d77399767f11fe4ebd7e8ee9e41bf4c}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!close@{close}}
+\index{close@{close}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::stream\-::close (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a5d77399767f11fe4ebd7e8ee9e41bf4c}
+
+
+closes the tcp connection 
+
+
+
+References pion\-::tcp\-::connection\-::close(), and pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a6f420f12a9f3586dba9d9b14632e42b8}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!connect@{connect}}
+\index{connect@{connect}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::system\-::error\-\_\-code pion\-::tcp\-::stream\-::connect (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{tcp\-\_\-endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a6f420f12a9f3586dba9d9b14632e42b8}
+connects to a remote endpoint and performs S\-S\-L handshake if necessary
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-endpoint} & remote endpoint to connect to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::system\-::error\-\_\-code contains error code if the connection fails
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+boost\-::asio\-::basic\-\_\-socket\-\_\-acceptor\-::connect() 
+\end{DoxySeeAlso}
+
+
+References pion\-::tcp\-::connection\-::connect(), pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), get\-\_\-ssl\-\_\-flag(), and pion\-::tcp\-::connection\-::handshake\-\_\-client().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a81cbfbba0a2849ec2476eee75f1ff9df}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!connect@{connect}}
+\index{connect@{connect}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::system\-::error\-\_\-code pion\-::tcp\-::stream\-::connect (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::address \&}]{remote\-\_\-addr, }
+\item[{const unsigned int}]{remote\-\_\-port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a81cbfbba0a2849ec2476eee75f1ff9df}
+connects to a (I\-Pv4) remote endpoint and performs S\-S\-L handshake if necessary
+
+
+\begin{DoxyParams}{Parameters}
+{\em remote\-\_\-addr} & remote I\-P address (v4) to connect to \\
+\hline
+{\em remote\-\_\-port} & remote port number to connect to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::system\-::error\-\_\-code contains error code if the connection fails
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+boost\-::asio\-::basic\-\_\-socket\-\_\-acceptor\-::connect() 
+\end{DoxySeeAlso}
+
+
+References pion\-::tcp\-::connection\-::connect(), pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), get\-\_\-ssl\-\_\-flag(), and pion\-::tcp\-::connection\-::handshake\-\_\-client().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a56bb8792fd97a8cd522a6ba2802730db}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!get\-\_\-remote\-\_\-ip@{get\-\_\-remote\-\_\-ip}}
+\index{get\-\_\-remote\-\_\-ip@{get\-\_\-remote\-\_\-ip}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{get\-\_\-remote\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::ip\-::address pion\-::tcp\-::stream\-::get\-\_\-remote\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a56bb8792fd97a8cd522a6ba2802730db}
+
+
+returns the client's I\-P address 
+
+
+
+References pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), and pion\-::tcp\-::connection\-::get\-\_\-remote\-\_\-ip().
+
+\hypertarget{classpion_1_1tcp_1_1stream_acdd826b93ef7eb171f86f26226f293eb}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!get\-\_\-ssl\-\_\-flag@{get\-\_\-ssl\-\_\-flag}}
+\index{get\-\_\-ssl\-\_\-flag@{get\-\_\-ssl\-\_\-flag}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{get\-\_\-ssl\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::tcp\-::stream\-::get\-\_\-ssl\-\_\-flag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_acdd826b93ef7eb171f86f26226f293eb}
+
+
+returns true if the connection is encrypted using S\-S\-L 
+
+
+
+References pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), and pion\-::tcp\-::connection\-::get\-\_\-ssl\-\_\-flag().
+
+
+
+Referenced by accept(), and connect().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a4e27277109a8a65e4d8824955a70f495}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!is\-\_\-open@{is\-\_\-open}}
+\index{is\-\_\-open@{is\-\_\-open}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{is\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::tcp\-::stream\-::is\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a4e27277109a8a65e4d8824955a70f495}
+
+
+returns true if the connection is currently open 
+
+
+
+References pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection(), and pion\-::tcp\-::connection\-::is\-\_\-open().
+
+\hypertarget{classpion_1_1tcp_1_1stream_a73604ddf5106fd3df9922774a05f4930}{\index{pion\-::tcp\-::stream@{pion\-::tcp\-::stream}!rdbuf@{rdbuf}}
+\index{rdbuf@{rdbuf}!pion::tcp::stream@{pion\-::tcp\-::stream}}
+\subsubsection[{rdbuf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stream\-\_\-buffer}$\ast$ pion\-::tcp\-::stream\-::rdbuf (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream_a73604ddf5106fd3df9922774a05f4930}
+
+
+returns a pointer to the stream buffer in use 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/tcp/\hyperlink{stream_8hpp}{stream.\-hpp}\end{DoxyCompactItemize}

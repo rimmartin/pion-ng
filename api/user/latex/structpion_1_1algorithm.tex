@@ -1,0 +1,824 @@
+\hypertarget{structpion_1_1algorithm}{\section{pion\-:\-:algorithm Struct Reference}
+\label{structpion_1_1algorithm}\index{pion\-::algorithm@{pion\-::algorithm}}
+}
+
+
+{\ttfamily \#include $<$algorithm.\-hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{structpion_1_1algorithm_ad1700ce7cf8e29bb7600d5729fd4cdad}{base64\-\_\-decode} (std\-::string const \&input, std\-::string \&output)
+\item 
+static bool \hyperlink{structpion_1_1algorithm_ae5f52e52ac349ecf20410f2ad3e257dd}{base64\-\_\-encode} (std\-::string const \&input, std\-::string \&output)
+\item 
+static std\-::string \hyperlink{structpion_1_1algorithm_a440bd54b07a24c80bc939fdb03583721}{url\-\_\-decode} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em escapes U\-R\-L-\/encoded strings (a\%20value+with\%20spaces) \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{structpion_1_1algorithm_aa4eaedaecac95a638cedf5c4884de1b8}{url\-\_\-encode} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em encodes strings so that they are safe for U\-R\-Ls (with\%20spaces) \end{DoxyCompactList}\item 
+static std\-::string \hyperlink{structpion_1_1algorithm_a2177ca0d0f01e6ef6d4d3bceb73d82bb}{xml\-\_\-encode} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em T\-O\-D\-O\-: escapes X\-M\-L/\-H\-T\-M\-L-\/encoded strings (1 $<$ 2) \end{DoxyCompactList}\item 
+static void \hyperlink{structpion_1_1algorithm_ab3cce74846661c3585ec5f540a99ff07}{float\-\_\-from\-\_\-bytes} (long double \&value, const unsigned char $\ast$ptr, size\-\_\-t num\-\_\-exp\-\_\-bits, size\-\_\-t num\-\_\-fraction\-\_\-bits)
+\item 
+static void \hyperlink{structpion_1_1algorithm_a61872c7ccf75793a16d8ce7961f28842}{float\-\_\-to\-\_\-bytes} (long double value, unsigned char $\ast$ptr, size\-\_\-t num\-\_\-exp\-\_\-bits, size\-\_\-t num\-\_\-fraction\-\_\-bits)
+\item 
+static boost\-::uint8\-\_\-t \hyperlink{structpion_1_1algorithm_a79898e00c20439125c68d90248afb2e0}{to\-\_\-uint8} (unsigned char byte)
+\begin{DoxyCompactList}\small\item\em convert sequence of one byte to 8-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int8\-\_\-t \hyperlink{structpion_1_1algorithm_afb09388ae577897cd3fac5572c9e4eef}{to\-\_\-int8} (unsigned char byte)
+\begin{DoxyCompactList}\small\item\em convert sequence of one byte to 8-\/bit signed integer \end{DoxyCompactList}\item 
+static boost\-::uint8\-\_\-t \hyperlink{structpion_1_1algorithm_a6088634700c44316b7d6d55e687d65aa}{to\-\_\-uint8} (char byte)
+\begin{DoxyCompactList}\small\item\em convert sequence of one byte to 8-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int8\-\_\-t \hyperlink{structpion_1_1algorithm_a8a891be43c16371c9cf9447224f1705c}{to\-\_\-int8} (char byte)
+\begin{DoxyCompactList}\small\item\em convert sequence of one byte to 8-\/bit signed integer \end{DoxyCompactList}\item 
+static boost\-::uint16\-\_\-t \hyperlink{structpion_1_1algorithm_aa755b157b2cda061aec92c49b7ee9dac}{to\-\_\-uint16} (unsigned char high, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int16\-\_\-t \hyperlink{structpion_1_1algorithm_a32a9690172523ef7c558f92b319429c9}{to\-\_\-int16} (unsigned char high, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit signed integer \end{DoxyCompactList}\item 
+static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_ad1fd95bf2a6c3c2a775492c1acd0b5c1}{to\-\_\-uint24} (unsigned char high, unsigned char mid, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_a607abc832ec9f6983cb42b76cc8914e6}{to\-\_\-int24} (unsigned char high, unsigned char mid, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit signed integer \end{DoxyCompactList}\item 
+static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_af2092366e2a82fbfc456bceb15a0f599}{to\-\_\-uint32} (unsigned char high, unsigned char mid1, unsigned char mid2, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_ac8dd9cfadaa3fb758b4ea3f9bd524595}{to\-\_\-int32} (unsigned char high, unsigned char mid1, unsigned char mid2, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit signed integer \end{DoxyCompactList}\item 
+static boost\-::uint64\-\_\-t \hyperlink{structpion_1_1algorithm_ab4622cfb454d0ca206ffe42077a15c52}{to\-\_\-uint64} (unsigned char high, unsigned char mid1, unsigned char mid2, unsigned char mid3, unsigned char mid4, unsigned char mid5, unsigned char mid6, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit unsigned integer \end{DoxyCompactList}\item 
+static boost\-::int64\-\_\-t \hyperlink{structpion_1_1algorithm_aa08271822b58fa0ca87fb4f0740b1d3a}{to\-\_\-int64} (unsigned char high, unsigned char mid1, unsigned char mid2, unsigned char mid3, unsigned char mid4, unsigned char mid5, unsigned char mid6, unsigned char low)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static boost\-::uint16\-\_\-t \hyperlink{structpion_1_1algorithm_a260aedfd03824ec43e7a11a9bb410b69}{to\-\_\-uint16} (T1 high, T2 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\static boost\-::int16\-\_\-t \hyperlink{structpion_1_1algorithm_ae474bcdaf7b1a54182e1724c8ebe3410}{to\-\_\-int16} (T1 high, T2 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 $>$ }\\static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_a1080e1965b34717702987a559665a8e9}{to\-\_\-uint24} (T1 high, T2 mid, T3 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 $>$ }\\static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_aed87f4efd146f0d6afdedc8618dfac9c}{to\-\_\-int24} (T1 high, T2 mid, T3 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ }\\static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_a14437094ac2afa2b8b2f94a92baf7253}{to\-\_\-uint32} (T1 high, T2 mid1, T3 mid2, T4 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ }\\static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_abad3afe7cdb40f779cac637f3e28702c}{to\-\_\-int32} (T1 high, T2 mid1, T3 mid2, T4 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 $>$ }\\static boost\-::uint64\-\_\-t \hyperlink{structpion_1_1algorithm_adae7fcd4321444d86e98acf5796ecadd}{to\-\_\-uint64} (T1 high, T2 mid1, T3 mid2, T4 mid3, T5 mid4, T6 mid5, T7 mid6, T8 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 $>$ }\\static boost\-::int64\-\_\-t \hyperlink{structpion_1_1algorithm_a559bde18e9670cefd4c4937394f2c82c}{to\-\_\-int64} (T1 high, T2 mid1, T3 mid2, T4 mid3, T5 mid4, T6 mid5, T7 mid6, T8 low)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::uint8\-\_\-t \hyperlink{structpion_1_1algorithm_a60bfca7cfacf90a664a4977cd70ccf68}{to\-\_\-uint8} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert byte pointer into an 8-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::int8\-\_\-t \hyperlink{structpion_1_1algorithm_a884a55189c818f89a88ac6791e79de96}{to\-\_\-int8} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert byte pointer into an 8-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::uint16\-\_\-t \hyperlink{structpion_1_1algorithm_a009df038f511d87e4ccb89163305a42b}{to\-\_\-uint16} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::int16\-\_\-t \hyperlink{structpion_1_1algorithm_a8a5dc0884a7dd1deb53762947dce167c}{to\-\_\-int16} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of two bytes to 16-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_ae54ebabcc5db708e1528c6afd4bb23fc}{to\-\_\-uint24} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_aa7faf5f422723c835e432e6c0bd43a71}{to\-\_\-int24} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of three bytes to 24-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::uint32\-\_\-t \hyperlink{structpion_1_1algorithm_ad8e9e4a781ab4c3903f53b771239bad3}{to\-\_\-uint32} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::int32\-\_\-t \hyperlink{structpion_1_1algorithm_a1f6f08fd741bd53e2d7ab23d13d557ec}{to\-\_\-int32} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of four bytes to 32-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::uint64\-\_\-t \hyperlink{structpion_1_1algorithm_a6043289280973a9c81c3f227f7be3558}{to\-\_\-uint64} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit unsigned integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static boost\-::int64\-\_\-t \hyperlink{structpion_1_1algorithm_a320eb1084a7f4c6721aa4c5c1f212c76}{to\-\_\-int64} (const Byte $\ast$buf)
+\begin{DoxyCompactList}\small\item\em convert sequence of eight bytes to 64-\/bit signed integer \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a8ef52bc60dfefc940b6fdf5a1dcb5ad7}{from\-\_\-uint8} (Byte $\ast$buf, const boost\-::uint8\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 8-\/bit unsigned integer into sequence of one byte \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_aaf784c8b8c422a15929fb1486d3a7282}{from\-\_\-int8} (Byte $\ast$buf, const boost\-::int8\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 8-\/bit signed integer into sequence of one byte \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a9c5dbfc05e297e824b47e03c6cf4ce26}{from\-\_\-uint16} (Byte $\ast$buf, const boost\-::uint16\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 16-\/bit unsigned integer into sequence of two bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a7668dc2bd3cc56d59353e8664ca128d5}{from\-\_\-int16} (Byte $\ast$buf, const boost\-::int16\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 16-\/bit signed integer into sequence of two bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a72de6ae9d5cee3b2fed7014a0bbe612c}{from\-\_\-uint24} (Byte $\ast$buf, const boost\-::uint32\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 24-\/bit unsigned integer into sequence of three bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_ada38cebfc1f9988ee34695663e260abb}{from\-\_\-int24} (Byte $\ast$buf, const boost\-::int32\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 24-\/bit signed integer into sequence of three bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a5c78cafafadb680180ff97f1eaf58fce}{from\-\_\-uint32} (Byte $\ast$buf, const boost\-::uint32\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 32-\/bit unsigned integer into sequence of four bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_acea1222844d4cb2fa93cd2510999e376}{from\-\_\-int32} (Byte $\ast$buf, const boost\-::int32\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 32-\/bit signed integer into sequence of four bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a5b030d4284869249e23311d75eaedd57}{from\-\_\-uint64} (Byte $\ast$buf, const boost\-::uint64\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 64-\/bit unsigned integer into sequence of eight bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_ad89ffdbdeab62a40643b566a166ec726}{from\-\_\-int64} (Byte $\ast$buf, const boost\-::int64\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em convert 64-\/bit signed integer into sequence of eight bytes \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Byte $>$ }\\static float \hyperlink{structpion_1_1algorithm_a31acba5139987280e2d51aeb48f21f28}{to\-\_\-float} (const Byte $\ast$ptr)
+\item 
+{\footnotesize template$<$typename Byte $>$ }\\static double \hyperlink{structpion_1_1algorithm_a00b83de67d45aceec623296314885f81}{to\-\_\-double} (const Byte $\ast$ptr)
+\item 
+{\footnotesize template$<$typename Byte $>$ }\\static long double \hyperlink{structpion_1_1algorithm_aad9a66169d2c5a3b009ae25255775cf0}{to\-\_\-long\-\_\-double} (const Byte $\ast$ptr)
+\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a281972f7e3f6a234080e1c792d920723}{from\-\_\-float} (Byte $\ast$ptr, const float n)
+\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a241c29e87904952a01f40624d5494aef}{from\-\_\-double} (Byte $\ast$ptr, const double n)
+\item 
+{\footnotesize template$<$typename Byte $>$ }\\static void \hyperlink{structpion_1_1algorithm_a387c15c00a1d229059e9da8ff9e0aa84}{from\-\_\-long\-\_\-double} (Byte $\ast$ptr, const long double n)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$const \hyperlink{structpion_1_1algorithm_ad068c4b57bfaefc287dcda5681095603}{U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R} = \char`\"{}\textbackslash{}x\-E\-F\textbackslash{}x\-B\-F\textbackslash{}x\-B\-D\char`\"{}
+\begin{DoxyCompactList}\small\item\em 3-\/byte character sequence representing the U\-T\-F-\/8 replacement character \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structpion_1_1algorithm_ad1700ce7cf8e29bb7600d5729fd4cdad}{\index{pion\-::algorithm@{pion\-::algorithm}!base64\-\_\-decode@{base64\-\_\-decode}}
+\index{base64\-\_\-decode@{base64\-\_\-decode}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{base64\-\_\-decode}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::algorithm\-::base64\-\_\-decode (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{input, }
+\item[{std\-::string \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_ad1700ce7cf8e29bb7600d5729fd4cdad}
+base64 decoding
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ base64 encoded string \\
+\hline
+{\em output} & -\/ decoded string ( may include non-\/text chars) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false if input string contains non-\/base64 symbols 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::basic\-\_\-auth\-::parse\-\_\-credentials().
+
+\hypertarget{structpion_1_1algorithm_ae5f52e52ac349ecf20410f2ad3e257dd}{\index{pion\-::algorithm@{pion\-::algorithm}!base64\-\_\-encode@{base64\-\_\-encode}}
+\index{base64\-\_\-encode@{base64\-\_\-encode}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{base64\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::algorithm\-::base64\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{input, }
+\item[{std\-::string \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_ae5f52e52ac349ecf20410f2ad3e257dd}
+base64 encoding
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & -\/ arbitrary string ( may include non-\/text chars) \\
+\hline
+{\em output} & -\/ base64 encoded string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::cookie\-\_\-auth\-::process\-\_\-login().
+
+\hypertarget{structpion_1_1algorithm_ab3cce74846661c3585ec5f540a99ff07}{\index{pion\-::algorithm@{pion\-::algorithm}!float\-\_\-from\-\_\-bytes@{float\-\_\-from\-\_\-bytes}}
+\index{float\-\_\-from\-\_\-bytes@{float\-\_\-from\-\_\-bytes}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{float\-\_\-from\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::algorithm\-::float\-\_\-from\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{long double \&}]{value, }
+\item[{const unsigned char $\ast$}]{ptr, }
+\item[{size\-\_\-t}]{num\-\_\-exp\-\_\-bits, }
+\item[{size\-\_\-t}]{num\-\_\-fraction\-\_\-bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_ab3cce74846661c3585ec5f540a99ff07}
+convert sequence of bytes in I\-E\-E\-E 754 format into a native floating point data type reference\-: \href{http://en.wikipedia.org/wiki/Single_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Single\-\_\-precision\-\_\-floating-\/point\-\_\-format} 
+
+References S\-H\-I\-F\-T\-\_\-\-B\-I\-T\-M\-A\-S\-K.
+
+\hypertarget{structpion_1_1algorithm_a61872c7ccf75793a16d8ce7961f28842}{\index{pion\-::algorithm@{pion\-::algorithm}!float\-\_\-to\-\_\-bytes@{float\-\_\-to\-\_\-bytes}}
+\index{float\-\_\-to\-\_\-bytes@{float\-\_\-to\-\_\-bytes}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{float\-\_\-to\-\_\-bytes}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::algorithm\-::float\-\_\-to\-\_\-bytes (
+\begin{DoxyParamCaption}
+\item[{long double}]{value, }
+\item[{unsigned char $\ast$}]{ptr, }
+\item[{size\-\_\-t}]{num\-\_\-exp\-\_\-bits, }
+\item[{size\-\_\-t}]{num\-\_\-fraction\-\_\-bits}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_a61872c7ccf75793a16d8ce7961f28842}
+convert native floating point type into a sequence of bytes in I\-E\-E\-E 754 format reference\-: \href{http://en.wikipedia.org/wiki/Single_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Single\-\_\-precision\-\_\-floating-\/point\-\_\-format} 
+
+References S\-H\-I\-F\-T\-\_\-\-B\-I\-T\-M\-A\-S\-K.
+
+\hypertarget{structpion_1_1algorithm_a241c29e87904952a01f40624d5494aef}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-double@{from\-\_\-double}}
+\index{from\-\_\-double@{from\-\_\-double}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{ptr, }
+\item[{const double}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a241c29e87904952a01f40624d5494aef}
+convert double into sequence of eight bytes in \char`\"{}double precision\char`\"{} binary64 format \href{http://en.wikipedia.org/wiki/Double_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Double\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_a281972f7e3f6a234080e1c792d920723}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-float@{from\-\_\-float}}
+\index{from\-\_\-float@{from\-\_\-float}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{ptr, }
+\item[{const float}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a281972f7e3f6a234080e1c792d920723}
+convert float into sequence of four bytes in \char`\"{}single precision\char`\"{} binary32 format \href{http://en.wikipedia.org/wiki/Single_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Single\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_a7668dc2bd3cc56d59353e8664ca128d5}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-int16@{from\-\_\-int16}}
+\index{from\-\_\-int16@{from\-\_\-int16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-int16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-int16 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::int16\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a7668dc2bd3cc56d59353e8664ca128d5}
+
+
+convert 16-\/bit signed integer into sequence of two bytes 
+
+\hypertarget{structpion_1_1algorithm_ada38cebfc1f9988ee34695663e260abb}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-int24@{from\-\_\-int24}}
+\index{from\-\_\-int24@{from\-\_\-int24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-int24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-int24 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::int32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ada38cebfc1f9988ee34695663e260abb}
+
+
+convert 24-\/bit signed integer into sequence of three bytes 
+
+\hypertarget{structpion_1_1algorithm_acea1222844d4cb2fa93cd2510999e376}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-int32@{from\-\_\-int32}}
+\index{from\-\_\-int32@{from\-\_\-int32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-int32 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::int32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_acea1222844d4cb2fa93cd2510999e376}
+
+
+convert 32-\/bit signed integer into sequence of four bytes 
+
+\hypertarget{structpion_1_1algorithm_ad89ffdbdeab62a40643b566a166ec726}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-int64@{from\-\_\-int64}}
+\index{from\-\_\-int64@{from\-\_\-int64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::int64\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ad89ffdbdeab62a40643b566a166ec726}
+
+
+convert 64-\/bit signed integer into sequence of eight bytes 
+
+\hypertarget{structpion_1_1algorithm_aaf784c8b8c422a15929fb1486d3a7282}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-int8@{from\-\_\-int8}}
+\index{from\-\_\-int8@{from\-\_\-int8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-int8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-int8 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::int8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aaf784c8b8c422a15929fb1486d3a7282}
+
+
+convert 8-\/bit signed integer into sequence of one byte 
+
+\hypertarget{structpion_1_1algorithm_a387c15c00a1d229059e9da8ff9e0aa84}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-long\-\_\-double@{from\-\_\-long\-\_\-double}}
+\index{from\-\_\-long\-\_\-double@{from\-\_\-long\-\_\-double}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-long\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-long\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{ptr, }
+\item[{const long double}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a387c15c00a1d229059e9da8ff9e0aa84}
+convert long double into sequence of sixteen bytes in 128-\/bit \char`\"{}quadruple precision\char`\"{} format \href{http://en.wikipedia.org/wiki/Quadruple_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Quadruple\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_a9c5dbfc05e297e824b47e03c6cf4ce26}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-uint16@{from\-\_\-uint16}}
+\index{from\-\_\-uint16@{from\-\_\-uint16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-uint16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-uint16 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::uint16\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a9c5dbfc05e297e824b47e03c6cf4ce26}
+
+
+convert 16-\/bit unsigned integer into sequence of two bytes 
+
+\hypertarget{structpion_1_1algorithm_a72de6ae9d5cee3b2fed7014a0bbe612c}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-uint24@{from\-\_\-uint24}}
+\index{from\-\_\-uint24@{from\-\_\-uint24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-uint24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-uint24 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::uint32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a72de6ae9d5cee3b2fed7014a0bbe612c}
+
+
+convert 24-\/bit unsigned integer into sequence of three bytes 
+
+\hypertarget{structpion_1_1algorithm_a5c78cafafadb680180ff97f1eaf58fce}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-uint32@{from\-\_\-uint32}}
+\index{from\-\_\-uint32@{from\-\_\-uint32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-uint32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-uint32 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::uint32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a5c78cafafadb680180ff97f1eaf58fce}
+
+
+convert 32-\/bit unsigned integer into sequence of four bytes 
+
+\hypertarget{structpion_1_1algorithm_a5b030d4284869249e23311d75eaedd57}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-uint64@{from\-\_\-uint64}}
+\index{from\-\_\-uint64@{from\-\_\-uint64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-uint64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-uint64 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::uint64\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a5b030d4284869249e23311d75eaedd57}
+
+
+convert 64-\/bit unsigned integer into sequence of eight bytes 
+
+\hypertarget{structpion_1_1algorithm_a8ef52bc60dfefc940b6fdf5a1dcb5ad7}{\index{pion\-::algorithm@{pion\-::algorithm}!from\-\_\-uint8@{from\-\_\-uint8}}
+\index{from\-\_\-uint8@{from\-\_\-uint8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{from\-\_\-uint8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static void pion\-::algorithm\-::from\-\_\-uint8 (
+\begin{DoxyParamCaption}
+\item[{Byte $\ast$}]{buf, }
+\item[{const boost\-::uint8\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a8ef52bc60dfefc940b6fdf5a1dcb5ad7}
+
+
+convert 8-\/bit unsigned integer into sequence of one byte 
+
+\hypertarget{structpion_1_1algorithm_a00b83de67d45aceec623296314885f81}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-double@{to\-\_\-double}}
+\index{to\-\_\-double@{to\-\_\-double}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static double pion\-::algorithm\-::to\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a00b83de67d45aceec623296314885f81}
+convert sequence of eight bytes in 64-\/bit \char`\"{}double precision\char`\"{} binary64 format into a double \href{http://en.wikipedia.org/wiki/Double_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Double\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_a31acba5139987280e2d51aeb48f21f28}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-float@{to\-\_\-float}}
+\index{to\-\_\-float@{to\-\_\-float}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-float}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static float pion\-::algorithm\-::to\-\_\-float (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a31acba5139987280e2d51aeb48f21f28}
+convert sequence of four bytes in 32-\/bit \char`\"{}single precision\char`\"{} binary32 format into a float \href{http://en.wikipedia.org/wiki/Single_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Single\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_a32a9690172523ef7c558f92b319429c9}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int16@{to\-\_\-int16}}
+\index{to\-\_\-int16@{to\-\_\-int16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int16}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int16\-\_\-t pion\-::algorithm\-::to\-\_\-int16 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a32a9690172523ef7c558f92b319429c9}
+
+
+convert sequence of two bytes to 16-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_ae474bcdaf7b1a54182e1724c8ebe3410}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int16@{to\-\_\-int16}}
+\index{to\-\_\-int16@{to\-\_\-int16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 $>$ static boost\-::int16\-\_\-t pion\-::algorithm\-::to\-\_\-int16 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ae474bcdaf7b1a54182e1724c8ebe3410}
+
+
+convert sequence of two bytes to 16-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a8a5dc0884a7dd1deb53762947dce167c}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int16@{to\-\_\-int16}}
+\index{to\-\_\-int16@{to\-\_\-int16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::int16\-\_\-t pion\-::algorithm\-::to\-\_\-int16 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a8a5dc0884a7dd1deb53762947dce167c}
+
+
+convert sequence of two bytes to 16-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a607abc832ec9f6983cb42b76cc8914e6}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int24@{to\-\_\-int24}}
+\index{to\-\_\-int24@{to\-\_\-int24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int24}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int24 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a607abc832ec9f6983cb42b76cc8914e6}
+
+
+convert sequence of three bytes to 24-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_aed87f4efd146f0d6afdedc8618dfac9c}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int24@{to\-\_\-int24}}
+\index{to\-\_\-int24@{to\-\_\-int24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 $>$ static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int24 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid, }
+\item[{T3}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aed87f4efd146f0d6afdedc8618dfac9c}
+
+
+convert sequence of three bytes to 24-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_aa7faf5f422723c835e432e6c0bd43a71}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int24@{to\-\_\-int24}}
+\index{to\-\_\-int24@{to\-\_\-int24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int24 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aa7faf5f422723c835e432e6c0bd43a71}
+
+
+convert sequence of three bytes to 24-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_ac8dd9cfadaa3fb758b4ea3f9bd524595}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int32@{to\-\_\-int32}}
+\index{to\-\_\-int32@{to\-\_\-int32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int32 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid1, }
+\item[{unsigned char}]{mid2, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ac8dd9cfadaa3fb758b4ea3f9bd524595}
+
+
+convert sequence of four bytes to 32-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_abad3afe7cdb40f779cac637f3e28702c}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int32@{to\-\_\-int32}}
+\index{to\-\_\-int32@{to\-\_\-int32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int32 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid1, }
+\item[{T3}]{mid2, }
+\item[{T4}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_abad3afe7cdb40f779cac637f3e28702c}
+
+
+convert sequence of four bytes to 32-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a1f6f08fd741bd53e2d7ab23d13d557ec}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int32@{to\-\_\-int32}}
+\index{to\-\_\-int32@{to\-\_\-int32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::int32\-\_\-t pion\-::algorithm\-::to\-\_\-int32 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a1f6f08fd741bd53e2d7ab23d13d557ec}
+
+
+convert sequence of four bytes to 32-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_aa08271822b58fa0ca87fb4f0740b1d3a}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int64@{to\-\_\-int64}}
+\index{to\-\_\-int64@{to\-\_\-int64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int64\-\_\-t pion\-::algorithm\-::to\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid1, }
+\item[{unsigned char}]{mid2, }
+\item[{unsigned char}]{mid3, }
+\item[{unsigned char}]{mid4, }
+\item[{unsigned char}]{mid5, }
+\item[{unsigned char}]{mid6, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aa08271822b58fa0ca87fb4f0740b1d3a}
+
+
+convert sequence of eight bytes to 64-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a559bde18e9670cefd4c4937394f2c82c}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int64@{to\-\_\-int64}}
+\index{to\-\_\-int64@{to\-\_\-int64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 $>$ static boost\-::int64\-\_\-t pion\-::algorithm\-::to\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid1, }
+\item[{T3}]{mid2, }
+\item[{T4}]{mid3, }
+\item[{T5}]{mid4, }
+\item[{T6}]{mid5, }
+\item[{T7}]{mid6, }
+\item[{T8}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a559bde18e9670cefd4c4937394f2c82c}
+
+
+convert sequence of eight bytes to 64-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a320eb1084a7f4c6721aa4c5c1f212c76}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int64@{to\-\_\-int64}}
+\index{to\-\_\-int64@{to\-\_\-int64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::int64\-\_\-t pion\-::algorithm\-::to\-\_\-int64 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a320eb1084a7f4c6721aa4c5c1f212c76}
+
+
+convert sequence of eight bytes to 64-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_afb09388ae577897cd3fac5572c9e4eef}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int8@{to\-\_\-int8}}
+\index{to\-\_\-int8@{to\-\_\-int8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int8}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int8\-\_\-t pion\-::algorithm\-::to\-\_\-int8 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_afb09388ae577897cd3fac5572c9e4eef}
+
+
+convert sequence of one byte to 8-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a8a891be43c16371c9cf9447224f1705c}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int8@{to\-\_\-int8}}
+\index{to\-\_\-int8@{to\-\_\-int8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int8}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::int8\-\_\-t pion\-::algorithm\-::to\-\_\-int8 (
+\begin{DoxyParamCaption}
+\item[{char}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a8a891be43c16371c9cf9447224f1705c}
+
+
+convert sequence of one byte to 8-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_a884a55189c818f89a88ac6791e79de96}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-int8@{to\-\_\-int8}}
+\index{to\-\_\-int8@{to\-\_\-int8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-int8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::int8\-\_\-t pion\-::algorithm\-::to\-\_\-int8 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a884a55189c818f89a88ac6791e79de96}
+
+
+convert byte pointer into an 8-\/bit signed integer 
+
+\hypertarget{structpion_1_1algorithm_aad9a66169d2c5a3b009ae25255775cf0}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-long\-\_\-double@{to\-\_\-long\-\_\-double}}
+\index{to\-\_\-long\-\_\-double@{to\-\_\-long\-\_\-double}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-long\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static long double pion\-::algorithm\-::to\-\_\-long\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aad9a66169d2c5a3b009ae25255775cf0}
+convert sequence of sixteen bytes in 128-\/bit \char`\"{}quadruple precision\char`\"{} format into a long double \href{http://en.wikipedia.org/wiki/Quadruple_precision_floating-point_format}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Quadruple\-\_\-precision\-\_\-floating-\/point\-\_\-format} \hypertarget{structpion_1_1algorithm_aa755b157b2cda061aec92c49b7ee9dac}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint16@{to\-\_\-uint16}}
+\index{to\-\_\-uint16@{to\-\_\-uint16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint16}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint16\-\_\-t pion\-::algorithm\-::to\-\_\-uint16 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_aa755b157b2cda061aec92c49b7ee9dac}
+
+
+convert sequence of two bytes to 16-\/bit unsigned integer 
+
+
+
+Referenced by pion\-::spdy\-::parser\-::is\-\_\-spdy\-\_\-control\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-header\-\_\-payload(), and pion\-::spdy\-::parser\-::populate\-\_\-frame().
+
+\hypertarget{structpion_1_1algorithm_a260aedfd03824ec43e7a11a9bb410b69}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint16@{to\-\_\-uint16}}
+\index{to\-\_\-uint16@{to\-\_\-uint16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 $>$ static boost\-::uint16\-\_\-t pion\-::algorithm\-::to\-\_\-uint16 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a260aedfd03824ec43e7a11a9bb410b69}
+
+
+convert sequence of two bytes to 16-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a009df038f511d87e4ccb89163305a42b}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint16@{to\-\_\-uint16}}
+\index{to\-\_\-uint16@{to\-\_\-uint16}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint16}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::uint16\-\_\-t pion\-::algorithm\-::to\-\_\-uint16 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a009df038f511d87e4ccb89163305a42b}
+
+
+convert sequence of two bytes to 16-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_ad1fd95bf2a6c3c2a775492c1acd0b5c1}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint24@{to\-\_\-uint24}}
+\index{to\-\_\-uint24@{to\-\_\-uint24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint24}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint24 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ad1fd95bf2a6c3c2a775492c1acd0b5c1}
+
+
+convert sequence of three bytes to 24-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a1080e1965b34717702987a559665a8e9}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint24@{to\-\_\-uint24}}
+\index{to\-\_\-uint24@{to\-\_\-uint24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 $>$ static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint24 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid, }
+\item[{T3}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a1080e1965b34717702987a559665a8e9}
+
+
+convert sequence of three bytes to 24-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_ae54ebabcc5db708e1528c6afd4bb23fc}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint24@{to\-\_\-uint24}}
+\index{to\-\_\-uint24@{to\-\_\-uint24}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint24}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint24 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ae54ebabcc5db708e1528c6afd4bb23fc}
+
+
+convert sequence of three bytes to 24-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_af2092366e2a82fbfc456bceb15a0f599}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint32@{to\-\_\-uint32}}
+\index{to\-\_\-uint32@{to\-\_\-uint32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint32}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint32 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid1, }
+\item[{unsigned char}]{mid2, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_af2092366e2a82fbfc456bceb15a0f599}
+
+
+convert sequence of four bytes to 32-\/bit unsigned integer 
+
+
+
+Referenced by pion\-::spdy\-::parser\-::get\-\_\-control\-\_\-frame\-\_\-stream\-\_\-id(), pion\-::spdy\-::parser\-::parse\-\_\-header\-\_\-payload(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-goaway\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-ping\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-rst\-\_\-stream(), and pion\-::spdy\-::parser\-::populate\-\_\-frame().
+
+\hypertarget{structpion_1_1algorithm_a14437094ac2afa2b8b2f94a92baf7253}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint32@{to\-\_\-uint32}}
+\index{to\-\_\-uint32@{to\-\_\-uint32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 $>$ static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint32 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid1, }
+\item[{T3}]{mid2, }
+\item[{T4}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a14437094ac2afa2b8b2f94a92baf7253}
+
+
+convert sequence of four bytes to 32-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_ad8e9e4a781ab4c3903f53b771239bad3}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint32@{to\-\_\-uint32}}
+\index{to\-\_\-uint32@{to\-\_\-uint32}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint32}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::uint32\-\_\-t pion\-::algorithm\-::to\-\_\-uint32 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ad8e9e4a781ab4c3903f53b771239bad3}
+
+
+convert sequence of four bytes to 32-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_ab4622cfb454d0ca206ffe42077a15c52}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint64@{to\-\_\-uint64}}
+\index{to\-\_\-uint64@{to\-\_\-uint64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint64}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint64\-\_\-t pion\-::algorithm\-::to\-\_\-uint64 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{high, }
+\item[{unsigned char}]{mid1, }
+\item[{unsigned char}]{mid2, }
+\item[{unsigned char}]{mid3, }
+\item[{unsigned char}]{mid4, }
+\item[{unsigned char}]{mid5, }
+\item[{unsigned char}]{mid6, }
+\item[{unsigned char}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_ab4622cfb454d0ca206ffe42077a15c52}
+
+
+convert sequence of eight bytes to 64-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_adae7fcd4321444d86e98acf5796ecadd}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint64@{to\-\_\-uint64}}
+\index{to\-\_\-uint64@{to\-\_\-uint64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T1 , typename T2 , typename T3 , typename T4 , typename T5 , typename T6 , typename T7 , typename T8 $>$ static boost\-::uint64\-\_\-t pion\-::algorithm\-::to\-\_\-uint64 (
+\begin{DoxyParamCaption}
+\item[{T1}]{high, }
+\item[{T2}]{mid1, }
+\item[{T3}]{mid2, }
+\item[{T4}]{mid3, }
+\item[{T5}]{mid4, }
+\item[{T6}]{mid5, }
+\item[{T7}]{mid6, }
+\item[{T8}]{low}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_adae7fcd4321444d86e98acf5796ecadd}
+
+
+convert sequence of eight bytes to 64-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a6043289280973a9c81c3f227f7be3558}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint64@{to\-\_\-uint64}}
+\index{to\-\_\-uint64@{to\-\_\-uint64}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint64}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::uint64\-\_\-t pion\-::algorithm\-::to\-\_\-uint64 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a6043289280973a9c81c3f227f7be3558}
+
+
+convert sequence of eight bytes to 64-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a79898e00c20439125c68d90248afb2e0}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint8@{to\-\_\-uint8}}
+\index{to\-\_\-uint8@{to\-\_\-uint8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint8}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint8\-\_\-t pion\-::algorithm\-::to\-\_\-uint8 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a79898e00c20439125c68d90248afb2e0}
+
+
+convert sequence of one byte to 8-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a6088634700c44316b7d6d55e687d65aa}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint8@{to\-\_\-uint8}}
+\index{to\-\_\-uint8@{to\-\_\-uint8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint8}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::uint8\-\_\-t pion\-::algorithm\-::to\-\_\-uint8 (
+\begin{DoxyParamCaption}
+\item[{char}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a6088634700c44316b7d6d55e687d65aa}
+
+
+convert sequence of one byte to 8-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a60bfca7cfacf90a664a4977cd70ccf68}{\index{pion\-::algorithm@{pion\-::algorithm}!to\-\_\-uint8@{to\-\_\-uint8}}
+\index{to\-\_\-uint8@{to\-\_\-uint8}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{to\-\_\-uint8}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Byte $>$ static boost\-::uint8\-\_\-t pion\-::algorithm\-::to\-\_\-uint8 (
+\begin{DoxyParamCaption}
+\item[{const Byte $\ast$}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{structpion_1_1algorithm_a60bfca7cfacf90a664a4977cd70ccf68}
+
+
+convert byte pointer into an 8-\/bit unsigned integer 
+
+\hypertarget{structpion_1_1algorithm_a440bd54b07a24c80bc939fdb03583721}{\index{pion\-::algorithm@{pion\-::algorithm}!url\-\_\-decode@{url\-\_\-decode}}
+\index{url\-\_\-decode@{url\-\_\-decode}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{url\-\_\-decode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::algorithm\-::url\-\_\-decode (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_a440bd54b07a24c80bc939fdb03583721}
+
+
+escapes U\-R\-L-\/encoded strings (a\%20value+with\%20spaces) 
+
+
+
+Referenced by pion\-::http\-::plugin\-\_\-service\-::get\-\_\-relative\-\_\-resource().
+
+\hypertarget{structpion_1_1algorithm_aa4eaedaecac95a638cedf5c4884de1b8}{\index{pion\-::algorithm@{pion\-::algorithm}!url\-\_\-encode@{url\-\_\-encode}}
+\index{url\-\_\-encode@{url\-\_\-encode}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{url\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::algorithm\-::url\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_aa4eaedaecac95a638cedf5c4884de1b8}
+
+
+encodes strings so that they are safe for U\-R\-Ls (with\%20spaces) 
+
+
+
+Referenced by pion\-::http\-::types\-::make\-\_\-query\-\_\-string().
+
+\hypertarget{structpion_1_1algorithm_a2177ca0d0f01e6ef6d4d3bceb73d82bb}{\index{pion\-::algorithm@{pion\-::algorithm}!xml\-\_\-encode@{xml\-\_\-encode}}
+\index{xml\-\_\-encode@{xml\-\_\-encode}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{xml\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::algorithm\-::xml\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_a2177ca0d0f01e6ef6d4d3bceb73d82bb}
+
+
+T\-O\-D\-O\-: escapes X\-M\-L/\-H\-T\-M\-L-\/encoded strings (1 $<$ 2) 
+
+encodes strings so that they are safe for X\-M\-L/\-H\-T\-M\-L (2 $>$ 1) 
+
+References U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R.
+
+
+
+Referenced by pion\-::http\-::server\-::handle\-\_\-forbidden\-\_\-request(), pion\-::http\-::server\-::handle\-\_\-method\-\_\-not\-\_\-allowed(), pion\-::http\-::server\-::handle\-\_\-not\-\_\-found\-\_\-request(), and pion\-::http\-::server\-::handle\-\_\-server\-\_\-error().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structpion_1_1algorithm_ad068c4b57bfaefc287dcda5681095603}{\index{pion\-::algorithm@{pion\-::algorithm}!U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R@{U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}}
+\index{U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R@{U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}!pion::algorithm@{pion\-::algorithm}}
+\subsubsection[{U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$const pion\-::algorithm\-::\-U\-T\-F8\-\_\-\-R\-E\-P\-L\-A\-C\-E\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R = \char`\"{}\textbackslash{}x\-E\-F\textbackslash{}x\-B\-F\textbackslash{}x\-B\-D\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}}\label{structpion_1_1algorithm_ad068c4b57bfaefc287dcda5681095603}
+
+
+3-\/byte character sequence representing the U\-T\-F-\/8 replacement character 
+
+
+
+Referenced by xml\-\_\-encode().
+
+
+
+The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{algorithm_8hpp}{algorithm.\-hpp}\item 
+src/\hyperlink{algorithm_8cpp}{algorithm.\-cpp}\end{DoxyCompactItemize}

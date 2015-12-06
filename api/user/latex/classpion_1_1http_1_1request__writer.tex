@@ -1,0 +1,263 @@
+\hypertarget{classpion_1_1http_1_1request__writer}{\section{pion\-:\-:http\-:\-:request\-\_\-writer Class Reference}
+\label{classpion_1_1http_1_1request__writer}\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}}
+}
+
+
+{\ttfamily \#include $<$request\-\_\-writer.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:request\-\_\-writer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classpion_1_1http_1_1request__writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:request\-\_\-writer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classpion_1_1http_1_1request__writer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1http_1_1request__writer_a4e864e362bfa9d132175f80503b32782}{$\sim$request\-\_\-writer} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1request}{http\-::request} \& \hyperlink{classpion_1_1http_1_1request__writer_a16c7f5af36362dbb360fc46fd591c2b2}{get\-\_\-request} (void)
+\begin{DoxyCompactList}\small\item\em returns a non-\/const reference to the request that will be sent \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classpion_1_1http_1_1request__writer}{request\-\_\-writer} $>$ \hyperlink{classpion_1_1http_1_1request__writer_a93ea6feb07fbe9a639f6612bf5fe13da}{create} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t} handler=\hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t}())
+\item 
+static boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classpion_1_1http_1_1request__writer}{request\-\_\-writer} $>$ \hyperlink{classpion_1_1http_1_1request__writer_a00ad93f68c6fe3f8c1087a3d0b4b6242}{create} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t} handler=\hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t}())
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1request__writer_ab4486ed8abf634f5e4d52f2052e1b126}{request\-\_\-writer} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t} handler)
+\item 
+\hyperlink{classpion_1_1http_1_1request__writer_ae0d35cd3af7f08e71cf47c90ca8e7a32}{request\-\_\-writer} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t} handler)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1request__writer_aeef6096bf4fa008248be93a3c3158c2d}{prepare\-\_\-buffers\-\_\-for\-\_\-send} (\hyperlink{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{http\-::message\-::write\-\_\-buffers\-\_\-t} \&write\-\_\-buffers)
+\item 
+virtual \hyperlink{classpion_1_1http_1_1writer_a36fa31c850362d907559a0c1157a1bf3}{write\-\_\-handler\-\_\-t} \hyperlink{classpion_1_1http_1_1request__writer_a1ac6c4591f4a936391e78f394e18c9ed}{bind\-\_\-to\-\_\-write\-\_\-handler} (void)
+\begin{DoxyCompactList}\small\item\em returns a function bound to \href{http::writer::handle_write()}{\tt http\-::writer\-::handle\-\_\-write()} \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1request__writer_a8cb6beccbb5f89356be78935f2ca59d4}{handle\-\_\-write} (const boost\-::system\-::error\-\_\-code \&write\-\_\-error, std\-::size\-\_\-t bytes\-\_\-written)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1http_1_1request__writer}{request\-\_\-writer}\-: used to asynchronously send H\-T\-T\-P requests 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1request__writer_a4e864e362bfa9d132175f80503b32782}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!$\sim$request\-\_\-writer@{$\sim$request\-\_\-writer}}
+\index{$\sim$request\-\_\-writer@{$\sim$request\-\_\-writer}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{$\sim$request\-\_\-writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::request\-\_\-writer\-::$\sim$request\-\_\-writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request__writer_a4e864e362bfa9d132175f80503b32782}
+
+
+default destructor 
+
+\hypertarget{classpion_1_1http_1_1request__writer_ab4486ed8abf634f5e4d52f2052e1b126}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!request\-\_\-writer@{request\-\_\-writer}}
+\index{request\-\_\-writer@{request\-\_\-writer}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{request\-\_\-writer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::request\-\_\-writer\-::request\-\_\-writer (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1request__writer_ab4486ed8abf634f5e4d52f2052e1b126}
+protected constructor restricts creation of objects (use \hyperlink{classpion_1_1http_1_1request__writer_a93ea6feb07fbe9a639f6612bf5fe13da}{create()})
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection used to send the request \\
+\hline
+{\em handler} & function called after the request has been sent \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R, and pion\-::http\-::writer\-::set\-\_\-logger().
+
+
+
+Referenced by create().
+
+\hypertarget{classpion_1_1http_1_1request__writer_ae0d35cd3af7f08e71cf47c90ca8e7a32}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!request\-\_\-writer@{request\-\_\-writer}}
+\index{request\-\_\-writer@{request\-\_\-writer}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{request\-\_\-writer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::request\-\_\-writer\-::request\-\_\-writer (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1request__writer_ae0d35cd3af7f08e71cf47c90ca8e7a32}
+protected constructor restricts creation of objects (use \hyperlink{classpion_1_1http_1_1request__writer_a93ea6feb07fbe9a639f6612bf5fe13da}{create()})
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection used to send the request \\
+\hline
+{\em http\-\_\-request\-\_\-ptr} & pointer to the request that will be sent \\
+\hline
+{\em handler} & function called after the request has been sent \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R, pion\-::http\-::writer\-::set\-\_\-logger(), and pion\-::http\-::writer\-::write\-\_\-no\-\_\-copy().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1request__writer_a1ac6c4591f4a936391e78f394e18c9ed}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!bind\-\_\-to\-\_\-write\-\_\-handler@{bind\-\_\-to\-\_\-write\-\_\-handler}}
+\index{bind\-\_\-to\-\_\-write\-\_\-handler@{bind\-\_\-to\-\_\-write\-\_\-handler}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{bind\-\_\-to\-\_\-write\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf write\-\_\-handler\-\_\-t} pion\-::http\-::request\-\_\-writer\-::bind\-\_\-to\-\_\-write\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request__writer_a1ac6c4591f4a936391e78f394e18c9ed}
+
+
+returns a function bound to \href{http::writer::handle_write()}{\tt http\-::writer\-::handle\-\_\-write()} 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1writer_acea77b1d3cd2af31f4f1f410900aa207}{pion\-::http\-::writer}.
+
+
+
+References handle\-\_\-write().
+
+\hypertarget{classpion_1_1http_1_1request__writer_a93ea6feb07fbe9a639f6612bf5fe13da}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!create@{create}}
+\index{create@{create}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::shared\-\_\-ptr$<${\bf request\-\_\-writer}$>$ pion\-::http\-::request\-\_\-writer\-::create (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler = {\ttfamily {\bf finished\-\_\-handler\-\_\-t}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1http_1_1request__writer_a93ea6feb07fbe9a639f6612bf5fe13da}
+creates new \hyperlink{classpion_1_1http_1_1request__writer}{request\-\_\-writer} objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection used to send the request \\
+\hline
+{\em handler} & function called after the request has been sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::shared\-\_\-ptr$<$request\-\_\-writer$>$ shared pointer to the new writer object that was created 
+\end{DoxyReturn}
+
+
+References request\-\_\-writer().
+
+\hypertarget{classpion_1_1http_1_1request__writer_a00ad93f68c6fe3f8c1087a3d0b4b6242}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!create@{create}}
+\index{create@{create}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}static boost\-::shared\-\_\-ptr$<${\bf request\-\_\-writer}$>$ pion\-::http\-::request\-\_\-writer\-::create (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler = {\ttfamily {\bf finished\-\_\-handler\-\_\-t}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1http_1_1request__writer_a00ad93f68c6fe3f8c1087a3d0b4b6242}
+creates new \hyperlink{classpion_1_1http_1_1request__writer}{request\-\_\-writer} objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection used to send the request \\
+\hline
+{\em http\-\_\-request\-\_\-ptr} & pointer to the request that will be sent \\
+\hline
+{\em handler} & function called after the request has been sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::shared\-\_\-ptr$<$request\-\_\-writer$>$ shared pointer to the new writer object that was created 
+\end{DoxyReturn}
+
+
+References request\-\_\-writer().
+
+\hypertarget{classpion_1_1http_1_1request__writer_a16c7f5af36362dbb360fc46fd591c2b2}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!get\-\_\-request@{get\-\_\-request}}
+\index{get\-\_\-request@{get\-\_\-request}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{get\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf http\-::request}\& pion\-::http\-::request\-\_\-writer\-::get\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request__writer_a16c7f5af36362dbb360fc46fd591c2b2}
+
+
+returns a non-\/const reference to the request that will be sent 
+
+\hypertarget{classpion_1_1http_1_1request__writer_a8cb6beccbb5f89356be78935f2ca59d4}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!handle\-\_\-write@{handle\-\_\-write}}
+\index{handle\-\_\-write@{handle\-\_\-write}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{handle\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{const boost\-::system\-::error\-\_\-code \&}]{write\-\_\-error, }
+\item[{std\-::size\-\_\-t}]{bytes\-\_\-written}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request__writer_a8cb6beccbb5f89356be78935f2ca59d4}
+called after the request is sent
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-error} & error status from the last write operation \\
+\hline
+{\em bytes\-\_\-written} & number of bytes sent by the last write operation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}{pion\-::http\-::writer}.
+
+
+
+References pion\-::http\-::writer\-::clear(), pion\-::http\-::writer\-::finished\-\_\-writing(), pion\-::http\-::writer\-::get\-\_\-logger(), P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G, and pion\-::http\-::writer\-::sending\-\_\-chunked\-\_\-message().
+
+
+
+Referenced by bind\-\_\-to\-\_\-write\-\_\-handler().
+
+\hypertarget{classpion_1_1http_1_1request__writer_aeef6096bf4fa008248be93a3c3158c2d}{\index{pion\-::http\-::request\-\_\-writer@{pion\-::http\-::request\-\_\-writer}!prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}}
+\index{prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}!pion::http::request_writer@{pion\-::http\-::request\-\_\-writer}}
+\subsubsection[{prepare\-\_\-buffers\-\_\-for\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::request\-\_\-writer\-::prepare\-\_\-buffers\-\_\-for\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-::message\-::write\-\_\-buffers\-\_\-t} \&}]{write\-\_\-buffers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request__writer_aeef6096bf4fa008248be93a3c3158c2d}
+initializes a vector of write buffers with the H\-T\-T\-P message information
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-buffers} & vector of write buffers to initialize \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classpion_1_1http_1_1writer_ab7a583948d97402772dc1fe2e87bcf66}{pion\-::http\-::writer}.
+
+
+
+References pion\-::http\-::writer\-::get\-\_\-connection(), pion\-::http\-::writer\-::get\-\_\-content\-\_\-length(), and pion\-::http\-::writer\-::sending\-\_\-chunked\-\_\-message().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{request__writer_8hpp}{request\-\_\-writer.\-hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="log4cplus::spi::RootLogger" name="log4cplus::spi::RootLogger">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1spi_1_1LoggerImpl.html" title="log4cplus::spi::LoggerImpl" alt="" coords="920,131,1088,157"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title="log4cplus::helpers\l::SharedObject" alt="" coords="665,5,788,46"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1thread_1_1Mutex.html" title="log4cplus::thread::\lMutex" alt="" coords="295,11,419,53"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1helpers_1_1AppenderAttachableImpl.html" title="log4cplus::helpers\l::AppenderAttachableImpl" alt="" coords="641,82,812,123"/>
+<area shape="rect" id="node6" href="$classlog4cplus_1_1spi_1_1AppenderAttachable.html" title="log4cplus::spi::Appender\lAttachable" alt="" coords="278,89,437,130"/>
+<area shape="rect" id="node8" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; T \&gt;" alt="" coords="5,154,160,195"/>
+<area shape="rect" id="node9" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; LoggerImpl \&gt;" alt="" coords="621,147,832,189"/>
+</map>

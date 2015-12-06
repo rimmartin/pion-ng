@@ -1,0 +1,123 @@
+\hypertarget{unit__test_8hpp}{\section{include/pion/test/unit\-\_\-test.hpp File Reference}
+\label{unit__test_8hpp}\index{include/pion/test/unit\-\_\-test.\-hpp@{include/pion/test/unit\-\_\-test.\-hpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$boost/version.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/algorithm/string.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread/mutex.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread/condition.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/test/unit\-\_\-test.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/test/unit\-\_\-test\-\_\-log.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/test/unit\-\_\-test\-\_\-log\-\_\-formatter.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/test/test\-\_\-case\-\_\-template.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/test/utils/xml\-\_\-printer.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/logger.\-hpp$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+Include dependency graph for unit\-\_\-test.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unit__test_8hpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter}{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}
+\begin{DoxyCompactList}\small\item\em thread-\/safe version of Boost.\-Test's xml\-\_\-log\-\_\-formatter class \end{DoxyCompactList}\item 
+struct \hyperlink{structpion_1_1test_1_1config}{pion\-::test\-::config}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\item 
+\hyperlink{namespacepion_1_1test}{pion\-::test}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{unit__test_8hpp_a6dd31a97c8a937a0f6f034b1ab0ca3f6}{C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}~chdir
+\item 
+\#define \hyperlink{unit__test_8hpp_a64486ae219f6f05c1c97005d4adf049c}{G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}(a, b)~getcwd(a,b)
+\item 
+\#define \hyperlink{unit__test_8hpp_a384a0f18f6de264ef6cb659f92980a03}{D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E}~1000
+\item 
+\#define \hyperlink{unit__test_8hpp_a30e7a675348d9b0eea2c25c62c0807c1}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}(suite\-\_\-name, fixture\-\_\-types)
+\item 
+\#define \hyperlink{unit__test_8hpp_a0dafc5af61cc0a17db6a3a6233e5df7c}{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}(test\-\_\-name)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{namespacepion_1_1test_a8643b0d0deb0ae53d23bc49cf7d3b5f5}{pion\-::test\-::trim} (char $\ast$str)
+\item 
+static bool \hyperlink{namespacepion_1_1test_ad544a077fe8df96bda285ca3cb9228f1}{pion\-::test\-::read\-\_\-lines\-\_\-from\-\_\-file} (const std\-::string \&filename, std\-::list$<$ std\-::string $>$ \&lines)
+\item 
+static bool \hyperlink{namespacepion_1_1test_a555d109b71085d9b0d7a0e0c4d9d3592}{pion\-::test\-::check\-\_\-files\-\_\-match} (const std\-::string \&file\-A, const std\-::string \&file\-B)
+\item 
+static bool \hyperlink{namespacepion_1_1test_a578e6dab3bf9823953e00948a0915849}{pion\-::test\-::check\-\_\-files\-\_\-exact\-\_\-match} (const std\-::string \&file\-A, const std\-::string \&file\-B, bool ignore\-\_\-line\-\_\-endings=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{unit__test_8hpp_a0dafc5af61cc0a17db6a3a6233e5df7c}{\index{unit\-\_\-test.\-hpp@{unit\-\_\-test.\-hpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}!unit_test.hpp@{unit\-\_\-test.\-hpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-C\-A\-S\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{test\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{unit__test_8hpp_a0dafc5af61cc0a17db6a3a6233e5df7c}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{template}<\textcolor{keyword}{typename} F>                                            \(\backslash\)
+struct test\_name : \textcolor{keyword}{public} F                                     \(\backslash\)
+\{ \textcolor{keywordtype}{void} test\_method(); \};                                        \(\backslash\)
+                                                                \(\backslash\)
+struct BOOST\_AUTO\_TC\_INVOKER( test\_name ) \{                     \(\backslash\)
+    template<typename TestType>                                 \(\backslash\)
+    static \textcolor{keywordtype}{void} run( boost::type<TestType>* = 0 )               \(\backslash\)
+    \{                                                           \(\backslash\)
+        test\_name<TestType> t;                                  \(\backslash\)
+        t.test\_method();                                        \(\backslash\)
+    \}                                                           \(\backslash\)
+\};                                                              \(\backslash\)
+                                                                \(\backslash\)
+BOOST\_AUTO\_TU\_REGISTRAR( test\_name )(                           \(\backslash\)
+    boost::unit\_test::ut\_detail::template\_test\_case\_gen<        \(\backslash\)
+        BOOST\_AUTO\_TC\_INVOKER( test\_name ),                     \(\backslash\)
+        BOOST\_AUTO\_TEST\_CASE\_FIXTURE\_TYPES >(                   \(\backslash\)
+            BOOST\_STRINGIZE( test\_name ) ) );                   \(\backslash\)
+                                                                \(\backslash\)
+template<typename F>                                            \(\backslash\)
+void test\_name<F>::test\_method()                                \(\backslash\)
+\end{DoxyCode}
+\hypertarget{unit__test_8hpp_a30e7a675348d9b0eea2c25c62c0807c1}{\index{unit\-\_\-test.\-hpp@{unit\-\_\-test.\-hpp}!B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}}
+\index{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E@{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}!unit_test.hpp@{unit\-\_\-test.\-hpp}}
+\subsubsection[{B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-O\-S\-T\-\_\-\-A\-U\-T\-O\-\_\-\-T\-E\-S\-T\-\_\-\-S\-U\-I\-T\-E\-\_\-\-F\-I\-X\-T\-U\-R\-E\-\_\-\-T\-E\-M\-P\-L\-A\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{suite\-\_\-name, }
+\item[{}]{fixture\-\_\-types}
+\end{DoxyParamCaption}
+)}}\label{unit__test_8hpp_a30e7a675348d9b0eea2c25c62c0807c1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+BOOST\_AUTO\_TEST\_SUITE(suite\_name)                                         \(\backslash\)
+typedef fixture\_types BOOST\_AUTO\_TEST\_CASE\_FIXTURE\_TYPES;                 \(\backslash\)
+\end{DoxyCode}
+\hypertarget{unit__test_8hpp_a6dd31a97c8a937a0f6f034b1ab0ca3f6}{\index{unit\-\_\-test.\-hpp@{unit\-\_\-test.\-hpp}!C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y@{C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}}
+\index{C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y@{C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}!unit_test.hpp@{unit\-\_\-test.\-hpp}}
+\subsubsection[{C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-N\-G\-E\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y~chdir}}\label{unit__test_8hpp_a6dd31a97c8a937a0f6f034b1ab0ca3f6}
+\hypertarget{unit__test_8hpp_a384a0f18f6de264ef6cb659f92980a03}{\index{unit\-\_\-test.\-hpp@{unit\-\_\-test.\-hpp}!D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E@{D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E}}
+\index{D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E@{D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E}!unit_test.hpp@{unit\-\_\-test.\-hpp}}
+\subsubsection[{D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-I\-R\-E\-C\-T\-O\-R\-Y\-\_\-\-M\-A\-X\-\_\-\-S\-I\-Z\-E~1000}}\label{unit__test_8hpp_a384a0f18f6de264ef6cb659f92980a03}
+\hypertarget{unit__test_8hpp_a64486ae219f6f05c1c97005d4adf049c}{\index{unit\-\_\-test.\-hpp@{unit\-\_\-test.\-hpp}!G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y@{G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}}
+\index{G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y@{G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}!unit_test.hpp@{unit\-\_\-test.\-hpp}}
+\subsubsection[{G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~getcwd(a,b)}}\label{unit__test_8hpp_a64486ae219f6f05c1c97005d4adf049c}

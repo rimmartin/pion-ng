@@ -1,0 +1,25 @@
+var classpion_1_1plugin__manager =
+[
+    [ "map_type", "classpion_1_1plugin__manager_1_1map__type.html", "classpion_1_1plugin__manager_1_1map__type" ],
+    [ "PluginRunFunction", "classpion_1_1plugin__manager.html#a275b88a2c9f7c89d6d737c1b444be8b2", null ],
+    [ "PluginStatFunction", "classpion_1_1plugin__manager.html#a1e6a4223438c74e4e928401f734d2e0c", null ],
+    [ "plugin_manager", "classpion_1_1plugin__manager.html#a6f451cdb1f4ea91b954e5dd453a827d3", null ],
+    [ "~plugin_manager", "classpion_1_1plugin__manager.html#aff2f27834dee6eb0087e68f2af86b9e9", null ],
+    [ "add", "classpion_1_1plugin__manager.html#ad017fef715f7b049513eb176e1df809b", null ],
+    [ "clear", "classpion_1_1plugin__manager.html#ac56a5e432352d1b9c2a4853ce82a5a8c", null ],
+    [ "clone", "classpion_1_1plugin__manager.html#abb39b6639117e8a3f557a628fa302c44", null ],
+    [ "empty", "classpion_1_1plugin__manager.html#adee5498ef23acb797355b2a79f3fd059", null ],
+    [ "find", "classpion_1_1plugin__manager.html#ab58061848dde1682a7c013c7f468d191", null ],
+    [ "get", "classpion_1_1plugin__manager.html#a348da20310edf84242a2688ddc1639e9", null ],
+    [ "get", "classpion_1_1plugin__manager.html#a716a150691df75fb46d1f472e3eda2f6", null ],
+    [ "get_lib_ptr", "classpion_1_1plugin__manager.html#abb0ab4f0a27e5739682430b8a6d06f15", null ],
+    [ "get_statistic", "classpion_1_1plugin__manager.html#a40b42b430ba69d4f0143c04ceed81f57", null ],
+    [ "get_statistic", "classpion_1_1plugin__manager.html#a9a569d4782392bf94a0faed3143eedd4", null ],
+    [ "load", "classpion_1_1plugin__manager.html#a3e03e5f6023f530c91464b766b2fab9e", null ],
+    [ "remove", "classpion_1_1plugin__manager.html#a2acdd8496472871d8ab881637577240d", null ],
+    [ "replace", "classpion_1_1plugin__manager.html#ab8d0b6ecfa27e23495a64d94147c4d60", null ],
+    [ "run", "classpion_1_1plugin__manager.html#a1c2f6105acfcfcf1b742aecab122a368", null ],
+    [ "run", "classpion_1_1plugin__manager.html#af530db568a45e50b3d8b06976c13d994", null ],
+    [ "m_plugin_map", "classpion_1_1plugin__manager.html#a6022dd5905f5079523844d68cd89977d", null ],
+    [ "m_plugin_mutex", "classpion_1_1plugin__manager.html#a4ce56259eca75c8c88bdc4f778526ec4", null ]
+];

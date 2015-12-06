@@ -1,0 +1,213 @@
+\hypertarget{classpion_1_1one__to__one__scheduler}{\section{pion\-:\-:one\-\_\-to\-\_\-one\-\_\-scheduler Class Reference}
+\label{classpion_1_1one__to__one__scheduler}\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+}
+
+
+{\ttfamily \#include $<$scheduler.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:one\-\_\-to\-\_\-one\-\_\-scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classpion_1_1one__to__one__scheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:one\-\_\-to\-\_\-one\-\_\-scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1one__to__one__scheduler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpion_1_1one__to__one__scheduler_1_1service__pair__type}{service\-\_\-pair\-\_\-type}
+\begin{DoxyCompactList}\small\item\em typedef for a pair object where first is an I\-O service and second is a deadline timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1one__to__one__scheduler_a1cf085d6cabbbe06891f316a3c0cb938}{one\-\_\-to\-\_\-one\-\_\-scheduler} (void)
+\begin{DoxyCompactList}\small\item\em constructs a new \hyperlink{classpion_1_1one__to__one__scheduler}{one\-\_\-to\-\_\-one\-\_\-scheduler} \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1one__to__one__scheduler_a76da28c9f319dced91f30b1d303da518}{$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual boost\-::asio\-::io\-\_\-service \& \hyperlink{classpion_1_1one__to__one__scheduler_a6ead3ddcbbcbfb0eba98b102530d2a90}{get\-\_\-io\-\_\-service} (void)
+\begin{DoxyCompactList}\small\item\em returns an async I/\-O service used to schedule work \end{DoxyCompactList}\item 
+virtual boost\-::asio\-::io\-\_\-service \& \hyperlink{classpion_1_1one__to__one__scheduler_a5af0e30b2ef08cbbaf40278c9066c166}{get\-\_\-io\-\_\-service} (boost\-::uint32\-\_\-t n)
+\item 
+virtual void \hyperlink{classpion_1_1one__to__one__scheduler_a8f32fd88bc0d95d9952c5045849e09b9}{startup} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread scheduler (this is called automatically when necessary) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::vector\\*
+$<$ boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{structpion_1_1one__to__one__scheduler_1_1service__pair__type}{service\-\_\-pair\-\_\-type} $>$ $>$ \hyperlink{classpion_1_1one__to__one__scheduler_ac41a2d4f38f49673139a77e609b1d084}{service\-\_\-pool\-\_\-type}
+\begin{DoxyCompactList}\small\item\em typedef for a pool of I\-O services \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1one__to__one__scheduler_a39c02d4a67bf5cd28da3ce22363dd698}{stop\-\_\-services} (void)
+\begin{DoxyCompactList}\small\item\em stops all services used to schedule work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1one__to__one__scheduler_a3e9f1380789598587a27f0857e7c9133}{finish\-\_\-services} (void)
+\begin{DoxyCompactList}\small\item\em finishes all services used to schedule work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1one__to__one__scheduler_ac41a2d4f38f49673139a77e609b1d084}{service\-\_\-pool\-\_\-type} \hyperlink{classpion_1_1one__to__one__scheduler_a8b6ae075086a579e46ca08a89085c07a}{m\-\_\-service\-\_\-pool}
+\begin{DoxyCompactList}\small\item\em pool of I\-O services used to schedule work \end{DoxyCompactList}\item 
+boost\-::uint32\-\_\-t \hyperlink{classpion_1_1one__to__one__scheduler_ae4e2b2a157c1c9e36694e86b6ae354b1}{m\-\_\-next\-\_\-service}
+\begin{DoxyCompactList}\small\item\em the next service to use for scheduling work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1one__to__one__scheduler}{one\-\_\-to\-\_\-one\-\_\-scheduler}\-: uses a single I\-O service for each thread 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1one__to__one__scheduler_ac41a2d4f38f49673139a77e609b1d084}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!service\-\_\-pool\-\_\-type@{service\-\_\-pool\-\_\-type}}
+\index{service\-\_\-pool\-\_\-type@{service\-\_\-pool\-\_\-type}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{service\-\_\-pool\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<$boost\-::shared\-\_\-ptr$<${\bf service\-\_\-pair\-\_\-type}$>$ $>$ {\bf pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::service\-\_\-pool\-\_\-type}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1one__to__one__scheduler_ac41a2d4f38f49673139a77e609b1d084}
+
+
+typedef for a pool of I\-O services 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1one__to__one__scheduler_a1cf085d6cabbbe06891f316a3c0cb938}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!one\-\_\-to\-\_\-one\-\_\-scheduler@{one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\index{one\-\_\-to\-\_\-one\-\_\-scheduler@{one\-\_\-to\-\_\-one\-\_\-scheduler}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{one\-\_\-to\-\_\-one\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::one\-\_\-to\-\_\-one\-\_\-scheduler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1one__to__one__scheduler_a1cf085d6cabbbe06891f316a3c0cb938}
+
+
+constructs a new \hyperlink{classpion_1_1one__to__one__scheduler}{one\-\_\-to\-\_\-one\-\_\-scheduler} 
+
+\hypertarget{classpion_1_1one__to__one__scheduler_a76da28c9f319dced91f30b1d303da518}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler@{$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\index{$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler@{$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::$\sim$one\-\_\-to\-\_\-one\-\_\-scheduler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a76da28c9f319dced91f30b1d303da518}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1one__to__one__scheduler_a3e9f1380789598587a27f0857e7c9133}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!finish\-\_\-services@{finish\-\_\-services}}
+\index{finish\-\_\-services@{finish\-\_\-services}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{finish\-\_\-services}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::finish\-\_\-services (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a3e9f1380789598587a27f0857e7c9133}
+
+
+finishes all services used to schedule work 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1scheduler_a64dbc267db8e1481f80ba6d42bbb24ea}{pion\-::scheduler}.
+
+\hypertarget{classpion_1_1one__to__one__scheduler_a6ead3ddcbbcbfb0eba98b102530d2a90}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}}
+\index{get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{get\-\_\-io\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}virtual boost\-::asio\-::io\-\_\-service\& pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::get\-\_\-io\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a6ead3ddcbbcbfb0eba98b102530d2a90}
+
+
+returns an async I/\-O service used to schedule work 
+
+
+
+Implements \hyperlink{classpion_1_1scheduler_a037e0ee2c2c83b7002180a4656ccbbfa}{pion\-::scheduler}.
+
+\hypertarget{classpion_1_1one__to__one__scheduler_a5af0e30b2ef08cbbaf40278c9066c166}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}}
+\index{get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{get\-\_\-io\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}virtual boost\-::asio\-::io\-\_\-service\& pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::get\-\_\-io\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{boost\-::uint32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a5af0e30b2ef08cbbaf40278c9066c166}
+returns an async I/\-O service used to schedule work (provides direct access to avoid locking when possible)
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & integer number representing the service object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1one__to__one__scheduler_a8f32fd88bc0d95d9952c5045849e09b9}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!startup@{startup}}
+\index{startup@{startup}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{startup}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a8f32fd88bc0d95d9952c5045849e09b9}
+
+
+Starts the thread scheduler (this is called automatically when necessary) 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1scheduler_ab656139dc844a547d5c1001b3ef17d13}{pion\-::scheduler}.
+
+
+
+References pion\-::scheduler\-::keep\-\_\-running(), pion\-::scheduler\-::m\-\_\-is\-\_\-running, pion\-::scheduler\-::m\-\_\-logger, pion\-::scheduler\-::m\-\_\-mutex, pion\-::scheduler\-::m\-\_\-num\-\_\-threads, m\-\_\-service\-\_\-pool, pion\-::multi\-\_\-thread\-\_\-scheduler\-::m\-\_\-thread\-\_\-pool, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and pion\-::scheduler\-::process\-\_\-service\-\_\-work().
+
+\hypertarget{classpion_1_1one__to__one__scheduler_a39c02d4a67bf5cd28da3ce22363dd698}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!stop\-\_\-services@{stop\-\_\-services}}
+\index{stop\-\_\-services@{stop\-\_\-services}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{stop\-\_\-services}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::stop\-\_\-services (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1one__to__one__scheduler_a39c02d4a67bf5cd28da3ce22363dd698}
+
+
+stops all services used to schedule work 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1scheduler_a62b59f0561bd527d78768fd3a5ceeb36}{pion\-::scheduler}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1one__to__one__scheduler_ae4e2b2a157c1c9e36694e86b6ae354b1}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!m\-\_\-next\-\_\-service@{m\-\_\-next\-\_\-service}}
+\index{m\-\_\-next\-\_\-service@{m\-\_\-next\-\_\-service}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{m\-\_\-next\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint32\-\_\-t pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::m\-\_\-next\-\_\-service\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1one__to__one__scheduler_ae4e2b2a157c1c9e36694e86b6ae354b1}
+
+
+the next service to use for scheduling work 
+
+\hypertarget{classpion_1_1one__to__one__scheduler_a8b6ae075086a579e46ca08a89085c07a}{\index{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}!m\-\_\-service\-\_\-pool@{m\-\_\-service\-\_\-pool}}
+\index{m\-\_\-service\-\_\-pool@{m\-\_\-service\-\_\-pool}!pion::one_to_one_scheduler@{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}}
+\subsubsection[{m\-\_\-service\-\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf service\-\_\-pool\-\_\-type} pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::m\-\_\-service\-\_\-pool\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1one__to__one__scheduler_a8b6ae075086a579e46ca08a89085c07a}
+
+
+pool of I\-O services used to schedule work 
+
+
+
+Referenced by startup().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{scheduler_8hpp}{scheduler.\-hpp}\item 
+src/\hyperlink{scheduler_8cpp}{scheduler.\-cpp}\end{DoxyCompactItemize}

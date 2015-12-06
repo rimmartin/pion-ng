@@ -1,0 +1,489 @@
+\hypertarget{classpion_1_1http_1_1request}{\section{pion\-:\-:http\-:\-:request Class Reference}
+\label{classpion_1_1http_1_1request}\index{pion\-::http\-::request@{pion\-::http\-::request}}
+}
+
+
+{\ttfamily \#include $<$request.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:request\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classpion_1_1http_1_1request__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:request\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1http_1_1request__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1request_a186975ae3a5cb72c0faeb0f8f66ce594}{request} (const std\-::string \&resource)
+\item 
+\hyperlink{classpion_1_1http_1_1request_a4cf48bf36c01ed7899b72784e01adf83}{request} (void)
+\begin{DoxyCompactList}\small\item\em constructs a new request object (default constructor) \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1http_1_1request_a6b8d3e709899131b6d23ce623af4a7d3}{$\sim$request} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1request_a820ac867130387a16859a6cf9ca77c74}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears all request data \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1http_1_1request_a9ec7262ec35b4282ea66cf07e49fd4fb}{is\-\_\-content\-\_\-length\-\_\-implied} (void) const 
+\begin{DoxyCompactList}\small\item\em the content length of the message can never be implied for requests \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1request_a43fa910a94a42fe8b26700a94ab9c3c2}{get\-\_\-method} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the request method (i.\-e. G\-E\-T, P\-O\-S\-T, P\-U\-T) \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1request_a929787cdfb1a8cca18c1971e3cfc5d54}{get\-\_\-resource} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the resource uri-\/stem to be delivered (possibly the result of a redirect) \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1request_a79e8400cd9f7b956a4116b9bf218486b}{get\-\_\-original\-\_\-resource} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the resource uri-\/stem originally requested \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1request_a0a4f0e3f4ee577db353a55524efb3526}{get\-\_\-query\-\_\-string} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the uri-\/query or query string requested \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1request_aee545d0144035125655d0a4de441820a}{get\-\_\-query} (const std\-::string \&key) const 
+\begin{DoxyCompactList}\small\item\em returns a value for the query key if any are defined; otherwise, an empty string \end{DoxyCompactList}\item 
+\hyperlink{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{ihash\-\_\-multimap} \& \hyperlink{classpion_1_1http_1_1request_a2e75b875b0858057b6b4bd6255f7424f}{get\-\_\-queries} (void)
+\begin{DoxyCompactList}\small\item\em returns the query parameters \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1request_ac0da1fdcb02cf58ab0391d9f7955aeab}{has\-\_\-query} (const std\-::string \&key) const 
+\begin{DoxyCompactList}\small\item\em returns true if at least one value for the query key is defined \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a0878aad94ef74810b8df2670a17c22b2}{set\-\_\-method} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em sets the H\-T\-T\-P request method (i.\-e. G\-E\-T, P\-O\-S\-T, P\-U\-T) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a421f57b069fd2442397dbcdb8c382a87}{set\-\_\-resource} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em sets the resource or uri-\/stem originally requested \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a2e0eff2dbba55adc260b13a8be013e8c}{change\-\_\-resource} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em changes the resource or uri-\/stem to be delivered (called as the result of a redirect) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_adbcb876e6bf19efb6a84802d90347e2b}{set\-\_\-query\-\_\-string} (const std\-::string \&str)
+\begin{DoxyCompactList}\small\item\em sets the uri-\/query or query string requested \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a4167f9aed250f3f7cb6d935b5787bbba}{add\-\_\-query} (const std\-::string \&key, const std\-::string \&value)
+\begin{DoxyCompactList}\small\item\em adds a value for the query key \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a5bc1d88faa0f3bb054f32c7ff0257f3b}{change\-\_\-query} (const std\-::string \&key, const std\-::string \&value)
+\begin{DoxyCompactList}\small\item\em changes the value of a query key \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_acfcd67cdc0c390f3c264935718fe0b57}{delete\-\_\-query} (const std\-::string \&key)
+\begin{DoxyCompactList}\small\item\em removes all values for a query key \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_aa3dd2b6074201004ea631051367b21d7}{use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string} (void)
+\begin{DoxyCompactList}\small\item\em use the query parameters to build a query string for the request \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_abb1410c7dbbdc3a18997ee2486585106}{use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content} (void)
+\begin{DoxyCompactList}\small\item\em use the query parameters to build P\-O\-S\-T content for the request \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_a343d9892b3a658acd3a28eadb908748d}{set\-\_\-content} (const std\-::string \&value)
+\begin{DoxyCompactList}\small\item\em add content (for P\-O\-S\-T) from string \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1request_aa3df02baf7762c38c2dbbf04a02526fd}{set\-\_\-content} (const char $\ast$value, size\-\_\-t size)
+\item 
+void \hyperlink{classpion_1_1http_1_1request_abe13dc66982da6ab6cc08ff68710d4af}{set\-\_\-user} (\hyperlink{namespacepion_afd2ae32f926db1286ba2e83011456e11}{user\-\_\-ptr} \hyperlink{classpion_1_1user}{user})
+\begin{DoxyCompactList}\small\item\em sets the user record for H\-T\-T\-P request after authentication \end{DoxyCompactList}\item 
+\hyperlink{namespacepion_afd2ae32f926db1286ba2e83011456e11}{user\-\_\-ptr} \hyperlink{classpion_1_1http_1_1request_a0c525f2d99bad69e67353cb2478c6b74}{get\-\_\-user} () const 
+\begin{DoxyCompactList}\small\item\em get the user record for H\-T\-T\-P request after authentication \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1request_a48f4d55f5be5e6bed2936ad8efa8b8ff}{update\-\_\-first\-\_\-line} (void) const 
+\begin{DoxyCompactList}\small\item\em updates the string containing the first line for the H\-T\-T\-P message \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1request_a17fbce903b00388346ad85e8b3d997b3}{append\-\_\-cookie\-\_\-headers} (void)
+\begin{DoxyCompactList}\small\item\em appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+request\-: container for H\-T\-T\-P request information 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1request_a186975ae3a5cb72c0faeb0f8f66ce594}{\index{pion\-::http\-::request@{pion\-::http\-::request}!request@{request}}
+\index{request@{request}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{request}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::request\-::request (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a186975ae3a5cb72c0faeb0f8f66ce594}
+constructs a new request object
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the H\-T\-T\-P resource to request \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1request_a4cf48bf36c01ed7899b72784e01adf83}{\index{pion\-::http\-::request@{pion\-::http\-::request}!request@{request}}
+\index{request@{request}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{request}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::request\-::request (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a4cf48bf36c01ed7899b72784e01adf83}
+
+
+constructs a new request object (default constructor) 
+
+\hypertarget{classpion_1_1http_1_1request_a6b8d3e709899131b6d23ce623af4a7d3}{\index{pion\-::http\-::request@{pion\-::http\-::request}!$\sim$request@{$\sim$request}}
+\index{$\sim$request@{$\sim$request}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{$\sim$request}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::request\-::$\sim$request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request_a6b8d3e709899131b6d23ce623af4a7d3}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1request_a4167f9aed250f3f7cb6d935b5787bbba}{\index{pion\-::http\-::request@{pion\-::http\-::request}!add\-\_\-query@{add\-\_\-query}}
+\index{add\-\_\-query@{add\-\_\-query}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{add\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::add\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a4167f9aed250f3f7cb6d935b5787bbba}
+
+
+adds a value for the query key 
+
+\hypertarget{classpion_1_1http_1_1request_a17fbce903b00388346ad85e8b3d997b3}{\index{pion\-::http\-::request@{pion\-::http\-::request}!append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}}
+\index{append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{append\-\_\-cookie\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::request\-::append\-\_\-cookie\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request_a17fbce903b00388346ad85e8b3d997b3}
+
+
+appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1message_a532d475ab2dfdcdb969445902fad2e6f}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-C\-O\-O\-K\-I\-E\-\_\-\-N\-A\-M\-E\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-E\-L\-I\-M\-I\-T\-E\-R, pion\-::http\-::message\-::get\-\_\-cookies(), and pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-C\-O\-O\-K\-I\-E.
+
+\hypertarget{classpion_1_1http_1_1request_a5bc1d88faa0f3bb054f32c7ff0257f3b}{\index{pion\-::http\-::request@{pion\-::http\-::request}!change\-\_\-query@{change\-\_\-query}}
+\index{change\-\_\-query@{change\-\_\-query}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{change\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::change\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a5bc1d88faa0f3bb054f32c7ff0257f3b}
+
+
+changes the value of a query key 
+
+
+
+References pion\-::http\-::message\-::change\-\_\-value().
+
+\hypertarget{classpion_1_1http_1_1request_a2e0eff2dbba55adc260b13a8be013e8c}{\index{pion\-::http\-::request@{pion\-::http\-::request}!change\-\_\-resource@{change\-\_\-resource}}
+\index{change\-\_\-resource@{change\-\_\-resource}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{change\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::change\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a2e0eff2dbba55adc260b13a8be013e8c}
+
+
+changes the resource or uri-\/stem to be delivered (called as the result of a redirect) 
+
+\hypertarget{classpion_1_1http_1_1request_a820ac867130387a16859a6cf9ca77c74}{\index{pion\-::http\-::request@{pion\-::http\-::request}!clear@{clear}}
+\index{clear@{clear}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::request\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request_a820ac867130387a16859a6cf9ca77c74}
+
+
+clears all request data 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1message_af13279269cf1e00ae4fc5091c1c7cae5}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::clear().
+
+\hypertarget{classpion_1_1http_1_1request_acfcd67cdc0c390f3c264935718fe0b57}{\index{pion\-::http\-::request@{pion\-::http\-::request}!delete\-\_\-query@{delete\-\_\-query}}
+\index{delete\-\_\-query@{delete\-\_\-query}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{delete\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::delete\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_acfcd67cdc0c390f3c264935718fe0b57}
+
+
+removes all values for a query key 
+
+
+
+References pion\-::http\-::message\-::delete\-\_\-value().
+
+\hypertarget{classpion_1_1http_1_1request_a43fa910a94a42fe8b26700a94ab9c3c2}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-method@{get\-\_\-method}}
+\index{get\-\_\-method@{get\-\_\-method}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::request\-::get\-\_\-method (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a43fa910a94a42fe8b26700a94ab9c3c2}
+
+
+returns the request method (i.\-e. G\-E\-T, P\-O\-S\-T, P\-U\-T) 
+
+
+
+Referenced by pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1request_a79e8400cd9f7b956a4116b9bf218486b}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-original\-\_\-resource@{get\-\_\-original\-\_\-resource}}
+\index{get\-\_\-original\-\_\-resource@{get\-\_\-original\-\_\-resource}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-original\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::request\-::get\-\_\-original\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a79e8400cd9f7b956a4116b9bf218486b}
+
+
+returns the resource uri-\/stem originally requested 
+
+\hypertarget{classpion_1_1http_1_1request_a2e75b875b0858057b6b4bd6255f7424f}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-queries@{get\-\_\-queries}}
+\index{get\-\_\-queries@{get\-\_\-queries}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-queries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ihash\-\_\-multimap}\& pion\-::http\-::request\-::get\-\_\-queries (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a2e75b875b0858057b6b4bd6255f7424f}
+
+
+returns the query parameters 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish(), and pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1request_aee545d0144035125655d0a4de441820a}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-query@{get\-\_\-query}}
+\index{get\-\_\-query@{get\-\_\-query}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::request\-::get\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_aee545d0144035125655d0a4de441820a}
+
+
+returns a value for the query key if any are defined; otherwise, an empty string 
+
+
+
+References pion\-::http\-::message\-::get\-\_\-value().
+
+\hypertarget{classpion_1_1http_1_1request_a0a4f0e3f4ee577db353a55524efb3526}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-query\-\_\-string@{get\-\_\-query\-\_\-string}}
+\index{get\-\_\-query\-\_\-string@{get\-\_\-query\-\_\-string}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-query\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::request\-::get\-\_\-query\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a0a4f0e3f4ee577db353a55524efb3526}
+
+
+returns the uri-\/query or query string requested 
+
+\hypertarget{classpion_1_1http_1_1request_a929787cdfb1a8cca18c1971e3cfc5d54}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-resource@{get\-\_\-resource}}
+\index{get\-\_\-resource@{get\-\_\-resource}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::request\-::get\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a929787cdfb1a8cca18c1971e3cfc5d54}
+
+
+returns the resource uri-\/stem to be delivered (possibly the result of a redirect) 
+
+\hypertarget{classpion_1_1http_1_1request_a0c525f2d99bad69e67353cb2478c6b74}{\index{pion\-::http\-::request@{pion\-::http\-::request}!get\-\_\-user@{get\-\_\-user}}
+\index{get\-\_\-user@{get\-\_\-user}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{get\-\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}{\bf user\-\_\-ptr} pion\-::http\-::request\-::get\-\_\-user (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a0c525f2d99bad69e67353cb2478c6b74}
+
+
+get the user record for H\-T\-T\-P request after authentication 
+
+\hypertarget{classpion_1_1http_1_1request_ac0da1fdcb02cf58ab0391d9f7955aeab}{\index{pion\-::http\-::request@{pion\-::http\-::request}!has\-\_\-query@{has\-\_\-query}}
+\index{has\-\_\-query@{has\-\_\-query}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{has\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::request\-::has\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_ac0da1fdcb02cf58ab0391d9f7955aeab}
+
+
+returns true if at least one value for the query key is defined 
+
+\hypertarget{classpion_1_1http_1_1request_a9ec7262ec35b4282ea66cf07e49fd4fb}{\index{pion\-::http\-::request@{pion\-::http\-::request}!is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}}
+\index{is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{is\-\_\-content\-\_\-length\-\_\-implied}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool pion\-::http\-::request\-::is\-\_\-content\-\_\-length\-\_\-implied (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request_a9ec7262ec35b4282ea66cf07e49fd4fb}
+
+
+the content length of the message can never be implied for requests 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1message_a08bd257bd46e7a42b64bbc4482f28363}{pion\-::http\-::message}.
+
+\hypertarget{classpion_1_1http_1_1request_a343d9892b3a658acd3a28eadb908748d}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-content@{set\-\_\-content}}
+\index{set\-\_\-content@{set\-\_\-content}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a343d9892b3a658acd3a28eadb908748d}
+
+
+add content (for P\-O\-S\-T) from string 
+
+
+
+References pion\-::http\-::message\-::create\-\_\-content\-\_\-buffer(), and pion\-::http\-::message\-::set\-\_\-content\-\_\-length().
+
+\hypertarget{classpion_1_1http_1_1request_aa3df02baf7762c38c2dbbf04a02526fd}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-content@{set\-\_\-content}}
+\index{set\-\_\-content@{set\-\_\-content}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_aa3df02baf7762c38c2dbbf04a02526fd}
+add content (for P\-O\-S\-T) from buffer of given size does nothing if the buffer is invalid or the buffer size is zero 
+
+References pion\-::http\-::message\-::create\-\_\-content\-\_\-buffer(), and pion\-::http\-::message\-::set\-\_\-content\-\_\-length().
+
+\hypertarget{classpion_1_1http_1_1request_a0878aad94ef74810b8df2670a17c22b2}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-method@{set\-\_\-method}}
+\index{set\-\_\-method@{set\-\_\-method}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-method}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-method (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a0878aad94ef74810b8df2670a17c22b2}
+
+
+sets the H\-T\-T\-P request method (i.\-e. G\-E\-T, P\-O\-S\-T, P\-U\-T) 
+
+
+
+References pion\-::http\-::message\-::clear\-\_\-first\-\_\-line().
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data(), and use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content().
+
+\hypertarget{classpion_1_1http_1_1request_adbcb876e6bf19efb6a84802d90347e2b}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-query\-\_\-string@{set\-\_\-query\-\_\-string}}
+\index{set\-\_\-query\-\_\-string@{set\-\_\-query\-\_\-string}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-query\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-query\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_adbcb876e6bf19efb6a84802d90347e2b}
+
+
+sets the uri-\/query or query string requested 
+
+
+
+References pion\-::http\-::message\-::clear\-\_\-first\-\_\-line().
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data(), and use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string().
+
+\hypertarget{classpion_1_1http_1_1request_a421f57b069fd2442397dbcdb8c382a87}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-resource@{set\-\_\-resource}}
+\index{set\-\_\-resource@{set\-\_\-resource}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_a421f57b069fd2442397dbcdb8c382a87}
+
+
+sets the resource or uri-\/stem originally requested 
+
+
+
+References pion\-::http\-::message\-::clear\-\_\-first\-\_\-line().
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1request_abe13dc66982da6ab6cc08ff68710d4af}{\index{pion\-::http\-::request@{pion\-::http\-::request}!set\-\_\-user@{set\-\_\-user}}
+\index{set\-\_\-user@{set\-\_\-user}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{set\-\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::set\-\_\-user (
+\begin{DoxyParamCaption}
+\item[{{\bf user\-\_\-ptr}}]{user}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_abe13dc66982da6ab6cc08ff68710d4af}
+
+
+sets the user record for H\-T\-T\-P request after authentication 
+
+\hypertarget{classpion_1_1http_1_1request_a48f4d55f5be5e6bed2936ad8efa8b8ff}{\index{pion\-::http\-::request@{pion\-::http\-::request}!update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}}
+\index{update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{update\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::request\-::update\-\_\-first\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1request_a48f4d55f5be5e6bed2936ad8efa8b8ff}
+
+
+updates the string containing the first line for the H\-T\-T\-P message 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1message_a697a832ab0741d02ddecd8df8da0265d}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::get\-\_\-version\-\_\-string(), and pion\-::http\-::message\-::m\-\_\-first\-\_\-line.
+
+\hypertarget{classpion_1_1http_1_1request_abb1410c7dbbdc3a18997ee2486585106}{\index{pion\-::http\-::request@{pion\-::http\-::request}!use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content@{use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content}}
+\index{use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content@{use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_abb1410c7dbbdc3a18997ee2486585106}
+
+
+use the query parameters to build P\-O\-S\-T content for the request 
+
+
+
+References pion\-::http\-::types\-::\-C\-O\-N\-T\-E\-N\-T\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-R\-L\-E\-N\-C\-O\-D\-E\-D, pion\-::http\-::message\-::create\-\_\-content\-\_\-buffer(), pion\-::http\-::types\-::make\-\_\-query\-\_\-string(), pion\-::http\-::types\-::\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-P\-O\-S\-T, pion\-::http\-::message\-::set\-\_\-content\-\_\-length(), pion\-::http\-::message\-::set\-\_\-content\-\_\-type(), and set\-\_\-method().
+
+\hypertarget{classpion_1_1http_1_1request_aa3dd2b6074201004ea631051367b21d7}{\index{pion\-::http\-::request@{pion\-::http\-::request}!use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string@{use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string}}
+\index{use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string@{use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string}!pion::http::request@{pion\-::http\-::request}}
+\subsubsection[{use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::request\-::use\-\_\-query\-\_\-params\-\_\-for\-\_\-query\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1request_aa3dd2b6074201004ea631051367b21d7}
+
+
+use the query parameters to build a query string for the request 
+
+
+
+References pion\-::http\-::types\-::make\-\_\-query\-\_\-string(), and set\-\_\-query\-\_\-string().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{request_8hpp}{request.\-hpp}\end{DoxyCompactItemize}

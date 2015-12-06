@@ -1,0 +1,55 @@
+\hypertarget{internal_2socket_8h}{\section{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/internal/socket.h File Reference}
+\label{internal_2socket_8h}\index{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/internal/socket.\-h@{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/internal/socket.\-h}}
+}
+{\ttfamily \#include $<$log4cplus/config.\-hxx$>$}\\*
+{\ttfamily \#include $<$log4cplus/helpers/socket.\-h$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+Include dependency graph for socket.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{internal_2socket_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1addrinfo__deleter}{log4cplus\-::helpers\-::addrinfo\-\_\-deleter}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{log4cplus\-::helpers\-::socket\-\_\-closer}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{log4cplus\-::helpers\-::socket\-\_\-holder}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus}{log4cplus}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\-::helpers}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{log4cplus\-::helpers\-::os\-\_\-socket\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static os\-\_\-socket\-\_\-type \hyperlink{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{log4cplus\-::helpers\-::to\-\_\-os\-\_\-socket} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E const \&x)
+\item 
+static S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E \hyperlink{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{log4cplus\-::helpers\-::to\-\_\-log4cplus\-\_\-socket} (os\-\_\-socket\-\_\-type const \&x)
+\item 
+static void \hyperlink{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{log4cplus\-::helpers\-::set\-\_\-last\-\_\-socket\-\_\-error} (int err)
+\item 
+static int \hyperlink{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{log4cplus\-::helpers\-::get\-\_\-last\-\_\-socket\-\_\-error} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+os\-\_\-socket\-\_\-type const \hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{log4cplus\-::helpers\-::\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header contains declaration internal to \hyperlink{namespacelog4cplus}{log4cplus}. They must never be visible from user accesible headers or exported in D\-L\-L/shared libray. 

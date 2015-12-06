@@ -1,0 +1,177 @@
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender}{\section{log4cplus\-:\-:Daily\-Rolling\-File\-Appender Class Reference}
+\label{classlog4cplus_1_1DailyRollingFileAppender}\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+}
+
+
+{\ttfamily \#include $<$fileappender.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:Daily\-Rolling\-File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classlog4cplus_1_1DailyRollingFileAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:Daily\-Rolling\-File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1DailyRollingFileAppender__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_ab592e04193b1a4ffc523d1f31d28c7b6}{Daily\-Rolling\-File\-Appender} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&\hyperlink{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}{filename}, \hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{Daily\-Rolling\-File\-Schedule} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}{schedule}=\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8fa7f77eb6bafd1349c8b9c4eb91b4336e6}{D\-A\-I\-L\-Y}, bool \hyperlink{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}{immediate\-Flush}=true, int \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}{max\-Backup\-Index}=10, bool \hyperlink{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}{create\-Dirs}=false)
+\item 
+\hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1a4e5b15cf036d8bacddfed1f51e1ef4}{Daily\-Rolling\-File\-Appender} (const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \&properties)
+\item 
+virtual \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a00d9f808c1f7f6d37e9d584c55782b7d}{$\sim$\-Daily\-Rolling\-File\-Appender} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}{append} (const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\-::\-Internal\-Logging\-Event} \&event)
+\item 
+void \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a0b24c164ca29eecbb836427bf01ef655}{rollover} (bool already\-Locked=false)
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a3712d58aa4df52e7f839faae0b6e4655}{calculate\-Next\-Rollover\-Time} (const \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time} \&t) const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_a524d5db42fd75e03ea349aa4c172f418}{get\-Filename} (const \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time} \&t) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus_a8e28400490e25b19a04113f211de4c8f}{Daily\-Rolling\-File\-Schedule} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}{schedule}
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_ad29319815bc3795962df15aa7aebe1a0}{scheduled\-Filename}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time} \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_abc7c4f4cfd9c9a7ea9db92c452f34ec7}{next\-Rollover\-Time}
+\item 
+int \hyperlink{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}{max\-Backup\-Index}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classlog4cplus_1_1DailyRollingFileAppender}{Daily\-Rolling\-File\-Appender} extends \hyperlink{classlog4cplus_1_1FileAppender}{File\-Appender} so that the underlying file is rolled over at a user chosen frequency.
+
+\paragraph*{Properties}
+
+Properties additional to \hyperlink{classlog4cplus_1_1FileAppender}{File\-Appender}'s properties\-:
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily Schedule} ]This property specifies rollover schedule. The possible values are {\ttfamily M\-O\-N\-T\-H\-L\-Y}, {\ttfamily W\-E\-E\-K\-L\-Y}, {\ttfamily D\-A\-I\-L\-Y}, {\ttfamily T\-W\-I\-C\-E\-\_\-\-D\-A\-I\-L\-Y}, {\ttfamily H\-O\-U\-R\-L\-Y} and {\ttfamily M\-I\-N\-U\-T\-E\-L\-Y}.
+
+
+\item[{\ttfamily Max\-Backup\-Index} ]This property limits how many backup files are kept per single logging period; e.\-g. how many {\ttfamily log.\-2009-\/11-\/07.\-1}, {\ttfamily log.\-2009-\/11-\/07.\-2} etc. files are kept.
+
+
+\end{DoxyDescription}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_ab592e04193b1a4ffc523d1f31d28c7b6}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!Daily\-Rolling\-File\-Appender@{Daily\-Rolling\-File\-Appender}}
+\index{Daily\-Rolling\-File\-Appender@{Daily\-Rolling\-File\-Appender}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{Daily\-Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::\-Daily\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{filename, }
+\item[{{\bf Daily\-Rolling\-File\-Schedule}}]{schedule = {\ttfamily {\bf D\-A\-I\-L\-Y}}, }
+\item[{bool}]{immediate\-Flush = {\ttfamily true}, }
+\item[{int}]{max\-Backup\-Index = {\ttfamily 10}, }
+\item[{bool}]{create\-Dirs = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1DailyRollingFileAppender_ab592e04193b1a4ffc523d1f31d28c7b6}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a1a4e5b15cf036d8bacddfed1f51e1ef4}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!Daily\-Rolling\-File\-Appender@{Daily\-Rolling\-File\-Appender}}
+\index{Daily\-Rolling\-File\-Appender@{Daily\-Rolling\-File\-Appender}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{Daily\-Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::\-Daily\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Properties} \&}]{properties}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1DailyRollingFileAppender_a1a4e5b15cf036d8bacddfed1f51e1ef4}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a00d9f808c1f7f6d37e9d584c55782b7d}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!$\sim$\-Daily\-Rolling\-File\-Appender@{$\sim$\-Daily\-Rolling\-File\-Appender}}
+\index{$\sim$\-Daily\-Rolling\-File\-Appender@{$\sim$\-Daily\-Rolling\-File\-Appender}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{$\sim$\-Daily\-Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::$\sim$\-Daily\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a00d9f808c1f7f6d37e9d584c55782b7d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!append@{append}}
+\index{append@{append}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf spi\-::\-Internal\-Logging\-Event} \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a6d61c3b82eb60068ae77696c6a3bb7ec}
+Subclasses of {\ttfamily \hyperlink{classlog4cplus_1_1Appender}{Appender}} should implement this method to perform actual logging. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\-Append} method. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classlog4cplus_1_1FileAppender_a47a8d23755accaf61487844f6361958f}{log4cplus\-::\-File\-Appender}.
+
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a3712d58aa4df52e7f839faae0b6e4655}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!calculate\-Next\-Rollover\-Time@{calculate\-Next\-Rollover\-Time}}
+\index{calculate\-Next\-Rollover\-Time@{calculate\-Next\-Rollover\-Time}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{calculate\-Next\-Rollover\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::helpers\-::\-Time} log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::calculate\-Next\-Rollover\-Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Time} \&}]{t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a3712d58aa4df52e7f839faae0b6e4655}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!close@{close}}
+\index{close@{close}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a1c3c5f076abe251e3fcf5610c6e1a6a7}
+Release any resources allocated within the appender such as file handles, network connections, etc.
+
+It is a programming error to append to a closed appender. 
+
+Reimplemented from \hyperlink{classlog4cplus_1_1FileAppender_ab6eae1f13e1eae0db2f801e52c150e41}{log4cplus\-::\-File\-Appender}.
+
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a524d5db42fd75e03ea349aa4c172f418}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!get\-Filename@{get\-Filename}}
+\index{get\-Filename@{get\-Filename}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{get\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::get\-Filename (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Time} \&}]{t}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a524d5db42fd75e03ea349aa4c172f418}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_a0b24c164ca29eecbb836427bf01ef655}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!rollover@{rollover}}
+\index{rollover@{rollover}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{rollover}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::rollover (
+\begin{DoxyParamCaption}
+\item[{bool}]{already\-Locked = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_a0b24c164ca29eecbb836427bf01ef655}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!max\-Backup\-Index@{max\-Backup\-Index}}
+\index{max\-Backup\-Index@{max\-Backup\-Index}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{max\-Backup\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::max\-Backup\-Index\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_adca7446589f15917965d3224fa0eda93}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_abc7c4f4cfd9c9a7ea9db92c452f34ec7}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!next\-Rollover\-Time@{next\-Rollover\-Time}}
+\index{next\-Rollover\-Time@{next\-Rollover\-Time}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{next\-Rollover\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::helpers\-::\-Time} log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::next\-Rollover\-Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_abc7c4f4cfd9c9a7ea9db92c452f34ec7}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!schedule@{schedule}}
+\index{schedule@{schedule}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{schedule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Daily\-Rolling\-File\-Schedule} log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::schedule\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_abafd4df2e5d44b4c92f6b7e403946217}
+\hypertarget{classlog4cplus_1_1DailyRollingFileAppender_ad29319815bc3795962df15aa7aebe1a0}{\index{log4cplus\-::\-Daily\-Rolling\-File\-Appender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}!scheduled\-Filename@{scheduled\-Filename}}
+\index{scheduled\-Filename@{scheduled\-Filename}!log4cplus::DailyRollingFileAppender@{log4cplus\-::\-Daily\-Rolling\-File\-Appender}}
+\subsubsection[{scheduled\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-Daily\-Rolling\-File\-Appender\-::scheduled\-Filename\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DailyRollingFileAppender_ad29319815bc3795962df15aa7aebe1a0}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{fileappender_8h}{fileappender.\-h}\end{DoxyCompactItemize}

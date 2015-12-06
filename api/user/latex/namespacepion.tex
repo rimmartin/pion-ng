@@ -1,0 +1,145 @@
+\hypertarget{namespacepion}{\section{pion Namespace Reference}
+\label{namespacepion}\index{pion@{pion}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion_1_1error}{error}
+\item 
+\hyperlink{namespacepion_1_1http}{http}
+\item 
+\hyperlink{namespacepion_1_1spdy}{spdy}
+\item 
+\hyperlink{namespacepion_1_1tcp}{tcp}
+\item 
+\hyperlink{namespacepion_1_1test}{test}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1admin__rights}{admin\-\_\-rights}
+\item 
+struct \hyperlink{structpion_1_1algorithm}{algorithm}
+\item 
+class \hyperlink{classpion_1_1exception}{exception}
+\item 
+struct \hyperlink{structpion_1_1iequal__to}{iequal\-\_\-to}
+\item 
+struct \hyperlink{structpion_1_1ihash}{ihash}
+\item 
+struct \hyperlink{structpion_1_1logger}{logger}
+\item 
+class \hyperlink{classpion_1_1plugin}{plugin}
+\item 
+class \hyperlink{classpion_1_1plugin__ptr}{plugin\-\_\-ptr}
+\item 
+class \hyperlink{classpion_1_1plugin__instance__ptr}{plugin\-\_\-instance\-\_\-ptr}
+\item 
+class \hyperlink{classpion_1_1plugin__manager}{plugin\-\_\-manager}
+\item 
+class \hyperlink{classpion_1_1process}{process}
+\item 
+class \hyperlink{classpion_1_1scheduler}{scheduler}
+\item 
+class \hyperlink{classpion_1_1multi__thread__scheduler}{multi\-\_\-thread\-\_\-scheduler}
+\item 
+class \hyperlink{classpion_1_1single__service__scheduler}{single\-\_\-service\-\_\-scheduler}
+\item 
+class \hyperlink{classpion_1_1one__to__one__scheduler}{one\-\_\-to\-\_\-one\-\_\-scheduler}
+\item 
+class \hyperlink{classpion_1_1user}{user}
+\item 
+class \hyperlink{classpion_1_1user__manager}{user\-\_\-manager}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{hash__map_8hpp_ad6156e5f37a43d2118014c45b0a0b90f}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}\\*
+$<$ std\-::string, std\-::string, \\*
+\hyperlink{structpion_1_1ihash}{ihash}, \hyperlink{structpion_1_1iequal__to}{iequal\-\_\-to} $>$ \hyperlink{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{ihash\-\_\-multimap}
+\begin{DoxyCompactList}\small\item\em data type for case-\/insensitive dictionary of strings \end{DoxyCompactList}\item 
+typedef int \hyperlink{namespacepion_a0ae721a15721415f669eea72b5410bfb}{log\-\_\-appender}
+\item 
+typedef \hyperlink{namespacepion_a0ae721a15721415f669eea72b5410bfb}{log\-\_\-appender} $\ast$ \hyperlink{namespacepion_a66164fd1ba2d2866081712f2c82300d5}{log\-\_\-appender\-\_\-ptr}
+\item 
+typedef boost\-::shared\-\_\-ptr$<$ \hyperlink{classpion_1_1user}{user} $>$ \hyperlink{namespacepion_afd2ae32f926db1286ba2e83011456e11}{user\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em data type for a user pointer \end{DoxyCompactList}\item 
+typedef boost\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{classpion_1_1user__manager}{user\-\_\-manager} $>$ \hyperlink{namespacepion_a20602680730b88b8efd08b3730d601af}{user\-\_\-manager\-\_\-ptr}
+\begin{DoxyCompactList}\small\item\em data type for a \hyperlink{classpion_1_1user__manager}{user\-\_\-manager} pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static std\-::string \hyperlink{namespacepion_a50c25b08ffd02ef4d8e8ab93b713b5a0}{diagnostic\-\_\-information} (T const \&e)
+\item 
+void \hyperlink{namespacepion_a1de9bad9d6fe6c82f2698f3c2c927c48}{handle\-\_\-signal} (int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{\index{pion@{pion}!ihash\-\_\-multimap@{ihash\-\_\-multimap}}
+\index{ihash\-\_\-multimap@{ihash\-\_\-multimap}!pion@{pion}}
+\subsubsection[{ihash\-\_\-multimap}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}$<$std\-::string, std\-::string, {\bf ihash}, {\bf iequal\-\_\-to} $>$ {\bf pion\-::ihash\-\_\-multimap}}}\label{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}
+
+
+data type for case-\/insensitive dictionary of strings 
+
+\hypertarget{namespacepion_a0ae721a15721415f669eea72b5410bfb}{\index{pion@{pion}!log\-\_\-appender@{log\-\_\-appender}}
+\index{log\-\_\-appender@{log\-\_\-appender}!pion@{pion}}
+\subsubsection[{log\-\_\-appender}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf pion\-::log\-\_\-appender}}}\label{namespacepion_a0ae721a15721415f669eea72b5410bfb}
+\hypertarget{namespacepion_a66164fd1ba2d2866081712f2c82300d5}{\index{pion@{pion}!log\-\_\-appender\-\_\-ptr@{log\-\_\-appender\-\_\-ptr}}
+\index{log\-\_\-appender\-\_\-ptr@{log\-\_\-appender\-\_\-ptr}!pion@{pion}}
+\subsubsection[{log\-\_\-appender\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf log\-\_\-appender}$\ast$ {\bf pion\-::log\-\_\-appender\-\_\-ptr}}}\label{namespacepion_a66164fd1ba2d2866081712f2c82300d5}
+\hypertarget{namespacepion_a20602680730b88b8efd08b3730d601af}{\index{pion@{pion}!user\-\_\-manager\-\_\-ptr@{user\-\_\-manager\-\_\-ptr}}
+\index{user\-\_\-manager\-\_\-ptr@{user\-\_\-manager\-\_\-ptr}!pion@{pion}}
+\subsubsection[{user\-\_\-manager\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf user\-\_\-manager}$>$ {\bf pion\-::user\-\_\-manager\-\_\-ptr}}}\label{namespacepion_a20602680730b88b8efd08b3730d601af}
+
+
+data type for a \hyperlink{classpion_1_1user__manager}{user\-\_\-manager} pointer 
+
+\hypertarget{namespacepion_afd2ae32f926db1286ba2e83011456e11}{\index{pion@{pion}!user\-\_\-ptr@{user\-\_\-ptr}}
+\index{user\-\_\-ptr@{user\-\_\-ptr}!pion@{pion}}
+\subsubsection[{user\-\_\-ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::shared\-\_\-ptr$<${\bf user}$>$ {\bf pion\-::user\-\_\-ptr}}}\label{namespacepion_afd2ae32f926db1286ba2e83011456e11}
+
+
+data type for a user pointer 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacepion_a50c25b08ffd02ef4d8e8ab93b713b5a0}{\index{pion@{pion}!diagnostic\-\_\-information@{diagnostic\-\_\-information}}
+\index{diagnostic\-\_\-information@{diagnostic\-\_\-information}!pion@{pion}}
+\subsubsection[{diagnostic\-\_\-information}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ static std\-::string pion\-::diagnostic\-\_\-information (
+\begin{DoxyParamCaption}
+\item[{T const \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespacepion_a50c25b08ffd02ef4d8e8ab93b713b5a0}
+static method that generates a meaningful diagnostic message from exceptions
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & reference to an exception object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::string descriptive error message 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::server\-::handle\-\_\-request(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config(), and pion\-::scheduler\-::process\-\_\-service\-\_\-work().
+
+\hypertarget{namespacepion_a1de9bad9d6fe6c82f2698f3c2c927c48}{\index{pion@{pion}!handle\-\_\-signal@{handle\-\_\-signal}}
+\index{handle\-\_\-signal@{handle\-\_\-signal}!pion@{pion}}
+\subsubsection[{handle\-\_\-signal}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::handle\-\_\-signal (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacepion_a1de9bad9d6fe6c82f2698f3c2c927c48}
+
+
+References pion\-::process\-::shutdown().
+
+
+
+Referenced by pion\-::process\-::initialize().
+

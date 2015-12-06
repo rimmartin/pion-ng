@@ -1,0 +1,97 @@
+\hypertarget{error_8hpp}{\section{include/pion/error.hpp File Reference}
+\label{error_8hpp}\index{include/pion/error.\-hpp@{include/pion/error.\-hpp}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$boost/version.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/throw\-\_\-exception.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/exception/exception.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/exception/info.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/exception/error\-\_\-info.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/exception/get\-\_\-error\-\_\-info.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/config.\-hpp$>$}\\*
+Include dependency graph for error.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{error_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{error_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1exception}{pion\-::exception}
+\item 
+class \hyperlink{classpion_1_1error_1_1bad__arg}{pion\-::error\-::bad\-\_\-arg}
+\begin{DoxyCompactList}\small\item\em exception thrown for an invalid configuration argument or option \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1bad__config}{pion\-::error\-::bad\-\_\-config}
+\begin{DoxyCompactList}\small\item\em exception thrown if there is an error parsing a configuration file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1open__file}{pion\-::error\-::open\-\_\-file}
+\begin{DoxyCompactList}\small\item\em exception thrown if we failed to open a file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1open__plugin}{pion\-::error\-::open\-\_\-plugin}
+\begin{DoxyCompactList}\small\item\em exception thrown if we are unable to open a plugin \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1read__file}{pion\-::error\-::read\-\_\-file}
+\begin{DoxyCompactList}\small\item\em exception thrown if we failed to read data from a file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1file__not__found}{pion\-::error\-::file\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a file is not found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1directory__not__found}{pion\-::error\-::directory\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a required directory is not found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__not__found}{pion\-::error\-::plugin\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin cannot be found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1duplicate__plugin}{pion\-::error\-::duplicate\-\_\-plugin}
+\begin{DoxyCompactList}\small\item\em exception thrown if we try to add or load a duplicate plugin \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__missing__symbol}{pion\-::error\-::plugin\-\_\-missing\-\_\-symbol}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin is missing a required symbol \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__undefined}{pion\-::error\-::plugin\-\_\-undefined}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin has an undefined state \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1bad__password__hash}{pion\-::error\-::bad\-\_\-password\-\_\-hash}
+\begin{DoxyCompactList}\small\item\em exception thrown if a bad password hash is provided \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\item 
+\hyperlink{namespacepion_1_1error}{pion\-::error}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-arg\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a5ee8b972a03980d77e8abf0c12349449}{pion\-::error\-::errinfo\-\_\-message}
+\begin{DoxyCompactList}\small\item\em generic error message \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-arg\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a490aee146b33a07ff0cf1054379633cf}{pion\-::error\-::errinfo\-\_\-arg\-\_\-name}
+\begin{DoxyCompactList}\small\item\em name of an unrecognized configuration argument or option \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-file\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a5526ef1c3e6ab8db270a0d49a66a5782}{pion\-::error\-::errinfo\-\_\-file\-\_\-name}
+\begin{DoxyCompactList}\small\item\em file name/path \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-dir\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_ac098c77a623d21817e85bc6ee8df5c09}{pion\-::error\-::errinfo\-\_\-dir\-\_\-name}
+\begin{DoxyCompactList}\small\item\em directory name/path \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-plugin\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a7327ab3a3df1bd5f5ca8fb259260da2f}{pion\-::error\-::errinfo\-\_\-plugin\-\_\-name}
+\begin{DoxyCompactList}\small\item\em plugin identifier \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-dir\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a13c185094e103a8c0bb136923ccfa717}{pion\-::error\-::errinfo\-\_\-symbol\-\_\-name}
+\begin{DoxyCompactList}\small\item\em plugin symbol name \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static std\-::string \hyperlink{namespacepion_a50c25b08ffd02ef4d8e8ab93b713b5a0}{pion\-::diagnostic\-\_\-information} (T const \&e)
+\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{timehelper_8h}{\section{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/timehelper.h File Reference}
+\label{timehelper_8h}\index{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/timehelper.\-h@{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/timehelper.\-h}}
+}
+{\ttfamily \#include $<$log4cplus/config.\-hxx$>$}\\*
+{\ttfamily \#include $<$log4cplus/tstring.\-h$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+Include dependency graph for timehelper.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timehelper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timehelper_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus}{log4cplus}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\-::helpers}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef chrono\-::system\-\_\-clock \hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{log4cplus\-::helpers\-::\-Clock}
+\item 
+typedef chrono\-::duration$<$ long \\*
+long, std\-::micro $>$ \hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{log4cplus\-::helpers\-::\-Duration}
+\item 
+typedef chrono\-::time\-\_\-point\\*
+$<$ Clock, Duration $>$ \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{log4cplus\-::helpers\-::\-Time}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename From\-Duration $>$ }\\Time \hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{log4cplus\-::helpers\-::time\-\_\-cast} (chrono\-::time\-\_\-point$<$ Clock, From\-Duration $>$ const \&tp)
+\item 
+Time \hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{log4cplus\-::helpers\-::now} ()
+\item 
+Time \hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{log4cplus\-::helpers\-::from\-\_\-time\-\_\-t} (time\-\_\-t t\-\_\-time)
+\item 
+time\-\_\-t \hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{log4cplus\-::helpers\-::to\-\_\-time\-\_\-t} (Time const \&the\-\_\-time)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} Time \hyperlink{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{log4cplus\-::helpers\-::from\-\_\-struct\-\_\-tm} (tm $\ast$t)
+\item 
+Time \hyperlink{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{log4cplus\-::helpers\-::truncate\-\_\-fractions} (Time const \&the\-\_\-time)
+\item 
+long \hyperlink{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{log4cplus\-::helpers\-::microseconds\-\_\-part} (Time const \&the\-\_\-time)
+\item 
+Time \hyperlink{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{log4cplus\-::helpers\-::time\-\_\-from\-\_\-parts} (time\-\_\-t tv\-\_\-sec, long tv\-\_\-usec)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{log4cplus\-::helpers\-::gm\-Time} (tm $\ast$t, Time const \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{log4cplus\-::helpers\-::local\-Time} (tm $\ast$t, Time const \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{log4cplus\-::helpers\-::get\-Formatted\-Time} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&fmt, Time const \&the\-\_\-time, bool use\-\_\-gmtime=false)
+\end{DoxyCompactItemize}

@@ -1,0 +1,564 @@
+\hypertarget{classpion_1_1http_1_1server}{\section{pion\-:\-:http\-:\-:server Class Reference}
+\label{classpion_1_1http_1_1server}\index{pion\-::http\-::server@{pion\-::http\-::server}}
+}
+
+
+{\ttfamily \#include $<$server.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classpion_1_1http_1_1server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classpion_1_1http_1_1server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::function2$<$ void, \\*
+const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \\*
+\&, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \& $>$ \hyperlink{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{request\-\_\-handler\-\_\-t}
+\begin{DoxyCompactList}\small\item\em type of function that is used to handle requests \end{DoxyCompactList}\item 
+typedef boost\-::function3$<$ void, \\*
+const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \\*
+\&, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \\*
+\&, const std\-::string \& $>$ \hyperlink{classpion_1_1http_1_1server_abc3b778d656bfb9dfa0b63315b5369f9}{error\-\_\-handler\-\_\-t}
+\begin{DoxyCompactList}\small\item\em handler for requests that result in \char`\"{}500 Server Error\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1http_1_1server_a5632ccba73177582414d649c6316362d}{$\sim$server} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1server_a12ed7b808ae35c5e503f9d23d73860d7}{server} (const unsigned int tcp\-\_\-port=0)
+\item 
+\hyperlink{classpion_1_1http_1_1server_ac63e91762958da5d8122a1be80650382}{server} (const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+\hyperlink{classpion_1_1http_1_1server_abdfcbc45db2b886e3bfcf0c6b867b0c2}{server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const unsigned int tcp\-\_\-port=0)
+\item 
+\hyperlink{classpion_1_1http_1_1server_ae84f4442d8bd468a1d77a1c96e29e681}{server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+void \hyperlink{classpion_1_1http_1_1server_a312ad564b529bda2b4ddd12f02fd6d62}{add\-\_\-resource} (const std\-::string \&resource, \hyperlink{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{request\-\_\-handler\-\_\-t} request\-\_\-handler)
+\item 
+void \hyperlink{classpion_1_1http_1_1server_ac75fe5968f4d5e5c68e6328d483d0794}{remove\-\_\-resource} (const std\-::string \&resource)
+\item 
+void \hyperlink{classpion_1_1http_1_1server_a114c86a620ac425e4da9ebacebda3f21}{add\-\_\-redirect} (const std\-::string \&requested\-\_\-resource, const std\-::string \&new\-\_\-resource)
+\item 
+void \hyperlink{classpion_1_1http_1_1server_ae519fa972938c911f02b0ec156615a0d}{set\-\_\-bad\-\_\-request\-\_\-handler} (\hyperlink{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{request\-\_\-handler\-\_\-t} h)
+\begin{DoxyCompactList}\small\item\em sets the function that handles bad H\-T\-T\-P requests \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1server_a817a94e4117d2d8616c37b5f8d093e92}{set\-\_\-not\-\_\-found\-\_\-handler} (\hyperlink{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{request\-\_\-handler\-\_\-t} h)
+\begin{DoxyCompactList}\small\item\em sets the function that handles requests which match no other web services \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1server_ae88ab890a352b5bb389cbc8e6363e671}{set\-\_\-error\-\_\-handler} (\hyperlink{classpion_1_1http_1_1server_abc3b778d656bfb9dfa0b63315b5369f9}{error\-\_\-handler\-\_\-t} h)
+\begin{DoxyCompactList}\small\item\em sets the function that handles requests which match no other web services \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1server_af7e7f7b23f1d90d1e1e7171a33b29d7b}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears the collection of resources recognized by the H\-T\-T\-P server \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1server_a5ccee5bdd4d7f59a348dd9475cba7ded}{set\-\_\-authentication} (\hyperlink{namespacepion_1_1http_ad4fb4365aa7da70980fe02dfb13773e4}{http\-::auth\-\_\-ptr} \hyperlink{classpion_1_1http_1_1auth}{auth})
+\item 
+void \hyperlink{classpion_1_1http_1_1server_acf80fa19484a66649c89cf9a23cc9251}{set\-\_\-max\-\_\-content\-\_\-length} (std\-::size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em sets the maximum length for H\-T\-T\-P request payload content \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::string \hyperlink{classpion_1_1http_1_1server_a375e54d0970e5d3dfc0eb50f902cf4c9}{strip\-\_\-trailing\-\_\-slash} (const std\-::string \&str)
+\item 
+static void \hyperlink{classpion_1_1http_1_1server_a32e2b0b6936fe56f78bc8bdc4b03786c}{handle\-\_\-bad\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+static void \hyperlink{classpion_1_1http_1_1server_a774691f785de05231a90a9975a4bc7e4}{handle\-\_\-not\-\_\-found\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+static void \hyperlink{classpion_1_1http_1_1server_a912a8d3d7754f8a3c1433b079e606871}{handle\-\_\-server\-\_\-error} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const std\-::string \&error\-\_\-msg)
+\item 
+static void \hyperlink{classpion_1_1http_1_1server_aa3b21b862df05cd2d0ccb12ae9659d68}{handle\-\_\-forbidden\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const std\-::string \&error\-\_\-msg)
+\item 
+static void \hyperlink{classpion_1_1http_1_1server_a84802be9b0759de8d41cf5eca99b8b48}{handle\-\_\-method\-\_\-not\-\_\-allowed} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const std\-::string \&allowed\-\_\-methods=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1server_a7f15a7abd45216a7e03e3f3b5c0b83c1}{handle\-\_\-connection} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1server_aadca54c44a0136f541e2f2e95e2c8084}{handle\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const boost\-::system\-::error\-\_\-code \&ec)
+\item 
+virtual bool \hyperlink{classpion_1_1http_1_1server_a2a0e8e0c21438a9928e680cb0d94430c}{find\-\_\-request\-\_\-handler} (const std\-::string \&resource, \hyperlink{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{request\-\_\-handler\-\_\-t} \&request\-\_\-handler) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+server\-: a server that handles H\-T\-T\-P connections 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1http_1_1server_abc3b778d656bfb9dfa0b63315b5369f9}{\index{pion\-::http\-::server@{pion\-::http\-::server}!error\-\_\-handler\-\_\-t@{error\-\_\-handler\-\_\-t}}
+\index{error\-\_\-handler\-\_\-t@{error\-\_\-handler\-\_\-t}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{error\-\_\-handler\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function3$<$void, const {\bf http\-::request\-\_\-ptr}\&, const {\bf tcp\-::connection\-\_\-ptr}\&, const std\-::string\&$>$ {\bf pion\-::http\-::server\-::error\-\_\-handler\-\_\-t}}}\label{classpion_1_1http_1_1server_abc3b778d656bfb9dfa0b63315b5369f9}
+
+
+handler for requests that result in \char`\"{}500 Server Error\char`\"{} 
+
+\hypertarget{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}{\index{pion\-::http\-::server@{pion\-::http\-::server}!request\-\_\-handler\-\_\-t@{request\-\_\-handler\-\_\-t}}
+\index{request\-\_\-handler\-\_\-t@{request\-\_\-handler\-\_\-t}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{request\-\_\-handler\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function2$<$void, const {\bf http\-::request\-\_\-ptr}\&, const {\bf tcp\-::connection\-\_\-ptr}\&$>$ {\bf pion\-::http\-::server\-::request\-\_\-handler\-\_\-t}}}\label{classpion_1_1http_1_1server_a9a5ae02baccb5646a5a76b99dc44df6e}
+
+
+type of function that is used to handle requests 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1server_a5632ccba73177582414d649c6316362d}{\index{pion\-::http\-::server@{pion\-::http\-::server}!$\sim$server@{$\sim$server}}
+\index{$\sim$server@{$\sim$server}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{$\sim$server}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::server\-::$\sim$server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1server_a5632ccba73177582414d649c6316362d}
+
+
+default destructor 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1tcp_1_1server_a728020c37ae9ec06197d01b195a24f9e}{pion\-::tcp\-::server}.
+
+\hypertarget{classpion_1_1http_1_1server_a12ed7b808ae35c5e503f9d23d73860d7}{\index{pion\-::http\-::server@{pion\-::http\-::server}!server@{server}}
+\index{server@{server}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{tcp\-\_\-port = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1server_a12ed7b808ae35c5e503f9d23d73860d7}
+creates a new server object
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1server_ac63e91762958da5d8122a1be80650382}{\index{pion\-::http\-::server@{pion\-::http\-::server}!server@{server}}
+\index{server@{server}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1server_ac63e91762958da5d8122a1be80650382}
+creates a new server object
+
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1server_abdfcbc45db2b886e3bfcf0c6b867b0c2}{\index{pion\-::http\-::server@{pion\-::http\-::server}!server@{server}}
+\index{server@{server}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const unsigned int}]{tcp\-\_\-port = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1server_abdfcbc45db2b886e3bfcf0c6b867b0c2}
+creates a new server object
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1server_ae84f4442d8bd468a1d77a1c96e29e681}{\index{pion\-::http\-::server@{pion\-::http\-::server}!server@{server}}
+\index{server@{server}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_ae84f4442d8bd468a1d77a1c96e29e681}
+creates a new server object
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1server_a114c86a620ac425e4da9ebacebda3f21}{\index{pion\-::http\-::server@{pion\-::http\-::server}!add\-\_\-redirect@{add\-\_\-redirect}}
+\index{add\-\_\-redirect@{add\-\_\-redirect}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{add\-\_\-redirect}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::add\-\_\-redirect (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{requested\-\_\-resource, }
+\item[{const std\-::string \&}]{new\-\_\-resource}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1server_a114c86a620ac425e4da9ebacebda3f21}
+adds a new resource redirection to the H\-T\-T\-P server
+
+
+\begin{DoxyParams}{Parameters}
+{\em requested\-\_\-resource} & the resource name or uri-\/stem that will be redirected \\
+\hline
+{\em new\-\_\-resource} & the resource that requested\-\_\-resource will be redirected to \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and strip\-\_\-trailing\-\_\-slash().
+
+\hypertarget{classpion_1_1http_1_1server_a312ad564b529bda2b4ddd12f02fd6d62}{\index{pion\-::http\-::server@{pion\-::http\-::server}!add\-\_\-resource@{add\-\_\-resource}}
+\index{add\-\_\-resource@{add\-\_\-resource}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{add\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::add\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource, }
+\item[{{\bf request\-\_\-handler\-\_\-t}}]{request\-\_\-handler}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1server_a312ad564b529bda2b4ddd12f02fd6d62}
+adds a new web service to the H\-T\-T\-P server
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the resource name or uri-\/stem to bind to the handler \\
+\hline
+{\em request\-\_\-handler} & function used to handle requests to the resource \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and strip\-\_\-trailing\-\_\-slash().
+
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service(), and pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service().
+
+\hypertarget{classpion_1_1http_1_1server_af7e7f7b23f1d90d1e1e7171a33b29d7b}{\index{pion\-::http\-::server@{pion\-::http\-::server}!clear@{clear}}
+\index{clear@{clear}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::server\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1server_af7e7f7b23f1d90d1e1e7171a33b29d7b}
+
+
+clears the collection of resources recognized by the H\-T\-T\-P server 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1plugin__server_a81c0779f8ddda5cdb6e05e1b74ec2fee}{pion\-::http\-::plugin\-\_\-server}.
+
+
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::clear().
+
+\hypertarget{classpion_1_1http_1_1server_a2a0e8e0c21438a9928e680cb0d94430c}{\index{pion\-::http\-::server@{pion\-::http\-::server}!find\-\_\-request\-\_\-handler@{find\-\_\-request\-\_\-handler}}
+\index{find\-\_\-request\-\_\-handler@{find\-\_\-request\-\_\-handler}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{find\-\_\-request\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::server\-::find\-\_\-request\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource, }
+\item[{{\bf request\-\_\-handler\-\_\-t} \&}]{request\-\_\-handler}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1server_a2a0e8e0c21438a9928e680cb0d94430c}
+searches for the appropriate request handler to use for a given resource
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the name of the resource to search for \\
+\hline
+{\em request\-\_\-handler} & function that can handle requests for this resource \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1server_a32e2b0b6936fe56f78bc8bdc4b03786c}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-bad\-\_\-request@{handle\-\_\-bad\-\_\-request}}
+\index{handle\-\_\-bad\-\_\-request@{handle\-\_\-bad\-\_\-request}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-bad\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-bad\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1http_1_1server_a32e2b0b6936fe56f78bc8bdc4b03786c}
+used to send responses when a bad H\-T\-T\-P request is made
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-B\-A\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-B\-A\-D\-\_\-\-R\-E\-Q\-U\-E\-S\-T.
+
+\hypertarget{classpion_1_1http_1_1server_a7f15a7abd45216a7e03e3f3b5c0b83c1}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-connection@{handle\-\_\-connection}}
+\index{handle\-\_\-connection@{handle\-\_\-connection}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1server_a7f15a7abd45216a7e03e3f3b5c0b83c1}
+handles a new T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & the new T\-C\-P connection to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classpion_1_1tcp_1_1server_a1e8ae789868cd0b8eb08e5c3da9b33a4}{pion\-::tcp\-::server}.
+
+
+
+References pion\-::http\-::request\-\_\-reader\-::create(), and handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1server_aa3b21b862df05cd2d0ccb12ae9659d68}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-forbidden\-\_\-request@{handle\-\_\-forbidden\-\_\-request}}
+\index{handle\-\_\-forbidden\-\_\-request@{handle\-\_\-forbidden\-\_\-request}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-forbidden\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-forbidden\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const std\-::string \&}]{error\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1http_1_1server_aa3b21b862df05cd2d0ccb12ae9659d68}
+used to send responses when a request is forbidden
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+{\em error\-\_\-msg} & message that explains what went wrong \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-F\-O\-R\-B\-I\-D\-D\-E\-N, pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-O\-R\-B\-I\-D\-D\-E\-N, and pion\-::algorithm\-::xml\-\_\-encode().
+
+\hypertarget{classpion_1_1http_1_1server_a84802be9b0759de8d41cf5eca99b8b48}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-method\-\_\-not\-\_\-allowed@{handle\-\_\-method\-\_\-not\-\_\-allowed}}
+\index{handle\-\_\-method\-\_\-not\-\_\-allowed@{handle\-\_\-method\-\_\-not\-\_\-allowed}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-method\-\_\-not\-\_\-allowed}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-method\-\_\-not\-\_\-allowed (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const std\-::string \&}]{allowed\-\_\-methods = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1http_1_1server_a84802be9b0759de8d41cf5eca99b8b48}
+used to send responses when a method is not allowed
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+{\em allowed\-\_\-methods} & optional comma separated list of allowed methods \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-O\-T\-\_\-\-A\-L\-L\-O\-W\-E\-D, pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-N\-O\-T\-\_\-\-A\-L\-L\-O\-W\-E\-D, and pion\-::algorithm\-::xml\-\_\-encode().
+
+\hypertarget{classpion_1_1http_1_1server_a774691f785de05231a90a9975a4bc7e4}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-not\-\_\-found\-\_\-request@{handle\-\_\-not\-\_\-found\-\_\-request}}
+\index{handle\-\_\-not\-\_\-found\-\_\-request@{handle\-\_\-not\-\_\-found\-\_\-request}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-not\-\_\-found\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-not\-\_\-found\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1http_1_1server_a774691f785de05231a90a9975a4bc7e4}
+used to send responses when no web services can handle the request
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D, pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-N\-O\-T\-\_\-\-F\-O\-U\-N\-D, and pion\-::algorithm\-::xml\-\_\-encode().
+
+\hypertarget{classpion_1_1http_1_1server_aadca54c44a0136f541e2f2e95e2c8084}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-request@{handle\-\_\-request}}
+\index{handle\-\_\-request@{handle\-\_\-request}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const boost\-::system\-::error\-\_\-code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1server_aadca54c44a0136f541e2f2e95e2c8084}
+handles a new H\-T\-T\-P request
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & T\-C\-P connection containing a new request \\
+\hline
+{\em ec} & error\-\_\-code contains additional information for parsing errors \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::diagnostic\-\_\-information(), find\-\_\-request\-\_\-handler(), pion\-::http\-::parser\-::get\-\_\-error\-\_\-category(), pion\-::tcp\-::server\-::get\-\_\-port(), pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-C\-L\-O\-S\-E, pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and strip\-\_\-trailing\-\_\-slash().
+
+
+
+Referenced by handle\-\_\-connection().
+
+\hypertarget{classpion_1_1http_1_1server_a912a8d3d7754f8a3c1433b079e606871}{\index{pion\-::http\-::server@{pion\-::http\-::server}!handle\-\_\-server\-\_\-error@{handle\-\_\-server\-\_\-error}}
+\index{handle\-\_\-server\-\_\-error@{handle\-\_\-server\-\_\-error}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{handle\-\_\-server\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::handle\-\_\-server\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const std\-::string \&}]{error\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1http_1_1server_a912a8d3d7754f8a3c1433b079e606871}
+used to send responses when a server error occurs
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+{\em error\-\_\-msg} & message that explains what went wrong \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R, pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-E\-R\-R\-O\-R, and pion\-::algorithm\-::xml\-\_\-encode().
+
+\hypertarget{classpion_1_1http_1_1server_ac75fe5968f4d5e5c68e6328d483d0794}{\index{pion\-::http\-::server@{pion\-::http\-::server}!remove\-\_\-resource@{remove\-\_\-resource}}
+\index{remove\-\_\-resource@{remove\-\_\-resource}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{remove\-\_\-resource}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::remove\-\_\-resource (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1server_ac75fe5968f4d5e5c68e6328d483d0794}
+removes a web service from the H\-T\-T\-P server
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the resource name or uri-\/stem to remove \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, and strip\-\_\-trailing\-\_\-slash().
+
+\hypertarget{classpion_1_1http_1_1server_a5ccee5bdd4d7f59a348dd9475cba7ded}{\index{pion\-::http\-::server@{pion\-::http\-::server}!set\-\_\-authentication@{set\-\_\-authentication}}
+\index{set\-\_\-authentication@{set\-\_\-authentication}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{set\-\_\-authentication}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::set\-\_\-authentication (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-::auth\-\_\-ptr}}]{auth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_a5ccee5bdd4d7f59a348dd9475cba7ded}
+sets the handler object for authentication verification processing 
+
+Referenced by pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config().
+
+\hypertarget{classpion_1_1http_1_1server_ae519fa972938c911f02b0ec156615a0d}{\index{pion\-::http\-::server@{pion\-::http\-::server}!set\-\_\-bad\-\_\-request\-\_\-handler@{set\-\_\-bad\-\_\-request\-\_\-handler}}
+\index{set\-\_\-bad\-\_\-request\-\_\-handler@{set\-\_\-bad\-\_\-request\-\_\-handler}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{set\-\_\-bad\-\_\-request\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::set\-\_\-bad\-\_\-request\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{{\bf request\-\_\-handler\-\_\-t}}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_ae519fa972938c911f02b0ec156615a0d}
+
+
+sets the function that handles bad H\-T\-T\-P requests 
+
+\hypertarget{classpion_1_1http_1_1server_ae88ab890a352b5bb389cbc8e6363e671}{\index{pion\-::http\-::server@{pion\-::http\-::server}!set\-\_\-error\-\_\-handler@{set\-\_\-error\-\_\-handler}}
+\index{set\-\_\-error\-\_\-handler@{set\-\_\-error\-\_\-handler}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{set\-\_\-error\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::set\-\_\-error\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{{\bf error\-\_\-handler\-\_\-t}}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_ae88ab890a352b5bb389cbc8e6363e671}
+
+
+sets the function that handles requests which match no other web services 
+
+\hypertarget{classpion_1_1http_1_1server_acf80fa19484a66649c89cf9a23cc9251}{\index{pion\-::http\-::server@{pion\-::http\-::server}!set\-\_\-max\-\_\-content\-\_\-length@{set\-\_\-max\-\_\-content\-\_\-length}}
+\index{set\-\_\-max\-\_\-content\-\_\-length@{set\-\_\-max\-\_\-content\-\_\-length}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{set\-\_\-max\-\_\-content\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::set\-\_\-max\-\_\-content\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_acf80fa19484a66649c89cf9a23cc9251}
+
+
+sets the maximum length for H\-T\-T\-P request payload content 
+
+\hypertarget{classpion_1_1http_1_1server_a817a94e4117d2d8616c37b5f8d093e92}{\index{pion\-::http\-::server@{pion\-::http\-::server}!set\-\_\-not\-\_\-found\-\_\-handler@{set\-\_\-not\-\_\-found\-\_\-handler}}
+\index{set\-\_\-not\-\_\-found\-\_\-handler@{set\-\_\-not\-\_\-found\-\_\-handler}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{set\-\_\-not\-\_\-found\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::server\-::set\-\_\-not\-\_\-found\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{{\bf request\-\_\-handler\-\_\-t}}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1server_a817a94e4117d2d8616c37b5f8d093e92}
+
+
+sets the function that handles requests which match no other web services 
+
+\hypertarget{classpion_1_1http_1_1server_a375e54d0970e5d3dfc0eb50f902cf4c9}{\index{pion\-::http\-::server@{pion\-::http\-::server}!strip\-\_\-trailing\-\_\-slash@{strip\-\_\-trailing\-\_\-slash}}
+\index{strip\-\_\-trailing\-\_\-slash@{strip\-\_\-trailing\-\_\-slash}!pion::http::server@{pion\-::http\-::server}}
+\subsubsection[{strip\-\_\-trailing\-\_\-slash}]{\setlength{\rightskip}{0pt plus 5cm}static std\-::string pion\-::http\-::server\-::strip\-\_\-trailing\-\_\-slash (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1http_1_1server_a375e54d0970e5d3dfc0eb50f902cf4c9}
+strips trailing slash from a string, if one exists
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the original string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resulting string, after any trailing slash is removed 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::auth\-::add\-\_\-permit(), add\-\_\-redirect(), add\-\_\-resource(), pion\-::http\-::auth\-::add\-\_\-restrict(), pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service(), handle\-\_\-request(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service(), pion\-::http\-::auth\-::need\-\_\-authentication(), pion\-::http\-::cookie\-\_\-auth\-::process\-\_\-login(), remove\-\_\-resource(), and pion\-::http\-::plugin\-\_\-server\-::set\-\_\-service\-\_\-option().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{http_2server_8hpp}{server.\-hpp}\item 
+src/\hyperlink{http__server_8cpp}{http\-\_\-server.\-cpp}\end{DoxyCompactItemize}

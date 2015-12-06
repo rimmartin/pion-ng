@@ -1,0 +1,14 @@
+<map id="log4cplus::SocketAppender" name="log4cplus::SocketAppender">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1Appender.html" title="log4cplus::Appender" alt="" coords="902,204,1039,231"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title="log4cplus::helpers\l::SharedObject" alt="" coords="611,135,733,177"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1thread_1_1Mutex.html" title="log4cplus::thread::\lMutex" alt="" coords="311,135,435,177"/>
+<area shape="rect" id="node6" href="$classlog4cplus_1_1helpers_1_1LockFile.html" title="log4cplus::helpers\l::LockFile" alt="" coords="312,201,435,242"/>
+<area shape="rect" id="node8" href="$classlog4cplus_1_1ErrorHandler.html" title="log4cplus::ErrorHandler" alt="" coords="297,273,450,300"/>
+<area shape="rect" id="node10" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; Filter \&gt;" alt="" coords="585,5,759,46"/>
+<area shape="rect" id="node12" href="$classlog4cplus_1_1Layout.html" title="log4cplus::Layout" alt="" coords="313,77,433,104"/>
+<area shape="rect" id="node13" href="$classlog4cplus_1_1LogLevelManager.html" title="log4cplus::LogLevelManager" alt="" coords="6,77,189,104"/>
+<area shape="rect" id="node14" href="$classlog4cplus_1_1helpers_1_1IConnectorThreadClient.html" title="Interface implemented by users of ConnectorThread. " alt="" coords="889,401,1053,442"/>
+<area shape="rect" id="node15" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; helpers\l::ConnectorThread \&gt;" alt="" coords="883,465,1059,521"/>
+<area shape="rect" id="node16" href="$classlog4cplus_1_1helpers_1_1Socket.html" title="log4cplus::helpers\l::Socket" alt="" coords="909,545,1032,586"/>
+<area shape="rect" id="node17" href="$classlog4cplus_1_1helpers_1_1AbstractSocket.html" title="log4cplus::helpers\l::AbstractSocket" alt="" coords="611,545,733,586"/>
+</map>

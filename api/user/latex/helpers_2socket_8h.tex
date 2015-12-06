@@ -1,0 +1,87 @@
+\hypertarget{helpers_2socket_8h}{\section{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/socket.h File Reference}
+\label{helpers_2socket_8h}\index{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/socket.\-h@{/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/socket.\-h}}
+}
+{\ttfamily \#include $<$log4cplus/config.\-hxx$>$}\\*
+{\ttfamily \#include $<$array$>$}\\*
+{\ttfamily \#include $<$log4cplus/tstring.\-h$>$}\\*
+{\ttfamily \#include $<$log4cplus/helpers/socketbuffer.\-h$>$}\\*
+Include dependency graph for socket.\-h\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers_2socket_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{helpers_2socket_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{log4cplus\-::helpers\-::\-Abstract\-Socket}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1Socket}{log4cplus\-::helpers\-::\-Socket}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{log4cplus\-::helpers\-::\-Server\-Socket}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus}{log4cplus}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers}{log4cplus\-::helpers}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::ptrdiff\-\_\-t \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{log4cplus\-::helpers\-::\-S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{log4cplus\-::helpers\-::\-Socket\-State} \{ \\*
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}{log4cplus\-::helpers\-::ok}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}{log4cplus\-::helpers\-::not\-\_\-opened}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}{log4cplus\-::helpers\-::bad\-\_\-address}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}{log4cplus\-::helpers\-::connection\-\_\-failed}, 
+\\*
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}{log4cplus\-::helpers\-::broken\-\_\-pipe}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}{log4cplus\-::helpers\-::invalid\-\_\-access\-\_\-mode}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}{log4cplus\-::helpers\-::message\-\_\-truncated}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}{log4cplus\-::helpers\-::accept\-\_\-interrupted}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E \hyperlink{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}{log4cplus\-::helpers\-::open\-Socket} (unsigned short port, bool udp, bool ipv6, Socket\-State \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E \hyperlink{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}{log4cplus\-::helpers\-::connect\-Socket} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&hostn, unsigned short port, bool udp, bool ipv6, Socket\-State \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E \hyperlink{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}{log4cplus\-::helpers\-::accept\-Socket} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock, Socket\-State \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}{log4cplus\-::helpers\-::close\-Socket} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}{log4cplus\-::helpers\-::shutdown\-Socket} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}{log4cplus\-::helpers\-::read} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock, Socket\-Buffer \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}{log4cplus\-::helpers\-::write} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock, const Socket\-Buffer \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}{log4cplus\-::helpers\-::write} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E sock, const std\-::string \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} tstring \hyperlink{namespacelog4cplus_1_1helpers_a8bbc22ccb8a533bae0a8820fd97cd319}{log4cplus\-::helpers\-::get\-Hostname} (bool fqdn)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}{log4cplus\-::helpers\-::set\-T\-C\-P\-No\-Delay} (S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E, bool)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E const \hyperlink{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}{log4cplus\-::helpers\-::\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}
+\end{DoxyCompactItemize}

@@ -1,0 +1,467 @@
+\hypertarget{classpion_1_1http_1_1writer}{\section{pion\-:\-:http\-:\-:writer Class Reference}
+\label{classpion_1_1http_1_1writer}\index{pion\-::http\-::writer@{pion\-::http\-::writer}}
+}
+
+
+{\ttfamily \#include $<$writer.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:writer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classpion_1_1http_1_1writer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:writer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classpion_1_1http_1_1writer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1http_1_1writer_ae8a84fa8012af64f2b5c22582f37f0ef}{$\sim$writer} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1writer_a17e88be48ecde04b8dbe54239a14dc25}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears out all of the memory buffers used to cache payload content data \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classpion_1_1http_1_1writer_a5959a2c14149da804ce62fe52b009596}{write} (const T \&data)
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_aaa847dd2364e85844395fc4815a654ca}{write} (std\-::ostream \&($\ast$iomanip)(std\-::ostream \&))
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_a8b0b29526fb03597934145eb9f21e932}{write} (const void $\ast$data, size\-\_\-t length)
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_ad82908f247f558770c6c4d9f58d2a5f2}{write\-\_\-no\-\_\-copy} (const std\-::string \&data)
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_a33832b2c08f3696a50614d0ad3c886a9}{write\-\_\-no\-\_\-copy} (void $\ast$data, size\-\_\-t length)
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_a6c96aa95d710babcf5096d8294f703d5}{send} (void)
+\item 
+{\footnotesize template$<$typename Send\-Handler $>$ }\\void \hyperlink{classpion_1_1http_1_1writer_a7f258348ea914b41591c30a226b9d6a5}{send} (Send\-Handler send\-\_\-handler)
+\item 
+{\footnotesize template$<$typename Send\-Handler $>$ }\\void \hyperlink{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}{send\-\_\-chunk} (Send\-Handler send\-\_\-handler)
+\item 
+{\footnotesize template$<$typename Send\-Handler $>$ }\\void \hyperlink{classpion_1_1http_1_1writer_a1001000ab1c48af56e1de38d0b92e22f}{send\-\_\-final\-\_\-chunk} (Send\-Handler send\-\_\-handler)
+\item 
+void \hyperlink{classpion_1_1http_1_1writer_a902953ed4ab1f0a009f8fc4517735351}{send\-\_\-final\-\_\-chunk} (void)
+\item 
+\hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \& \hyperlink{classpion_1_1http_1_1writer_ae65148e4a1e72266e64c4ab1ceed2c17}{get\-\_\-connection} (void)
+\begin{DoxyCompactList}\small\item\em returns a shared pointer to the T\-C\-P connection \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classpion_1_1http_1_1writer_a980285662a960320b561e419563a83e2}{get\-\_\-content\-\_\-length} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the length of the payload content (in bytes) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1writer_ae2d856d25a3e4859d3f5f86d4d269364}{supports\-\_\-chunked\-\_\-messages} (bool b)
+\begin{DoxyCompactList}\small\item\em sets whether or not the client supports chunked messages \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1writer_ab7a31c41238ac7524eb8a2cc461a153b}{supports\-\_\-chunked\-\_\-messages} () const 
+\begin{DoxyCompactList}\small\item\em returns true if the client supports chunked messages \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1writer_a7a9f95f0cc0ccf1d091a94d5ba5ecebc}{sending\-\_\-chunked\-\_\-message} () const 
+\begin{DoxyCompactList}\small\item\em returns true if we are sending a chunked message to the client \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1writer_a25f0a6f75c22eb95d619ae600c0f2121}{set\-\_\-logger} (\hyperlink{structpion_1_1logger}{logger} log\-\_\-ptr)
+\begin{DoxyCompactList}\small\item\em sets the logger to be used \end{DoxyCompactList}\item 
+\hyperlink{structpion_1_1logger}{logger} \hyperlink{classpion_1_1http_1_1writer_a58c000ca432c7c168ebd666f4bd17c30}{get\-\_\-logger} (void)
+\begin{DoxyCompactList}\small\item\em returns the logger currently in use \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::function1$<$ void, \\*
+const \\*
+boost\-::system\-::error\-\_\-code \& $>$ \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t}
+\begin{DoxyCompactList}\small\item\em function called after the H\-T\-T\-P message has been sent \end{DoxyCompactList}\item 
+typedef boost\-::function2$<$ void, \\*
+const \\*
+boost\-::system\-::error\-\_\-code \\*
+\&, std\-::size\-\_\-t $>$ \hyperlink{classpion_1_1http_1_1writer_a36fa31c850362d907559a0c1157a1bf3}{write\-\_\-handler\-\_\-t}
+\begin{DoxyCompactList}\small\item\em data type for a function that handles write operations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1writer_abfa160a7e4fbbe09db12ab5c68d886ae}{writer} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, \hyperlink{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{finished\-\_\-handler\-\_\-t} handler)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}{handle\-\_\-write} (const boost\-::system\-::error\-\_\-code \&write\-\_\-error, std\-::size\-\_\-t bytes\-\_\-written)=0
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1writer_ab7a583948d97402772dc1fe2e87bcf66}{prepare\-\_\-buffers\-\_\-for\-\_\-send} (\hyperlink{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{http\-::message\-::write\-\_\-buffers\-\_\-t} \&write\-\_\-buffers)=0
+\item 
+virtual \hyperlink{classpion_1_1http_1_1writer_a36fa31c850362d907559a0c1157a1bf3}{write\-\_\-handler\-\_\-t} \hyperlink{classpion_1_1http_1_1writer_acea77b1d3cd2af31f4f1f410900aa207}{bind\-\_\-to\-\_\-write\-\_\-handler} (void)=0
+\begin{DoxyCompactList}\small\item\em returns a function bound to \hyperlink{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}{writer\-::handle\-\_\-write()} \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1writer_a28a73762ddc3c59091aa44d10adad5ea}{finished\-\_\-writing} (const boost\-::system\-::error\-\_\-code \&ec)
+\begin{DoxyCompactList}\small\item\em called after we have finished sending the H\-T\-T\-P message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+writer\-: used to asynchronously send H\-T\-T\-P messages 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!finished\-\_\-handler\-\_\-t@{finished\-\_\-handler\-\_\-t}}
+\index{finished\-\_\-handler\-\_\-t@{finished\-\_\-handler\-\_\-t}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{finished\-\_\-handler\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function1$<$void,const boost\-::system\-::error\-\_\-code\&$>$ {\bf pion\-::http\-::writer\-::finished\-\_\-handler\-\_\-t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1writer_a7e3ce4b88e0427adf673a99fca3af982}
+
+
+function called after the H\-T\-T\-P message has been sent 
+
+\hypertarget{classpion_1_1http_1_1writer_a36fa31c850362d907559a0c1157a1bf3}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write\-\_\-handler\-\_\-t@{write\-\_\-handler\-\_\-t}}
+\index{write\-\_\-handler\-\_\-t@{write\-\_\-handler\-\_\-t}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write\-\_\-handler\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::function2$<$void,const boost\-::system\-::error\-\_\-code\&,std\-::size\-\_\-t$>$ {\bf pion\-::http\-::writer\-::write\-\_\-handler\-\_\-t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1writer_a36fa31c850362d907559a0c1157a1bf3}
+
+
+data type for a function that handles write operations 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1writer_abfa160a7e4fbbe09db12ab5c68d886ae}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!writer@{writer}}
+\index{writer@{writer}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{writer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::writer\-::writer (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{{\bf finished\-\_\-handler\-\_\-t}}]{handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1writer_abfa160a7e4fbbe09db12ab5c68d886ae}
+protected constructor\-: only derived classes may create objects
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection used to send the message \\
+\hline
+{\em handler} & function called after the request has been sent \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1writer_ae8a84fa8012af64f2b5c22582f37f0ef}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!$\sim$writer@{$\sim$writer}}
+\index{$\sim$writer@{$\sim$writer}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{$\sim$writer}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::writer\-::$\sim$writer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1writer_ae8a84fa8012af64f2b5c22582f37f0ef}
+
+
+default destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1writer_acea77b1d3cd2af31f4f1f410900aa207}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!bind\-\_\-to\-\_\-write\-\_\-handler@{bind\-\_\-to\-\_\-write\-\_\-handler}}
+\index{bind\-\_\-to\-\_\-write\-\_\-handler@{bind\-\_\-to\-\_\-write\-\_\-handler}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{bind\-\_\-to\-\_\-write\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf write\-\_\-handler\-\_\-t} pion\-::http\-::writer\-::bind\-\_\-to\-\_\-write\-\_\-handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classpion_1_1http_1_1writer_acea77b1d3cd2af31f4f1f410900aa207}
+
+
+returns a function bound to \hyperlink{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}{writer\-::handle\-\_\-write()} 
+
+
+
+Implemented in \hyperlink{classpion_1_1http_1_1response__writer_a95b3d41b77828f8ec14862c03accb58a}{pion\-::http\-::response\-\_\-writer}, and \hyperlink{classpion_1_1http_1_1request__writer_a1ac6c4591f4a936391e78f394e18c9ed}{pion\-::http\-::request\-\_\-writer}.
+
+\hypertarget{classpion_1_1http_1_1writer_a17e88be48ecde04b8dbe54239a14dc25}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!clear@{clear}}
+\index{clear@{clear}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a17e88be48ecde04b8dbe54239a14dc25}
+
+
+clears out all of the memory buffers used to cache payload content data 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write().
+
+\hypertarget{classpion_1_1http_1_1writer_a28a73762ddc3c59091aa44d10adad5ea}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!finished\-\_\-writing@{finished\-\_\-writing}}
+\index{finished\-\_\-writing@{finished\-\_\-writing}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{finished\-\_\-writing}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::finished\-\_\-writing (
+\begin{DoxyParamCaption}
+\item[{const boost\-::system\-::error\-\_\-code \&}]{ec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1writer_a28a73762ddc3c59091aa44d10adad5ea}
+
+
+called after we have finished sending the H\-T\-T\-P message 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write().
+
+\hypertarget{classpion_1_1http_1_1writer_ae65148e4a1e72266e64c4ab1ceed2c17}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!get\-\_\-connection@{get\-\_\-connection}}
+\index{get\-\_\-connection@{get\-\_\-connection}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{get\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tcp\-::connection\-\_\-ptr}\& pion\-::http\-::writer\-::get\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_ae65148e4a1e72266e64c4ab1ceed2c17}
+
+
+returns a shared pointer to the T\-C\-P connection 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::prepare\-\_\-buffers\-\_\-for\-\_\-send().
+
+\hypertarget{classpion_1_1http_1_1writer_a980285662a960320b561e419563a83e2}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!get\-\_\-content\-\_\-length@{get\-\_\-content\-\_\-length}}
+\index{get\-\_\-content\-\_\-length@{get\-\_\-content\-\_\-length}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{get\-\_\-content\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t pion\-::http\-::writer\-::get\-\_\-content\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a980285662a960320b561e419563a83e2}
+
+
+returns the length of the payload content (in bytes) 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::prepare\-\_\-buffers\-\_\-for\-\_\-send().
+
+\hypertarget{classpion_1_1http_1_1writer_a58c000ca432c7c168ebd666f4bd17c30}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!get\-\_\-logger@{get\-\_\-logger}}
+\index{get\-\_\-logger@{get\-\_\-logger}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{get\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} pion\-::http\-::writer\-::get\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a58c000ca432c7c168ebd666f4bd17c30}
+
+
+returns the logger currently in use 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write().
+
+\hypertarget{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!handle\-\_\-write@{handle\-\_\-write}}
+\index{handle\-\_\-write@{handle\-\_\-write}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{handle\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::writer\-::handle\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{const boost\-::system\-::error\-\_\-code \&}]{write\-\_\-error, }
+\item[{std\-::size\-\_\-t}]{bytes\-\_\-written}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classpion_1_1http_1_1writer_a8bf871122153a6048ca5b21cacf5310c}
+called after the message is sent
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-error} & error status from the last write operation \\
+\hline
+{\em bytes\-\_\-written} & number of bytes sent by the last write operation \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classpion_1_1http_1_1response__writer_a216d682fd204bd15e92b2babb55c216a}{pion\-::http\-::response\-\_\-writer}, and \hyperlink{classpion_1_1http_1_1request__writer_a8cb6beccbb5f89356be78935f2ca59d4}{pion\-::http\-::request\-\_\-writer}.
+
+\hypertarget{classpion_1_1http_1_1writer_ab7a583948d97402772dc1fe2e87bcf66}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}}
+\index{prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{prepare\-\_\-buffers\-\_\-for\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::writer\-::prepare\-\_\-buffers\-\_\-for\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{{\bf http\-::message\-::write\-\_\-buffers\-\_\-t} \&}]{write\-\_\-buffers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classpion_1_1http_1_1writer_ab7a583948d97402772dc1fe2e87bcf66}
+initializes a vector of write buffers with the H\-T\-T\-P message information
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-buffers} & vector of write buffers to initialize \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classpion_1_1http_1_1response__writer_a5f18282e90307978ca33be6c4e4f7bf9}{pion\-::http\-::response\-\_\-writer}, and \hyperlink{classpion_1_1http_1_1request__writer_aeef6096bf4fa008248be93a3c3158c2d}{pion\-::http\-::request\-\_\-writer}.
+
+\hypertarget{classpion_1_1http_1_1writer_a6c96aa95d710babcf5096d8294f703d5}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!send@{send}}
+\index{send@{send}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::send (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a6c96aa95d710babcf5096d8294f703d5}
+Sends all data buffered as a single H\-T\-T\-P message (without chunking). Following a call to this function, it is not thread safe to use your reference to the writer object. \hypertarget{classpion_1_1http_1_1writer_a7f258348ea914b41591c30a226b9d6a5}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!send@{send}}
+\index{send@{send}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Send\-Handler $>$ void pion\-::http\-::writer\-::send (
+\begin{DoxyParamCaption}
+\item[{Send\-Handler}]{send\-\_\-handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a7f258348ea914b41591c30a226b9d6a5}
+Sends all data buffered as a single H\-T\-T\-P message (without chunking). Following a call to this function, it is not thread safe to use your reference to the writer object until the send\-\_\-handler has been called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\-\_\-handler} & function that is called after the message has been sent to the client. Your callback function must end the connection by calling connection\-::finish(). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!send\-\_\-chunk@{send\-\_\-chunk}}
+\index{send\-\_\-chunk@{send\-\_\-chunk}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{send\-\_\-chunk}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Send\-Handler $>$ void pion\-::http\-::writer\-::send\-\_\-chunk (
+\begin{DoxyParamCaption}
+\item[{Send\-Handler}]{send\-\_\-handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}
+Sends all data buffered as a single H\-T\-T\-P chunk. Following a call to this function, it is not thread safe to use your reference to the writer object until the send\-\_\-handler has been called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\-\_\-handler} & function that is called after the chunk has been sent to the client. Your callback function must end by calling one of \hyperlink{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}{send\-\_\-chunk()} or \hyperlink{classpion_1_1http_1_1writer_a902953ed4ab1f0a009f8fc4517735351}{send\-\_\-final\-\_\-chunk()}. Also, be sure to \hyperlink{classpion_1_1http_1_1writer_a17e88be48ecde04b8dbe54239a14dc25}{clear()} the writer before writing data to it. \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-C\-L\-O\-S\-E.
+
+\hypertarget{classpion_1_1http_1_1writer_a1001000ab1c48af56e1de38d0b92e22f}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!send\-\_\-final\-\_\-chunk@{send\-\_\-final\-\_\-chunk}}
+\index{send\-\_\-final\-\_\-chunk@{send\-\_\-final\-\_\-chunk}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{send\-\_\-final\-\_\-chunk}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Send\-Handler $>$ void pion\-::http\-::writer\-::send\-\_\-final\-\_\-chunk (
+\begin{DoxyParamCaption}
+\item[{Send\-Handler}]{send\-\_\-handler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a1001000ab1c48af56e1de38d0b92e22f}
+Sends all data buffered (if any) and also sends the final H\-T\-T\-P chunk. This function (either overloaded version) must be called following any calls to \hyperlink{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}{send\-\_\-chunk()}. Following a call to this function, it is not thread safe to use your reference to the writer object until the send\-\_\-handler has been called.
+
+
+\begin{DoxyParams}{Parameters}
+{\em send\-\_\-handler} & function that is called after the message has been sent to the client. Your callback function must end the connection by calling connection\-::finish(). \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1writer_a902953ed4ab1f0a009f8fc4517735351}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!send\-\_\-final\-\_\-chunk@{send\-\_\-final\-\_\-chunk}}
+\index{send\-\_\-final\-\_\-chunk@{send\-\_\-final\-\_\-chunk}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{send\-\_\-final\-\_\-chunk}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::send\-\_\-final\-\_\-chunk (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a902953ed4ab1f0a009f8fc4517735351}
+Sends all data buffered (if any) and also sends the final H\-T\-T\-P chunk. This function (either overloaded version) must be called following any calls to \hyperlink{classpion_1_1http_1_1writer_ab84706ce61c770b5d38e42f0da52b678}{send\-\_\-chunk()}. Following a call to this function, it is not thread safe to use your reference to the writer object. \hypertarget{classpion_1_1http_1_1writer_a7a9f95f0cc0ccf1d091a94d5ba5ecebc}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!sending\-\_\-chunked\-\_\-message@{sending\-\_\-chunked\-\_\-message}}
+\index{sending\-\_\-chunked\-\_\-message@{sending\-\_\-chunked\-\_\-message}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{sending\-\_\-chunked\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::writer\-::sending\-\_\-chunked\-\_\-message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a7a9f95f0cc0ccf1d091a94d5ba5ecebc}
+
+
+returns true if we are sending a chunked message to the client 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write(), and pion\-::http\-::request\-\_\-writer\-::prepare\-\_\-buffers\-\_\-for\-\_\-send().
+
+\hypertarget{classpion_1_1http_1_1writer_a25f0a6f75c22eb95d619ae600c0f2121}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!set\-\_\-logger@{set\-\_\-logger}}
+\index{set\-\_\-logger@{set\-\_\-logger}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{set\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::set\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{{\bf logger}}]{log\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a25f0a6f75c22eb95d619ae600c0f2121}
+
+
+sets the logger to be used 
+
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::request\-\_\-writer().
+
+\hypertarget{classpion_1_1http_1_1writer_ae2d856d25a3e4859d3f5f86d4d269364}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!supports\-\_\-chunked\-\_\-messages@{supports\-\_\-chunked\-\_\-messages}}
+\index{supports\-\_\-chunked\-\_\-messages@{supports\-\_\-chunked\-\_\-messages}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{supports\-\_\-chunked\-\_\-messages}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::supports\-\_\-chunked\-\_\-messages (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_ae2d856d25a3e4859d3f5f86d4d269364}
+
+
+sets whether or not the client supports chunked messages 
+
+\hypertarget{classpion_1_1http_1_1writer_ab7a31c41238ac7524eb8a2cc461a153b}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!supports\-\_\-chunked\-\_\-messages@{supports\-\_\-chunked\-\_\-messages}}
+\index{supports\-\_\-chunked\-\_\-messages@{supports\-\_\-chunked\-\_\-messages}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{supports\-\_\-chunked\-\_\-messages}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::writer\-::supports\-\_\-chunked\-\_\-messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_ab7a31c41238ac7524eb8a2cc461a153b}
+
+
+returns true if the client supports chunked messages 
+
+\hypertarget{classpion_1_1http_1_1writer_a5959a2c14149da804ce62fe52b009596}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write@{write}}
+\index{write@{write}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void pion\-::http\-::writer\-::write (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a5959a2c14149da804ce62fe52b009596}
+write text (non-\/binary) payload content
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data to append to the payload content \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1writer_aaa847dd2364e85844395fc4815a654ca}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write@{write}}
+\index{write@{write}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::write (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&($\ast$)(std\-::ostream \&)}]{iomanip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_aaa847dd2364e85844395fc4815a654ca}
+\hypertarget{classpion_1_1http_1_1writer_a8b0b29526fb03597934145eb9f21e932}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write@{write}}
+\index{write@{write}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::write (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a8b0b29526fb03597934145eb9f21e932}
+write binary payload content
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & points to the binary data to append to the payload content \\
+\hline
+{\em length} & the length, in bytes, of the binary data \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1writer_ad82908f247f558770c6c4d9f58d2a5f2}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write\-\_\-no\-\_\-copy@{write\-\_\-no\-\_\-copy}}
+\index{write\-\_\-no\-\_\-copy@{write\-\_\-no\-\_\-copy}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write\-\_\-no\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::write\-\_\-no\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_ad82908f247f558770c6c4d9f58d2a5f2}
+write text (non-\/binary) payload content; the data written is not copied, and therefore must persist until the message has finished sending
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & the data to append to the payload content \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::http\-::request\-\_\-writer\-::request\-\_\-writer().
+
+\hypertarget{classpion_1_1http_1_1writer_a33832b2c08f3696a50614d0ad3c886a9}{\index{pion\-::http\-::writer@{pion\-::http\-::writer}!write\-\_\-no\-\_\-copy@{write\-\_\-no\-\_\-copy}}
+\index{write\-\_\-no\-\_\-copy@{write\-\_\-no\-\_\-copy}!pion::http::writer@{pion\-::http\-::writer}}
+\subsubsection[{write\-\_\-no\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::writer\-::write\-\_\-no\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1writer_a33832b2c08f3696a50614d0ad3c886a9}
+write binary payload content; the data written is not copied, and therefore must persist until the message has finished sending
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & points to the binary data to append to the payload content \\
+\hline
+{\em length} & the length, in bytes, of the binary data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{writer_8hpp}{writer.\-hpp}\item 
+src/\hyperlink{http__writer_8cpp}{http\-\_\-writer.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="pion::scheduler" name="pion::scheduler">
+<area shape="rect" id="node3" href="$classpion_1_1multi__thread__scheduler.html" title="pion::multi_thread\l_scheduler" alt="" coords="125,155,248,197"/>
+<area shape="rect" id="node4" href="$classpion_1_1one__to__one__scheduler.html" title="pion::one_to_one_scheduler" alt="" coords="5,253,187,280"/>
+<area shape="rect" id="node5" href="$classpion_1_1single__service__scheduler.html" title="pion::single_service\l_scheduler" alt="" coords="211,246,343,287"/>
+</map>

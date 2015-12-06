@@ -1,0 +1,613 @@
+\hypertarget{classpion_1_1scheduler}{\section{pion\-:\-:scheduler Class Reference}
+\label{classpion_1_1scheduler}\index{pion\-::scheduler@{pion\-::scheduler}}
+}
+
+
+{\ttfamily \#include $<$scheduler.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classpion_1_1scheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classpion_1_1scheduler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1scheduler_a745efe16565852dc0b54bea88eb6d7fb}{scheduler} (void)
+\begin{DoxyCompactList}\small\item\em constructs a new scheduler \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1scheduler_a24c6e2c943335bba6ec6d1d8dae20c0e}{$\sim$scheduler} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_ab656139dc844a547d5c1001b3ef17d13}{startup} (void)
+\begin{DoxyCompactList}\small\item\em Starts the thread scheduler (this is called automatically when necessary) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_a54887d0e772ed9c01156a46f2d89ce93}{shutdown} (void)
+\begin{DoxyCompactList}\small\item\em Stops the thread scheduler (this is called automatically when the program exits) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1scheduler_ab9a1777f25b90f1970ea97035dd7310d}{join} (void)
+\begin{DoxyCompactList}\small\item\em the calling thread will sleep until the scheduler has stopped \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1scheduler_aff5a6778a3a6174d7d684b709901d1d0}{add\-\_\-active\-\_\-user} (void)
+\item 
+void \hyperlink{classpion_1_1scheduler_a402e15e25d6c4b63241a636bd3ca53cf}{remove\-\_\-active\-\_\-user} (void)
+\begin{DoxyCompactList}\small\item\em unregisters an active user with the thread scheduler \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1scheduler_a83d328c2947c65e77a603a4127442eb4}{is\-\_\-running} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the scheduler is running \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1scheduler_acd1c3b2393354a9db7a4dba6aa028b83}{set\-\_\-num\-\_\-threads} (const boost\-::uint32\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em sets the number of threads to be used (these are shared by all servers) \end{DoxyCompactList}\item 
+boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_af9b6fe7245c024bd18e3f245993cd965}{get\-\_\-num\-\_\-threads} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the number of threads currently in use \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1scheduler_a3842b00e98a84105cbeb8a1786c9e353}{set\-\_\-logger} (\hyperlink{structpion_1_1logger}{logger} log\-\_\-ptr)
+\begin{DoxyCompactList}\small\item\em sets the logger to be used \end{DoxyCompactList}\item 
+\hyperlink{structpion_1_1logger}{logger} \hyperlink{classpion_1_1scheduler_a3fba5b7cb9d99d49394241e386e5f581}{get\-\_\-logger} (void)
+\begin{DoxyCompactList}\small\item\em returns the logger currently in use \end{DoxyCompactList}\item 
+virtual boost\-::asio\-::io\-\_\-service \& \hyperlink{classpion_1_1scheduler_a037e0ee2c2c83b7002180a4656ccbbfa}{get\-\_\-io\-\_\-service} (void)=0
+\begin{DoxyCompactList}\small\item\em returns an async I/\-O service used to schedule work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_aad1b779b29a0dc3b8c2e38e5e67263bb}{post} (boost\-::function0$<$ void $>$ work\-\_\-func)
+\item 
+void \hyperlink{classpion_1_1scheduler_a8bda557ed5c95e2fbec96e14c793e844}{keep\-\_\-running} (boost\-::asio\-::io\-\_\-service \&my\-\_\-service, boost\-::asio\-::deadline\-\_\-timer \&my\-\_\-timer)
+\item 
+void \hyperlink{classpion_1_1scheduler_a53cdc5fc1fb829de12cefd4183021d28}{process\-\_\-service\-\_\-work} (boost\-::asio\-::io\-\_\-service \&service)
+\begin{DoxyCompactList}\small\item\em processes work passed to the asio service \& handles uncaught exceptions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classpion_1_1scheduler_aeaa9a398167fdab0fa0f5a1e16d0a279}{sleep} (boost\-::uint32\-\_\-t sleep\-\_\-sec, boost\-::uint32\-\_\-t sleep\-\_\-nsec)
+\item 
+{\footnotesize template$<$typename Condition\-Type , typename Lock\-Type $>$ }\\static void \hyperlink{classpion_1_1scheduler_af4a67a6731a94a59cf60f9916debf026}{sleep} (Condition\-Type \&wakeup\-\_\-condition, Lock\-Type \&wakeup\-\_\-lock, boost\-::uint32\-\_\-t sleep\-\_\-sec, boost\-::uint32\-\_\-t sleep\-\_\-nsec)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1scheduler_a62b59f0561bd527d78768fd3a5ceeb36}{stop\-\_\-services} (void)
+\begin{DoxyCompactList}\small\item\em stops all services used to schedule work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_abd7b1239bb9cf5a6ca1492341adfc4db}{stop\-\_\-threads} (void)
+\begin{DoxyCompactList}\small\item\em stops all threads used to perform work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_a64dbc267db8e1481f80ba6d42bbb24ea}{finish\-\_\-services} (void)
+\begin{DoxyCompactList}\small\item\em finishes all services used to schedule work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1scheduler_a6436e075a8c23734e55329f4286b5509}{finish\-\_\-threads} (void)
+\begin{DoxyCompactList}\small\item\em finishes all threads used to perform work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boost\-::system\-\_\-time \hyperlink{classpion_1_1scheduler_ad4ca39f249281cb2c6bd354cc52d0b9e}{get\-\_\-wakeup\-\_\-time} (boost\-::uint32\-\_\-t sleep\-\_\-sec, boost\-::uint32\-\_\-t sleep\-\_\-nsec)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\-::mutex \hyperlink{classpion_1_1scheduler_a0a1cf13bf9b31229c6d6f030ddbb0d09}{m\-\_\-mutex}
+\begin{DoxyCompactList}\small\item\em mutex to make class thread-\/safe \end{DoxyCompactList}\item 
+\hyperlink{structpion_1_1logger}{logger} \hyperlink{classpion_1_1scheduler_aa611e2e63bc69eefce43c243846d99e5}{m\-\_\-logger}
+\begin{DoxyCompactList}\small\item\em primary logging interface used by this class \end{DoxyCompactList}\item 
+boost\-::condition \hyperlink{classpion_1_1scheduler_a35fe165b525a1babfa8dd2a602d0e598}{m\-\_\-no\-\_\-more\-\_\-active\-\_\-users}
+\begin{DoxyCompactList}\small\item\em condition triggered when there are no more active users \end{DoxyCompactList}\item 
+boost\-::condition \hyperlink{classpion_1_1scheduler_ab5321fccd4a1136f4358cce8679d22fd}{m\-\_\-scheduler\-\_\-has\-\_\-stopped}
+\begin{DoxyCompactList}\small\item\em condition triggered when the scheduler has stopped \end{DoxyCompactList}\item 
+boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_a0ecf6f549714b0e9e33fea80a11a073f}{m\-\_\-num\-\_\-threads}
+\begin{DoxyCompactList}\small\item\em total number of worker threads in the pool \end{DoxyCompactList}\item 
+boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_aa8028397b2e084c8808032ac448955b8}{m\-\_\-active\-\_\-users}
+\begin{DoxyCompactList}\small\item\em the scheduler will not shutdown until there are no more active users \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1scheduler_a1fa5ef108570fe6c4a984fb1c01e8bd9}{m\-\_\-is\-\_\-running}
+\begin{DoxyCompactList}\small\item\em true if the thread scheduler is running \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_ab8d6ac8ea6a3946abe86cbd20f0783e0}{D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S} = 8
+\begin{DoxyCompactList}\small\item\em default number of worker threads in the thread pool \end{DoxyCompactList}\item 
+static const boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_aa5633b15c629c78c2aeb451ae428ea25}{N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D} = 1000000000
+\begin{DoxyCompactList}\small\item\em number of nanoseconds in one full second (10 $^\wedge$ 9) \end{DoxyCompactList}\item 
+static const boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_acbe8f3104aa4713c93bbf3f2abe8615a}{M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D} = 1000000
+\begin{DoxyCompactList}\small\item\em number of microseconds in one full second (10 $^\wedge$ 6) \end{DoxyCompactList}\item 
+static const boost\-::uint32\-\_\-t \hyperlink{classpion_1_1scheduler_a4f2047f8ecdaf5901f3548ee693b39ce}{K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S} = 5
+\begin{DoxyCompactList}\small\item\em number of seconds a timer should wait for to keep the I\-O services running \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+scheduler\-: combines Boost.\-A\-S\-I\-O with a managed thread pool for scheduling 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1scheduler_a745efe16565852dc0b54bea88eb6d7fb}{\index{pion\-::scheduler@{pion\-::scheduler}!scheduler@{scheduler}}
+\index{scheduler@{scheduler}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{scheduler}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::scheduler\-::scheduler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_a745efe16565852dc0b54bea88eb6d7fb}
+
+
+constructs a new scheduler 
+
+\hypertarget{classpion_1_1scheduler_a24c6e2c943335bba6ec6d1d8dae20c0e}{\index{pion\-::scheduler@{pion\-::scheduler}!$\sim$scheduler@{$\sim$scheduler}}
+\index{$\sim$scheduler@{$\sim$scheduler}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{$\sim$scheduler}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::scheduler\-::$\sim$scheduler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_a24c6e2c943335bba6ec6d1d8dae20c0e}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1scheduler_aff5a6778a3a6174d7d684b709901d1d0}{\index{pion\-::scheduler@{pion\-::scheduler}!add\-\_\-active\-\_\-user@{add\-\_\-active\-\_\-user}}
+\index{add\-\_\-active\-\_\-user@{add\-\_\-active\-\_\-user}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{add\-\_\-active\-\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::add\-\_\-active\-\_\-user (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1scheduler_aff5a6778a3a6174d7d684b709901d1d0}
+registers an active user with the thread scheduler. Shutdown of the scheduler is deferred until there are no more active users. This ensures that any work queued will not reference destructed objects 
+
+References m\-\_\-active\-\_\-users, m\-\_\-is\-\_\-running, m\-\_\-mutex, and startup().
+
+
+
+Referenced by pion\-::tcp\-::server\-::start().
+
+\hypertarget{classpion_1_1scheduler_a64dbc267db8e1481f80ba6d42bbb24ea}{\index{pion\-::scheduler@{pion\-::scheduler}!finish\-\_\-services@{finish\-\_\-services}}
+\index{finish\-\_\-services@{finish\-\_\-services}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{finish\-\_\-services}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::finish\-\_\-services (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_a64dbc267db8e1481f80ba6d42bbb24ea}
+
+
+finishes all services used to schedule work 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1one__to__one__scheduler_a3e9f1380789598587a27f0857e7c9133}{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}, and \hyperlink{classpion_1_1single__service__scheduler_a87b3dd728dece02e378675d1536aea72}{pion\-::single\-\_\-service\-\_\-scheduler}.
+
+
+
+Referenced by shutdown().
+
+\hypertarget{classpion_1_1scheduler_a6436e075a8c23734e55329f4286b5509}{\index{pion\-::scheduler@{pion\-::scheduler}!finish\-\_\-threads@{finish\-\_\-threads}}
+\index{finish\-\_\-threads@{finish\-\_\-threads}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{finish\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::finish\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_a6436e075a8c23734e55329f4286b5509}
+
+
+finishes all threads used to perform work 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1multi__thread__scheduler_a5e602b3bb9fd7208e7d3325f596e8266}{pion\-::multi\-\_\-thread\-\_\-scheduler}.
+
+
+
+Referenced by shutdown().
+
+\hypertarget{classpion_1_1scheduler_a037e0ee2c2c83b7002180a4656ccbbfa}{\index{pion\-::scheduler@{pion\-::scheduler}!get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}}
+\index{get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{get\-\_\-io\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}virtual boost\-::asio\-::io\-\_\-service\& pion\-::scheduler\-::get\-\_\-io\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classpion_1_1scheduler_a037e0ee2c2c83b7002180a4656ccbbfa}
+
+
+returns an async I/\-O service used to schedule work 
+
+
+
+Implemented in \hyperlink{classpion_1_1one__to__one__scheduler_a6ead3ddcbbcbfb0eba98b102530d2a90}{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}, and \hyperlink{classpion_1_1single__service__scheduler_a9afe2d43c1deb4f78dc4cfabd5f3a873}{pion\-::single\-\_\-service\-\_\-scheduler}.
+
+\hypertarget{classpion_1_1scheduler_a3fba5b7cb9d99d49394241e386e5f581}{\index{pion\-::scheduler@{pion\-::scheduler}!get\-\_\-logger@{get\-\_\-logger}}
+\index{get\-\_\-logger@{get\-\_\-logger}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{get\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} pion\-::scheduler\-::get\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_a3fba5b7cb9d99d49394241e386e5f581}
+
+
+returns the logger currently in use 
+
+\hypertarget{classpion_1_1scheduler_af9b6fe7245c024bd18e3f245993cd965}{\index{pion\-::scheduler@{pion\-::scheduler}!get\-\_\-num\-\_\-threads@{get\-\_\-num\-\_\-threads}}
+\index{get\-\_\-num\-\_\-threads@{get\-\_\-num\-\_\-threads}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{get\-\_\-num\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint32\-\_\-t pion\-::scheduler\-::get\-\_\-num\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_af9b6fe7245c024bd18e3f245993cd965}
+
+
+returns the number of threads currently in use 
+
+\hypertarget{classpion_1_1scheduler_ad4ca39f249281cb2c6bd354cc52d0b9e}{\index{pion\-::scheduler@{pion\-::scheduler}!get\-\_\-wakeup\-\_\-time@{get\-\_\-wakeup\-\_\-time}}
+\index{get\-\_\-wakeup\-\_\-time@{get\-\_\-wakeup\-\_\-time}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{get\-\_\-wakeup\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::system\-\_\-time pion\-::scheduler\-::get\-\_\-wakeup\-\_\-time (
+\begin{DoxyParamCaption}
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-sec, }
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-nsec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1scheduler_ad4ca39f249281cb2c6bd354cc52d0b9e}
+calculates a wakeup time in boost\-::system\-\_\-time format
+
+
+\begin{DoxyParams}{Parameters}
+{\em sleep\-\_\-sec} & number of seconds to sleep for \\
+\hline
+{\em sleep\-\_\-nsec} & number of nanoseconds to sleep for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boost\-::system\-\_\-time time to wake up from sleep 
+\end{DoxyReturn}
+\hypertarget{classpion_1_1scheduler_a83d328c2947c65e77a603a4127442eb4}{\index{pion\-::scheduler@{pion\-::scheduler}!is\-\_\-running@{is\-\_\-running}}
+\index{is\-\_\-running@{is\-\_\-running}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{is\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::scheduler\-::is\-\_\-running (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_a83d328c2947c65e77a603a4127442eb4}
+
+
+returns true if the scheduler is running 
+
+\hypertarget{classpion_1_1scheduler_ab9a1777f25b90f1970ea97035dd7310d}{\index{pion\-::scheduler@{pion\-::scheduler}!join@{join}}
+\index{join@{join}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1scheduler_ab9a1777f25b90f1970ea97035dd7310d}
+
+
+the calling thread will sleep until the scheduler has stopped 
+
+
+
+References m\-\_\-is\-\_\-running, m\-\_\-mutex, and m\-\_\-scheduler\-\_\-has\-\_\-stopped.
+
+\hypertarget{classpion_1_1scheduler_a8bda557ed5c95e2fbec96e14c793e844}{\index{pion\-::scheduler@{pion\-::scheduler}!keep\-\_\-running@{keep\-\_\-running}}
+\index{keep\-\_\-running@{keep\-\_\-running}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{keep\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::keep\-\_\-running (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{my\-\_\-service, }
+\item[{boost\-::asio\-::deadline\-\_\-timer \&}]{my\-\_\-timer}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1scheduler_a8bda557ed5c95e2fbec96e14c793e844}
+thread function used to keep the io\-\_\-service running
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\-\_\-service} & I\-O service used to re-\/schedule \hyperlink{classpion_1_1scheduler_a8bda557ed5c95e2fbec96e14c793e844}{keep\-\_\-running()} \\
+\hline
+{\em my\-\_\-timer} & deadline timer used to keep the I\-O service active while running \\
+\hline
+\end{DoxyParams}
+
+
+References K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S, and m\-\_\-is\-\_\-running.
+
+
+
+Referenced by pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_aad1b779b29a0dc3b8c2e38e5e67263bb}{\index{pion\-::scheduler@{pion\-::scheduler}!post@{post}}
+\index{post@{post}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{post}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::post (
+\begin{DoxyParamCaption}
+\item[{boost\-::function0$<$ void $>$}]{work\-\_\-func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_aad1b779b29a0dc3b8c2e38e5e67263bb}
+schedules work to be performed by one of the pooled threads
+
+
+\begin{DoxyParams}{Parameters}
+{\em work\-\_\-func} & work function to be executed \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1scheduler_a53cdc5fc1fb829de12cefd4183021d28}{\index{pion\-::scheduler@{pion\-::scheduler}!process\-\_\-service\-\_\-work@{process\-\_\-service\-\_\-work}}
+\index{process\-\_\-service\-\_\-work@{process\-\_\-service\-\_\-work}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{process\-\_\-service\-\_\-work}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::process\-\_\-service\-\_\-work (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{service}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1scheduler_a53cdc5fc1fb829de12cefd4183021d28}
+
+
+processes work passed to the asio service \& handles uncaught exceptions 
+
+
+
+References pion\-::diagnostic\-\_\-information(), m\-\_\-is\-\_\-running, m\-\_\-logger, and P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R.
+
+
+
+Referenced by pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_a402e15e25d6c4b63241a636bd3ca53cf}{\index{pion\-::scheduler@{pion\-::scheduler}!remove\-\_\-active\-\_\-user@{remove\-\_\-active\-\_\-user}}
+\index{remove\-\_\-active\-\_\-user@{remove\-\_\-active\-\_\-user}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{remove\-\_\-active\-\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::remove\-\_\-active\-\_\-user (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1scheduler_a402e15e25d6c4b63241a636bd3ca53cf}
+
+
+unregisters an active user with the thread scheduler 
+
+
+
+References m\-\_\-active\-\_\-users, m\-\_\-mutex, and m\-\_\-no\-\_\-more\-\_\-active\-\_\-users.
+
+
+
+Referenced by pion\-::tcp\-::server\-::stop().
+
+\hypertarget{classpion_1_1scheduler_a3842b00e98a84105cbeb8a1786c9e353}{\index{pion\-::scheduler@{pion\-::scheduler}!set\-\_\-logger@{set\-\_\-logger}}
+\index{set\-\_\-logger@{set\-\_\-logger}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{set\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::set\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{{\bf logger}}]{log\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_a3842b00e98a84105cbeb8a1786c9e353}
+
+
+sets the logger to be used 
+
+\hypertarget{classpion_1_1scheduler_acd1c3b2393354a9db7a4dba6aa028b83}{\index{pion\-::scheduler@{pion\-::scheduler}!set\-\_\-num\-\_\-threads@{set\-\_\-num\-\_\-threads}}
+\index{set\-\_\-num\-\_\-threads@{set\-\_\-num\-\_\-threads}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{set\-\_\-num\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::set\-\_\-num\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{const boost\-::uint32\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1scheduler_acd1c3b2393354a9db7a4dba6aa028b83}
+
+
+sets the number of threads to be used (these are shared by all servers) 
+
+\hypertarget{classpion_1_1scheduler_a54887d0e772ed9c01156a46f2d89ce93}{\index{pion\-::scheduler@{pion\-::scheduler}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::scheduler\-::shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1scheduler_a54887d0e772ed9c01156a46f2d89ce93}
+
+
+Stops the thread scheduler (this is called automatically when the program exits) 
+
+
+
+References finish\-\_\-services(), finish\-\_\-threads(), m\-\_\-active\-\_\-users, m\-\_\-is\-\_\-running, m\-\_\-logger, m\-\_\-mutex, m\-\_\-no\-\_\-more\-\_\-active\-\_\-users, m\-\_\-scheduler\-\_\-has\-\_\-stopped, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, stop\-\_\-services(), and stop\-\_\-threads().
+
+\hypertarget{classpion_1_1scheduler_aeaa9a398167fdab0fa0f5a1e16d0a279}{\index{pion\-::scheduler@{pion\-::scheduler}!sleep@{sleep}}
+\index{sleep@{sleep}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}static void pion\-::scheduler\-::sleep (
+\begin{DoxyParamCaption}
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-sec, }
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-nsec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1scheduler_aeaa9a398167fdab0fa0f5a1e16d0a279}
+puts the current thread to sleep for a specific period of time
+
+
+\begin{DoxyParams}{Parameters}
+{\em sleep\-\_\-sec} & number of entire seconds to sleep for \\
+\hline
+{\em sleep\-\_\-nsec} & number of nanoseconds to sleep for (10$^\wedge$-\/9 in 1 second) \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::tcp\-::server\-::stop().
+
+\hypertarget{classpion_1_1scheduler_af4a67a6731a94a59cf60f9916debf026}{\index{pion\-::scheduler@{pion\-::scheduler}!sleep@{sleep}}
+\index{sleep@{sleep}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Condition\-Type , typename Lock\-Type $>$ static void pion\-::scheduler\-::sleep (
+\begin{DoxyParamCaption}
+\item[{Condition\-Type \&}]{wakeup\-\_\-condition, }
+\item[{Lock\-Type \&}]{wakeup\-\_\-lock, }
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-sec, }
+\item[{boost\-::uint32\-\_\-t}]{sleep\-\_\-nsec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classpion_1_1scheduler_af4a67a6731a94a59cf60f9916debf026}
+puts the current thread to sleep for a specific period of time, or until a wakeup condition is signaled
+
+
+\begin{DoxyParams}{Parameters}
+{\em wakeup\-\_\-condition} & if signaled, the condition will wakeup the thread early \\
+\hline
+{\em wakeup\-\_\-lock} & scoped lock protecting the wakeup condition \\
+\hline
+{\em sleep\-\_\-sec} & number of entire seconds to sleep for \\
+\hline
+{\em sleep\-\_\-nsec} & number of nanoseconds to sleep for (10$^\wedge$-\/9 in 1 second) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1scheduler_ab656139dc844a547d5c1001b3ef17d13}{\index{pion\-::scheduler@{pion\-::scheduler}!startup@{startup}}
+\index{startup@{startup}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{startup}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::startup (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_ab656139dc844a547d5c1001b3ef17d13}
+
+
+Starts the thread scheduler (this is called automatically when necessary) 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1one__to__one__scheduler_a8f32fd88bc0d95d9952c5045849e09b9}{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}, and \hyperlink{classpion_1_1single__service__scheduler_a1f7e3583fb384e97eea9303201ae1631}{pion\-::single\-\_\-service\-\_\-scheduler}.
+
+
+
+Referenced by add\-\_\-active\-\_\-user().
+
+\hypertarget{classpion_1_1scheduler_a62b59f0561bd527d78768fd3a5ceeb36}{\index{pion\-::scheduler@{pion\-::scheduler}!stop\-\_\-services@{stop\-\_\-services}}
+\index{stop\-\_\-services@{stop\-\_\-services}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{stop\-\_\-services}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::stop\-\_\-services (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_a62b59f0561bd527d78768fd3a5ceeb36}
+
+
+stops all services used to schedule work 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1one__to__one__scheduler_a39c02d4a67bf5cd28da3ce22363dd698}{pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler}, and \hyperlink{classpion_1_1single__service__scheduler_a954817cfba7dddde2abe96f6fbb5d1a8}{pion\-::single\-\_\-service\-\_\-scheduler}.
+
+
+
+Referenced by shutdown().
+
+\hypertarget{classpion_1_1scheduler_abd7b1239bb9cf5a6ca1492341adfc4db}{\index{pion\-::scheduler@{pion\-::scheduler}!stop\-\_\-threads@{stop\-\_\-threads}}
+\index{stop\-\_\-threads@{stop\-\_\-threads}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{stop\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::scheduler\-::stop\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1scheduler_abd7b1239bb9cf5a6ca1492341adfc4db}
+
+
+stops all threads used to perform work 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1multi__thread__scheduler_a91945cc6c4a05a716fec36fc48474265}{pion\-::multi\-\_\-thread\-\_\-scheduler}.
+
+
+
+Referenced by shutdown().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1scheduler_ab8d6ac8ea6a3946abe86cbd20f0783e0}{\index{pion\-::scheduler@{pion\-::scheduler}!D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S}}
+\index{D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S@{D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::uint32\-\_\-t pion\-::scheduler\-::\-D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-U\-M\-\_\-\-T\-H\-R\-E\-A\-D\-S = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1scheduler_ab8d6ac8ea6a3946abe86cbd20f0783e0}
+
+
+default number of worker threads in the thread pool 
+
+\hypertarget{classpion_1_1scheduler_a4f2047f8ecdaf5901f3548ee693b39ce}{\index{pion\-::scheduler@{pion\-::scheduler}!K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S@{K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}}
+\index{K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S@{K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::uint32\-\_\-t pion\-::scheduler\-::\-K\-E\-E\-P\-\_\-\-R\-U\-N\-N\-I\-N\-G\-\_\-\-T\-I\-M\-E\-R\-\_\-\-S\-E\-C\-O\-N\-D\-S = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1scheduler_a4f2047f8ecdaf5901f3548ee693b39ce}
+
+
+number of seconds a timer should wait for to keep the I\-O services running 
+
+
+
+Referenced by keep\-\_\-running().
+
+\hypertarget{classpion_1_1scheduler_aa8028397b2e084c8808032ac448955b8}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-active\-\_\-users@{m\-\_\-active\-\_\-users}}
+\index{m\-\_\-active\-\_\-users@{m\-\_\-active\-\_\-users}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-active\-\_\-users}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint32\-\_\-t pion\-::scheduler\-::m\-\_\-active\-\_\-users\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_aa8028397b2e084c8808032ac448955b8}
+
+
+the scheduler will not shutdown until there are no more active users 
+
+
+
+Referenced by add\-\_\-active\-\_\-user(), remove\-\_\-active\-\_\-user(), and shutdown().
+
+\hypertarget{classpion_1_1scheduler_a1fa5ef108570fe6c4a984fb1c01e8bd9}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-is\-\_\-running@{m\-\_\-is\-\_\-running}}
+\index{m\-\_\-is\-\_\-running@{m\-\_\-is\-\_\-running}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-is\-\_\-running}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::scheduler\-::m\-\_\-is\-\_\-running\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_a1fa5ef108570fe6c4a984fb1c01e8bd9}
+
+
+true if the thread scheduler is running 
+
+
+
+Referenced by add\-\_\-active\-\_\-user(), join(), keep\-\_\-running(), process\-\_\-service\-\_\-work(), shutdown(), pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_aa611e2e63bc69eefce43c243846d99e5}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-logger@{m\-\_\-logger}}
+\index{m\-\_\-logger@{m\-\_\-logger}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} pion\-::scheduler\-::m\-\_\-logger\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_aa611e2e63bc69eefce43c243846d99e5}
+
+
+primary logging interface used by this class 
+
+
+
+Referenced by process\-\_\-service\-\_\-work(), shutdown(), pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_a0a1cf13bf9b31229c6d6f030ddbb0d09}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-mutex@{m\-\_\-mutex}}
+\index{m\-\_\-mutex@{m\-\_\-mutex}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-mutex}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex pion\-::scheduler\-::m\-\_\-mutex\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_a0a1cf13bf9b31229c6d6f030ddbb0d09}
+
+
+mutex to make class thread-\/safe 
+
+
+
+Referenced by add\-\_\-active\-\_\-user(), join(), remove\-\_\-active\-\_\-user(), shutdown(), pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_a35fe165b525a1babfa8dd2a602d0e598}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-no\-\_\-more\-\_\-active\-\_\-users@{m\-\_\-no\-\_\-more\-\_\-active\-\_\-users}}
+\index{m\-\_\-no\-\_\-more\-\_\-active\-\_\-users@{m\-\_\-no\-\_\-more\-\_\-active\-\_\-users}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-no\-\_\-more\-\_\-active\-\_\-users}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::condition pion\-::scheduler\-::m\-\_\-no\-\_\-more\-\_\-active\-\_\-users\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_a35fe165b525a1babfa8dd2a602d0e598}
+
+
+condition triggered when there are no more active users 
+
+
+
+Referenced by remove\-\_\-active\-\_\-user(), and shutdown().
+
+\hypertarget{classpion_1_1scheduler_a0ecf6f549714b0e9e33fea80a11a073f}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-num\-\_\-threads@{m\-\_\-num\-\_\-threads}}
+\index{m\-\_\-num\-\_\-threads@{m\-\_\-num\-\_\-threads}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-num\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint32\-\_\-t pion\-::scheduler\-::m\-\_\-num\-\_\-threads\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_a0ecf6f549714b0e9e33fea80a11a073f}
+
+
+total number of worker threads in the pool 
+
+
+
+Referenced by pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+\hypertarget{classpion_1_1scheduler_ab5321fccd4a1136f4358cce8679d22fd}{\index{pion\-::scheduler@{pion\-::scheduler}!m\-\_\-scheduler\-\_\-has\-\_\-stopped@{m\-\_\-scheduler\-\_\-has\-\_\-stopped}}
+\index{m\-\_\-scheduler\-\_\-has\-\_\-stopped@{m\-\_\-scheduler\-\_\-has\-\_\-stopped}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{m\-\_\-scheduler\-\_\-has\-\_\-stopped}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::condition pion\-::scheduler\-::m\-\_\-scheduler\-\_\-has\-\_\-stopped\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1scheduler_ab5321fccd4a1136f4358cce8679d22fd}
+
+
+condition triggered when the scheduler has stopped 
+
+
+
+Referenced by join(), and shutdown().
+
+\hypertarget{classpion_1_1scheduler_acbe8f3104aa4713c93bbf3f2abe8615a}{\index{pion\-::scheduler@{pion\-::scheduler}!M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D@{M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D@{M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::uint32\-\_\-t pion\-::scheduler\-::\-M\-I\-C\-R\-O\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D = 1000000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1scheduler_acbe8f3104aa4713c93bbf3f2abe8615a}
+
+
+number of microseconds in one full second (10 $^\wedge$ 6) 
+
+\hypertarget{classpion_1_1scheduler_aa5633b15c629c78c2aeb451ae428ea25}{\index{pion\-::scheduler@{pion\-::scheduler}!N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D@{N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}}
+\index{N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D@{N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}!pion::scheduler@{pion\-::scheduler}}
+\subsubsection[{N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::uint32\-\_\-t pion\-::scheduler\-::\-N\-S\-E\-C\-\_\-\-I\-N\-\_\-\-S\-E\-C\-O\-N\-D = 1000000000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1scheduler_aa5633b15c629c78c2aeb451ae428ea25}
+
+
+number of nanoseconds in one full second (10 $^\wedge$ 9) 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{scheduler_8hpp}{scheduler.\-hpp}\item 
+src/\hyperlink{scheduler_8cpp}{scheduler.\-cpp}\end{DoxyCompactItemize}

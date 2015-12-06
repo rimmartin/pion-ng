@@ -1,0 +1,206 @@
+\hypertarget{classpion_1_1http_1_1basic__auth}{\section{pion\-:\-:http\-:\-:basic\-\_\-auth Class Reference}
+\label{classpion_1_1http_1_1basic__auth}\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}}
+}
+
+
+{\ttfamily \#include $<$basic\-\_\-auth.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:basic\-\_\-auth\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classpion_1_1http_1_1basic__auth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:basic\-\_\-auth\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1http_1_1basic__auth__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1basic__auth_a81644f280b0c499a06e0d44bccc83773}{basic\-\_\-auth} (\hyperlink{namespacepion_a20602680730b88b8efd08b3730d601af}{user\-\_\-manager\-\_\-ptr} user\-Manager, const std\-::string \&realm=\char`\"{}P\-I\-O\-N\char`\"{})
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1http_1_1basic__auth_a27a464fec905b9f071d1ecb3c026709b}{$\sim$basic\-\_\-auth} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1http_1_1basic__auth_a032fb3d76e1e4f4e484a97bae7f5b367}{handle\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1basic__auth_a9da335bd02b00b82cff40cb333fe7ee7}{set\-\_\-option} (const std\-::string \&name, const std\-::string \&value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpion_1_1http_1_1basic__auth_ac8e9633bc2e16b21a564845ede483027}{handle\-\_\-unauthorized} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classpion_1_1http_1_1basic__auth_ae93865f8cdee463b021a8746aa802026}{parse\-\_\-authorization} (std\-::string const \&authorization, std\-::string \&credentials)
+\item 
+static bool \hyperlink{classpion_1_1http_1_1basic__auth_a54f121e4a3385e44d9503bc3cb9f3385}{parse\-\_\-credentials} (std\-::string const \&credentials, std\-::string \&username, std\-::string \&password)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1http_1_1basic__auth}{basic\-\_\-auth}\-: a base class for handling H\-T\-T\-P Authentication and session management in accordance with R\-F\-C 2617 \href{http://tools.ietf.org/html/rfc2617}{\tt http\-://tools.\-ietf.\-org/html/rfc2617} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1basic__auth_a81644f280b0c499a06e0d44bccc83773}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!basic\-\_\-auth@{basic\-\_\-auth}}
+\index{basic\-\_\-auth@{basic\-\_\-auth}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{basic\-\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::basic\-\_\-auth\-::basic\-\_\-auth (
+\begin{DoxyParamCaption}
+\item[{{\bf user\-\_\-manager\-\_\-ptr}}]{user\-Manager, }
+\item[{const std\-::string \&}]{realm = {\ttfamily \char`\"{}PION\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1basic__auth_a81644f280b0c499a06e0d44bccc83773}
+
+
+default constructor 
+
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R, and pion\-::http\-::auth\-::set\-\_\-logger().
+
+\hypertarget{classpion_1_1http_1_1basic__auth_a27a464fec905b9f071d1ecb3c026709b}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!$\sim$basic\-\_\-auth@{$\sim$basic\-\_\-auth}}
+\index{$\sim$basic\-\_\-auth@{$\sim$basic\-\_\-auth}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{$\sim$basic\-\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::basic\-\_\-auth\-::$\sim$basic\-\_\-auth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1basic__auth_a27a464fec905b9f071d1ecb3c026709b}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1basic__auth_a032fb3d76e1e4f4e484a97bae7f5b367}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!handle\-\_\-request@{handle\-\_\-request}}
+\index{handle\-\_\-request@{handle\-\_\-request}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{handle\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::basic\-\_\-auth\-::handle\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1http_1_1basic__auth_a032fb3d76e1e4f4e484a97bae7f5b367}
+attempts to validate authentication of a new H\-T\-T\-P request. If request valid, pointer to user identity object (if any) will be preserved in the request and return \char`\"{}true\char`\"{}. If request not authenticated, appropriate response is sent over tcp\-\_\-conn and return \char`\"{}false\char`\"{};
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if request valid and user identity inserted into request 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classpion_1_1http_1_1auth_ad59da7a2c24929b7dd4d41c5679bb8bf}{pion\-::http\-::auth}.
+
+
+
+References handle\-\_\-unauthorized(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-A\-U\-T\-H\-O\-R\-I\-Z\-A\-T\-I\-O\-N, pion\-::http\-::auth\-::m\-\_\-user\-\_\-manager, pion\-::http\-::auth\-::need\-\_\-authentication(), parse\-\_\-authorization(), and parse\-\_\-credentials().
+
+\hypertarget{classpion_1_1http_1_1basic__auth_ac8e9633bc2e16b21a564845ede483027}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!handle\-\_\-unauthorized@{handle\-\_\-unauthorized}}
+\index{handle\-\_\-unauthorized@{handle\-\_\-unauthorized}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{handle\-\_\-unauthorized}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::basic\-\_\-auth\-::handle\-\_\-unauthorized (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1basic__auth_ac8e9633bc2e16b21a564845ede483027}
+used to send responses when access to resource is not authorized
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-U\-N\-A\-U\-T\-H\-O\-R\-I\-Z\-E\-D, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-U\-N\-A\-U\-T\-H\-O\-R\-I\-Z\-E\-D.
+
+
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1basic__auth_ae93865f8cdee463b021a8746aa802026}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!parse\-\_\-authorization@{parse\-\_\-authorization}}
+\index{parse\-\_\-authorization@{parse\-\_\-authorization}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{parse\-\_\-authorization}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::basic\-\_\-auth\-::parse\-\_\-authorization (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{authorization, }
+\item[{std\-::string \&}]{credentials}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1basic__auth_ae93865f8cdee463b021a8746aa802026}
+extracts base64 user credentials from authorization string
+
+
+\begin{DoxyParams}{Parameters}
+{\em authorization} & value of the H\-E\-A\-D\-E\-R\-\_\-\-A\-U\-T\-H\-O\-R\-I\-Z\-A\-T\-I\-O\-N \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1basic__auth_a54f121e4a3385e44d9503bc3cb9f3385}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!parse\-\_\-credentials@{parse\-\_\-credentials}}
+\index{parse\-\_\-credentials@{parse\-\_\-credentials}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{parse\-\_\-credentials}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::basic\-\_\-auth\-::parse\-\_\-credentials (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{credentials, }
+\item[{std\-::string \&}]{username, }
+\item[{std\-::string \&}]{password}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1basic__auth_a54f121e4a3385e44d9503bc3cb9f3385}
+parse base64 credentials and extract username/password 
+
+References pion\-::algorithm\-::base64\-\_\-decode().
+
+
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1basic__auth_a9da335bd02b00b82cff40cb333fe7ee7}{\index{pion\-::http\-::basic\-\_\-auth@{pion\-::http\-::basic\-\_\-auth}!set\-\_\-option@{set\-\_\-option}}
+\index{set\-\_\-option@{set\-\_\-option}!pion::http::basic_auth@{pion\-::http\-::basic\-\_\-auth}}
+\subsubsection[{set\-\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::basic\-\_\-auth\-::set\-\_\-option (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1http_1_1basic__auth_a9da335bd02b00b82cff40cb333fe7ee7}
+sets a configuration option Valid options\-:
+\begin{DoxyItemize}
+\item \char`\"{}domain\char`\"{} -\/ name of authentication domain
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the option to change \\
+\hline
+{\em value} & the value of the option \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1auth_a49861152e006dc35880152ed0e7a6e92}{pion\-::http\-::auth}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{basic__auth_8hpp}{basic\-\_\-auth.\-hpp}\item 
+src/\hyperlink{http__basic__auth_8cpp}{http\-\_\-basic\-\_\-auth.\-cpp}\end{DoxyCompactItemize}

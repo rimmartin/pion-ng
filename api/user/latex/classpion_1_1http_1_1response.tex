@@ -1,0 +1,455 @@
+\hypertarget{classpion_1_1http_1_1response}{\section{pion\-:\-:http\-:\-:response Class Reference}
+\label{classpion_1_1http_1_1response}\index{pion\-::http\-::response@{pion\-::http\-::response}}
+}
+
+
+{\ttfamily \#include $<$response.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:response\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classpion_1_1http_1_1response__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:response\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1http_1_1response__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1response_af459c78b24147ae4bd1bea8c2da2d294}{response} (const \hyperlink{classpion_1_1http_1_1request}{http\-::request} \&http\-\_\-request\-\_\-ptr)
+\item 
+\hyperlink{classpion_1_1http_1_1response_a18b0b58e5ae3a7d885745907e0ac9cd6}{response} (const std\-::string \&request\-\_\-method)
+\item 
+\hyperlink{classpion_1_1http_1_1response_aa6d18e376129813e953d7b100a82e199}{response} (const \hyperlink{classpion_1_1http_1_1response}{response} \&http\-\_\-response)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1response_a05a0b5ff4bd220b250b887ce148a6bbc}{response} (void)
+\item 
+virtual \hyperlink{classpion_1_1http_1_1response_a9802a656f1dc6c0a9ecc706c06167dc6}{$\sim$response} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1response_a0713749f7a9ac79b6e04a753e7332e83}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears all response data \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1http_1_1response_ad9e7b85bac1ad8f69145ccc719efd3da}{is\-\_\-content\-\_\-length\-\_\-implied} (void) const 
+\begin{DoxyCompactList}\small\item\em the content length may be implied for certain types of responses \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1response_a6a2428e8d529db703e14260fab28f887}{update\-\_\-request\-\_\-info} (const \hyperlink{classpion_1_1http_1_1request}{http\-::request} \&http\-\_\-request)
+\item 
+void \hyperlink{classpion_1_1http_1_1response_a3f84cd25cec31c9ca4b0b5718f6d58ed}{set\-\_\-status\-\_\-code} (unsigned int n)
+\begin{DoxyCompactList}\small\item\em sets the H\-T\-T\-P response status code \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1response_a0d991f62da50d7bd74c0d21334bec2b9}{set\-\_\-status\-\_\-message} (const std\-::string \&msg)
+\begin{DoxyCompactList}\small\item\em sets the H\-T\-T\-P response status message \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classpion_1_1http_1_1response_a31c291703dda1fd25efc920b9b35fca2}{get\-\_\-status\-\_\-code} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the H\-T\-T\-P response status code \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1response_a58829c8e1cbb298135fd1c3895b54ba8}{get\-\_\-status\-\_\-message} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the H\-T\-T\-P response status message \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1response_a49aa79083d321eabfc4991aa0194fb09}{set\-\_\-cookie} (const std\-::string \&name, const std\-::string \&value)
+\item 
+void \hyperlink{classpion_1_1http_1_1response_a5e913a111e16773e2da83adf036a1431}{set\-\_\-cookie} (const std\-::string \&name, const std\-::string \&value, const std\-::string \&path)
+\item 
+void \hyperlink{classpion_1_1http_1_1response_ad5d56b58acc9a5f93f66f48972749345}{set\-\_\-cookie} (const std\-::string \&name, const std\-::string \&value, const std\-::string \&path, const unsigned long max\-\_\-age)
+\item 
+void \hyperlink{classpion_1_1http_1_1response_aca578f57f31824c1f5b04682c5f65883}{set\-\_\-cookie} (const std\-::string \&name, const std\-::string \&value, const unsigned long max\-\_\-age)
+\item 
+void \hyperlink{classpion_1_1http_1_1response_a966ca40fe93496d7eae90b4d6c1afe69}{delete\-\_\-cookie} (const std\-::string \&name)
+\begin{DoxyCompactList}\small\item\em deletes cookie called name by adding a Set-\/\-Cookie header (cookie has no path) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1response_a3886a2d0fc05db863dd23c3269b509eb}{delete\-\_\-cookie} (const std\-::string \&name, const std\-::string \&path)
+\begin{DoxyCompactList}\small\item\em deletes cookie called name by adding a Set-\/\-Cookie header (cookie has a path) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1response_a224bbb594892c7a04ada36afa0dc1d1e}{set\-\_\-last\-\_\-modified} (const unsigned long t)
+\begin{DoxyCompactList}\small\item\em sets the time that the response was last modified (Last-\/\-Modified) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1response_a2777a77848e97f3ea205ccfaaa06c0bf}{update\-\_\-first\-\_\-line} (void) const 
+\begin{DoxyCompactList}\small\item\em updates the string containing the first line for the H\-T\-T\-P message \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1response_ad86616700baf2ba068268b3fd725d5f8}{append\-\_\-cookie\-\_\-headers} (void)
+\begin{DoxyCompactList}\small\item\em appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+response\-: container for H\-T\-T\-P response information 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1response_af459c78b24147ae4bd1bea8c2da2d294}{\index{pion\-::http\-::response@{pion\-::http\-::response}!response@{response}}
+\index{response@{response}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{response}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::response\-::response (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request} \&}]{http\-\_\-request\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_af459c78b24147ae4bd1bea8c2da2d294}
+constructs a new response object for a particular request
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the request that this is responding to \\
+\hline
+\end{DoxyParams}
+
+
+References update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1response_a18b0b58e5ae3a7d885745907e0ac9cd6}{\index{pion\-::http\-::response@{pion\-::http\-::response}!response@{response}}
+\index{response@{response}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{response}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::response\-::response (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{request\-\_\-method}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a18b0b58e5ae3a7d885745907e0ac9cd6}
+constructs a new response object for a particular request method
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\-\_\-method} & the method used by the H\-T\-T\-P request we are responding to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1response_aa6d18e376129813e953d7b100a82e199}{\index{pion\-::http\-::response@{pion\-::http\-::response}!response@{response}}
+\index{response@{response}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{response}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::response\-::response (
+\begin{DoxyParamCaption}
+\item[{const {\bf response} \&}]{http\-\_\-response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_aa6d18e376129813e953d7b100a82e199}
+
+
+copy constructor 
+
+\hypertarget{classpion_1_1http_1_1response_a05a0b5ff4bd220b250b887ce148a6bbc}{\index{pion\-::http\-::response@{pion\-::http\-::response}!response@{response}}
+\index{response@{response}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{response}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::response\-::response (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a05a0b5ff4bd220b250b887ce148a6bbc}
+default constructor\-: you are strongly encouraged to use one of the other constructors, since response parsing is influenced by the request method \hypertarget{classpion_1_1http_1_1response_a9802a656f1dc6c0a9ecc706c06167dc6}{\index{pion\-::http\-::response@{pion\-::http\-::response}!$\sim$response@{$\sim$response}}
+\index{$\sim$response@{$\sim$response}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{$\sim$response}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::response\-::$\sim$response (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response_a9802a656f1dc6c0a9ecc706c06167dc6}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1response_ad86616700baf2ba068268b3fd725d5f8}{\index{pion\-::http\-::response@{pion\-::http\-::response}!append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}}
+\index{append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{append\-\_\-cookie\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-::append\-\_\-cookie\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response_ad86616700baf2ba068268b3fd725d5f8}
+
+
+appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1message_a532d475ab2dfdcdb969445902fad2e6f}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::get\-\_\-cookies(), and set\-\_\-cookie().
+
+\hypertarget{classpion_1_1http_1_1response_a0713749f7a9ac79b6e04a753e7332e83}{\index{pion\-::http\-::response@{pion\-::http\-::response}!clear@{clear}}
+\index{clear@{clear}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response_a0713749f7a9ac79b6e04a753e7332e83}
+
+
+clears all response data 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1message_af13279269cf1e00ae4fc5091c1c7cae5}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::clear(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-O\-K, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-O\-K.
+
+\hypertarget{classpion_1_1http_1_1response_a966ca40fe93496d7eae90b4d6c1afe69}{\index{pion\-::http\-::response@{pion\-::http\-::response}!delete\-\_\-cookie@{delete\-\_\-cookie}}
+\index{delete\-\_\-cookie@{delete\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{delete\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::delete\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a966ca40fe93496d7eae90b4d6c1afe69}
+
+
+deletes cookie called name by adding a Set-\/\-Cookie header (cookie has no path) 
+
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+\hypertarget{classpion_1_1http_1_1response_a3886a2d0fc05db863dd23c3269b509eb}{\index{pion\-::http\-::response@{pion\-::http\-::response}!delete\-\_\-cookie@{delete\-\_\-cookie}}
+\index{delete\-\_\-cookie@{delete\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{delete\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::delete\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a3886a2d0fc05db863dd23c3269b509eb}
+
+
+deletes cookie called name by adding a Set-\/\-Cookie header (cookie has a path) 
+
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+\hypertarget{classpion_1_1http_1_1response_a31c291703dda1fd25efc920b9b35fca2}{\index{pion\-::http\-::response@{pion\-::http\-::response}!get\-\_\-status\-\_\-code@{get\-\_\-status\-\_\-code}}
+\index{get\-\_\-status\-\_\-code@{get\-\_\-status\-\_\-code}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{get\-\_\-status\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int pion\-::http\-::response\-::get\-\_\-status\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a31c291703dda1fd25efc920b9b35fca2}
+
+
+returns the H\-T\-T\-P response status code 
+
+\hypertarget{classpion_1_1http_1_1response_a58829c8e1cbb298135fd1c3895b54ba8}{\index{pion\-::http\-::response@{pion\-::http\-::response}!get\-\_\-status\-\_\-message@{get\-\_\-status\-\_\-message}}
+\index{get\-\_\-status\-\_\-message@{get\-\_\-status\-\_\-message}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{get\-\_\-status\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::response\-::get\-\_\-status\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a58829c8e1cbb298135fd1c3895b54ba8}
+
+
+returns the H\-T\-T\-P response status message 
+
+\hypertarget{classpion_1_1http_1_1response_ad9e7b85bac1ad8f69145ccc719efd3da}{\index{pion\-::http\-::response@{pion\-::http\-::response}!is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}}
+\index{is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{is\-\_\-content\-\_\-length\-\_\-implied}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool pion\-::http\-::response\-::is\-\_\-content\-\_\-length\-\_\-implied (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response_ad9e7b85bac1ad8f69145ccc719efd3da}
+
+
+the content length may be implied for certain types of responses 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1message_a08bd257bd46e7a42b64bbc4482f28363}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::types\-::\-R\-E\-Q\-U\-E\-S\-T\-\_\-\-M\-E\-T\-H\-O\-D\-\_\-\-H\-E\-A\-D.
+
+\hypertarget{classpion_1_1http_1_1response_a49aa79083d321eabfc4991aa0194fb09}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-cookie@{set\-\_\-cookie}}
+\index{set\-\_\-cookie@{set\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a49aa79083d321eabfc4991aa0194fb09}
+sets a cookie by adding a Set-\/\-Cookie header (see R\-F\-C 2109) the cookie will be discarded by the user-\/agent when it closes
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the cookie \\
+\hline
+{\em value} & the value of the cookie \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+
+
+Referenced by append\-\_\-cookie\-\_\-headers().
+
+\hypertarget{classpion_1_1http_1_1response_a5e913a111e16773e2da83adf036a1431}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-cookie@{set\-\_\-cookie}}
+\index{set\-\_\-cookie@{set\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value, }
+\item[{const std\-::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a5e913a111e16773e2da83adf036a1431}
+sets a cookie by adding a Set-\/\-Cookie header (see R\-F\-C 2109) the cookie will be discarded by the user-\/agent when it closes
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the cookie \\
+\hline
+{\em value} & the value of the cookie \\
+\hline
+{\em path} & the path of the cookie \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+\hypertarget{classpion_1_1http_1_1response_ad5d56b58acc9a5f93f66f48972749345}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-cookie@{set\-\_\-cookie}}
+\index{set\-\_\-cookie@{set\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value, }
+\item[{const std\-::string \&}]{path, }
+\item[{const unsigned long}]{max\-\_\-age}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_ad5d56b58acc9a5f93f66f48972749345}
+sets a cookie by adding a Set-\/\-Cookie header (see R\-F\-C 2109)
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the cookie \\
+\hline
+{\em value} & the value of the cookie \\
+\hline
+{\em path} & the path of the cookie \\
+\hline
+{\em max\-\_\-age} & the life of the cookie, in seconds (0 = discard) \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+\hypertarget{classpion_1_1http_1_1response_aca578f57f31824c1f5b04682c5f65883}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-cookie@{set\-\_\-cookie}}
+\index{set\-\_\-cookie@{set\-\_\-cookie}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value, }
+\item[{const unsigned long}]{max\-\_\-age}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_aca578f57f31824c1f5b04682c5f65883}
+sets a cookie by adding a Set-\/\-Cookie header (see R\-F\-C 2109)
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the cookie \\
+\hline
+{\em value} & the value of the cookie \\
+\hline
+{\em max\-\_\-age} & the life of the cookie, in seconds (0 = discard) \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::message\-::add\-\_\-header(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-S\-E\-T\-\_\-\-C\-O\-O\-K\-I\-E, and pion\-::http\-::types\-::make\-\_\-set\-\_\-cookie\-\_\-header().
+
+\hypertarget{classpion_1_1http_1_1response_a224bbb594892c7a04ada36afa0dc1d1e}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-last\-\_\-modified@{set\-\_\-last\-\_\-modified}}
+\index{set\-\_\-last\-\_\-modified@{set\-\_\-last\-\_\-modified}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-last\-\_\-modified}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-last\-\_\-modified (
+\begin{DoxyParamCaption}
+\item[{const unsigned long}]{t}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a224bbb594892c7a04ada36afa0dc1d1e}
+
+
+sets the time that the response was last modified (Last-\/\-Modified) 
+
+
+
+References pion\-::http\-::message\-::change\-\_\-header(), pion\-::http\-::types\-::get\-\_\-date\-\_\-string(), and pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-L\-A\-S\-T\-\_\-\-M\-O\-D\-I\-F\-I\-E\-D.
+
+\hypertarget{classpion_1_1http_1_1response_a3f84cd25cec31c9ca4b0b5718f6d58ed}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-status\-\_\-code@{set\-\_\-status\-\_\-code}}
+\index{set\-\_\-status\-\_\-code@{set\-\_\-status\-\_\-code}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-status\-\_\-code}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-status\-\_\-code (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a3f84cd25cec31c9ca4b0b5718f6d58ed}
+
+
+sets the H\-T\-T\-P response status code 
+
+
+
+References pion\-::http\-::message\-::clear\-\_\-first\-\_\-line().
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data(), and update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1response_a0d991f62da50d7bd74c0d21334bec2b9}{\index{pion\-::http\-::response@{pion\-::http\-::response}!set\-\_\-status\-\_\-message@{set\-\_\-status\-\_\-message}}
+\index{set\-\_\-status\-\_\-message@{set\-\_\-status\-\_\-message}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{set\-\_\-status\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::set\-\_\-status\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a0d991f62da50d7bd74c0d21334bec2b9}
+
+
+sets the H\-T\-T\-P response status message 
+
+
+
+References pion\-::http\-::message\-::clear\-\_\-first\-\_\-line().
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data(), and update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1response_a2777a77848e97f3ea205ccfaaa06c0bf}{\index{pion\-::http\-::response@{pion\-::http\-::response}!update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}}
+\index{update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{update\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::response\-::update\-\_\-first\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1response_a2777a77848e97f3ea205ccfaaa06c0bf}
+
+
+updates the string containing the first line for the H\-T\-T\-P message 
+
+
+
+Implements \hyperlink{classpion_1_1http_1_1message_a697a832ab0741d02ddecd8df8da0265d}{pion\-::http\-::message}.
+
+
+
+References pion\-::http\-::message\-::get\-\_\-version\-\_\-string(), and pion\-::http\-::message\-::m\-\_\-first\-\_\-line.
+
+\hypertarget{classpion_1_1http_1_1response_a6a2428e8d529db703e14260fab28f887}{\index{pion\-::http\-::response@{pion\-::http\-::response}!update\-\_\-request\-\_\-info@{update\-\_\-request\-\_\-info}}
+\index{update\-\_\-request\-\_\-info@{update\-\_\-request\-\_\-info}!pion::http::response@{pion\-::http\-::response}}
+\subsubsection[{update\-\_\-request\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::response\-::update\-\_\-request\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request} \&}]{http\-\_\-request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1response_a6a2428e8d529db703e14260fab28f887}
+Updates H\-T\-T\-P request information for the response object (use this if the response cannot be constructed using the request)
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request} & the request that this is responding to \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::request\-::get\-\_\-method(), pion\-::http\-::message\-::get\-\_\-version\-\_\-major(), pion\-::http\-::message\-::get\-\_\-version\-\_\-minor(), pion\-::http\-::message\-::set\-\_\-chunks\-\_\-supported(), set\-\_\-status\-\_\-code(), set\-\_\-status\-\_\-message(), pion\-::http\-::message\-::set\-\_\-version\-\_\-major(), and pion\-::http\-::message\-::set\-\_\-version\-\_\-minor().
+
+
+
+Referenced by response().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{response_8hpp}{response.\-hpp}\end{DoxyCompactItemize}

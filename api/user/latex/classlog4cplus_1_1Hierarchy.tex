@@ -1,0 +1,277 @@
+\hypertarget{classlog4cplus_1_1Hierarchy}{\section{log4cplus\-:\-:Hierarchy Class Reference}
+\label{classlog4cplus_1_1Hierarchy}\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}}
+}
+
+
+{\ttfamily \#include $<$hierarchy.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}{Hierarchy} ()
+\item 
+virtual \hyperlink{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}{$\sim$\-Hierarchy} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}{clear} ()
+\item 
+virtual bool \hyperlink{classlog4cplus_1_1Hierarchy_afb304d18e5565662864ee60506d751b0}{exists} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{disable} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&loglevel\-Str)
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable} (\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\-Level} ll)
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disable\-All} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disable\-Debug} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disable\-Info} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}{enable\-All} ()
+\item 
+virtual \hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1Hierarchy_ae255db6950dff79f2679acb9c2fe55e1}{get\-Instance} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+virtual \hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1Hierarchy_a5ce0f3f345617d4073cdf3fbbb43d31a}{get\-Instance} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name, \hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\-::\-Logger\-Factory} \&factory)
+\item 
+virtual \hyperlink{namespacelog4cplus_a9bad705b454c9c31bd84d97837fec22f}{Logger\-List} \hyperlink{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}{get\-Current\-Loggers} ()
+\item 
+virtual bool \hyperlink{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}{is\-Disabled} (\hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\-Level} level)
+\item 
+virtual \hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1Hierarchy_ac6b0296fd70ba66144a33ab3c30a6398}{get\-Root} () const 
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{reset\-Configuration} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}{set\-Logger\-Factory} (std\-::unique\-\_\-ptr$<$ \hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\-::\-Logger\-Factory} $>$ factory)
+\item 
+virtual \hyperlink{classlog4cplus_1_1spi_1_1LoggerFactory}{spi\-::\-Logger\-Factory} $\ast$ \hyperlink{classlog4cplus_1_1Hierarchy_ac31bd5c5bac279fb803a6d7aa47fcd99}{get\-Logger\-Factory} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}{shutdown} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\-Level} \hyperlink{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F}
+\item 
+static const \hyperlink{namespacelog4cplus_abd332cc8c98fefcbbdcf57b6b3867de9}{Log\-Level} \hyperlink{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}{log4cplus\-::spi\-::\-Logger\-Impl}
+\item 
+class \hyperlink{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}{log4cplus\-::\-Hierarchy\-Locker}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is specialized in retrieving loggers by name and also maintaining the logger hierarchy.
+
+{\itshape The casual user should not have to deal with this class directly.} However, if you are in an environment where multiple applications run in the same process, then read on.
+
+The structure of the logger hierarchy is maintained by the \hyperlink{classlog4cplus_1_1Hierarchy_ae255db6950dff79f2679acb9c2fe55e1}{get\-Instance} method. The hierarchy is such that children link to their parent but parents do not have any pointers to their children. Moreover, loggers can be instantiated in any order, in particular descendant before ancestor.
+
+In case a descendant is created before a particular ancestor, then it creates a provision node for the ancestor and adds itself to the provision node. Other descendants of the same ancestor add themselves to the previously created provision node. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!Hierarchy@{Hierarchy}}
+\index{Hierarchy@{Hierarchy}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{Hierarchy}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Hierarchy\-::\-Hierarchy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1Hierarchy_ade70368f1b18517ad8e0e2a2a5006d92}
+Create a new \hyperlink{classlog4cplus_1_1Logger}{Logger} hierarchy. \hypertarget{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!$\sim$\-Hierarchy@{$\sim$\-Hierarchy}}
+\index{$\sim$\-Hierarchy@{$\sim$\-Hierarchy}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{$\sim$\-Hierarchy}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-Hierarchy\-::$\sim$\-Hierarchy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ae3e5257eca6d6b594d82b94d402043ec}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!clear@{clear}}
+\index{clear@{clear}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a24fecebf76cb5e8c78eed5ee52c13ca2}
+This call will clear all logger definitions from the internal hashtable. Invoking this method will irrevocably mess up the logger hierarchy.
+
+You should {\itshape really} know what you are doing before invoking this method. \hypertarget{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!disable@{disable}}
+\index{disable@{disable}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{disable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::disable (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{loglevel\-Str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}
+Similar to \hyperlink{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{disable(\-Log\-Level)} except that the Log\-Level argument is given as a \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring}. \hypertarget{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!disable@{disable}}
+\index{disable@{disable}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{disable}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::disable (
+\begin{DoxyParamCaption}
+\item[{{\bf Log\-Level}}]{ll}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a943f6d7b230fd7a7793a1c7f5a52b56c}
+Disable all logging requests of Log\-Level {\itshape equal to or below} the ll parameter {\ttfamily p}, for {\itshape all} loggers in this hierarchy. Logging requests of higher Log\-Level then {\ttfamily p} remain unaffected.
+
+Nevertheless, if the \hyperlink{classlog4cplus_1_1BasicConfigurator_ab49c9a199cf259ac23ac9684da03176c}{Basic\-Configurator\-::\-D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E\-\_\-\-K\-E\-Y} property is set to true, then logging requests are evaluated as usual.
+
+The \char`\"{}disable\char`\"{} family of methods are there for speed. They allow printing methods such as debug, info, etc. to return immediately after an integer comparison without walking the logger hierarchy. In most modern computers an integer comparison is measured in nanoseconds where as a logger walk is measured in units of microseconds. \hypertarget{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!disable\-All@{disable\-All}}
+\index{disable\-All@{disable\-All}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{disable\-All}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::disable\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}
+Disable all logging requests regardless of logger and Log\-Level. This method is equivalent to calling \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{disable} with the argument F\-A\-T\-A\-L\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L, the highest possible Log\-Level. \hypertarget{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!disable\-Debug@{disable\-Debug}}
+\index{disable\-Debug@{disable\-Debug}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{disable\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::disable\-Debug (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}
+Disable all Debug logging requests regardless of logger. This method is equivalent to calling \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{disable} with the argument D\-E\-B\-U\-G\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L. \hypertarget{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!disable\-Info@{disable\-Info}}
+\index{disable\-Info@{disable\-Info}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{disable\-Info}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::disable\-Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}
+Disable all Info logging requests regardless of logger. This method is equivalent to calling \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{disable} with the argument I\-N\-F\-O\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L. \hypertarget{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!enable\-All@{enable\-All}}
+\index{enable\-All@{enable\-All}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{enable\-All}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::enable\-All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ac656131db5fd68886f6d1ba1238f8128}
+Undoes the effect of calling any of \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{disable}, \hyperlink{classlog4cplus_1_1Hierarchy_ad838286679614098f433e28a4565b15b}{disable\-All}, \hyperlink{classlog4cplus_1_1Hierarchy_a7e36764558f00fda4e21e518a713ba0e}{disable\-Debug} and \hyperlink{classlog4cplus_1_1Hierarchy_a80165fb44a8dc1272808309c8e817d68}{disable\-Info} methods. More precisely, invoking this method sets the \hyperlink{classlog4cplus_1_1Logger}{Logger} class internal variable called {\ttfamily disable} to its default \char`\"{}off\char`\"{} value. \hypertarget{classlog4cplus_1_1Hierarchy_afb304d18e5565662864ee60506d751b0}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!exists@{exists}}
+\index{exists@{exists}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool log4cplus\-::\-Hierarchy\-::exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_afb304d18e5565662864ee60506d751b0}
+Returns {\ttfamily true }if the named logger exists (in the default hierarchy).
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to search for. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!get\-Current\-Loggers@{get\-Current\-Loggers}}
+\index{get\-Current\-Loggers@{get\-Current\-Loggers}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{get\-Current\-Loggers}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Logger\-List} log4cplus\-::\-Hierarchy\-::get\-Current\-Loggers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a0bac7879e92fe670563c251e406178ba}
+Returns all the currently defined loggers in this hierarchy.
+
+The root logger is {\itshape not} included in the returned list. \hypertarget{classlog4cplus_1_1Hierarchy_ae255db6950dff79f2679acb9c2fe55e1}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Logger} log4cplus\-::\-Hierarchy\-::get\-Instance (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ae255db6950dff79f2679acb9c2fe55e1}
+Return a new logger instance named as the first parameter using the default factory.
+
+If a logger of that name already exists, then it will be returned. Otherwise, a new logger will be instantiated and then linked with its existing ancestors as well as children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to retrieve. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classlog4cplus_1_1Hierarchy_a5ce0f3f345617d4073cdf3fbbb43d31a}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Logger} log4cplus\-::\-Hierarchy\-::get\-Instance (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name, }
+\item[{{\bf spi\-::\-Logger\-Factory} \&}]{factory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a5ce0f3f345617d4073cdf3fbbb43d31a}
+Return a new logger instance named as the first parameter using {\ttfamily factory}.
+
+If a logger of that name already exists, then it will be returned. Otherwise, a new logger will be instantiated by the {\ttfamily factory} parameter and linked with its existing ancestors as well as children.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the logger to retrieve. \\
+\hline
+{\em factory} & The factory that will make the new logger instance. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classlog4cplus_1_1Hierarchy_ac31bd5c5bac279fb803a6d7aa47fcd99}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!get\-Logger\-Factory@{get\-Logger\-Factory}}
+\index{get\-Logger\-Factory@{get\-Logger\-Factory}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{get\-Logger\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf spi\-::\-Logger\-Factory}$\ast$ log4cplus\-::\-Hierarchy\-::get\-Logger\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ac31bd5c5bac279fb803a6d7aa47fcd99}
+Returns the default Logger\-Factory instance. \hypertarget{classlog4cplus_1_1Hierarchy_ac6b0296fd70ba66144a33ab3c30a6398}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!get\-Root@{get\-Root}}
+\index{get\-Root@{get\-Root}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{get\-Root}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Logger} log4cplus\-::\-Hierarchy\-::get\-Root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ac6b0296fd70ba66144a33ab3c30a6398}
+Get the root of this hierarchy. \hypertarget{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!is\-Disabled@{is\-Disabled}}
+\index{is\-Disabled@{is\-Disabled}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{is\-Disabled}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool log4cplus\-::\-Hierarchy\-::is\-Disabled (
+\begin{DoxyParamCaption}
+\item[{{\bf Log\-Level}}]{level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_ad1c99cd9a4b145b21628340ea52d5448}
+Is the Log\-Level specified by {\ttfamily level} enabled? \hypertarget{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!reset\-Configuration@{reset\-Configuration}}
+\index{reset\-Configuration@{reset\-Configuration}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{reset\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::reset\-Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}
+Reset all values contained in this hierarchy instance to their default. This removes all appenders from all loggers, sets the Log\-Level of all non-\/root loggers to {\ttfamily N\-O\-T\-\_\-\-S\-E\-T\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L}, sets their additivity flag to {\ttfamily true} and sets the Log\-Level of the root logger to D\-E\-B\-U\-G\-\_\-\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L. Moreover, message disabling is set its default \char`\"{}off\char`\"{} value.
+
+Existing loggers are not removed. They are just reset.
+
+This method should be used sparingly and with care as it will block all logging until it is completed.\hypertarget{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!set\-Logger\-Factory@{set\-Logger\-Factory}}
+\index{set\-Logger\-Factory@{set\-Logger\-Factory}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{set\-Logger\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::set\-Logger\-Factory (
+\begin{DoxyParamCaption}
+\item[{std\-::unique\-\_\-ptr$<$ {\bf spi\-::\-Logger\-Factory} $>$}]{factory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a679503bfae305c532a39e17b2bdc20e4}
+Set the default Logger\-Factory instance. \hypertarget{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Hierarchy\-::shutdown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1Hierarchy_a8444b6eacb26763e0c52983ddf2bcb7c}
+Shutting down a hierarchy will {\itshape safely} close and remove all appenders in all loggers including the root logger.
+
+Some appenders such as \hyperlink{classlog4cplus_1_1SocketAppender}{Socket\-Appender} need to be closed before the application exits. Otherwise, pending logging events might be lost.
+
+The {\ttfamily shutdown} method is careful to close nested appenders before closing regular appenders. This is allows configurations where a regular appender is attached to a logger and again to a nested appender. 
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}}
+\index{log4cplus\-::\-Hierarchy\-Locker@{log4cplus\-::\-Hierarchy\-Locker}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{log4cplus\-::\-Hierarchy\-Locker}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf log4cplus\-::\-Hierarchy\-Locker}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classlog4cplus_1_1Hierarchy_abb1f3e29e548cb77cdea6e6499167e15}
+\hypertarget{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!log4cplus\-::spi\-::\-Logger\-Impl@{log4cplus\-::spi\-::\-Logger\-Impl}}
+\index{log4cplus\-::spi\-::\-Logger\-Impl@{log4cplus\-::spi\-::\-Logger\-Impl}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{log4cplus\-::spi\-::\-Logger\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf log4cplus\-::spi\-::\-Logger\-Impl}\hspace{0.3cm}{\ttfamily [friend]}}}\label{classlog4cplus_1_1Hierarchy_a8448132462ee76feacd2f66a641d3698}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F@{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F}}
+\index{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F@{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Log\-Level} log4cplus\-::\-Hierarchy\-::\-D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-F\-F\hspace{0.3cm}{\ttfamily [static]}}}\label{classlog4cplus_1_1Hierarchy_ab772d872d4d7d11946a87580cff29f55}
+\hypertarget{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}{\index{log4cplus\-::\-Hierarchy@{log4cplus\-::\-Hierarchy}!D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E@{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E}}
+\index{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E@{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E}!log4cplus::Hierarchy@{log4cplus\-::\-Hierarchy}}
+\subsubsection[{D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Log\-Level} log4cplus\-::\-Hierarchy\-::\-D\-I\-S\-A\-B\-L\-E\-\_\-\-O\-V\-E\-R\-R\-I\-D\-E\hspace{0.3cm}{\ttfamily [static]}}}\label{classlog4cplus_1_1Hierarchy_aec08bdb25b4dd2c8003afd821b7c7eca}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{hierarchy_8h}{hierarchy.\-h}\end{DoxyCompactItemize}

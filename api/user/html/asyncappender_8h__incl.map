@@ -1,0 +1,23 @@
+<map id="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/asyncappender.h" name="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/asyncappender.h">
+<area shape="rect" id="node2" href="$config_8hxx.html" title="log4cplus/config.hxx" alt="" coords="1208,632,1343,659"/>
+<area shape="rect" id="node5" href="$queue_8h.html" title="log4cplus/helpers/queue.h" alt="" coords="660,184,831,211"/>
+<area shape="rect" id="node20" href="$threads_8h.html" title="log4cplus/thread/threads.h" alt="" coords="695,333,867,360"/>
+<area shape="rect" id="node29" href="$appender_8h.html" title="log4cplus/appender.h" alt="" coords="1499,259,1641,285"/>
+<area shape="rect" id="node36" href="$appenderattachableimpl_8h.html" title="log4cplus/helpers/appenderattachableimpl.h" alt="" coords="1852,109,2123,136"/>
+<area shape="rect" id="node3" href="$defines_8hxx.html" title="log4cplus/config/defines.hxx" alt="" coords="1089,715,1268,741"/>
+<area shape="rect" id="node4" href="$thread-config_8h.html" title="log4cplus/helpers/thread\l&#45;config.h" alt="" coords="1293,707,1453,749"/>
+<area shape="rect" id="node7" href="$loggingevent_8h.html" title="log4cplus/spi/loggingevent.h" alt="" coords="561,259,743,285"/>
+<area shape="rect" id="node23" href="$syncprims_8h.html" title="log4cplus/thread/syncprims.h" alt="" coords="1948,483,2135,509"/>
+<area shape="rect" id="node9" href="$loglevel_8h.html" title="log4cplus/loglevel.h" alt="" coords="1364,408,1497,435"/>
+<area shape="rect" id="node11" href="$tstring_8h.html" title="log4cplus/tstring.h" alt="" coords="957,483,1083,509"/>
+<area shape="rect" id="node14" href="$ndc_8h.html" title="log4cplus/ndc.h" alt="" coords="138,408,248,435"/>
+<area shape="rect" id="node16" href="$mdc_8h.html" title="log4cplus/mdc.h" alt="" coords="324,408,439,435"/>
+<area shape="rect" id="node17" href="$timehelper_8h.html" title="log4cplus/helpers/timehelper.h" alt="" coords="513,408,708,435"/>
+<area shape="rect" id="node13" href="$tchar_8h.html" title="log4cplus/tchar.h" alt="" coords="1069,557,1187,584"/>
+<area shape="rect" id="node22" href="$pointer_8h.html" title="log4cplus/helpers/pointer.h" alt="" coords="1522,408,1696,435"/>
+<area shape="rect" id="node30" href="$layout_8h.html" title="log4cplus/layout.h" alt="" coords="1265,333,1388,360"/>
+<area shape="rect" id="node33" href="$filter_8h.html" title="log4cplus/spi/filter.h" alt="" coords="1609,333,1743,360"/>
+<area shape="rect" id="node35" href="$lockfile_8h.html" title="log4cplus/helpers/lockfile.h" alt="" coords="1927,408,2101,435"/>
+<area shape="rect" id="node31" href="$streams_8h.html" title="log4cplus/streams.h" alt="" coords="1314,483,1448,509"/>
+<area shape="rect" id="node37" href="$appenderattachable_8h.html" title="log4cplus/spi/appenderattachable.h" alt="" coords="1950,184,2172,211"/>
+</map>

@@ -1,0 +1,207 @@
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter}{\section{pion\-:\-:test\-:\-:safe\-\_\-xml\-\_\-log\-\_\-formatter Class Reference}
+\label{classpion_1_1test_1_1safe__xml__log__formatter}\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+}
+
+
+thread-\/safe version of Boost.\-Test's xml\-\_\-log\-\_\-formatter class  
+
+
+
+
+{\ttfamily \#include $<$unit\-\_\-test.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:test\-:\-:safe\-\_\-xml\-\_\-log\-\_\-formatter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classpion_1_1test_1_1safe__xml__log__formatter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:test\-:\-:safe\-\_\-xml\-\_\-log\-\_\-formatter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classpion_1_1test_1_1safe__xml__log__formatter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a239efc65e6d0c1f14aae16edc8867664}{safe\-\_\-xml\-\_\-log\-\_\-formatter} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a33953784f10be2a896f44ea81a083a7d}{$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_ad5ecf157f05d08b7a7028c8aeba9b0d7}{log\-\_\-start} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::counter\-\_\-t)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-start \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_ab84589991d45d0301487dde76c748cb2}{log\-\_\-finish} (std\-::ostream \&ostr)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-finish \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_ac97db50c4d84d7c94145fe18a6ba9223}{log\-\_\-build\-\_\-info} (std\-::ostream \&ostr)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-build\-\_\-info \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_ab7896861850e8f45508dc4872d860554}{test\-\_\-unit\-\_\-start} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::test\-\_\-unit const \&tu)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-start \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_aef89506940d8bd7886f659c158e5c862}{test\-\_\-unit\-\_\-finish} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::test\-\_\-unit const \&tu, unsigned long elapsed)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-finish \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_aa838459335f68434f0ef4ee01a491caa}{test\-\_\-unit\-\_\-skipped} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::test\-\_\-unit const \&tu)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-skipped \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a8d87cb10851f0ed9b30ddbdd5d2d7650}{log\-\_\-exception} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::log\-\_\-checkpoint\-\_\-data const \&checkpoint\-\_\-data, boost\-::execution\-\_\-exception const \&ex)
+\begin{DoxyCompactList}\small\item\em wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-exception \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a50eff755ff4bc8ee87d3bdda2370faf6}{log\-\_\-entry\-\_\-start} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::log\-\_\-entry\-\_\-data const \&entry\-\_\-data, log\-\_\-entry\-\_\-types let)
+\begin{DoxyCompactList}\small\item\em thread-\/safe wrapper for xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-start \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a812c1c1b93592d1ab11c5273ef4eef97}{log\-\_\-entry\-\_\-value} (std\-::ostream \&ostr, boost\-::unit\-\_\-test\-::const\-\_\-string value)
+\item 
+virtual void \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a9ec475531b42223043b52919ed7c440e}{log\-\_\-entry\-\_\-finish} (std\-::ostream \&ostr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+thread-\/safe version of Boost.\-Test's xml\-\_\-log\-\_\-formatter class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a239efc65e6d0c1f14aae16edc8867664}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!safe\-\_\-xml\-\_\-log\-\_\-formatter@{safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\index{safe\-\_\-xml\-\_\-log\-\_\-formatter@{safe\-\_\-xml\-\_\-log\-\_\-formatter}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{safe\-\_\-xml\-\_\-log\-\_\-formatter}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::safe\-\_\-xml\-\_\-log\-\_\-formatter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a239efc65e6d0c1f14aae16edc8867664}
+
+
+default constructor 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a33953784f10be2a896f44ea81a083a7d}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter@{$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\index{$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter@{$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::$\sim$safe\-\_\-xml\-\_\-log\-\_\-formatter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a33953784f10be2a896f44ea81a083a7d}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_ac97db50c4d84d7c94145fe18a6ba9223}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-build\-\_\-info@{log\-\_\-build\-\_\-info}}
+\index{log\-\_\-build\-\_\-info@{log\-\_\-build\-\_\-info}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-build\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-build\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_ac97db50c4d84d7c94145fe18a6ba9223}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-build\-\_\-info 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a9ec475531b42223043b52919ed7c440e}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-entry\-\_\-finish@{log\-\_\-entry\-\_\-finish}}
+\index{log\-\_\-entry\-\_\-finish@{log\-\_\-entry\-\_\-finish}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-entry\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a9ec475531b42223043b52919ed7c440e}
+thread-\/safe wrapper for xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-finish assumes the current thread has control via call to \hyperlink{classpion_1_1test_1_1safe__xml__log__formatter_a50eff755ff4bc8ee87d3bdda2370faf6}{log\-\_\-entry\-\_\-start()} \hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a50eff755ff4bc8ee87d3bdda2370faf6}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-entry\-\_\-start@{log\-\_\-entry\-\_\-start}}
+\index{log\-\_\-entry\-\_\-start@{log\-\_\-entry\-\_\-start}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-entry\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::log\-\_\-entry\-\_\-data const \&}]{entry\-\_\-data, }
+\item[{log\-\_\-entry\-\_\-types}]{let}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a50eff755ff4bc8ee87d3bdda2370faf6}
+
+
+thread-\/safe wrapper for xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-start 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a812c1c1b93592d1ab11c5273ef4eef97}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-entry\-\_\-value@{log\-\_\-entry\-\_\-value}}
+\index{log\-\_\-entry\-\_\-value@{log\-\_\-entry\-\_\-value}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-entry\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::const\-\_\-string}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a812c1c1b93592d1ab11c5273ef4eef97}
+thread-\/safe wrapper for xml\-\_\-log\-\_\-formatter\-::log\-\_\-entry\-\_\-value ensures that an entry is in progress \hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_a8d87cb10851f0ed9b30ddbdd5d2d7650}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-exception@{log\-\_\-exception}}
+\index{log\-\_\-exception@{log\-\_\-exception}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-exception}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-exception (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::log\-\_\-checkpoint\-\_\-data const \&}]{checkpoint\-\_\-data, }
+\item[{boost\-::execution\-\_\-exception const \&}]{ex}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_a8d87cb10851f0ed9b30ddbdd5d2d7650}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-exception 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_ab84589991d45d0301487dde76c748cb2}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-finish@{log\-\_\-finish}}
+\index{log\-\_\-finish@{log\-\_\-finish}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_ab84589991d45d0301487dde76c748cb2}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-finish 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_ad5ecf157f05d08b7a7028c8aeba9b0d7}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!log\-\_\-start@{log\-\_\-start}}
+\index{log\-\_\-start@{log\-\_\-start}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{log\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::log\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::counter\-\_\-t}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_ad5ecf157f05d08b7a7028c8aeba9b0d7}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::log\-\_\-start 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_aef89506940d8bd7886f659c158e5c862}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!test\-\_\-unit\-\_\-finish@{test\-\_\-unit\-\_\-finish}}
+\index{test\-\_\-unit\-\_\-finish@{test\-\_\-unit\-\_\-finish}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{test\-\_\-unit\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::test\-\_\-unit const \&}]{tu, }
+\item[{unsigned long}]{elapsed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_aef89506940d8bd7886f659c158e5c862}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-finish 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_aa838459335f68434f0ef4ee01a491caa}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!test\-\_\-unit\-\_\-skipped@{test\-\_\-unit\-\_\-skipped}}
+\index{test\-\_\-unit\-\_\-skipped@{test\-\_\-unit\-\_\-skipped}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{test\-\_\-unit\-\_\-skipped}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-skipped (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::test\-\_\-unit const \&}]{tu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_aa838459335f68434f0ef4ee01a491caa}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-skipped 
+
+\hypertarget{classpion_1_1test_1_1safe__xml__log__formatter_ab7896861850e8f45508dc4872d860554}{\index{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}!test\-\_\-unit\-\_\-start@{test\-\_\-unit\-\_\-start}}
+\index{test\-\_\-unit\-\_\-start@{test\-\_\-unit\-\_\-start}!pion::test::safe_xml_log_formatter@{pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter}}
+\subsubsection[{test\-\_\-unit\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::test\-::safe\-\_\-xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{ostr, }
+\item[{boost\-::unit\-\_\-test\-::test\-\_\-unit const \&}]{tu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1test_1_1safe__xml__log__formatter_ab7896861850e8f45508dc4872d860554}
+
+
+wrapper to flush output for xml\-\_\-log\-\_\-formatter\-::test\-\_\-unit\-\_\-start 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/test/\hyperlink{unit__test_8hpp}{unit\-\_\-test.\-hpp}\end{DoxyCompactItemize}

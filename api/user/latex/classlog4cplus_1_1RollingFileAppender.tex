@@ -1,0 +1,132 @@
+\hypertarget{classlog4cplus_1_1RollingFileAppender}{\section{log4cplus\-:\-:Rolling\-File\-Appender Class Reference}
+\label{classlog4cplus_1_1RollingFileAppender}\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}}
+}
+
+
+{\ttfamily \#include $<$fileappender.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:Rolling\-File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classlog4cplus_1_1RollingFileAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:Rolling\-File\-Appender\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1RollingFileAppender__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1RollingFileAppender_aa3f47fb76ae5ae3f2ac6ef576ba8fe3f}{Rolling\-File\-Appender} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&\hyperlink{classlog4cplus_1_1FileAppender_aa04b4a30301c69d784248eccbac2f864}{filename}, long \hyperlink{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}{max\-File\-Size}=10 $\ast$1024 $\ast$1024, int \hyperlink{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}{max\-Backup\-Index}=1, bool \hyperlink{classlog4cplus_1_1FileAppender_a89f7c6ae8f630cc2190a376fcc7ca2cc}{immediate\-Flush}=true, bool \hyperlink{classlog4cplus_1_1FileAppender_aa9b466ab8de95868505db1b05c645e3f}{create\-Dirs}=false)
+\item 
+\hyperlink{classlog4cplus_1_1RollingFileAppender_a6b71c8947f6398c601395f0178aa7536}{Rolling\-File\-Appender} (const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \&properties)
+\item 
+virtual \hyperlink{classlog4cplus_1_1RollingFileAppender_adf0c824ee29455a635b3a73de4fca693}{$\sim$\-Rolling\-File\-Appender} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}{append} (const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{spi\-::\-Internal\-Logging\-Event} \&event)
+\item 
+void \hyperlink{classlog4cplus_1_1RollingFileAppender_a7d98e6bd4af10f11b72b3b813dc4b714}{rollover} (bool already\-Locked=false)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}{max\-File\-Size}
+\item 
+int \hyperlink{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}{max\-Backup\-Index}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classlog4cplus_1_1RollingFileAppender}{Rolling\-File\-Appender} extends \hyperlink{classlog4cplus_1_1FileAppender}{File\-Appender} to backup the log files when they reach a certain size.
+
+\paragraph*{Properties}
+
+Properties additional to \hyperlink{classlog4cplus_1_1FileAppender}{File\-Appender}'s properties\-:
+
+
+\begin{DoxyDescription}
+\item[{\ttfamily Max\-File\-Size} ]This property specifies maximal size of output file. The value is in bytes. It is possible to use {\ttfamily M\-B} and {\ttfamily K\-B} suffixes to specify the value in megabytes or kilobytes instead.
+
+
+\item[{\ttfamily Max\-Backup\-Index} ]This property limits the number of backup output files; e.\-g. how many {\ttfamily log.\-1}, {\ttfamily log.\-2} etc. files will be kept. 
+\end{DoxyDescription}
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_aa3f47fb76ae5ae3f2ac6ef576ba8fe3f}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!Rolling\-File\-Appender@{Rolling\-File\-Appender}}
+\index{Rolling\-File\-Appender@{Rolling\-File\-Appender}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Rolling\-File\-Appender\-::\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{filename, }
+\item[{long}]{max\-File\-Size = {\ttfamily 10~$\ast$1024~$\ast$1024}, }
+\item[{int}]{max\-Backup\-Index = {\ttfamily 1}, }
+\item[{bool}]{immediate\-Flush = {\ttfamily true}, }
+\item[{bool}]{create\-Dirs = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1RollingFileAppender_aa3f47fb76ae5ae3f2ac6ef576ba8fe3f}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_a6b71c8947f6398c601395f0178aa7536}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!Rolling\-File\-Appender@{Rolling\-File\-Appender}}
+\index{Rolling\-File\-Appender@{Rolling\-File\-Appender}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Rolling\-File\-Appender\-::\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Properties} \&}]{properties}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1RollingFileAppender_a6b71c8947f6398c601395f0178aa7536}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_adf0c824ee29455a635b3a73de4fca693}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!$\sim$\-Rolling\-File\-Appender@{$\sim$\-Rolling\-File\-Appender}}
+\index{$\sim$\-Rolling\-File\-Appender@{$\sim$\-Rolling\-File\-Appender}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{$\sim$\-Rolling\-File\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-Rolling\-File\-Appender\-::$\sim$\-Rolling\-File\-Appender (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1RollingFileAppender_adf0c824ee29455a635b3a73de4fca693}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!append@{append}}
+\index{append@{append}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Rolling\-File\-Appender\-::append (
+\begin{DoxyParamCaption}
+\item[{const {\bf spi\-::\-Internal\-Logging\-Event} \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1RollingFileAppender_adc10fea61bae7d6e491639ffb77a1cc3}
+Subclasses of {\ttfamily \hyperlink{classlog4cplus_1_1Appender}{Appender}} should implement this method to perform actual logging. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\-Append} method. 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{classlog4cplus_1_1FileAppender_a47a8d23755accaf61487844f6361958f}{log4cplus\-::\-File\-Appender}.
+
+\hypertarget{classlog4cplus_1_1RollingFileAppender_a7d98e6bd4af10f11b72b3b813dc4b714}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!rollover@{rollover}}
+\index{rollover@{rollover}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{rollover}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Rolling\-File\-Appender\-::rollover (
+\begin{DoxyParamCaption}
+\item[{bool}]{already\-Locked = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1RollingFileAppender_a7d98e6bd4af10f11b72b3b813dc4b714}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!max\-Backup\-Index@{max\-Backup\-Index}}
+\index{max\-Backup\-Index@{max\-Backup\-Index}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{max\-Backup\-Index}]{\setlength{\rightskip}{0pt plus 5cm}int log4cplus\-::\-Rolling\-File\-Appender\-::max\-Backup\-Index\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1RollingFileAppender_a4a19bc9843438a939fbd40869cad5c69}
+\hypertarget{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}{\index{log4cplus\-::\-Rolling\-File\-Appender@{log4cplus\-::\-Rolling\-File\-Appender}!max\-File\-Size@{max\-File\-Size}}
+\index{max\-File\-Size@{max\-File\-Size}!log4cplus::RollingFileAppender@{log4cplus\-::\-Rolling\-File\-Appender}}
+\subsubsection[{max\-File\-Size}]{\setlength{\rightskip}{0pt plus 5cm}long log4cplus\-::\-Rolling\-File\-Appender\-::max\-File\-Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1RollingFileAppender_aa60097480e57fa947795b5c3278fe573}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{fileappender_8h}{fileappender.\-h}\end{DoxyCompactItemize}

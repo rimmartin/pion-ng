@@ -1,0 +1,175 @@
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t}{\section{pion\-:\-:http\-:\-:message\-:\-:content\-\_\-buffer\-\_\-t Class Reference}
+\label{classpion_1_1http_1_1message_1_1content__buffer__t}\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+}
+
+
+a simple helper class used to manage a fixed-\/size payload content buffer  
+
+
+
+
+{\ttfamily \#include $<$message.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a3ea8a034039b47b3cbdbab2591812353}{$\sim$content\-\_\-buffer\-\_\-t} ()
+\begin{DoxyCompactList}\small\item\em simple destructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a338e2dbbb2fa4b4ab4eb876837d39d90}{content\-\_\-buffer\-\_\-t} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a2f0ef54675bfaa620b4900866b8174e3}{content\-\_\-buffer\-\_\-t} (const \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t}{content\-\_\-buffer\-\_\-t} \&buf)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t}{content\-\_\-buffer\-\_\-t} \& \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a79d3e130075949cb148734a4435a404a}{operator=} (const \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t}{content\-\_\-buffer\-\_\-t} \&buf)
+\begin{DoxyCompactList}\small\item\em assignment operator \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a709d6984941254634cdb8b3527bb7ad6}{is\-\_\-empty} () const 
+\begin{DoxyCompactList}\small\item\em returns true if buffer is empty \end{DoxyCompactList}\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a4af97b94d9c7a9dabcdb61fcf29a6742}{size} () const 
+\begin{DoxyCompactList}\small\item\em returns size in bytes \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a0612969681bf2b0a4078e31205e1cd86}{get} () const 
+\begin{DoxyCompactList}\small\item\em returns const pointer to data \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a768b0cce716f2dc01d2371ade49f9616}{get} ()
+\begin{DoxyCompactList}\small\item\em returns mutable pointer to data \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_a1dc5a7c1a0864d7431bd335b7a86f466}{resize} (std\-::size\-\_\-t len)
+\begin{DoxyCompactList}\small\item\em changes the size of the content buffer \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t_ad4b7e8e9c83c928800d06d78708c1c21}{clear} ()
+\begin{DoxyCompactList}\small\item\em clears the content buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+a simple helper class used to manage a fixed-\/size payload content buffer 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a3ea8a034039b47b3cbdbab2591812353}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!$\sim$content\-\_\-buffer\-\_\-t@{$\sim$content\-\_\-buffer\-\_\-t}}
+\index{$\sim$content\-\_\-buffer\-\_\-t@{$\sim$content\-\_\-buffer\-\_\-t}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{$\sim$content\-\_\-buffer\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::$\sim$content\-\_\-buffer\-\_\-t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a3ea8a034039b47b3cbdbab2591812353}
+
+
+simple destructor 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a338e2dbbb2fa4b4ab4eb876837d39d90}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!content\-\_\-buffer\-\_\-t@{content\-\_\-buffer\-\_\-t}}
+\index{content\-\_\-buffer\-\_\-t@{content\-\_\-buffer\-\_\-t}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{content\-\_\-buffer\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::content\-\_\-buffer\-\_\-t (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a338e2dbbb2fa4b4ab4eb876837d39d90}
+
+
+default constructor 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a2f0ef54675bfaa620b4900866b8174e3}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!content\-\_\-buffer\-\_\-t@{content\-\_\-buffer\-\_\-t}}
+\index{content\-\_\-buffer\-\_\-t@{content\-\_\-buffer\-\_\-t}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{content\-\_\-buffer\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::content\-\_\-buffer\-\_\-t (
+\begin{DoxyParamCaption}
+\item[{const {\bf content\-\_\-buffer\-\_\-t} \&}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a2f0ef54675bfaa620b4900866b8174e3}
+
+
+copy constructor 
+
+
+
+References get(), and size().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_ad4b7e8e9c83c928800d06d78708c1c21}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!clear@{clear}}
+\index{clear@{clear}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_ad4b7e8e9c83c928800d06d78708c1c21}
+
+
+clears the content buffer 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a0612969681bf2b0a4078e31205e1cd86}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!get@{get}}
+\index{get@{get}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a0612969681bf2b0a4078e31205e1cd86}
+
+
+returns const pointer to data 
+
+
+
+Referenced by content\-\_\-buffer\-\_\-t(), and operator=().
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a768b0cce716f2dc01d2371ade49f9616}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!get@{get}}
+\index{get@{get}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a768b0cce716f2dc01d2371ade49f9616}
+
+
+returns mutable pointer to data 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a709d6984941254634cdb8b3527bb7ad6}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!is\-\_\-empty@{is\-\_\-empty}}
+\index{is\-\_\-empty@{is\-\_\-empty}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{is\-\_\-empty}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::is\-\_\-empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a709d6984941254634cdb8b3527bb7ad6}
+
+
+returns true if buffer is empty 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a79d3e130075949cb148734a4435a404a}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!operator=@{operator=}}
+\index{operator=@{operator=}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf content\-\_\-buffer\-\_\-t}\& pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf content\-\_\-buffer\-\_\-t} \&}]{buf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a79d3e130075949cb148734a4435a404a}
+
+
+assignment operator 
+
+
+
+References get(), and size().
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a1dc5a7c1a0864d7431bd335b7a86f466}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!resize@{resize}}
+\index{resize@{resize}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::resize (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a1dc5a7c1a0864d7431bd335b7a86f466}
+
+
+changes the size of the content buffer 
+
+\hypertarget{classpion_1_1http_1_1message_1_1content__buffer__t_a4af97b94d9c7a9dabcdb61fcf29a6742}{\index{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}!size@{size}}
+\index{size@{size}!pion::http::message::content_buffer_t@{pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::content\-\_\-buffer\-\_\-t\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_1_1content__buffer__t_a4af97b94d9c7a9dabcdb61fcf29a6742}
+
+
+returns size in bytes 
+
+
+
+Referenced by content\-\_\-buffer\-\_\-t(), and operator=().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{message_8hpp}{message.\-hpp}\end{DoxyCompactItemize}

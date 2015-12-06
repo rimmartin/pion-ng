@@ -1,0 +1,183 @@
+\hypertarget{classlog4cplus_1_1DeviceAppender}{\section{log4cplus\-:\-:Device\-Appender$<$ Device $>$ Class Template Reference}
+\label{classlog4cplus_1_1DeviceAppender}\index{log4cplus\-::\-Device\-Appender$<$ Device $>$@{log4cplus\-::\-Device\-Appender$<$ Device $>$}}
+}
+
+
+{\ttfamily \#include $<$deviceappender.\-hxx$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:Device\-Appender$<$ Device $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classlog4cplus_1_1DeviceAppender__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:Device\-Appender$<$ Device $>$\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1DeviceAppender__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+\hyperlink{structlog4cplus_1_1device__appender__detail_1_1device__type__traits}{device\-\_\-appender\-\_\-detail\-::device\-\_\-type\-\_\-traits}\\*
+$<$ Device $>$ \hyperlink{classlog4cplus_1_1DeviceAppender_a83e74702b437b83036b314068959c558}{device\-\_\-traits}
+\item 
+typedef \hyperlink{structlog4cplus_1_1device__appender__detail_1_1device__type__traits_a302a3631da80b1b7944eb4edb6690730}{device\-\_\-traits\-::device\-\_\-type} \hyperlink{classlog4cplus_1_1DeviceAppender_a590c81a55f4366f846373b4f19559d06}{device\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename D $>$ }\\\hyperlink{classlog4cplus_1_1DeviceAppender_a8e1efdd99fdfb3e23e76dd4336f24561}{Device\-Appender} (D \&d, bool close\-\_\-device=true)
+\item 
+{\footnotesize template$<$typename D $>$ }\\\hyperlink{classlog4cplus_1_1DeviceAppender_a6c8f22fd45988095090268b9fae02b37}{Device\-Appender} (boost\-::shared\-\_\-ptr$<$ D $>$ const \&d, bool close\-\_\-device=true)
+\item 
+{\footnotesize template$<$typename D $>$ }\\\hyperlink{classlog4cplus_1_1DeviceAppender_a2d7b3bb3911df2c15149a5f01aba636a}{Device\-Appender} (D \&d, const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\-::\-Properties} \&props)
+\item 
+{\footnotesize template$<$typename D $>$ }\\\hyperlink{classlog4cplus_1_1DeviceAppender_af76fa334a528af7230df083483c7f363}{Device\-Appender} (boost\-::shared\-\_\-ptr$<$ D $>$ const \&d, const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{helpers\-::\-Properties} \&props)
+\item 
+virtual \hyperlink{classlog4cplus_1_1DeviceAppender_abec124b2300de65539674dda7f4e49b9}{$\sim$\-Device\-Appender} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1DeviceAppender_a85fa48dfb0f86439bbdcb26b31db8f0f}{close} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlog4cplus_1_1DeviceAppender_a8010b1ebc0dd3deefe73138eac2868dc}{append} (\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\-::spi\-::\-Internal\-Logging\-Event} const \&event)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1DeviceAppender_a590c81a55f4366f846373b4f19559d06}{device\-\_\-type} \hyperlink{classlog4cplus_1_1DeviceAppender_a24c1cf2ab4b9718d12bcab4c10b55efa}{device}
+\item 
+bool \hyperlink{classlog4cplus_1_1DeviceAppender_a857d0eeeb46a5a18a77d7602cf98b86f}{close\-\_\-flag}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a83e74702b437b83036b314068959c558}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!device\-\_\-traits@{device\-\_\-traits}}
+\index{device\-\_\-traits@{device\-\_\-traits}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{device\-\_\-traits}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ typedef {\bf device\-\_\-appender\-\_\-detail\-::device\-\_\-type\-\_\-traits}$<$Device$>$ {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf device\-\_\-traits}}}\label{classlog4cplus_1_1DeviceAppender_a83e74702b437b83036b314068959c558}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a590c81a55f4366f846373b4f19559d06}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!device\-\_\-type@{device\-\_\-type}}
+\index{device\-\_\-type@{device\-\_\-type}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{device\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ typedef {\bf device\-\_\-traits\-::device\-\_\-type} {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf device\-\_\-type}}}\label{classlog4cplus_1_1DeviceAppender_a590c81a55f4366f846373b4f19559d06}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a8e1efdd99fdfb3e23e76dd4336f24561}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!Device\-Appender@{Device\-Appender}}
+\index{Device\-Appender@{Device\-Appender}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{Device\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ template$<$typename D $>$ {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf Device\-Appender} (
+\begin{DoxyParamCaption}
+\item[{D \&}]{d, }
+\item[{bool}]{close\-\_\-device = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1DeviceAppender_a8e1efdd99fdfb3e23e76dd4336f24561}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a6c8f22fd45988095090268b9fae02b37}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!Device\-Appender@{Device\-Appender}}
+\index{Device\-Appender@{Device\-Appender}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{Device\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ template$<$typename D $>$ {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf Device\-Appender} (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ D $>$ const \&}]{d, }
+\item[{bool}]{close\-\_\-device = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1DeviceAppender_a6c8f22fd45988095090268b9fae02b37}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a2d7b3bb3911df2c15149a5f01aba636a}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!Device\-Appender@{Device\-Appender}}
+\index{Device\-Appender@{Device\-Appender}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{Device\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ template$<$typename D $>$ {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf Device\-Appender} (
+\begin{DoxyParamCaption}
+\item[{D \&}]{d, }
+\item[{const {\bf helpers\-::\-Properties} \&}]{props}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1DeviceAppender_a2d7b3bb3911df2c15149a5f01aba636a}
+
+
+References log4cplus\-::\-Device\-Appender$<$ Device $>$\-::close\-\_\-flag, log4cplus\-::helpers\-::\-Properties\-::exists(), and L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-T\-E\-X\-T.
+
+\hypertarget{classlog4cplus_1_1DeviceAppender_af76fa334a528af7230df083483c7f363}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!Device\-Appender@{Device\-Appender}}
+\index{Device\-Appender@{Device\-Appender}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{Device\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ template$<$typename D $>$ {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::{\bf Device\-Appender} (
+\begin{DoxyParamCaption}
+\item[{boost\-::shared\-\_\-ptr$<$ D $>$ const \&}]{d, }
+\item[{const {\bf helpers\-::\-Properties} \&}]{props}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1DeviceAppender_af76fa334a528af7230df083483c7f363}
+
+
+References log4cplus\-::\-Device\-Appender$<$ Device $>$\-::close\-\_\-flag, log4cplus\-::helpers\-::\-Properties\-::exists(), and L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-T\-E\-X\-T.
+
+\hypertarget{classlog4cplus_1_1DeviceAppender_abec124b2300de65539674dda7f4e49b9}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!$\sim$\-Device\-Appender@{$\sim$\-Device\-Appender}}
+\index{$\sim$\-Device\-Appender@{$\sim$\-Device\-Appender}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{$\sim$\-Device\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ virtual {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::$\sim${\bf Device\-Appender} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1DeviceAppender_abec124b2300de65539674dda7f4e49b9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a8010b1ebc0dd3deefe73138eac2868dc}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!append@{append}}
+\index{append@{append}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ virtual void {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::append (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::spi\-::\-Internal\-Logging\-Event} const \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1DeviceAppender_a8010b1ebc0dd3deefe73138eac2868dc}
+Subclasses of {\ttfamily \hyperlink{classlog4cplus_1_1Appender}{Appender}} should implement this method to perform actual logging. \begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1Appender_a63d9da23fa8956db3648adee75a5ff38}{do\-Append} method. 
+\end{DoxySeeAlso}
+
+
+Implements \hyperlink{classlog4cplus_1_1Appender_aa0c58458ad4d5db5074d26b9e82aba40}{log4cplus\-::\-Appender}.
+
+
+
+References log4cplus\-::\-Device\-Appender$<$ Device $>$\-::device, log4cplus\-::\-Appender\-::format\-Event(), log4cplus\-::device\-\_\-appender\-\_\-detail\-::device\-\_\-type\-\_\-traits$<$ T $>$\-::unwrap(), and log4cplus\-::helpers\-::write().
+
+\hypertarget{classlog4cplus_1_1DeviceAppender_a85fa48dfb0f86439bbdcb26b31db8f0f}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!close@{close}}
+\index{close@{close}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ virtual void {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1DeviceAppender_a85fa48dfb0f86439bbdcb26b31db8f0f}
+Release any resources allocated within the appender such as file handles, network connections, etc.
+
+It is a programming error to append to a closed appender. 
+
+Implements \hyperlink{classlog4cplus_1_1Appender_a0bd9b2567e1c82e589dec97f74abf689}{log4cplus\-::\-Appender}.
+
+
+
+References log4cplus\-::\-Device\-Appender$<$ Device $>$\-::close\-\_\-flag, log4cplus\-::\-Device\-Appender$<$ Device $>$\-::device, and log4cplus\-::device\-\_\-appender\-\_\-detail\-::device\-\_\-type\-\_\-traits$<$ T $>$\-::unwrap().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1DeviceAppender_a857d0eeeb46a5a18a77d7602cf98b86f}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!close\-\_\-flag@{close\-\_\-flag}}
+\index{close\-\_\-flag@{close\-\_\-flag}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{close\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ bool {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::close\-\_\-flag\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DeviceAppender_a857d0eeeb46a5a18a77d7602cf98b86f}
+
+
+Referenced by log4cplus\-::\-Device\-Appender$<$ Device $>$\-::close(), and log4cplus\-::\-Device\-Appender$<$ Device $>$\-::\-Device\-Appender().
+
+\hypertarget{classlog4cplus_1_1DeviceAppender_a24c1cf2ab4b9718d12bcab4c10b55efa}{\index{log4cplus\-::\-Device\-Appender@{log4cplus\-::\-Device\-Appender}!device@{device}}
+\index{device@{device}!log4cplus::DeviceAppender@{log4cplus\-::\-Device\-Appender}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Device $>$ {\bf device\-\_\-type} {\bf log4cplus\-::\-Device\-Appender}$<$ Device $>$\-::device\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1DeviceAppender_a24c1cf2ab4b9718d12bcab4c10b55efa}
+
+
+Referenced by log4cplus\-::\-Device\-Appender$<$ Device $>$\-::append(), and log4cplus\-::\-Device\-Appender$<$ Device $>$\-::close().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/boost/\hyperlink{deviceappender_8hxx}{deviceappender.\-hxx}\end{DoxyCompactItemize}

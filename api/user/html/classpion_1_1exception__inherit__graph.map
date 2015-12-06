@@ -1,0 +1,15 @@
+<map id="pion::exception" name="pion::exception">
+<area shape="rect" id="node4" href="$classpion_1_1error_1_1bad__arg.html" title="exception thrown for an invalid configuration argument or option " alt="" coords="357,5,488,32"/>
+<area shape="rect" id="node5" href="$classpion_1_1error_1_1bad__config.html" title="exception thrown if there is an error parsing a configuration file " alt="" coords="349,56,496,83"/>
+<area shape="rect" id="node6" href="$classpion_1_1error_1_1bad__password__hash.html" title="exception thrown if a bad password hash is provided " alt="" coords="323,107,522,133"/>
+<area shape="rect" id="node7" href="$classpion_1_1error_1_1directory__not__found.html" title="exception thrown if a required directory is not found " alt="" coords="356,158,489,199"/>
+<area shape="rect" id="node8" href="$classpion_1_1error_1_1duplicate__plugin.html" title="exception thrown if we try to add or load a duplicate plugin " alt="" coords="355,223,491,265"/>
+<area shape="rect" id="node9" href="$classpion_1_1error_1_1file__not__found.html" title="exception thrown if a file is not found " alt="" coords="360,289,485,330"/>
+<area shape="rect" id="node10" href="$classpion_1_1error_1_1open__file.html" title="exception thrown if we failed to open a file " alt="" coords="355,355,490,381"/>
+<area shape="rect" id="node11" href="$classpion_1_1error_1_1open__plugin.html" title="exception thrown if we are unable to open a plugin " alt="" coords="346,405,499,432"/>
+<area shape="rect" id="node12" href="$classpion_1_1error_1_1plugin__missing__symbol.html" title="exception thrown if a plugin is missing a required symbol " alt="" coords="363,457,482,498"/>
+<area shape="rect" id="node13" href="$classpion_1_1error_1_1plugin__not__found.html" title="exception thrown if a plugin cannot be found " alt="" coords="363,522,482,563"/>
+<area shape="rect" id="node14" href="$classpion_1_1error_1_1plugin__undefined.html" title="exception thrown if a plugin has an undefined state " alt="" coords="363,587,482,629"/>
+<area shape="rect" id="node15" href="$classpion_1_1error_1_1read__file.html" title="exception thrown if we failed to read data from a file " alt="" coords="357,653,489,680"/>
+<area shape="rect" id="node2" title="STL class. " alt="" coords="13,300,113,327"/>
+</map>

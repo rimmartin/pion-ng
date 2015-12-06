@@ -1,0 +1,116 @@
+\hypertarget{classlog4cplus_1_1spi_1_1Filter}{\section{log4cplus\-:\-:spi\-:\-:Filter Class Reference}
+\label{classlog4cplus_1_1spi_1_1Filter}\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}}
+}
+
+
+{\ttfamily \#include $<$filter.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:spi\-:\-:Filter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1spi_1_1Filter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:spi\-:\-:Filter\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classlog4cplus_1_1spi_1_1Filter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}{Filter} ()
+\item 
+virtual \hyperlink{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}{$\sim$\-Filter} ()
+\item 
+void \hyperlink{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}{append\-Filter} (\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\-Ptr} filter)
+\item 
+virtual \hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6}{Filter\-Result} \hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{decide} (const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{Internal\-Logging\-Event} \&event) const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus_1_1spi_abfdea757523ce8fe4598502a29bc7545}{Filter\-Ptr} \hyperlink{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}{next}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Users should extend this class to implement customized logging event filtering. Note that the \hyperlink{classlog4cplus_1_1Logger}{Logger} and \hyperlink{classlog4cplus_1_1Appender}{Appender} classes have built-\/in filtering rules. It is suggested that you first use and understand the built-\/in rules before rushing to write your own custom filters.
+
+This abstract class assumes and also imposes that filters be organized in a linear chain. The \hyperlink{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{decide(\-Logging\-Event)} method of each filter is called sequentially, in the order of their addition to the chain.
+
+If the value \hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a4782fd85324c15b37a4de87628f51634}{D\-E\-N\-Y} is returned, then the log event is dropped immediately without consulting with the remaining filters.
+
+If the value \hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6ae75ab2e37a542c14fe57be606502a550}{N\-E\-U\-T\-R\-A\-L} is returned, then the next filter in the chain is consulted. If there are no more filters in the chain, then the log event is logged. Thus, in the presence of no filters, the default behaviour is to log all logging events.
+
+If the value \hyperlink{namespacelog4cplus_1_1spi_aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7}{A\-C\-C\-E\-P\-T} is returned, then the log event is logged without consulting the remaining filters.
+
+The philosophy of \hyperlink{namespacelog4cplus}{log4cplus} filters is largely inspired from the Linux ipchains. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}{\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}!Filter@{Filter}}
+\index{Filter@{Filter}!log4cplus::spi::Filter@{log4cplus\-::spi\-::\-Filter}}
+\subsubsection[{Filter}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::spi\-::\-Filter\-::\-Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1spi_1_1Filter_acbdc515a91d5fd7f5c03b3225a1593ac}
+\hypertarget{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}{\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}!$\sim$\-Filter@{$\sim$\-Filter}}
+\index{$\sim$\-Filter@{$\sim$\-Filter}!log4cplus::spi::Filter@{log4cplus\-::spi\-::\-Filter}}
+\subsubsection[{$\sim$\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::spi\-::\-Filter\-::$\sim$\-Filter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1spi_1_1Filter_a8c78932b14954d46a03c8865e624f2ec}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}{\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}!append\-Filter@{append\-Filter}}
+\index{append\-Filter@{append\-Filter}!log4cplus::spi::Filter@{log4cplus\-::spi\-::\-Filter}}
+\subsubsection[{append\-Filter}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::spi\-::\-Filter\-::append\-Filter (
+\begin{DoxyParamCaption}
+\item[{{\bf Filter\-Ptr}}]{filter}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1spi_1_1Filter_a978f9027c1da32af99b517cbbc0657b0}
+Appends {\ttfamily filter} to the end of this filter chain. \hypertarget{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}{\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}!decide@{decide}}
+\index{decide@{decide}!log4cplus::spi::Filter@{log4cplus\-::spi\-::\-Filter}}
+\subsubsection[{decide}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Filter\-Result} log4cplus\-::spi\-::\-Filter\-::decide (
+\begin{DoxyParamCaption}
+\item[{const {\bf Internal\-Logging\-Event} \&}]{event}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classlog4cplus_1_1spi_1_1Filter_a728348e762ea1c10e30102503f6aa7a6}
+If the decision is {\ttfamily D\-E\-N\-Y}, then the event will be dropped. If the decision is {\ttfamily N\-E\-U\-T\-R\-A\-L}, then the next filter, if any, will be invoked. If the decision is A\-C\-C\-E\-P\-T then the event will be logged without consulting with other filters in the chain.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The Logging\-Event to decide upon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decision of the filter. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classlog4cplus_1_1spi_1_1FunctionFilter_a0c68a83fdb63980ec7da8419988e1e81}{log4cplus\-::spi\-::\-Function\-Filter}, \hyperlink{classlog4cplus_1_1spi_1_1StringMatchFilter_a6b9f1b930b9a045ff668aae689e798bb}{log4cplus\-::spi\-::\-String\-Match\-Filter}, \hyperlink{classlog4cplus_1_1spi_1_1LogLevelRangeFilter_a5c22fc312173f06abd729961933f30c8}{log4cplus\-::spi\-::\-Log\-Level\-Range\-Filter}, \hyperlink{classlog4cplus_1_1spi_1_1LogLevelMatchFilter_ab9d292692d09079ce2baeb4c7d40df92}{log4cplus\-::spi\-::\-Log\-Level\-Match\-Filter}, and \hyperlink{classlog4cplus_1_1spi_1_1DenyAllFilter_ac6952edfd99def7e84b9e90315782f64}{log4cplus\-::spi\-::\-Deny\-All\-Filter}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}{\index{log4cplus\-::spi\-::\-Filter@{log4cplus\-::spi\-::\-Filter}!next@{next}}
+\index{next@{next}!log4cplus::spi::Filter@{log4cplus\-::spi\-::\-Filter}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter\-Ptr} log4cplus\-::spi\-::\-Filter\-::next}}\label{classlog4cplus_1_1spi_1_1Filter_ac78a9de8a5b0536fdb165fbb40af9504}
+Points to the next filter in the filter chain. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/spi/\hyperlink{filter_8h}{filter.\-h}\end{DoxyCompactItemize}

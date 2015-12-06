@@ -1,0 +1,78 @@
+\hypertarget{classlog4cplus_1_1Initializer}{\section{log4cplus\-:\-:Initializer Class Reference}
+\label{classlog4cplus_1_1Initializer}\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}}
+}
+
+
+{\ttfamily \#include $<$initializer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}{Initializer} ()
+\item 
+\hyperlink{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}{$\sim$\-Initializer} ()
+\item 
+\hyperlink{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}{Initializer} (\hyperlink{classlog4cplus_1_1Initializer}{Initializer} const \&)=delete
+\item 
+\hyperlink{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}{Initializer} (\hyperlink{classlog4cplus_1_1Initializer}{Initializer} \&\&)=delete
+\item 
+\hyperlink{classlog4cplus_1_1Initializer}{Initializer} \& \hyperlink{classlog4cplus_1_1Initializer_addaa55cd2f01f8eb574639101c172abb}{operator=} (\hyperlink{classlog4cplus_1_1Initializer}{Initializer} const \&)=delete
+\item 
+\hyperlink{classlog4cplus_1_1Initializer}{Initializer} \& \hyperlink{classlog4cplus_1_1Initializer_a6e10aaa5be2f92ac8dff4d4a75ec7b06}{operator=} (\hyperlink{classlog4cplus_1_1Initializer}{Initializer} \&\&)=delete
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class helps with initialization and shutdown of \hyperlink{namespacelog4cplus}{log4cplus}. Its constructor calls {\ttfamily log4cplus\-::initialize()} and its destructor calls {\ttfamily \hyperlink{classlog4cplus_1_1Logger_a9a288b93105766e0ad7bebbbf8c5ea2f}{log4cplus\-::\-Logger\-::shutdown()}}. Use this class as the first thing in your {\ttfamily main()}. It will ensure shutdown of \hyperlink{namespacelog4cplus}{log4cplus} at the end of {\ttfamily main()}. This is particularly important on Windows, where shutdown of standard threads outside {\ttfamily main()} is impossible. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{Initializer}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Initializer\-::\-Initializer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1Initializer_a4db9d2cbea4704fc8cbe452e59f37c4c}
+\hypertarget{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!$\sim$\-Initializer@{$\sim$\-Initializer}}
+\index{$\sim$\-Initializer@{$\sim$\-Initializer}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{$\sim$\-Initializer}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Initializer\-::$\sim$\-Initializer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1Initializer_a63d9207254050c03b7853552e3229b71}
+\hypertarget{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{Initializer}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Initializer\-::\-Initializer (
+\begin{DoxyParamCaption}
+\item[{{\bf Initializer} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1Initializer_ad5b30413c875f4a0b358bdaf8aa9cc07}
+\hypertarget{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!Initializer@{Initializer}}
+\index{Initializer@{Initializer}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{Initializer}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Initializer\-::\-Initializer (
+\begin{DoxyParamCaption}
+\item[{{\bf Initializer} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1Initializer_ac5c4b7d0fda117f0940a43491c09eaac}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1Initializer_addaa55cd2f01f8eb574639101c172abb}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Initializer}\& log4cplus\-::\-Initializer\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Initializer} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1Initializer_addaa55cd2f01f8eb574639101c172abb}
+\hypertarget{classlog4cplus_1_1Initializer_a6e10aaa5be2f92ac8dff4d4a75ec7b06}{\index{log4cplus\-::\-Initializer@{log4cplus\-::\-Initializer}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::Initializer@{log4cplus\-::\-Initializer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Initializer}\& log4cplus\-::\-Initializer\-::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Initializer} \&\&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1Initializer_a6e10aaa5be2f92ac8dff4d4a75ec7b06}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{initializer_8h}{initializer.\-h}\end{DoxyCompactItemize}

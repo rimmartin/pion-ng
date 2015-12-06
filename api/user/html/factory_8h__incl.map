@@ -1,0 +1,17 @@
+<map id="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/spi/factory.h" name="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/spi/factory.h">
+<area shape="rect" id="node2" href="$config_8hxx.html" title="log4cplus/config.hxx" alt="" coords="752,483,887,509"/>
+<area shape="rect" id="node5" href="$appender_8h.html" title="log4cplus/appender.h" alt="" coords="643,109,785,136"/>
+<area shape="rect" id="node6" href="$layout_8h.html" title="log4cplus/layout.h" alt="" coords="1243,184,1367,211"/>
+<area shape="rect" id="node9" href="$tstring_8h.html" title="log4cplus/tstring.h" alt="" coords="903,333,1028,360"/>
+<area shape="rect" id="node25" href="$filter_8h.html" title="log4cplus/spi/filter.h" alt="" coords="793,184,927,211"/>
+<area shape="rect" id="node28" href="$objectregistry_8h.html" title="log4cplus/spi/objectregistry.h" alt="" coords="1596,184,1783,211"/>
+<area shape="rect" id="node3" href="$defines_8hxx.html" title="log4cplus/config/defines.hxx" alt="" coords="633,565,812,592"/>
+<area shape="rect" id="node4" href="$thread-config_8h.html" title="log4cplus/helpers/thread\l&#45;config.h" alt="" coords="837,558,997,599"/>
+<area shape="rect" id="node7" href="$loglevel_8h.html" title="log4cplus/loglevel.h" alt="" coords="899,259,1032,285"/>
+<area shape="rect" id="node18" href="$pointer_8h.html" title="log4cplus/helpers/pointer.h" alt="" coords="245,259,419,285"/>
+<area shape="rect" id="node27" href="$lockfile_8h.html" title="log4cplus/helpers/lockfile.h" alt="" coords="443,259,617,285"/>
+<area shape="rect" id="node12" href="$streams_8h.html" title="log4cplus/streams.h" alt="" coords="1053,333,1187,360"/>
+<area shape="rect" id="node14" href="$timehelper_8h.html" title="log4cplus/helpers/timehelper.h" alt="" coords="1208,259,1403,285"/>
+<area shape="rect" id="node11" href="$tchar_8h.html" title="log4cplus/tchar.h" alt="" coords="935,408,1053,435"/>
+<area shape="rect" id="node19" href="$syncprims_8h.html" title="log4cplus/thread/syncprims.h" alt="" coords="343,333,529,360"/>
+</map>

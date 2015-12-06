@@ -1,0 +1,34 @@
+<map id="include/pion/logger.hpp" name="include/pion/logger.hpp">
+<area shape="rect" id="node2" href="$admin__rights_8hpp.html" title="include/pion/admin\l_rights.hpp" alt="" coords="117,81,247,122"/>
+<area shape="rect" id="node5" href="$auth_8hpp.html" title="include/pion/http/auth.hpp" alt="" coords="680,171,851,197"/>
+<area shape="rect" id="node15" href="$http_2parser_8hpp.html" title="include/pion/http/parser.hpp" alt="" coords="1002,88,1181,115"/>
+<area shape="rect" id="node22" href="$writer_8hpp.html" title="include/pion/http/writer.hpp" alt="" coords="925,171,1101,197"/>
+<area shape="rect" id="node26" href="$scheduler_8hpp.html" title="include/pion/scheduler.hpp" alt="" coords="507,88,681,115"/>
+<area shape="rect" id="node27" href="$tcp_2server_8hpp.html" title="include/pion/tcp/server.hpp" alt="" coords="334,171,508,197"/>
+<area shape="rect" id="node29" href="$spdy_2parser_8hpp.html" title="include/pion/spdy/parser.hpp" alt="" coords="1207,88,1391,115"/>
+<area shape="rect" id="node31" href="$unit__test_8hpp.html" title="include/pion/test/unit\l_test.hpp" alt="" coords="1415,81,1555,122"/>
+<area shape="rect" id="node32" href="$logger_8cpp.html" title="src/logger.cpp" alt="" coords="1581,88,1683,115"/>
+<area shape="rect" id="node33" href="$process_8cpp.html" title="src/process.cpp" alt="" coords="1707,88,1817,115"/>
+<area shape="rect" id="node3" href="$admin__rights_8cpp.html" title="src/admin_rights.cpp" alt="" coords="5,171,144,197"/>
+<area shape="rect" id="node4" href="$tcp__server_8cpp.html" title="src/tcp_server.cpp" alt="" coords="90,253,216,280"/>
+<area shape="rect" id="node6" href="$basic__auth_8hpp.html" title="include/pion/http/basic\l_auth.hpp" alt="" coords="293,246,443,287"/>
+<area shape="rect" id="node9" href="$cookie__auth_8hpp.html" title="include/pion/http/cookie\l_auth.hpp" alt="" coords="867,246,1025,287"/>
+<area shape="rect" id="node11" href="$http_2server_8hpp.html" title="include/pion/http/server.hpp" alt="" coords="468,253,647,280"/>
+<area shape="rect" id="node13" href="$http__auth_8cpp.html" title="src/http_auth.cpp" alt="" coords="181,344,301,371"/>
+<area shape="rect" id="node7" href="$http__basic__auth_8cpp.html" title="src/http_basic_auth.cpp" alt="" coords="506,344,664,371"/>
+<area shape="rect" id="node8" href="$http__plugin__server_8cpp.html" title="src/http_plugin_server.cpp" alt="" coords="319,427,489,453"/>
+<area shape="rect" id="node10" href="$http__cookie__auth_8cpp.html" title="src/http_cookie_auth.cpp" alt="" coords="689,344,855,371"/>
+<area shape="rect" id="node12" href="$plugin__server_8hpp.html" title="include/pion/http/plugin\l_server.hpp" alt="" coords="327,337,480,378"/>
+<area shape="rect" id="node14" href="$http__server_8cpp.html" title="src/http_server.cpp" alt="" coords="880,344,1009,371"/>
+<area shape="rect" id="node16" href="$reader_8hpp.html" title="include/pion/http/reader.hpp" alt="" coords="1336,171,1517,197"/>
+<area shape="rect" id="node20" href="$http__message_8cpp.html" title="src/http_message.cpp" alt="" coords="1541,171,1688,197"/>
+<area shape="rect" id="node21" href="$http__parser_8cpp.html" title="src/http_parser.cpp" alt="" coords="1125,171,1255,197"/>
+<area shape="rect" id="node17" href="$request__reader_8hpp.html" title="include/pion/http/request\l_reader.hpp" alt="" coords="1545,246,1708,287"/>
+<area shape="rect" id="node18" href="$response__reader_8hpp.html" title="include/pion/http/response\l_reader.hpp" alt="" coords="1733,246,1904,287"/>
+<area shape="rect" id="node19" href="$http__reader_8cpp.html" title="src/http_reader.cpp" alt="" coords="1389,253,1520,280"/>
+<area shape="rect" id="node23" href="$request__writer_8hpp.html" title="include/pion/http/request\l_writer.hpp" alt="" coords="1051,246,1213,287"/>
+<area shape="rect" id="node24" href="$response__writer_8hpp.html" title="include/pion/http/response\l_writer.hpp" alt="" coords="671,246,843,287"/>
+<area shape="rect" id="node25" href="$http__writer_8cpp.html" title="src/http_writer.cpp" alt="" coords="1238,253,1364,280"/>
+<area shape="rect" id="node28" href="$scheduler_8cpp.html" title="src/scheduler.cpp" alt="" coords="533,171,656,197"/>
+<area shape="rect" id="node30" href="$spdy__parser_8cpp.html" title="src/spdy_parser.cpp" alt="" coords="1713,171,1847,197"/>
+</map>

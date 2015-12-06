@@ -1,0 +1,369 @@
+\hypertarget{classpion_1_1tcp_1_1stream__buffer}{\section{pion\-:\-:tcp\-:\-:stream\-\_\-buffer Class Reference}
+\label{classpion_1_1tcp_1_1stream__buffer}\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+}
+
+
+{\ttfamily \#include $<$stream.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:tcp\-:\-:stream\-\_\-buffer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classpion_1_1tcp_1_1stream__buffer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:tcp\-:\-:stream\-\_\-buffer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classpion_1_1tcp_1_1stream__buffer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928a5ac13e72ea6183eb2e5a2c2d085810d1}{P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X} = 10, 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928ae78f66502c67c6dea5194a4b86c41871}{W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E} = 8192
+ \}
+\item 
+typedef char \hyperlink{classpion_1_1tcp_1_1stream__buffer_a1fa60cd7dbf11eebb2983fe2a115a2e4}{char\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream__buffer_ac9b79dc64ad2b3e76c121b00ffc6e951}{off\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_ac9b79dc64ad2b3e76c121b00ffc6e951}{off\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$\\*
+\-::\hyperlink{classpion_1_1tcp_1_1stream__buffer_a3d24ccbacf44098151258b4219f3730c}{pos\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_a3d24ccbacf44098151258b4219f3730c}{pos\-\_\-type}
+\item 
+typedef std\-::char\-\_\-traits$<$ char $>$ \hyperlink{classpion_1_1tcp_1_1stream__buffer_a965a21f484cb7a926f7fb80f364c8373}{traits\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer_adc900819bfa97a760d09f3a1e09f3465}{stream\-\_\-buffer} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&conn\-\_\-ptr)
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer_a0c9993aa8a0c8d85f6808e354c4892b1}{stream\-\_\-buffer} (boost\-::asio\-::io\-\_\-service \&io\-\_\-service, const bool ssl\-\_\-flag=false)
+\item 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer_a6ba1babc9c1277e773f4ec5d3087a284}{stream\-\_\-buffer} (boost\-::asio\-::io\-\_\-service \&io\-\_\-service, \hyperlink{classpion_1_1tcp_1_1connection_a8587c35bbf48a119aa82f228e779a30e}{connection\-::ssl\-\_\-context\-\_\-type} \&ssl\-\_\-context)
+\item 
+virtual \hyperlink{classpion_1_1tcp_1_1stream__buffer_af72833c05fa921aba4404d3a72edd7cb}{$\sim$stream\-\_\-buffer} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor flushes the write buffer \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1tcp_1_1connection}{connection} \& \hyperlink{classpion_1_1tcp_1_1stream__buffer_a9ecf83066d0e3fc5cf9922f4c2f1e24d}{get\-\_\-connection} (void)
+\begin{DoxyCompactList}\small\item\em returns a reference to the current T\-C\-P connection \end{DoxyCompactList}\item 
+const \hyperlink{classpion_1_1tcp_1_1connection}{connection} \& \hyperlink{classpion_1_1tcp_1_1stream__buffer_a4a2d945145898de7c7b0919a97db49bb}{get\-\_\-connection} (void) const 
+\begin{DoxyCompactList}\small\item\em returns a const reference to the current T\-C\-P connection \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpion_1_1tcp_1_1stream__buffer_a02de69010776b51162faa62f3188faa1}{setup\-\_\-buffers} (void)
+\begin{DoxyCompactList}\small\item\em sets up the read and write buffers for input and output \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_a3fb6c729f62844f052043c472f92b59f}{flush\-\_\-output} (void)
+\item 
+virtual \hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_a94d2c63cb6994188b2628fc09480eb85}{underflow} (void)
+\item 
+virtual \hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_ae36650cd6ed06cee158907766f4e10e7}{overflow} (\hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} c)
+\item 
+virtual std\-::streamsize \hyperlink{classpion_1_1tcp_1_1stream__buffer_ac61f64d668dd49e4f57d518f500eac61}{xsputn} (const \hyperlink{classpion_1_1tcp_1_1stream__buffer_a1fa60cd7dbf11eebb2983fe2a115a2e4}{char\-\_\-type} $\ast$s, std\-::streamsize n)
+\item 
+virtual std\-::streamsize \hyperlink{classpion_1_1tcp_1_1stream__buffer_a96821e24e504729ff2a48579c208b21a}{xsgetn} (\hyperlink{classpion_1_1tcp_1_1stream__buffer_a1fa60cd7dbf11eebb2983fe2a115a2e4}{char\-\_\-type} $\ast$s, std\-::streamsize n)
+\item 
+virtual \hyperlink{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{int\-\_\-type} \hyperlink{classpion_1_1tcp_1_1stream__buffer_afd7b30acfb1a4c9897ae61e4a6731a58}{sync} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1tcp_1_1stream__buffer}{stream\-\_\-buffer}\-: std\-::basic\-\_\-streambuf wrapper for T\-C\-P network connections. Based in part on section 13.\-13.\-3 of \char`\"{}\-The Standard C++ Library\char`\"{} by Nicolai M. Josuttis, published in 1999 by Addison-\/\-Wesley 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a1fa60cd7dbf11eebb2983fe2a115a2e4}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!char\-\_\-type@{char\-\_\-type}}
+\index{char\-\_\-type@{char\-\_\-type}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{char\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf pion\-::tcp\-::stream\-\_\-buffer\-::char\-\_\-type}}}\label{classpion_1_1tcp_1_1stream__buffer_a1fa60cd7dbf11eebb2983fe2a115a2e4}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!int\-\_\-type@{int\-\_\-type}}
+\index{int\-\_\-type@{int\-\_\-type}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{int\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf int\-\_\-type} {\bf pion\-::tcp\-::stream\-\_\-buffer\-::int\-\_\-type}}}\label{classpion_1_1tcp_1_1stream__buffer_a7dcf4943671520d4018b4468c336e86e}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_ac9b79dc64ad2b3e76c121b00ffc6e951}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!off\-\_\-type@{off\-\_\-type}}
+\index{off\-\_\-type@{off\-\_\-type}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{off\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf off\-\_\-type} {\bf pion\-::tcp\-::stream\-\_\-buffer\-::off\-\_\-type}}}\label{classpion_1_1tcp_1_1stream__buffer_ac9b79dc64ad2b3e76c121b00ffc6e951}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a3d24ccbacf44098151258b4219f3730c}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!pos\-\_\-type@{pos\-\_\-type}}
+\index{pos\-\_\-type@{pos\-\_\-type}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{pos\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$\-::{\bf pos\-\_\-type} {\bf pion\-::tcp\-::stream\-\_\-buffer\-::pos\-\_\-type}}}\label{classpion_1_1tcp_1_1stream__buffer_a3d24ccbacf44098151258b4219f3730c}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a965a21f484cb7a926f7fb80f364c8373}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!traits\-\_\-type@{traits\-\_\-type}}
+\index{traits\-\_\-type@{traits\-\_\-type}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{traits\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::char\-\_\-traits$<$char$>$ {\bf pion\-::tcp\-::stream\-\_\-buffer\-::traits\-\_\-type}}}\label{classpion_1_1tcp_1_1stream__buffer_a965a21f484cb7a926f7fb80f364c8373}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X@{P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X}!pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}}\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X@{P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X}}\item[{\em 
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928a5ac13e72ea6183eb2e5a2c2d085810d1}{P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X}\label{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928a5ac13e72ea6183eb2e5a2c2d085810d1}
+}]\index{W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}!pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}}\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E@{W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}}\item[{\em 
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928ae78f66502c67c6dea5194a4b86c41871}{W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E}\label{classpion_1_1tcp_1_1stream__buffer_a25df9358691ed8b70684d53efb186928ae78f66502c67c6dea5194a4b86c41871}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_adc900819bfa97a760d09f3a1e09f3465}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!stream\-\_\-buffer@{stream\-\_\-buffer}}
+\index{stream\-\_\-buffer@{stream\-\_\-buffer}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{stream\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-\_\-buffer\-::stream\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{conn\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1tcp_1_1stream__buffer_adc900819bfa97a760d09f3a1e09f3465}
+constructs a T\-C\-P stream buffer object for an existing T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn\-\_\-ptr} & pointer to the T\-C\-P connection to use for reading \& writing \\
+\hline
+\end{DoxyParams}
+
+
+References setup\-\_\-buffers().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a0c9993aa8a0c8d85f6808e354c4892b1}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!stream\-\_\-buffer@{stream\-\_\-buffer}}
+\index{stream\-\_\-buffer@{stream\-\_\-buffer}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{stream\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-\_\-buffer\-::stream\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-\_\-service, }
+\item[{const bool}]{ssl\-\_\-flag = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1tcp_1_1stream__buffer_a0c9993aa8a0c8d85f6808e354c4892b1}
+constructs a T\-C\-P stream buffer object for a new T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\-\_\-service} & asio service associated with the connection \\
+\hline
+{\em ssl\-\_\-flag} & if true then the connection will be encrypted using S\-S\-L \\
+\hline
+\end{DoxyParams}
+
+
+References setup\-\_\-buffers().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a6ba1babc9c1277e773f4ec5d3087a284}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!stream\-\_\-buffer@{stream\-\_\-buffer}}
+\index{stream\-\_\-buffer@{stream\-\_\-buffer}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{stream\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::stream\-\_\-buffer\-::stream\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{boost\-::asio\-::io\-\_\-service \&}]{io\-\_\-service, }
+\item[{{\bf connection\-::ssl\-\_\-context\-\_\-type} \&}]{ssl\-\_\-context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream__buffer_a6ba1babc9c1277e773f4ec5d3087a284}
+constructs a T\-C\-P stream buffer object for a new S\-S\-L/\-T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\-\_\-service} & asio service associated with the connection \\
+\hline
+{\em ssl\-\_\-context} & asio ssl context associated with the connection \\
+\hline
+\end{DoxyParams}
+
+
+References setup\-\_\-buffers().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_af72833c05fa921aba4404d3a72edd7cb}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!$\sim$stream\-\_\-buffer@{$\sim$stream\-\_\-buffer}}
+\index{$\sim$stream\-\_\-buffer@{$\sim$stream\-\_\-buffer}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{$\sim$stream\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::tcp\-::stream\-\_\-buffer\-::$\sim$stream\-\_\-buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_af72833c05fa921aba4404d3a72edd7cb}
+
+
+virtual destructor flushes the write buffer 
+
+
+
+References sync().
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a3fb6c729f62844f052043c472f92b59f}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!flush\-\_\-output@{flush\-\_\-output}}
+\index{flush\-\_\-output@{flush\-\_\-output}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{flush\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}{\bf int\-\_\-type} pion\-::tcp\-::stream\-\_\-buffer\-::flush\-\_\-output (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1stream__buffer_a3fb6c729f62844f052043c472f92b59f}
+writes data in the output buffer to the T\-C\-P connection
+
+\begin{DoxyReturn}{Returns}
+int\-\_\-type the number of bytes sent, or eof() if there was an error 
+\end{DoxyReturn}
+
+
+Referenced by overflow(), sync(), and xsputn().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a9ecf83066d0e3fc5cf9922f4c2f1e24d}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!get\-\_\-connection@{get\-\_\-connection}}
+\index{get\-\_\-connection@{get\-\_\-connection}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{get\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf connection}\& pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream__buffer_a9ecf83066d0e3fc5cf9922f4c2f1e24d}
+
+
+returns a reference to the current T\-C\-P connection 
+
+
+
+Referenced by pion\-::tcp\-::stream\-::accept(), pion\-::tcp\-::stream\-::close(), pion\-::tcp\-::stream\-::connect(), pion\-::tcp\-::stream\-::get\-\_\-remote\-\_\-ip(), pion\-::tcp\-::stream\-::get\-\_\-ssl\-\_\-flag(), and pion\-::tcp\-::stream\-::is\-\_\-open().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a4a2d945145898de7c7b0919a97db49bb}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!get\-\_\-connection@{get\-\_\-connection}}
+\index{get\-\_\-connection@{get\-\_\-connection}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{get\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf connection}\& pion\-::tcp\-::stream\-\_\-buffer\-::get\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1stream__buffer_a4a2d945145898de7c7b0919a97db49bb}
+
+
+returns a const reference to the current T\-C\-P connection 
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_ae36650cd6ed06cee158907766f4e10e7}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!overflow@{overflow}}
+\index{overflow@{overflow}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{overflow}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int\-\_\-type} pion\-::tcp\-::stream\-\_\-buffer\-::overflow (
+\begin{DoxyParamCaption}
+\item[{{\bf int\-\_\-type}}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_ae36650cd6ed06cee158907766f4e10e7}
+this function is called when the write buffer for the stream is full
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character that has not been written yet, or eof() if we are flushing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\-\_\-type the last character written, or eof() if there was an error 
+\end{DoxyReturn}
+
+
+References flush\-\_\-output().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a02de69010776b51162faa62f3188faa1}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!setup\-\_\-buffers@{setup\-\_\-buffers}}
+\index{setup\-\_\-buffers@{setup\-\_\-buffers}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{setup\-\_\-buffers}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::stream\-\_\-buffer\-::setup\-\_\-buffers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1stream__buffer_a02de69010776b51162faa62f3188faa1}
+
+
+sets up the read and write buffers for input and output 
+
+
+
+References P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X, and W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E.
+
+
+
+Referenced by stream\-\_\-buffer().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_afd7b30acfb1a4c9897ae61e4a6731a58}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!sync@{sync}}
+\index{sync@{sync}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{sync}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int\-\_\-type} pion\-::tcp\-::stream\-\_\-buffer\-::sync (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_afd7b30acfb1a4c9897ae61e4a6731a58}
+synchronize buffers with the T\-C\-P connection
+
+\begin{DoxyReturn}{Returns}
+0 if successful, -\/1 if there was an error 
+\end{DoxyReturn}
+
+
+References flush\-\_\-output().
+
+
+
+Referenced by $\sim$stream\-\_\-buffer().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a94d2c63cb6994188b2628fc09480eb85}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!underflow@{underflow}}
+\index{underflow@{underflow}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{underflow}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf int\-\_\-type} pion\-::tcp\-::stream\-\_\-buffer\-::underflow (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_a94d2c63cb6994188b2628fc09480eb85}
+this function is called when the read buffer has no more characters available
+
+\begin{DoxyReturn}{Returns}
+int\-\_\-type the next character available for reading, or eof() if there was an error 
+\end{DoxyReturn}
+
+
+References P\-U\-T\-\_\-\-B\-A\-C\-K\-\_\-\-M\-A\-X, and pion\-::tcp\-::connection\-::\-R\-E\-A\-D\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E.
+
+
+
+Referenced by xsgetn().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_a96821e24e504729ff2a48579c208b21a}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!xsgetn@{xsgetn}}
+\index{xsgetn@{xsgetn}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{xsgetn}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::streamsize pion\-::tcp\-::stream\-\_\-buffer\-::xsgetn (
+\begin{DoxyParamCaption}
+\item[{{\bf char\-\_\-type} $\ast$}]{s, }
+\item[{std\-::streamsize}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_a96821e24e504729ff2a48579c208b21a}
+reads a sequence of characters
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & pointer to where the sequence of characters will be stored \\
+\hline
+{\em n} & number of characters in the sequence to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::streamsize number of character read 
+\end{DoxyReturn}
+
+
+References underflow().
+
+\hypertarget{classpion_1_1tcp_1_1stream__buffer_ac61f64d668dd49e4f57d518f500eac61}{\index{pion\-::tcp\-::stream\-\_\-buffer@{pion\-::tcp\-::stream\-\_\-buffer}!xsputn@{xsputn}}
+\index{xsputn@{xsputn}!pion::tcp::stream_buffer@{pion\-::tcp\-::stream\-\_\-buffer}}
+\subsubsection[{xsputn}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\-::streamsize pion\-::tcp\-::stream\-\_\-buffer\-::xsputn (
+\begin{DoxyParamCaption}
+\item[{const {\bf char\-\_\-type} $\ast$}]{s, }
+\item[{std\-::streamsize}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1stream__buffer_ac61f64d668dd49e4f57d518f500eac61}
+writes a sequence of characters
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & pointer to a sequence of characters \\
+\hline
+{\em n} & number of characters in the sequence to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::streamsize number of character written 
+\end{DoxyReturn}
+
+
+References flush\-\_\-output(), and W\-R\-I\-T\-E\-\_\-\-B\-U\-F\-F\-E\-R\-\_\-\-S\-I\-Z\-E.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/tcp/\hyperlink{stream_8hpp}{stream.\-hpp}\end{DoxyCompactItemize}

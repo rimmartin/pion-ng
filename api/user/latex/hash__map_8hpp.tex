@@ -1,0 +1,74 @@
+\hypertarget{hash__map_8hpp}{\section{include/pion/hash\-\_\-map.hpp File Reference}
+\label{hash__map_8hpp}\index{include/pion/hash\-\_\-map.\-hpp@{include/pion/hash\-\_\-map.\-hpp}}
+}
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$locale$>$}\\*
+{\ttfamily \#include $<$boost/algorithm/string.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/functional/hash.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/config.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/unordered\-\_\-map.\-hpp$>$}\\*
+Include dependency graph for hash\-\_\-map.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash__map_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash__map_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpion_1_1iequal__to}{pion\-::iequal\-\_\-to}
+\item 
+struct \hyperlink{structpion_1_1ihash}{pion\-::ihash}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{hash__map_8hpp_a56e33f7d099f3c211ed6af31a822a9bd}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P}~boost\-::unordered\-\_\-map
+\item 
+\#define \hyperlink{hash__map_8hpp_ad6156e5f37a43d2118014c45b0a0b90f}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}~boost\-::unordered\-\_\-multimap
+\item 
+\#define \hyperlink{hash__map_8hpp_a1b392e354ec26f2169525d988c79fc82}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G}~boost\-::hash$<$std\-::string$>$
+\item 
+\#define \hyperlink{hash__map_8hpp_adfd59336a59fee2b123653a083dbbb4d}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H}(T\-Y\-P\-E)~boost\-::hash$<$T\-Y\-P\-E$>$
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{hash__map_8hpp_ad6156e5f37a43d2118014c45b0a0b90f}{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}\\*
+$<$ std\-::string, std\-::string, \\*
+ihash, iequal\-\_\-to $>$ \hyperlink{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{pion\-::ihash\-\_\-multimap}
+\begin{DoxyCompactList}\small\item\em data type for case-\/insensitive dictionary of strings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{hash__map_8hpp_adfd59336a59fee2b123653a083dbbb4d}{\index{hash\-\_\-map.\-hpp@{hash\-\_\-map.\-hpp}!P\-I\-O\-N\-\_\-\-H\-A\-S\-H@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H}}
+\index{P\-I\-O\-N\-\_\-\-H\-A\-S\-H@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H}!hash_map.hpp@{hash\-\_\-map.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-H\-A\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-H\-A\-S\-H(
+\begin{DoxyParamCaption}
+\item[{}]{T\-Y\-P\-E}
+\end{DoxyParamCaption}
+)~boost\-::hash$<$T\-Y\-P\-E$>$}}\label{hash__map_8hpp_adfd59336a59fee2b123653a083dbbb4d}
+\hypertarget{hash__map_8hpp_a56e33f7d099f3c211ed6af31a822a9bd}{\index{hash\-\_\-map.\-hpp@{hash\-\_\-map.\-hpp}!P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P}}
+\index{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P}!hash_map.hpp@{hash\-\_\-map.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-A\-P~boost\-::unordered\-\_\-map}}\label{hash__map_8hpp_a56e33f7d099f3c211ed6af31a822a9bd}
+\hypertarget{hash__map_8hpp_ad6156e5f37a43d2118014c45b0a0b90f}{\index{hash\-\_\-map.\-hpp@{hash\-\_\-map.\-hpp}!P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}}
+\index{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}!hash_map.hpp@{hash\-\_\-map.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-M\-U\-L\-T\-I\-M\-A\-P~boost\-::unordered\-\_\-multimap}}\label{hash__map_8hpp_ad6156e5f37a43d2118014c45b0a0b90f}
+\hypertarget{hash__map_8hpp_a1b392e354ec26f2169525d988c79fc82}{\index{hash\-\_\-map.\-hpp@{hash\-\_\-map.\-hpp}!P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G@{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G}!hash_map.hpp@{hash\-\_\-map.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-H\-A\-S\-H\-\_\-\-S\-T\-R\-I\-N\-G~boost\-::hash$<$std\-::string$>$}}\label{hash__map_8hpp_a1b392e354ec26f2169525d988c79fc82}

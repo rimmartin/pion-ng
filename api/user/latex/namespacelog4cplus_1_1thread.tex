@@ -1,0 +1,141 @@
+\hypertarget{namespacelog4cplus_1_1thread}{\section{log4cplus\-:\-:thread Namespace Reference}
+\label{namespacelog4cplus_1_1thread}\index{log4cplus\-::thread@{log4cplus\-::thread}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacelog4cplus_1_1thread_1_1impl}{impl}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue}
+\begin{DoxyCompactList}\small\item\em Single consumer, multiple producers queue. \end{DoxyCompactList}\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\-Guard}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1Mutex}{Mutex}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1ManualResetEvent}{Manual\-Reset\-Event}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1SharedMutexImplBase}{Shared\-Mutex\-Impl\-Base}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\-Guard\-Func}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1SharedMutex}{Shared\-Mutex}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\-Thread}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\-::\-Shared\-Object\-Ptr}\\*
+$<$ \hyperlink{classlog4cplus_1_1thread_1_1Queue}{Queue} $>$ \hyperlink{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{Queue\-Ptr}
+\item 
+typedef \hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\-Guard}$<$ \hyperlink{classlog4cplus_1_1thread_1_1Mutex}{Mutex} $>$ \hyperlink{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{Mutex\-Guard}
+\item 
+typedef \hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{Sync\-Guard}$<$ \hyperlink{classlog4cplus_1_1thread_1_1Semaphore}{Semaphore} $>$ \hyperlink{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}{Semaphore\-Guard}
+\item 
+typedef \hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\-Guard\-Func}\\*
+$<$ \hyperlink{classlog4cplus_1_1thread_1_1SharedMutex}{Shared\-Mutex},\&\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_acd11f6dbc4d91679655bce921922de85}{Shared\-Mutex\-::rdlock},\&\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a82b134de3a73165f448fcb8b4ffb464d}{Shared\-Mutex\-::rdunlock} $>$ \hyperlink{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}{Shared\-Mutex\-Reader\-Guard}
+\item 
+typedef \hyperlink{classlog4cplus_1_1thread_1_1SyncGuardFunc}{Sync\-Guard\-Func}\\*
+$<$ \hyperlink{classlog4cplus_1_1thread_1_1SharedMutex}{Shared\-Mutex},\&\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_a02ee0f845373d648e8b329b557291f92}{Shared\-Mutex\-::wrlock},\&\hyperlink{classlog4cplus_1_1thread_1_1SharedMutex_ac0355fe97fdd3dfd89d5716f3326fce7}{Shared\-Mutex\-::wrunlock} $>$ \hyperlink{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}{Shared\-Mutex\-Writer\-Guard}
+\item 
+typedef \\*
+\hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{helpers\-::\-Shared\-Object\-Ptr}\\*
+$<$ \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\-Thread} $>$ \hyperlink{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{Abstract\-Thread\-Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \\*
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{namespacelog4cplus_1_1thread_a08691494b7efb682286c6c9f335dd89a}{get\-Current\-Thread\-Name} ()
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \\*
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{namespacelog4cplus_1_1thread_a148ccdb09942d9c27bf068dded1cfde1}{get\-Current\-Thread\-Name2} ()
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{set\-Current\-Thread\-Name} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{set\-Current\-Thread\-Name2} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{yield} ()
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{block\-All\-Signals} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Abstract\-Thread\-Ptr@{Abstract\-Thread\-Ptr}}
+\index{Abstract\-Thread\-Ptr@{Abstract\-Thread\-Ptr}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Abstract\-Thread\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf helpers\-::\-Shared\-Object\-Ptr}$<${\bf Abstract\-Thread}$>$ {\bf log4cplus\-::thread\-::\-Abstract\-Thread\-Ptr}}}\label{namespacelog4cplus_1_1thread_a06509aec895c736c1e3b0736dc8183fb}
+\hypertarget{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Mutex\-Guard@{Mutex\-Guard}}
+\index{Mutex\-Guard@{Mutex\-Guard}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Mutex\-Guard}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sync\-Guard}$<${\bf Mutex}$>$ {\bf log4cplus\-::thread\-::\-Mutex\-Guard}}}\label{namespacelog4cplus_1_1thread_a8ce7cde94c7a54f5b9e592eb1d4229c2}
+\hypertarget{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Queue\-Ptr@{Queue\-Ptr}}
+\index{Queue\-Ptr@{Queue\-Ptr}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Queue\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf helpers\-::\-Shared\-Object\-Ptr}$<${\bf Queue}$>$ {\bf log4cplus\-::thread\-::\-Queue\-Ptr}}}\label{namespacelog4cplus_1_1thread_a068fb33b4473fbc7d642ce6ea5a54b7d}
+\hypertarget{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Semaphore\-Guard@{Semaphore\-Guard}}
+\index{Semaphore\-Guard@{Semaphore\-Guard}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Semaphore\-Guard}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sync\-Guard}$<${\bf Semaphore}$>$ {\bf log4cplus\-::thread\-::\-Semaphore\-Guard}}}\label{namespacelog4cplus_1_1thread_af6c3058cbd378ff5317290189cb822f3}
+\hypertarget{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Shared\-Mutex\-Reader\-Guard@{Shared\-Mutex\-Reader\-Guard}}
+\index{Shared\-Mutex\-Reader\-Guard@{Shared\-Mutex\-Reader\-Guard}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Shared\-Mutex\-Reader\-Guard}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sync\-Guard\-Func}$<${\bf Shared\-Mutex}, \&{\bf Shared\-Mutex\-::rdlock}, \&{\bf Shared\-Mutex\-::rdunlock}$>$ {\bf log4cplus\-::thread\-::\-Shared\-Mutex\-Reader\-Guard}}}\label{namespacelog4cplus_1_1thread_a8bd093553b9a56ba1e032ebf07265da0}
+\hypertarget{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}{\index{log4cplus\-::thread@{log4cplus\-::thread}!Shared\-Mutex\-Writer\-Guard@{Shared\-Mutex\-Writer\-Guard}}
+\index{Shared\-Mutex\-Writer\-Guard@{Shared\-Mutex\-Writer\-Guard}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{Shared\-Mutex\-Writer\-Guard}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Sync\-Guard\-Func}$<${\bf Shared\-Mutex}, \&{\bf Shared\-Mutex\-::wrlock}, \&{\bf Shared\-Mutex\-::wrunlock}$>$ {\bf log4cplus\-::thread\-::\-Shared\-Mutex\-Writer\-Guard}}}\label{namespacelog4cplus_1_1thread_adf498119742efc3efc3df947998f36d5}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}{\index{log4cplus\-::thread@{log4cplus\-::thread}!block\-All\-Signals@{block\-All\-Signals}}
+\index{block\-All\-Signals@{block\-All\-Signals}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{block\-All\-Signals}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::thread\-::block\-All\-Signals (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_a3fcf3d6ab7e22c9ad7593ac6b8eecd13}
+\hypertarget{namespacelog4cplus_1_1thread_a08691494b7efb682286c6c9f335dd89a}{\index{log4cplus\-::thread@{log4cplus\-::thread}!get\-Current\-Thread\-Name@{get\-Current\-Thread\-Name}}
+\index{get\-Current\-Thread\-Name@{get\-Current\-Thread\-Name}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{get\-Current\-Thread\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::tstring} const\& log4cplus\-::thread\-::get\-Current\-Thread\-Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_a08691494b7efb682286c6c9f335dd89a}
+
+
+Referenced by log4cplus\-::spi\-::\-Internal\-Logging\-Event\-::get\-Thread().
+
+\hypertarget{namespacelog4cplus_1_1thread_a148ccdb09942d9c27bf068dded1cfde1}{\index{log4cplus\-::thread@{log4cplus\-::thread}!get\-Current\-Thread\-Name2@{get\-Current\-Thread\-Name2}}
+\index{get\-Current\-Thread\-Name2@{get\-Current\-Thread\-Name2}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{get\-Current\-Thread\-Name2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::tstring} const\& log4cplus\-::thread\-::get\-Current\-Thread\-Name2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_a148ccdb09942d9c27bf068dded1cfde1}
+
+
+Referenced by log4cplus\-::spi\-::\-Internal\-Logging\-Event\-::get\-Thread2().
+
+\hypertarget{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}{\index{log4cplus\-::thread@{log4cplus\-::thread}!set\-Current\-Thread\-Name@{set\-Current\-Thread\-Name}}
+\index{set\-Current\-Thread\-Name@{set\-Current\-Thread\-Name}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{set\-Current\-Thread\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::thread\-::set\-Current\-Thread\-Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_af6ba700f025019976e7ffe604ca30d05}
+\hypertarget{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}{\index{log4cplus\-::thread@{log4cplus\-::thread}!set\-Current\-Thread\-Name2@{set\-Current\-Thread\-Name2}}
+\index{set\-Current\-Thread\-Name2@{set\-Current\-Thread\-Name2}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{set\-Current\-Thread\-Name2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::thread\-::set\-Current\-Thread\-Name2 (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_a915dc6253407fcc42434c49de5630631}
+\hypertarget{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}{\index{log4cplus\-::thread@{log4cplus\-::thread}!yield@{yield}}
+\index{yield@{yield}!log4cplus::thread@{log4cplus\-::thread}}
+\subsubsection[{yield}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::thread\-::yield (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_a6e109610108e1f0de3aa5c3e75dadf18}

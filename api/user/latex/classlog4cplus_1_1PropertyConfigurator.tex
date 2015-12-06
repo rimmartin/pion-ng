@@ -1,0 +1,447 @@
+\hypertarget{classlog4cplus_1_1PropertyConfigurator}{\section{log4cplus\-:\-:Property\-Configurator Class Reference}
+\label{classlog4cplus_1_1PropertyConfigurator}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}
+}
+
+
+{\ttfamily \#include $<$configurator.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:Property\-Configurator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{classlog4cplus_1_1PropertyConfigurator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:Property\-Configurator\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlog4cplus_1_1PropertyConfigurator__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}{P\-C\-Flags} \{ \\*
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}{f\-Recursive\-Expansion} = (1 $<$$<$ 0), 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}{f\-Shadow\-Environment} = (1 $<$$<$ 1), 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}{f\-Allow\-Empty\-Vars} = (1 $<$$<$ 2), 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}{f\-Encoding\-Shift} = 3, 
+\\*
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}{f\-Encoding\-Mask} = 0x3, 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}{f\-Unspec\-Encoding} = (0 $<$$<$ f\-Encoding\-Shift)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}{Property\-Configurator} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&property\-File, \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \&\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}=\hyperlink{classlog4cplus_1_1Logger_a8d258d78a9a86f1f3a3241f43d015287}{Logger\-::get\-Default\-Hierarchy}(), unsigned \hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}=0)
+\item 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}{Property\-Configurator} (const \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \&props, \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \&\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}=\hyperlink{classlog4cplus_1_1Logger_a8d258d78a9a86f1f3a3241f43d015287}{Logger\-::get\-Default\-Hierarchy}(), unsigned \hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}=0)
+\item 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}{Property\-Configurator} (\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\-::tistream} \&property\-Stream, \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \&\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}=\hyperlink{classlog4cplus_1_1Logger_a8d258d78a9a86f1f3a3241f43d015287}{Logger\-::get\-Default\-Hierarchy}(), unsigned \hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}=0)
+\item 
+virtual \hyperlink{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}{$\sim$\-Property\-Configurator} ()
+\item 
+virtual void \hyperlink{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}{configure} ()
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \\*
+const \& \hyperlink{classlog4cplus_1_1PropertyConfigurator_a75479e09a78c6c5bfe0b1c2f62069023}{get\-Properties} () const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{classlog4cplus_1_1PropertyConfigurator_a48fc2e396c6090ab439161903396393d}{get\-Property\-Filename} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}{do\-Configure} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&config\-Filename, \hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \&\hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}=\hyperlink{classlog4cplus_1_1Logger_a8d258d78a9a86f1f3a3241f43d015287}{Logger\-::get\-Default\-Hierarchy}(), unsigned \hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}=0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring}, \\*
+\hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\-::\-Shared\-Appender\-Ptr} $>$ \hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{Appender\-Map}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}{init} ()
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}{reconfigure} ()
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}{replace\-Environ\-Variables} ()
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}{configure\-Loggers} ()
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}{configure\-Logger} (\hyperlink{classlog4cplus_1_1Logger}{log4cplus\-::\-Logger} logger, const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&config)
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}{configure\-Appenders} ()
+\item 
+void \hyperlink{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}{configure\-Additivity} ()
+\item 
+virtual \hyperlink{classlog4cplus_1_1Logger}{Logger} \hyperlink{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}{get\-Logger} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&name)
+\item 
+virtual void \hyperlink{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}{add\-Appender} (\hyperlink{classlog4cplus_1_1Logger}{Logger} \&logger, \hyperlink{namespacelog4cplus_a12d841b842c72396be9219ce67a0c215}{log4cplus\-::\-Shared\-Appender\-Ptr} \&appender)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1Hierarchy}{Hierarchy} \& \hyperlink{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{h}
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}{property\-Filename}
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{log4cplus\-::helpers\-::\-Properties} \hyperlink{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}{properties}
+\item 
+\hyperlink{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{Appender\-Map} \hyperlink{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}{appenders}
+\item 
+unsigned \hyperlink{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides configuration from an external file. See \hyperlink{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}{configure()} for the expected format.
+
+{\itshape All option values admit variable substitution.} For example, if {\ttfamily userhome} environment property is set to {\ttfamily /home/xyz} and the File option is set to the string {\ttfamily \$\{userhome\}/test.log}, then File option will be interpreted as the string {\ttfamily /home/xyz/test.log}.
+
+The syntax of variable substitution is similar to that of U\-N\-I\-X shells. The string between an opening {\bfseries "\$\{"} and closing {\bfseries "\}"} is interpreted as a key. Its value is searched in the environment properties. The corresponding value replaces the \$\{variable\-Name\} sequence.
+
+Configuration files also recognize {\ttfamily include {\itshape file.\-properties}} directive that allow composing configuration from multiple files. There is no cyclic includes detection mechanism to stop unbound recursion. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!Appender\-Map@{Appender\-Map}}
+\index{Appender\-Map@{Appender\-Map}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{Appender\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf log4cplus\-::tstring}, {\bf log4cplus\-::\-Shared\-Appender\-Ptr}$>$ {\bf log4cplus\-::\-Property\-Configurator\-::\-Appender\-Map}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a8348301eeeee11e2c7c121f3ccb5c283}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!P\-C\-Flags@{P\-C\-Flags}}
+\index{P\-C\-Flags@{P\-C\-Flags}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{P\-C\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf log4cplus\-::\-Property\-Configurator\-::\-P\-C\-Flags}}}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{f\-Recursive\-Expansion@{f\-Recursive\-Expansion}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Recursive\-Expansion@{f\-Recursive\-Expansion}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}{f\-Recursive\-Expansion}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703}
+}]\index{f\-Shadow\-Environment@{f\-Shadow\-Environment}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Shadow\-Environment@{f\-Shadow\-Environment}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}{f\-Shadow\-Environment}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6}
+}]\index{f\-Allow\-Empty\-Vars@{f\-Allow\-Empty\-Vars}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Allow\-Empty\-Vars@{f\-Allow\-Empty\-Vars}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}{f\-Allow\-Empty\-Vars}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31}
+}]\index{f\-Encoding\-Shift@{f\-Encoding\-Shift}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Encoding\-Shift@{f\-Encoding\-Shift}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}{f\-Encoding\-Shift}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf}
+}]\index{f\-Encoding\-Mask@{f\-Encoding\-Mask}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Encoding\-Mask@{f\-Encoding\-Mask}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}{f\-Encoding\-Mask}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0}
+}]\index{f\-Unspec\-Encoding@{f\-Unspec\-Encoding}!log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}}\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!f\-Unspec\-Encoding@{f\-Unspec\-Encoding}}\item[{\em 
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}{f\-Unspec\-Encoding}\label{classlog4cplus_1_1PropertyConfigurator_af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!Property\-Configurator@{Property\-Configurator}}
+\index{Property\-Configurator@{Property\-Configurator}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{Property\-Configurator}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Property\-Configurator\-::\-Property\-Configurator (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{property\-File, }
+\item[{{\bf Hierarchy} \&}]{h = {\ttfamily {\bf Logger\-::get\-Default\-Hierarchy}()}, }
+\item[{unsigned}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1PropertyConfigurator_af6b87ca97967f2f600f22d19002f47d6}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!Property\-Configurator@{Property\-Configurator}}
+\index{Property\-Configurator@{Property\-Configurator}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{Property\-Configurator}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Property\-Configurator\-::\-Property\-Configurator (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::helpers\-::\-Properties} \&}]{props, }
+\item[{{\bf Hierarchy} \&}]{h = {\ttfamily {\bf Logger\-::get\-Default\-Hierarchy}()}, }
+\item[{unsigned}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1PropertyConfigurator_a20b52dc0893e889b8a0f04c7fb3ae301}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!Property\-Configurator@{Property\-Configurator}}
+\index{Property\-Configurator@{Property\-Configurator}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{Property\-Configurator}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-Property\-Configurator\-::\-Property\-Configurator (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::tistream} \&}]{property\-Stream, }
+\item[{{\bf Hierarchy} \&}]{h = {\ttfamily {\bf Logger\-::get\-Default\-Hierarchy}()}, }
+\item[{unsigned}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1PropertyConfigurator_a473d1fcc692e6c74cef930dac00561a3}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!$\sim$\-Property\-Configurator@{$\sim$\-Property\-Configurator}}
+\index{$\sim$\-Property\-Configurator@{$\sim$\-Property\-Configurator}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{$\sim$\-Property\-Configurator}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-Property\-Configurator\-::$\sim$\-Property\-Configurator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1PropertyConfigurator_a9633f32d70f0536037fd24511b8d9e4c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!add\-Appender@{add\-Appender}}
+\index{add\-Appender@{add\-Appender}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{add\-Appender}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Property\-Configurator\-::add\-Appender (
+\begin{DoxyParamCaption}
+\item[{{\bf Logger} \&}]{logger, }
+\item[{{\bf log4cplus\-::\-Shared\-Appender\-Ptr} \&}]{appender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1PropertyConfigurator_af84ee25f2a52beddc37d2c08076b5741}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!configure@{configure}}
+\index{configure@{configure}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{configure}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::\-Property\-Configurator\-::configure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1PropertyConfigurator_a21e8e6b1440cc7a8a47b8fd14c54b239}
+Read configuration from a file. {\bfseries The existing configuration is not cleared nor reset.} If you require a different behavior, then call \hyperlink{classlog4cplus_1_1Hierarchy_aa85b45cef82941012cd1d0f4a8ac89b8}{reset\-Configuration} method before calling {\ttfamily do\-Configure}.
+
+The configuration file consists of statements in the format {\ttfamily key=value}. The syntax of different configuration elements are discussed below.
+
+\paragraph*{\hyperlink{classlog4cplus_1_1Appender}{Appender} configuration}
+
+\hyperlink{classlog4cplus_1_1Appender}{Appender} configuration syntax is\-: 
+\begin{DoxyPre}
+\# For appender named {\itshape appenderName}, set its class.
+\# Note: The appender name can contain dots.
+log4cplus.appender.appenderName=fully.qualified.name.of.appender.class\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# Set appender specific options.
+log4cplus.appender.appenderName.option1=value1
+...
+log4cplus.appender.appenderName.optionN=valueN
+\end{DoxyPre}
+
+
+For each named appender you can configure its \hyperlink{classlog4cplus_1_1Layout}{Layout}. The syntax for configuring an appender's layout is\-: 
+\begin{DoxyPre}
+log4cplus.appender.appenderName.layout=fully.qualified.name.of.layout.class
+log4cplus.appender.appenderName.layout.option1=value1
+....
+log4cplus.appender.appenderName.layout.optionN=valueN
+\end{DoxyPre}
+
+
+\paragraph*{Configuring loggers}
+
+The syntax for configuring the root logger is\-: 
+\begin{DoxyPre}
+log4cplus.rootLogger=[LogLevel], appenderName, appenderName, ...
+\end{DoxyPre}
+
+
+This syntax means that an optional {\itshape Log\-Level value} can be supplied followed by appender names separated by commas.
+
+The Log\-Level value can consist of the string values F\-A\-T\-A\-L, E\-R\-R\-O\-R, W\-A\-R\-N, I\-N\-F\-O, D\-E\-B\-U\-G or a {\itshape custom Log\-Level} value.
+
+If a Log\-Level value is specified, then the root Log\-Level is set to the corresponding Log\-Level. If no Log\-Level value is specified, then the root Log\-Level remains untouched.
+
+The root logger can be assigned multiple appenders.
+
+Each {\itshape appender\-Name} (separated by commas) will be added to the root logger. The named appender is defined using the appender syntax defined above.
+
+For non-\/root loggers the syntax is almost the same\-: 
+\begin{DoxyPre}
+log4cplus.logger.logger\_name=[LogLevel|INHERITED], appenderName, appenderName, ...
+\end{DoxyPre}
+
+
+The meaning of the optional Log\-Level value is discussed above in relation to the root logger. In addition however, the value I\-N\-H\-E\-R\-I\-T\-E\-D can be specified meaning that the named logger should inherit its Log\-Level from the logger hierarchy.
+
+By default loggers inherit their Log\-Level from the hierarchy. However, if you set the Log\-Level of a logger and later decide that that logger should inherit its Log\-Level, then you should specify I\-N\-H\-E\-R\-I\-T\-E\-D as the value for the Log\-Level value.
+
+Similar to the root logger syntax, each {\itshape appender\-Name} (separated by commas) will be attached to the named logger.
+
+See the \href{../../../../manual.html#additivity}{\tt appender additivity rule} in the user manual for the meaning of the {\ttfamily additivity} flag.
+
+The user can override any of the \hyperlink{classlog4cplus_1_1Hierarchy_adb298220a82bc8b0307539105ab73ae7}{Hierarchy\#disable} family of methods by setting the a key \char`\"{}log4cplus.\-disable\-Override\char`\"{} to {\ttfamily true} or any value other than false. As in 
+\begin{DoxyPre}log4cplus.disableOverride=true \end{DoxyPre}
+
+
+\paragraph*{Example}
+
+An example configuration is given below.
+
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# Set options for appender named "A1".
+\# \hyperlink{classlog4cplus_1_1Appender}{Appender} "A1" will be a SyslogAppender
+log4cplus.appender.A1=log4cplus::SyslogAppender\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# The syslog daemon resides on www.abc.net
+log4cplus.appender.A1.SyslogHost=www.abc.net\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# A1's layout is a \hyperlink{classlog4cplus_1_1PatternLayout}{PatternLayout}, using the conversion pattern
+\# {\bfseries r \%-5p c\{2\} M.L x - m\par
+}. Thus, the log output will
+\# include \# the relative time since the start of the application in
+\# milliseconds, followed by the LogLevel of the log request,
+\# followed by the two rightmost components of the logger name,
+\# followed by the callers method name, followed by the line number,
+\# the nested disgnostic context and finally the message itself.
+\# Refer to the documentation of \hyperlink{classlog4cplus_1_1PatternLayout}{PatternLayout} for further information
+\# on the syntax of the ConversionPattern key.
+log4cplus.appender.A1.layout=\hyperlink{classlog4cplus_1_1PatternLayout}{log4cplus::PatternLayout}
+log4cplus.appender.A1.layout.ConversionPattern=\%-4r \%-5p c\{2\} M.L x - m\par
+
+\# Set options for appender named "A2"
+\# A2 should be a \hyperlink{classlog4cplus_1_1RollingFileAppender}{RollingFileAppender}, with maximum file size of 10 MB
+\# using at most one backup file. A2's layout is TTCC, using the
+\# ISO8061 date format with context printing enabled.
+log4cplus.appender.A2=\hyperlink{classlog4cplus_1_1RollingFileAppender}{log4cplus::RollingFileAppender}
+log4cplus.appender.A2.MaxFileSize=10MB
+log4cplus.appender.A2.MaxBackupIndex=1
+log4cplus.appender.A2.layout=\hyperlink{classlog4cplus_1_1TTCCLayout}{log4cplus::TTCCLayout}
+log4cplus.appender.A2.layout.ContextPrinting=true
+log4cplus.appender.A2.layout.DateFormat=ISO8601\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# Root logger set to DEBUG using the A2 appender defined above.
+log4cplus.rootLogger=DEBUG, A2\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# \hyperlink{classlog4cplus_1_1Logger}{Logger} definitions:
+\# The SECURITY logger inherits is LogLevel from root. However, it's output
+\# will go to A1 appender defined above. It's additivity is non-cumulative.
+log4cplus.logger.SECURITY=INHERIT, A1
+log4cplus.additivity.SECURITY=false\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# Only warnings or above will be logged for the logger "SECURITY.access".
+\# Output will go to A1.
+log4cplus.logger.SECURITY.access=WARN\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\# The logger "class.of.the.day" inherits its LogLevel from the
+\# logger hierarchy.  Output will go to the appender's of the root
+\# logger, A2 in this case.
+log4cplus.logger.class.of.the.day=INHERIT
+\end{DoxyPre}
+
+
+Refer to the {\bfseries set\-Option} method in each \hyperlink{classlog4cplus_1_1Appender}{Appender} and \hyperlink{classlog4cplus_1_1Layout}{Layout} for class specific options.
+
+Use the {\ttfamily \#} character at the beginning of a line for comments. \hypertarget{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!configure\-Additivity@{configure\-Additivity}}
+\index{configure\-Additivity@{configure\-Additivity}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{configure\-Additivity}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::configure\-Additivity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a08a9514177abf1a49e16e2dc633a5404}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!configure\-Appenders@{configure\-Appenders}}
+\index{configure\-Appenders@{configure\-Appenders}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{configure\-Appenders}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::configure\-Appenders (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_aa679a0313c42e73d7801f2db1c6ef129}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!configure\-Logger@{configure\-Logger}}
+\index{configure\-Logger@{configure\-Logger}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{configure\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::configure\-Logger (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::\-Logger}}]{logger, }
+\item[{const {\bf log4cplus\-::tstring} \&}]{config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_ad0156614ac22226f2c1ce3905e0954c3}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!configure\-Loggers@{configure\-Loggers}}
+\index{configure\-Loggers@{configure\-Loggers}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{configure\-Loggers}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::configure\-Loggers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a4262d4cb486501ef5afe57cd4df61d23}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!do\-Configure@{do\-Configure}}
+\index{do\-Configure@{do\-Configure}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{do\-Configure}]{\setlength{\rightskip}{0pt plus 5cm}static void log4cplus\-::\-Property\-Configurator\-::do\-Configure (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{config\-Filename, }
+\item[{{\bf Hierarchy} \&}]{h = {\ttfamily {\bf Logger\-::get\-Default\-Hierarchy}()}, }
+\item[{unsigned}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classlog4cplus_1_1PropertyConfigurator_ac8a789fdb849ec689ead3cad69bd86e5}
+This method eliminates the need to create a temporary {\ttfamily \hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\-Configurator}} to configure \hyperlink{namespacelog4cplus}{log4cplus}. It is equivalent to the following\-:\par
+ {\ttfamily  \hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\-Configurator} config(\char`\"{}filename\char`\"{}); config.\-configure(); } \hypertarget{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!get\-Logger@{get\-Logger}}
+\index{get\-Logger@{get\-Logger}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{get\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Logger} log4cplus\-::\-Property\-Configurator\-::get\-Logger (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1PropertyConfigurator_a75c31dce031d7a97804fdc572fdca97d}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a75479e09a78c6c5bfe0b1c2f62069023}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!get\-Properties@{get\-Properties}}
+\index{get\-Properties@{get\-Properties}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{get\-Properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::helpers\-::\-Properties} const\& log4cplus\-::\-Property\-Configurator\-::get\-Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1PropertyConfigurator_a75479e09a78c6c5bfe0b1c2f62069023}
+\begin{DoxyReturn}{Returns}
+The return value is reference to Properties container of properties with the {\ttfamily \char`\"{}log4cplus.\char`\"{}} prefix removed and references to other properties and/or environment variables expanded. 
+\end{DoxyReturn}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a48fc2e396c6090ab439161903396393d}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!get\-Property\-Filename@{get\-Property\-Filename}}
+\index{get\-Property\-Filename@{get\-Property\-Filename}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{get\-Property\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} const\& log4cplus\-::\-Property\-Configurator\-::get\-Property\-Filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1PropertyConfigurator_a48fc2e396c6090ab439161903396393d}
+\begin{DoxyReturn}{Returns}
+The return value is a reference to \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} containing filename of properties source file. It will be string \char`\"{}\-U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E\char`\"{} if the \hyperlink{classlog4cplus_1_1PropertyConfigurator}{Property\-Configurator} instance has been constructed using one of the other constructors that do not take filename as parameter. 
+\end{DoxyReturn}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!init@{init}}
+\index{init@{init}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_ad3d500c1e7d307481233046fb199f29f}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!reconfigure@{reconfigure}}
+\index{reconfigure@{reconfigure}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{reconfigure}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::reconfigure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a6dc6d38274b51e9a03cf7e93952b1f3d}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!replace\-Environ\-Variables@{replace\-Environ\-Variables}}
+\index{replace\-Environ\-Variables@{replace\-Environ\-Variables}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{replace\-Environ\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-Property\-Configurator\-::replace\-Environ\-Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a35894c378d953afb0228eee9a6cec189}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!appenders@{appenders}}
+\index{appenders@{appenders}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{appenders}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Appender\-Map} log4cplus\-::\-Property\-Configurator\-::appenders\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_ae25ac2e5fb71cf0dd45bcc3afe58895d}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!flags@{flags}}
+\index{flags@{flags}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned log4cplus\-::\-Property\-Configurator\-::flags\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_af813851c5e5b234239b7ea974fb8e4b2}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!h@{h}}
+\index{h@{h}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{h}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hierarchy}\& log4cplus\-::\-Property\-Configurator\-::h\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_ae80f772be9d4eb67922d34f4e2dd71d1}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!properties@{properties}}
+\index{properties@{properties}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{properties}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::helpers\-::\-Properties} log4cplus\-::\-Property\-Configurator\-::properties\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a241cf28666e9c9abc2bf3784b66fb35b}
+\hypertarget{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}{\index{log4cplus\-::\-Property\-Configurator@{log4cplus\-::\-Property\-Configurator}!property\-Filename@{property\-Filename}}
+\index{property\-Filename@{property\-Filename}!log4cplus::PropertyConfigurator@{log4cplus\-::\-Property\-Configurator}}
+\subsubsection[{property\-Filename}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-Property\-Configurator\-::property\-Filename\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1PropertyConfigurator_a0f0985dd811ee13b96068a6fc1932287}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{configurator_8h}{configurator.\-h}\end{DoxyCompactItemize}

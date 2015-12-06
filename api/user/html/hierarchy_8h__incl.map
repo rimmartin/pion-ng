@@ -1,0 +1,19 @@
+<map id="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/hierarchy.h" name="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/hierarchy.h">
+<area shape="rect" id="node2" href="$config_8hxx.html" title="log4cplus/config.hxx" alt="" coords="1120,632,1255,659"/>
+<area shape="rect" id="node5" href="$logger_8h.html" title="log4cplus/logger.h" alt="" coords="353,109,479,136"/>
+<area shape="rect" id="node21" href="$syncprims_8h.html" title="log4cplus/thread/syncprims.h" alt="" coords="1428,483,1615,509"/>
+<area shape="rect" id="node3" href="$defines_8hxx.html" title="log4cplus/config/defines.hxx" alt="" coords="1001,715,1180,741"/>
+<area shape="rect" id="node4" href="$thread-config_8h.html" title="log4cplus/helpers/thread\l&#45;config.h" alt="" coords="1205,707,1365,749"/>
+<area shape="rect" id="node6" href="$loglevel_8h.html" title="log4cplus/loglevel.h" alt="" coords="555,408,688,435"/>
+<area shape="rect" id="node8" href="$tstring_8h.html" title="log4cplus/tstring.h" alt="" coords="455,483,580,509"/>
+<area shape="rect" id="node11" href="$appenderattachable_8h.html" title="log4cplus/spi/appenderattachable.h" alt="" coords="1058,184,1280,211"/>
+<area shape="rect" id="node30" href="$loggerfactory_8h.html" title="log4cplus/spi/loggerfactory.h" alt="" coords="93,408,277,435"/>
+<area shape="rect" id="node10" href="$tchar_8h.html" title="log4cplus/tchar.h" alt="" coords="558,557,676,584"/>
+<area shape="rect" id="node12" href="$appender_8h.html" title="log4cplus/appender.h" alt="" coords="1251,259,1393,285"/>
+<area shape="rect" id="node20" href="$pointer_8h.html" title="log4cplus/helpers/pointer.h" alt="" coords="1631,408,1805,435"/>
+<area shape="rect" id="node13" href="$layout_8h.html" title="log4cplus/layout.h" alt="" coords="714,333,837,360"/>
+<area shape="rect" id="node27" href="$filter_8h.html" title="log4cplus/spi/filter.h" alt="" coords="1421,333,1555,360"/>
+<area shape="rect" id="node29" href="$lockfile_8h.html" title="log4cplus/helpers/lockfile.h" alt="" coords="1175,408,1349,435"/>
+<area shape="rect" id="node14" href="$streams_8h.html" title="log4cplus/streams.h" alt="" coords="726,483,860,509"/>
+<area shape="rect" id="node16" href="$timehelper_8h.html" title="log4cplus/helpers/timehelper.h" alt="" coords="813,408,1008,435"/>
+</map>

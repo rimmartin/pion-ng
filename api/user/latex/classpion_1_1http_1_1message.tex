@@ -1,0 +1,1304 @@
+\hypertarget{classpion_1_1http_1_1message}{\section{pion\-:\-:http\-:\-:message Class Reference}
+\label{classpion_1_1http_1_1message}\index{pion\-::http\-::message@{pion\-::http\-::message}}
+}
+
+
+{\ttfamily \#include $<$message.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:message\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classpion_1_1http_1_1message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:message\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1http_1_1message__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1http_1_1message_1_1content__buffer__t}{content\-\_\-buffer\-\_\-t}
+\begin{DoxyCompactList}\small\item\em a simple helper class used to manage a fixed-\/size payload content buffer \end{DoxyCompactList}\item 
+struct \hyperlink{structpion_1_1http_1_1message_1_1receive__error__t}{receive\-\_\-error\-\_\-t}
+\begin{DoxyCompactList}\small\item\em data type for library errors returned during \hyperlink{classpion_1_1http_1_1message_a7e3c3f1ea265f91b87a9e075234b5d31}{receive()} operations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9}{data\-\_\-status\-\_\-t} \{ \hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a857bcfd3cb3884033f73a22e9d5ade05}{S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9ab69b544af26550d7cf5b0a795078715c}{S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D}, 
+\hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a4b310a8c8463d24ac0d8073eba11ef4a}{S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L}, 
+\hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a5fd3c3fcefd1a51ee076e40708e32674}{S\-T\-A\-T\-U\-S\-\_\-\-O\-K}
+ \}
+\begin{DoxyCompactList}\small\item\em defines message data integrity status codes \end{DoxyCompactList}\item 
+typedef std\-::vector\\*
+$<$ boost\-::asio\-::const\-\_\-buffer $>$ \hyperlink{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{write\-\_\-buffers\-\_\-t}
+\begin{DoxyCompactList}\small\item\em data type for I/\-O write buffers (these wrap existing data to be sent) \end{DoxyCompactList}\item 
+typedef std\-::vector$<$ char $>$ \hyperlink{classpion_1_1http_1_1message_a4bcf1ea1d4e7a5637d04ae109adb5e46}{chunk\-\_\-cache\-\_\-t}
+\begin{DoxyCompactList}\small\item\em used to cache chunked data \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1message_ad07a7f30359b9f44c9159f3f9a9db507}{message} (void)
+\begin{DoxyCompactList}\small\item\em constructs a new H\-T\-T\-P message object \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_a576e849f9d4a138d4856c83ceb0c47a3}{message} (const \hyperlink{classpion_1_1http_1_1message}{message} \&http\-\_\-msg)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message}{message} \& \hyperlink{classpion_1_1http_1_1message_a854b089e577498c9b01e5ec460595a35}{operator=} (const \hyperlink{classpion_1_1http_1_1message}{message} \&http\-\_\-msg)
+\begin{DoxyCompactList}\small\item\em assignment operator \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1http_1_1message_ac71ae21f149f7d74b2bdee1bf1149ead}{$\sim$message} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1message_af13279269cf1e00ae4fc5091c1c7cae5}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears all message data \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1http_1_1message_a08bd257bd46e7a42b64bbc4482f28363}{is\-\_\-content\-\_\-length\-\_\-implied} (void) const =0
+\begin{DoxyCompactList}\small\item\em should return true if the content length can be implied without headers \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a52850e6fe48b141f46662c83d4edbbf5}{is\-\_\-valid} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the message is valid \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a42ea3cfa8633a99a9c517afe2db00a1a}{get\-\_\-chunks\-\_\-supported} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if chunked transfer encodings are supported \end{DoxyCompactList}\item 
+boost\-::asio\-::ip\-::address \& \hyperlink{classpion_1_1http_1_1message_a42fdde8d94227c6d08d475c5ed8a6388}{get\-\_\-remote\-\_\-ip} (void)
+\begin{DoxyCompactList}\small\item\em returns I\-P address of the remote endpoint \end{DoxyCompactList}\item 
+boost\-::uint16\-\_\-t \hyperlink{classpion_1_1http_1_1message_a6d36c13df002129d3044d9c34999161d}{get\-\_\-version\-\_\-major} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the major H\-T\-T\-P version number \end{DoxyCompactList}\item 
+boost\-::uint16\-\_\-t \hyperlink{classpion_1_1http_1_1message_ac986c7014db695241db1823f17eda4cd}{get\-\_\-version\-\_\-minor} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the minor H\-T\-T\-P version number \end{DoxyCompactList}\item 
+std\-::string \hyperlink{classpion_1_1http_1_1message_a0bb6e14bd27dc1b956bb74dcccc7ee27}{get\-\_\-version\-\_\-string} (void) const 
+\begin{DoxyCompactList}\small\item\em returns a string representation of the H\-T\-T\-P version (i.\-e. \char`\"{}\-H\-T\-T\-P/1.\-1\char`\"{}) \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a10606f8fd2efbe14d447ef8eb8731a54}{get\-\_\-content\-\_\-length} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the length of the payload content (in bytes) \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a96264a238b04e1957c87ab7930a8023b}{is\-\_\-chunked} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the message content is chunked \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a7229c3a00b35846cdb050fc2b9b6ec73}{is\-\_\-content\-\_\-buffer\-\_\-allocated} () const 
+\begin{DoxyCompactList}\small\item\em returns true if buffer for content is allocated \end{DoxyCompactList}\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a172346504faba36f73d7527551c199a2}{get\-\_\-content\-\_\-buffer\-\_\-size} () const 
+\begin{DoxyCompactList}\small\item\em returns size of allocated buffer \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classpion_1_1http_1_1message_a60ddb1bd09afecdadc5e9c33c8c1de28}{get\-\_\-content} (void)
+\begin{DoxyCompactList}\small\item\em returns a pointer to the payload content, or empty string if there is none \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{classpion_1_1http_1_1message_aa2363086d3f0c17a54ecebaef558b971}{get\-\_\-content} (void) const 
+\begin{DoxyCompactList}\small\item\em returns a const pointer to the payload content, or empty string if there is none \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_a4bcf1ea1d4e7a5637d04ae109adb5e46}{chunk\-\_\-cache\-\_\-t} \& \hyperlink{classpion_1_1http_1_1message_aa672e8369ab07a212902a98f351805f3}{get\-\_\-chunk\-\_\-cache} (void)
+\begin{DoxyCompactList}\small\item\em returns a reference to the chunk cache \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1message_ab9e2735d01890cd8e93f86390cd46969}{get\-\_\-header} (const std\-::string \&key) const 
+\begin{DoxyCompactList}\small\item\em returns a value for the header if any are defined; otherwise, an empty string \end{DoxyCompactList}\item 
+\hyperlink{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{ihash\-\_\-multimap} \& \hyperlink{classpion_1_1http_1_1message_a8d067675e0396114e814ad688bed2b4f}{get\-\_\-headers} (void)
+\begin{DoxyCompactList}\small\item\em returns a reference to the H\-T\-T\-P headers \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_ac6667e7a771b157e24858700b4777223}{has\-\_\-header} (const std\-::string \&key) const 
+\begin{DoxyCompactList}\small\item\em returns true if at least one value for the header is defined \end{DoxyCompactList}\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1message_a735de2125e0b3c3a8caae7fad757cfc0}{get\-\_\-cookie} (const std\-::string \&key) const 
+\item 
+\hyperlink{namespacepion_a2cd31d7bbe0e98008bd4e6f135103c0e}{ihash\-\_\-multimap} \& \hyperlink{classpion_1_1http_1_1message_ab5e744890af0936eda97c21888bb4a2e}{get\-\_\-cookies} (void)
+\begin{DoxyCompactList}\small\item\em returns the cookie parameters \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_af033e860c1f7295a6ef8eb5ea75f53e8}{has\-\_\-cookie} (const std\-::string \&key) const 
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a0bc8756a9db916d5423dad19211de771}{add\-\_\-cookie} (const std\-::string \&key, const std\-::string \&value)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a1bfed0c1dc6a76384798c51ae74ea2da}{change\-\_\-cookie} (const std\-::string \&key, const std\-::string \&value)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a79e4153703ae62a1b8b0585510d032fd}{delete\-\_\-cookie} (const std\-::string \&key)
+\item 
+const std\-::string \& \hyperlink{classpion_1_1http_1_1message_ad9c43932bae03916ad193c257a7ec6c8}{get\-\_\-first\-\_\-line} (void) const 
+\begin{DoxyCompactList}\small\item\em returns a string containing the first line for the H\-T\-T\-P message \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a0ab661db865a6d018e8487a1b4f6932b}{has\-\_\-missing\-\_\-packets} () const 
+\begin{DoxyCompactList}\small\item\em true if there were missing packets \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_ac0749dac4643586e3925d73782840b26}{set\-\_\-missing\-\_\-packets} (bool new\-Val)
+\begin{DoxyCompactList}\small\item\em set to true when missing packets detected \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_a52fd51aca9d5a37f41a0ad18d577ddec}{has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets} () const 
+\begin{DoxyCompactList}\small\item\em true if more data seen after the missing packets \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_af9081484fde89d5e8bdfcb689bebdeb1}{set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet} (bool new\-Val)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a24b208fd31a21a5bdb76a6ba8683321e}{set\-\_\-is\-\_\-valid} (bool b=true)
+\begin{DoxyCompactList}\small\item\em sets whether or not the message is valid \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a524e682e0c1843d2bee6ad83c6b9e218}{set\-\_\-chunks\-\_\-supported} (bool b)
+\begin{DoxyCompactList}\small\item\em set to true if chunked transfer encodings are supported \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a476f852158ecaefef8f3e93a84e1f76a}{set\-\_\-remote\-\_\-ip} (const boost\-::asio\-::ip\-::address \&ip)
+\begin{DoxyCompactList}\small\item\em sets I\-P address of the remote endpoint \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_aab454a1ce4eebd904b8ee7fff3dbe5d9}{set\-\_\-version\-\_\-major} (const boost\-::uint16\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em sets the major H\-T\-T\-P version number \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a311e93b0818ec735a4933e825a55c12e}{set\-\_\-version\-\_\-minor} (const boost\-::uint16\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em sets the minor H\-T\-T\-P version number \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a81612c01ac85ebe08b947b1f9cfc2a75}{set\-\_\-content\-\_\-length} (size\-\_\-t n)
+\begin{DoxyCompactList}\small\item\em sets the length of the payload content (in bytes) \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_af6cf5b229cacaaec5ea2bac0df53e199}{set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length} (void)
+\begin{DoxyCompactList}\small\item\em if called, the content-\/length will not be sent in the H\-T\-T\-P headers \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9}{data\-\_\-status\-\_\-t} \hyperlink{classpion_1_1http_1_1message_aabb2581095e035b5b274ee88442ad9ed}{get\-\_\-status} () const 
+\begin{DoxyCompactList}\small\item\em return the data receival status \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_ad24b94c3ad437b2044c2658fa34bd78d}{set\-\_\-status} (\hyperlink{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9}{data\-\_\-status\-\_\-t} new\-Val)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a6a7a6a5114da843c033283a6c1db48aa}{update\-\_\-content\-\_\-length\-\_\-using\-\_\-header} (void)
+\begin{DoxyCompactList}\small\item\em sets the length of the payload content using the Content-\/\-Length header \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a8118770f69c9a479f3f5dcbc58d6d644}{update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header} (void)
+\begin{DoxyCompactList}\small\item\em sets the transfer coding using the Transfer-\/\-Encoding header \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classpion_1_1http_1_1message_a468f42e5bc2866d9c93138e3a4cec31b}{create\-\_\-content\-\_\-buffer} (void)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a3600676865fc813897e0ed45b58e5600}{set\-\_\-content} (const std\-::string \&content)
+\begin{DoxyCompactList}\small\item\em resets payload content to match the value of a string \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a33567717927344a33bc8332ad3a391a6}{clear\-\_\-content} (void)
+\begin{DoxyCompactList}\small\item\em clears payload content buffer \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_add4f889bb2d22e163556c2fd5fd993a8}{set\-\_\-content\-\_\-type} (const std\-::string \&type)
+\begin{DoxyCompactList}\small\item\em sets the content type for the message payload \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a115c9657c4933f034dcf2f4ce7bd55f0}{add\-\_\-header} (const std\-::string \&key, const std\-::string \&value)
+\begin{DoxyCompactList}\small\item\em adds a value for the H\-T\-T\-P header named key \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_aa1643164e7f60bae1b640d55735a4728}{change\-\_\-header} (const std\-::string \&key, const std\-::string \&value)
+\begin{DoxyCompactList}\small\item\em changes the value for the H\-T\-T\-P header named key \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a070ef742af75674725da392c25774884}{delete\-\_\-header} (const std\-::string \&key)
+\begin{DoxyCompactList}\small\item\em removes all values for the H\-T\-T\-P header named key \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1http_1_1message_ab0aa463a1327eac0d73ff6ab62ca3891}{check\-\_\-keep\-\_\-alive} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the H\-T\-T\-P connection may be kept alive \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_a668182618dfc614ddbe6c1af26552568}{prepare\-\_\-buffers\-\_\-for\-\_\-send} (\hyperlink{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{write\-\_\-buffers\-\_\-t} \&write\-\_\-buffers, const bool keep\-\_\-alive, const bool using\-\_\-chunks)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_ab90f91badb0f98f900a7624418781bea}{send} (\hyperlink{classpion_1_1tcp_1_1connection}{tcp\-::connection} \&tcp\-\_\-conn, boost\-::system\-::error\-\_\-code \&ec, bool headers\-\_\-only=false)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a7e3c3f1ea265f91b87a9e075234b5d31}{receive} (\hyperlink{classpion_1_1tcp_1_1connection}{tcp\-::connection} \&tcp\-\_\-conn, boost\-::system\-::error\-\_\-code \&ec, \hyperlink{classpion_1_1http_1_1parser}{parser} \&http\-\_\-parser)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a029d3c6260deabf91fdcc9f1f0157268}{receive} (\hyperlink{classpion_1_1tcp_1_1connection}{tcp\-::connection} \&tcp\-\_\-conn, boost\-::system\-::error\-\_\-code \&ec, bool headers\-\_\-only=false, std\-::size\-\_\-t max\-\_\-content\-\_\-length=static\-\_\-cast$<$ size\-\_\-t $>$(-\/1))
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a4a3911ad03031a1ddacfa4cedeb125a2}{write} (std\-::ostream \&out, boost\-::system\-::error\-\_\-code \&ec, bool headers\-\_\-only=false)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_a7b67f3e8303d838bb5d379ab72a35e2d}{read} (std\-::istream \&in, boost\-::system\-::error\-\_\-code \&ec, \hyperlink{classpion_1_1http_1_1parser}{parser} \&http\-\_\-parser)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1http_1_1message_ae99b6c39dd1b878520125f7037c035de}{read} (std\-::istream \&in, boost\-::system\-::error\-\_\-code \&ec, bool headers\-\_\-only=false, std\-::size\-\_\-t max\-\_\-content\-\_\-length=static\-\_\-cast$<$ size\-\_\-t $>$(-\/1))
+\item 
+void \hyperlink{classpion_1_1http_1_1message_aeffca5e2173be2b83f38b630d07f4bfd}{concatenate\-\_\-chunks} (void)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a1addd3b90c3b048c895f9723371f329f}{prepare\-\_\-headers\-\_\-for\-\_\-send} (const bool keep\-\_\-alive, const bool using\-\_\-chunks)
+\item 
+void \hyperlink{classpion_1_1http_1_1message_a3184733c3a21b8aa44d8f301eaf52697}{append\-\_\-headers} (\hyperlink{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{write\-\_\-buffers\-\_\-t} \&write\-\_\-buffers)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1message_a532d475ab2dfdcdb969445902fad2e6f}{append\-\_\-cookie\-\_\-headers} (void)
+\begin{DoxyCompactList}\small\item\em appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1http_1_1message_ab47dc3343c9b2cbc7fdf8605e4b7d3b2}{clear\-\_\-first\-\_\-line} (void) const 
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1message_a697a832ab0741d02ddecd8df8da0265d}{update\-\_\-first\-\_\-line} (void) const =0
+\begin{DoxyCompactList}\small\item\em updates the string containing the first line for the H\-T\-T\-P message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Dictionary\-Type $>$ }\\static const std\-::string \& \hyperlink{classpion_1_1http_1_1message_ad6e365382874be8f3e28df1234e3a3f7}{get\-\_\-value} (const Dictionary\-Type \&dict, const std\-::string \&key)
+\item 
+{\footnotesize template$<$typename Dictionary\-Type $>$ }\\static void \hyperlink{classpion_1_1http_1_1message_a40603cf88819b33abb4e56bb55dc61af}{change\-\_\-value} (Dictionary\-Type \&dict, const std\-::string \&key, const std\-::string \&value)
+\item 
+{\footnotesize template$<$typename Dictionary\-Type $>$ }\\static void \hyperlink{classpion_1_1http_1_1message_a6d07488a5fa36e1e90622d64179f7953}{delete\-\_\-value} (Dictionary\-Type \&dict, const std\-::string \&key)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{classpion_1_1http_1_1message_ad97c570395428af30074bd1b75672125}{m\-\_\-first\-\_\-line}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+message\-: base container for H\-T\-T\-P messages 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1http_1_1message_a4bcf1ea1d4e7a5637d04ae109adb5e46}{\index{pion\-::http\-::message@{pion\-::http\-::message}!chunk\-\_\-cache\-\_\-t@{chunk\-\_\-cache\-\_\-t}}
+\index{chunk\-\_\-cache\-\_\-t@{chunk\-\_\-cache\-\_\-t}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{chunk\-\_\-cache\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<$char$>$ {\bf pion\-::http\-::message\-::chunk\-\_\-cache\-\_\-t}}}\label{classpion_1_1http_1_1message_a4bcf1ea1d4e7a5637d04ae109adb5e46}
+
+
+used to cache chunked data 
+
+\hypertarget{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}{\index{pion\-::http\-::message@{pion\-::http\-::message}!write\-\_\-buffers\-\_\-t@{write\-\_\-buffers\-\_\-t}}
+\index{write\-\_\-buffers\-\_\-t@{write\-\_\-buffers\-\_\-t}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{write\-\_\-buffers\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<$boost\-::asio\-::const\-\_\-buffer$>$ {\bf pion\-::http\-::message\-::write\-\_\-buffers\-\_\-t}}}\label{classpion_1_1http_1_1message_aacf9a6a7677c32e4ab764ac97d0b5e7b}
+
+
+data type for I/\-O write buffers (these wrap existing data to be sent) 
+
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9}{\index{pion\-::http\-::message@{pion\-::http\-::message}!data\-\_\-status\-\_\-t@{data\-\_\-status\-\_\-t}}
+\index{data\-\_\-status\-\_\-t@{data\-\_\-status\-\_\-t}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{data\-\_\-status\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf pion\-::http\-::message\-::data\-\_\-status\-\_\-t}}}\label{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9}
+
+
+defines message data integrity status codes 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E@{S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E}!pion\-::http\-::message@{pion\-::http\-::message}}\index{pion\-::http\-::message@{pion\-::http\-::message}!S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E@{S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E}}\item[{\em 
+\hypertarget{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a857bcfd3cb3884033f73a22e9d5ade05}{S\-T\-A\-T\-U\-S\-\_\-\-N\-O\-N\-E}\label{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a857bcfd3cb3884033f73a22e9d5ade05}
+}]\index{S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D@{S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D}!pion\-::http\-::message@{pion\-::http\-::message}}\index{pion\-::http\-::message@{pion\-::http\-::message}!S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D@{S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D}}\item[{\em 
+\hypertarget{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9ab69b544af26550d7cf5b0a795078715c}{S\-T\-A\-T\-U\-S\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E\-D}\label{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9ab69b544af26550d7cf5b0a795078715c}
+}]\index{S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L@{S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L}!pion\-::http\-::message@{pion\-::http\-::message}}\index{pion\-::http\-::message@{pion\-::http\-::message}!S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L@{S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L}}\item[{\em 
+\hypertarget{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a4b310a8c8463d24ac0d8073eba11ef4a}{S\-T\-A\-T\-U\-S\-\_\-\-P\-A\-R\-T\-I\-A\-L}\label{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a4b310a8c8463d24ac0d8073eba11ef4a}
+}]\index{S\-T\-A\-T\-U\-S\-\_\-\-O\-K@{S\-T\-A\-T\-U\-S\-\_\-\-O\-K}!pion\-::http\-::message@{pion\-::http\-::message}}\index{pion\-::http\-::message@{pion\-::http\-::message}!S\-T\-A\-T\-U\-S\-\_\-\-O\-K@{S\-T\-A\-T\-U\-S\-\_\-\-O\-K}}\item[{\em 
+\hypertarget{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a5fd3c3fcefd1a51ee076e40708e32674}{S\-T\-A\-T\-U\-S\-\_\-\-O\-K}\label{classpion_1_1http_1_1message_ab71e06f72cacb4945dbf84663b0420e9a5fd3c3fcefd1a51ee076e40708e32674}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1message_ad07a7f30359b9f44c9159f3f9a9db507}{\index{pion\-::http\-::message@{pion\-::http\-::message}!message@{message}}
+\index{message@{message}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::message\-::message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ad07a7f30359b9f44c9159f3f9a9db507}
+
+
+constructs a new H\-T\-T\-P message object 
+
+\hypertarget{classpion_1_1http_1_1message_a576e849f9d4a138d4856c83ceb0c47a3}{\index{pion\-::http\-::message@{pion\-::http\-::message}!message@{message}}
+\index{message@{message}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{message}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::message\-::message (
+\begin{DoxyParamCaption}
+\item[{const {\bf message} \&}]{http\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a576e849f9d4a138d4856c83ceb0c47a3}
+
+
+copy constructor 
+
+\hypertarget{classpion_1_1http_1_1message_ac71ae21f149f7d74b2bdee1bf1149ead}{\index{pion\-::http\-::message@{pion\-::http\-::message}!$\sim$message@{$\sim$message}}
+\index{$\sim$message@{$\sim$message}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{$\sim$message}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::message\-::$\sim$message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1message_ac71ae21f149f7d74b2bdee1bf1149ead}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1message_a0bc8756a9db916d5423dad19211de771}{\index{pion\-::http\-::message@{pion\-::http\-::message}!add\-\_\-cookie@{add\-\_\-cookie}}
+\index{add\-\_\-cookie@{add\-\_\-cookie}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{add\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::add\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a0bc8756a9db916d5423dad19211de771}
+adds a value for the cookie since cookie names are insensitive, key should use lowercase alpha chars \hypertarget{classpion_1_1http_1_1message_a115c9657c4933f034dcf2f4ce7bd55f0}{\index{pion\-::http\-::message@{pion\-::http\-::message}!add\-\_\-header@{add\-\_\-header}}
+\index{add\-\_\-header@{add\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{add\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::add\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a115c9657c4933f034dcf2f4ce7bd55f0}
+
+
+adds a value for the H\-T\-T\-P header named key 
+
+
+
+Referenced by pion\-::http\-::request\-::append\-\_\-cookie\-\_\-headers(), pion\-::http\-::response\-::delete\-\_\-cookie(), pion\-::http\-::parser\-::parse\-\_\-headers(), and pion\-::http\-::response\-::set\-\_\-cookie().
+
+\hypertarget{classpion_1_1http_1_1message_a532d475ab2dfdcdb969445902fad2e6f}{\index{pion\-::http\-::message@{pion\-::http\-::message}!append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}}
+\index{append\-\_\-cookie\-\_\-headers@{append\-\_\-cookie\-\_\-headers}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{append\-\_\-cookie\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::message\-::append\-\_\-cookie\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1message_a532d475ab2dfdcdb969445902fad2e6f}
+
+
+appends H\-T\-T\-P headers for any cookies defined by the \href{http::message}{\tt http\-::message} 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1response_ad86616700baf2ba068268b3fd725d5f8}{pion\-::http\-::response}, and \hyperlink{classpion_1_1http_1_1request_a17fbce903b00388346ad85e8b3d997b3}{pion\-::http\-::request}.
+
+\hypertarget{classpion_1_1http_1_1message_a3184733c3a21b8aa44d8f301eaf52697}{\index{pion\-::http\-::message@{pion\-::http\-::message}!append\-\_\-headers@{append\-\_\-headers}}
+\index{append\-\_\-headers@{append\-\_\-headers}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{append\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::append\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{{\bf write\-\_\-buffers\-\_\-t} \&}]{write\-\_\-buffers}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_a3184733c3a21b8aa44d8f301eaf52697}
+appends the message's H\-T\-T\-P headers to a vector of write buffers
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-buffers} & the buffers to append H\-T\-T\-P headers into \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1message_a1bfed0c1dc6a76384798c51ae74ea2da}{\index{pion\-::http\-::message@{pion\-::http\-::message}!change\-\_\-cookie@{change\-\_\-cookie}}
+\index{change\-\_\-cookie@{change\-\_\-cookie}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{change\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::change\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a1bfed0c1dc6a76384798c51ae74ea2da}
+changes the value of a cookie since cookie names are insensitive, key should use lowercase alpha chars \hypertarget{classpion_1_1http_1_1message_aa1643164e7f60bae1b640d55735a4728}{\index{pion\-::http\-::message@{pion\-::http\-::message}!change\-\_\-header@{change\-\_\-header}}
+\index{change\-\_\-header@{change\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{change\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::change\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_aa1643164e7f60bae1b640d55735a4728}
+
+
+changes the value for the H\-T\-T\-P header named key 
+
+
+
+Referenced by pion\-::http\-::response\-::set\-\_\-last\-\_\-modified().
+
+\hypertarget{classpion_1_1http_1_1message_a40603cf88819b33abb4e56bb55dc61af}{\index{pion\-::http\-::message@{pion\-::http\-::message}!change\-\_\-value@{change\-\_\-value}}
+\index{change\-\_\-value@{change\-\_\-value}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{change\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Dictionary\-Type $>$ static void pion\-::http\-::message\-::change\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{Dictionary\-Type \&}]{dict, }
+\item[{const std\-::string \&}]{key, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_a40603cf88819b33abb4e56bb55dc61af}
+Changes the value for a dictionary key. Adds the key if it does not already exist. If multiple values exist for the key, they will be removed and only the new value will remain.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict} & the dictionary object to update \\
+\hline
+{\em key} & the key to change the value for \\
+\hline
+{\em value} & the value to assign to the key \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::http\-::request\-::change\-\_\-query().
+
+\hypertarget{classpion_1_1http_1_1message_ab0aa463a1327eac0d73ff6ab62ca3891}{\index{pion\-::http\-::message@{pion\-::http\-::message}!check\-\_\-keep\-\_\-alive@{check\-\_\-keep\-\_\-alive}}
+\index{check\-\_\-keep\-\_\-alive@{check\-\_\-keep\-\_\-alive}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{check\-\_\-keep\-\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::check\-\_\-keep\-\_\-alive (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ab0aa463a1327eac0d73ff6ab62ca3891}
+
+
+returns true if the H\-T\-T\-P connection may be kept alive 
+
+
+
+Referenced by receive().
+
+\hypertarget{classpion_1_1http_1_1message_af13279269cf1e00ae4fc5091c1c7cae5}{\index{pion\-::http\-::message@{pion\-::http\-::message}!clear@{clear}}
+\index{clear@{clear}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::message\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1message_af13279269cf1e00ae4fc5091c1c7cae5}
+
+
+clears all message data 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1response_a0713749f7a9ac79b6e04a753e7332e83}{pion\-::http\-::response}, and \hyperlink{classpion_1_1http_1_1request_a820ac867130387a16859a6cf9ca77c74}{pion\-::http\-::request}.
+
+
+
+Referenced by pion\-::http\-::request\-::clear(), pion\-::http\-::response\-::clear(), read(), and receive().
+
+\hypertarget{classpion_1_1http_1_1message_a33567717927344a33bc8332ad3a391a6}{\index{pion\-::http\-::message@{pion\-::http\-::message}!clear\-\_\-content@{clear\-\_\-content}}
+\index{clear\-\_\-content@{clear\-\_\-content}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{clear\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::clear\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a33567717927344a33bc8332ad3a391a6}
+
+
+clears payload content buffer 
+
+\hypertarget{classpion_1_1http_1_1message_ab47dc3343c9b2cbc7fdf8605e4b7d3b2}{\index{pion\-::http\-::message@{pion\-::http\-::message}!clear\-\_\-first\-\_\-line@{clear\-\_\-first\-\_\-line}}
+\index{clear\-\_\-first\-\_\-line@{clear\-\_\-first\-\_\-line}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{clear\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::clear\-\_\-first\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_ab47dc3343c9b2cbc7fdf8605e4b7d3b2}
+erases the string containing the first line for the H\-T\-T\-P message (it will be updated the next time \hyperlink{classpion_1_1http_1_1message_ad9c43932bae03916ad193c257a7ec6c8}{get\-\_\-first\-\_\-line()} is called) 
+
+Referenced by pion\-::http\-::request\-::set\-\_\-method(), pion\-::http\-::request\-::set\-\_\-query\-\_\-string(), pion\-::http\-::request\-::set\-\_\-resource(), pion\-::http\-::response\-::set\-\_\-status\-\_\-code(), and pion\-::http\-::response\-::set\-\_\-status\-\_\-message().
+
+\hypertarget{classpion_1_1http_1_1message_aeffca5e2173be2b83f38b630d07f4bfd}{\index{pion\-::http\-::message@{pion\-::http\-::message}!concatenate\-\_\-chunks@{concatenate\-\_\-chunks}}
+\index{concatenate\-\_\-chunks@{concatenate\-\_\-chunks}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{concatenate\-\_\-chunks}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::concatenate\-\_\-chunks (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_aeffca5e2173be2b83f38b630d07f4bfd}
+pieces together all the received chunks 
+
+References create\-\_\-content\-\_\-buffer(), and set\-\_\-content\-\_\-length().
+
+
+
+Referenced by pion\-::http\-::parser\-::check\-\_\-premature\-\_\-eof(), pion\-::http\-::parser\-::finish(), and pion\-::http\-::parser\-::parse().
+
+\hypertarget{classpion_1_1http_1_1message_a468f42e5bc2866d9c93138e3a4cec31b}{\index{pion\-::http\-::message@{pion\-::http\-::message}!create\-\_\-content\-\_\-buffer@{create\-\_\-content\-\_\-buffer}}
+\index{create\-\_\-content\-\_\-buffer@{create\-\_\-content\-\_\-buffer}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{create\-\_\-content\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pion\-::http\-::message\-::create\-\_\-content\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a468f42e5bc2866d9c93138e3a4cec31b}
+creates a payload content buffer of size m\-\_\-content\-\_\-length and returns a pointer to the new buffer (memory is managed by message class) 
+
+Referenced by concatenate\-\_\-chunks(), pion\-::http\-::parser\-::finish(), pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing(), pion\-::http\-::request\-::set\-\_\-content(), and pion\-::http\-::request\-::use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content().
+
+\hypertarget{classpion_1_1http_1_1message_a79e4153703ae62a1b8b0585510d032fd}{\index{pion\-::http\-::message@{pion\-::http\-::message}!delete\-\_\-cookie@{delete\-\_\-cookie}}
+\index{delete\-\_\-cookie@{delete\-\_\-cookie}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{delete\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::delete\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a79e4153703ae62a1b8b0585510d032fd}
+removes all values for a cookie since cookie names are insensitive, key should use lowercase alpha chars \hypertarget{classpion_1_1http_1_1message_a070ef742af75674725da392c25774884}{\index{pion\-::http\-::message@{pion\-::http\-::message}!delete\-\_\-header@{delete\-\_\-header}}
+\index{delete\-\_\-header@{delete\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{delete\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::delete\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a070ef742af75674725da392c25774884}
+
+
+removes all values for the H\-T\-T\-P header named key 
+
+\hypertarget{classpion_1_1http_1_1message_a6d07488a5fa36e1e90622d64179f7953}{\index{pion\-::http\-::message@{pion\-::http\-::message}!delete\-\_\-value@{delete\-\_\-value}}
+\index{delete\-\_\-value@{delete\-\_\-value}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{delete\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Dictionary\-Type $>$ static void pion\-::http\-::message\-::delete\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{Dictionary\-Type \&}]{dict, }
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_a6d07488a5fa36e1e90622d64179f7953}
+Deletes all values for a key
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict} & the dictionary object to update \\
+\hline
+{\em key} & the key to delete \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by pion\-::http\-::request\-::delete\-\_\-query().
+
+\hypertarget{classpion_1_1http_1_1message_aa672e8369ab07a212902a98f351805f3}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-chunk\-\_\-cache@{get\-\_\-chunk\-\_\-cache}}
+\index{get\-\_\-chunk\-\_\-cache@{get\-\_\-chunk\-\_\-cache}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-chunk\-\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}{\bf chunk\-\_\-cache\-\_\-t}\& pion\-::http\-::message\-::get\-\_\-chunk\-\_\-cache (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_aa672e8369ab07a212902a98f351805f3}
+
+
+returns a reference to the chunk cache 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing(), pion\-::http\-::parser\-::parse(), and pion\-::http\-::parser\-::parse\-\_\-missing\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1message_a42ea3cfa8633a99a9c517afe2db00a1a}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-chunks\-\_\-supported@{get\-\_\-chunks\-\_\-supported}}
+\index{get\-\_\-chunks\-\_\-supported@{get\-\_\-chunks\-\_\-supported}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-chunks\-\_\-supported}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::get\-\_\-chunks\-\_\-supported (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a42ea3cfa8633a99a9c517afe2db00a1a}
+
+
+returns true if chunked transfer encodings are supported 
+
+\hypertarget{classpion_1_1http_1_1message_a60ddb1bd09afecdadc5e9c33c8c1de28}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-content@{get\-\_\-content}}
+\index{get\-\_\-content@{get\-\_\-content}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ pion\-::http\-::message\-::get\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a60ddb1bd09afecdadc5e9c33c8c1de28}
+
+
+returns a pointer to the payload content, or empty string if there is none 
+
+
+
+Referenced by pion\-::http\-::parser\-::consume\-\_\-content(), pion\-::http\-::parser\-::finish(), pion\-::http\-::parser\-::parse\-\_\-missing\-\_\-data(), send(), and write().
+
+\hypertarget{classpion_1_1http_1_1message_aa2363086d3f0c17a54ecebaef558b971}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-content@{get\-\_\-content}}
+\index{get\-\_\-content@{get\-\_\-content}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ pion\-::http\-::message\-::get\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_aa2363086d3f0c17a54ecebaef558b971}
+
+
+returns a const pointer to the payload content, or empty string if there is none 
+
+\hypertarget{classpion_1_1http_1_1message_a172346504faba36f73d7527551c199a2}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-content\-\_\-buffer\-\_\-size@{get\-\_\-content\-\_\-buffer\-\_\-size}}
+\index{get\-\_\-content\-\_\-buffer\-\_\-size@{get\-\_\-content\-\_\-buffer\-\_\-size}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-content\-\_\-buffer\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::get\-\_\-content\-\_\-buffer\-\_\-size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a172346504faba36f73d7527551c199a2}
+
+
+returns size of allocated buffer 
+
+\hypertarget{classpion_1_1http_1_1message_a10606f8fd2efbe14d447ef8eb8731a54}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-content\-\_\-length@{get\-\_\-content\-\_\-length}}
+\index{get\-\_\-content\-\_\-length@{get\-\_\-content\-\_\-length}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-content\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t pion\-::http\-::message\-::get\-\_\-content\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a10606f8fd2efbe14d447ef8eb8731a54}
+
+
+returns the length of the payload content (in bytes) 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish(), pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing(), send(), and write().
+
+\hypertarget{classpion_1_1http_1_1message_a735de2125e0b3c3a8caae7fad757cfc0}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-cookie@{get\-\_\-cookie}}
+\index{get\-\_\-cookie@{get\-\_\-cookie}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::message\-::get\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a735de2125e0b3c3a8caae7fad757cfc0}
+returns a value for the cookie if any are defined; otherwise, an empty string since cookie names are insensitive, key should use lowercase alpha chars \hypertarget{classpion_1_1http_1_1message_ab5e744890af0936eda97c21888bb4a2e}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-cookies@{get\-\_\-cookies}}
+\index{get\-\_\-cookies@{get\-\_\-cookies}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-cookies}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ihash\-\_\-multimap}\& pion\-::http\-::message\-::get\-\_\-cookies (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ab5e744890af0936eda97c21888bb4a2e}
+
+
+returns the cookie parameters 
+
+
+
+Referenced by pion\-::http\-::request\-::append\-\_\-cookie\-\_\-headers(), pion\-::http\-::response\-::append\-\_\-cookie\-\_\-headers(), and pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1message_ad9c43932bae03916ad193c257a7ec6c8}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-first\-\_\-line@{get\-\_\-first\-\_\-line}}
+\index{get\-\_\-first\-\_\-line@{get\-\_\-first\-\_\-line}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::message\-::get\-\_\-first\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ad9c43932bae03916ad193c257a7ec6c8}
+
+
+returns a string containing the first line for the H\-T\-T\-P message 
+
+\hypertarget{classpion_1_1http_1_1message_ab9e2735d01890cd8e93f86390cd46969}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-header@{get\-\_\-header}}
+\index{get\-\_\-header@{get\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string\& pion\-::http\-::message\-::get\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ab9e2735d01890cd8e93f86390cd46969}
+
+
+returns a value for the header if any are defined; otherwise, an empty string 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish().
+
+\hypertarget{classpion_1_1http_1_1message_a8d067675e0396114e814ad688bed2b4f}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-headers@{get\-\_\-headers}}
+\index{get\-\_\-headers@{get\-\_\-headers}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-headers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf ihash\-\_\-multimap}\& pion\-::http\-::message\-::get\-\_\-headers (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a8d067675e0396114e814ad688bed2b4f}
+
+
+returns a reference to the H\-T\-T\-P headers 
+
+
+
+Referenced by pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1message_a42fdde8d94227c6d08d475c5ed8a6388}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-remote\-\_\-ip@{get\-\_\-remote\-\_\-ip}}
+\index{get\-\_\-remote\-\_\-ip@{get\-\_\-remote\-\_\-ip}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-remote\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::ip\-::address\& pion\-::http\-::message\-::get\-\_\-remote\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a42fdde8d94227c6d08d475c5ed8a6388}
+
+
+returns I\-P address of the remote endpoint 
+
+\hypertarget{classpion_1_1http_1_1message_aabb2581095e035b5b274ee88442ad9ed}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-status@{get\-\_\-status}}
+\index{get\-\_\-status@{get\-\_\-status}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf data\-\_\-status\-\_\-t} pion\-::http\-::message\-::get\-\_\-status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_aabb2581095e035b5b274ee88442ad9ed}
+
+
+return the data receival status 
+
+\hypertarget{classpion_1_1http_1_1message_ad6e365382874be8f3e28df1234e3a3f7}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-value@{get\-\_\-value}}
+\index{get\-\_\-value@{get\-\_\-value}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Dictionary\-Type $>$ static const std\-::string\& pion\-::http\-::message\-::get\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{const Dictionary\-Type \&}]{dict, }
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_ad6e365382874be8f3e28df1234e3a3f7}
+Returns the first value in a dictionary if key is found; or an empty string if no values are found
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict} & the dictionary to search for key \\
+\hline
+{\em key} & the key to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value if found; empty string if not 
+\end{DoxyReturn}
+
+
+Referenced by pion\-::http\-::request\-::get\-\_\-query().
+
+\hypertarget{classpion_1_1http_1_1message_a6d36c13df002129d3044d9c34999161d}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-version\-\_\-major@{get\-\_\-version\-\_\-major}}
+\index{get\-\_\-version\-\_\-major@{get\-\_\-version\-\_\-major}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-version\-\_\-major}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint16\-\_\-t pion\-::http\-::message\-::get\-\_\-version\-\_\-major (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a6d36c13df002129d3044d9c34999161d}
+
+
+returns the major H\-T\-T\-P version number 
+
+
+
+Referenced by pion\-::http\-::parser\-::parse\-\_\-headers(), and pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1message_ac986c7014db695241db1823f17eda4cd}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-version\-\_\-minor@{get\-\_\-version\-\_\-minor}}
+\index{get\-\_\-version\-\_\-minor@{get\-\_\-version\-\_\-minor}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-version\-\_\-minor}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::uint16\-\_\-t pion\-::http\-::message\-::get\-\_\-version\-\_\-minor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ac986c7014db695241db1823f17eda4cd}
+
+
+returns the minor H\-T\-T\-P version number 
+
+
+
+Referenced by pion\-::http\-::parser\-::parse\-\_\-headers(), and pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1message_a0bb6e14bd27dc1b956bb74dcccc7ee27}{\index{pion\-::http\-::message@{pion\-::http\-::message}!get\-\_\-version\-\_\-string@{get\-\_\-version\-\_\-string}}
+\index{get\-\_\-version\-\_\-string@{get\-\_\-version\-\_\-string}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{get\-\_\-version\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::http\-::message\-::get\-\_\-version\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a0bb6e14bd27dc1b956bb74dcccc7ee27}
+
+
+returns a string representation of the H\-T\-T\-P version (i.\-e. \char`\"{}\-H\-T\-T\-P/1.\-1\char`\"{}) 
+
+
+
+Referenced by pion\-::http\-::request\-::update\-\_\-first\-\_\-line(), and pion\-::http\-::response\-::update\-\_\-first\-\_\-line().
+
+\hypertarget{classpion_1_1http_1_1message_af033e860c1f7295a6ef8eb5ea75f53e8}{\index{pion\-::http\-::message@{pion\-::http\-::message}!has\-\_\-cookie@{has\-\_\-cookie}}
+\index{has\-\_\-cookie@{has\-\_\-cookie}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{has\-\_\-cookie}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::has\-\_\-cookie (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_af033e860c1f7295a6ef8eb5ea75f53e8}
+returns true if at least one value for the cookie is defined since cookie names are insensitive, key should use lowercase alpha chars \hypertarget{classpion_1_1http_1_1message_a52fd51aca9d5a37f41a0ad18d577ddec}{\index{pion\-::http\-::message@{pion\-::http\-::message}!has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets@{has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets}}
+\index{has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets@{has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::has\-\_\-data\-\_\-after\-\_\-missing\-\_\-packets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a52fd51aca9d5a37f41a0ad18d577ddec}
+
+
+true if more data seen after the missing packets 
+
+
+
+Referenced by pion\-::http\-::parser\-::compute\-\_\-msg\-\_\-status().
+
+\hypertarget{classpion_1_1http_1_1message_ac6667e7a771b157e24858700b4777223}{\index{pion\-::http\-::message@{pion\-::http\-::message}!has\-\_\-header@{has\-\_\-header}}
+\index{has\-\_\-header@{has\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{has\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::has\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{key}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ac6667e7a771b157e24858700b4777223}
+
+
+returns true if at least one value for the header is defined 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing().
+
+\hypertarget{classpion_1_1http_1_1message_a0ab661db865a6d018e8487a1b4f6932b}{\index{pion\-::http\-::message@{pion\-::http\-::message}!has\-\_\-missing\-\_\-packets@{has\-\_\-missing\-\_\-packets}}
+\index{has\-\_\-missing\-\_\-packets@{has\-\_\-missing\-\_\-packets}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{has\-\_\-missing\-\_\-packets}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::has\-\_\-missing\-\_\-packets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a0ab661db865a6d018e8487a1b4f6932b}
+
+
+true if there were missing packets 
+
+
+
+Referenced by pion\-::http\-::parser\-::compute\-\_\-msg\-\_\-status(), and pion\-::http\-::parser\-::parse().
+
+\hypertarget{classpion_1_1http_1_1message_a96264a238b04e1957c87ab7930a8023b}{\index{pion\-::http\-::message@{pion\-::http\-::message}!is\-\_\-chunked@{is\-\_\-chunked}}
+\index{is\-\_\-chunked@{is\-\_\-chunked}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{is\-\_\-chunked}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::is\-\_\-chunked (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a96264a238b04e1957c87ab7930a8023b}
+
+
+returns true if the message content is chunked 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing().
+
+\hypertarget{classpion_1_1http_1_1message_a7229c3a00b35846cdb050fc2b9b6ec73}{\index{pion\-::http\-::message@{pion\-::http\-::message}!is\-\_\-content\-\_\-buffer\-\_\-allocated@{is\-\_\-content\-\_\-buffer\-\_\-allocated}}
+\index{is\-\_\-content\-\_\-buffer\-\_\-allocated@{is\-\_\-content\-\_\-buffer\-\_\-allocated}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{is\-\_\-content\-\_\-buffer\-\_\-allocated}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::is\-\_\-content\-\_\-buffer\-\_\-allocated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a7229c3a00b35846cdb050fc2b9b6ec73}
+
+
+returns true if buffer for content is allocated 
+
+\hypertarget{classpion_1_1http_1_1message_a08bd257bd46e7a42b64bbc4482f28363}{\index{pion\-::http\-::message@{pion\-::http\-::message}!is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}}
+\index{is\-\_\-content\-\_\-length\-\_\-implied@{is\-\_\-content\-\_\-length\-\_\-implied}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{is\-\_\-content\-\_\-length\-\_\-implied}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool pion\-::http\-::message\-::is\-\_\-content\-\_\-length\-\_\-implied (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classpion_1_1http_1_1message_a08bd257bd46e7a42b64bbc4482f28363}
+
+
+should return true if the content length can be implied without headers 
+
+
+
+Implemented in \hyperlink{classpion_1_1http_1_1response_ad9e7b85bac1ad8f69145ccc719efd3da}{pion\-::http\-::response}, and \hyperlink{classpion_1_1http_1_1request_a9ec7262ec35b4282ea66cf07e49fd4fb}{pion\-::http\-::request}.
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing().
+
+\hypertarget{classpion_1_1http_1_1message_a52850e6fe48b141f46662c83d4edbbf5}{\index{pion\-::http\-::message@{pion\-::http\-::message}!is\-\_\-valid@{is\-\_\-valid}}
+\index{is\-\_\-valid@{is\-\_\-valid}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{is\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::message\-::is\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a52850e6fe48b141f46662c83d4edbbf5}
+
+
+returns true if the message is valid 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish().
+
+\hypertarget{classpion_1_1http_1_1message_a854b089e577498c9b01e5ec460595a35}{\index{pion\-::http\-::message@{pion\-::http\-::message}!operator=@{operator=}}
+\index{operator=@{operator=}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf message}\& pion\-::http\-::message\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf message} \&}]{http\-\_\-msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a854b089e577498c9b01e5ec460595a35}
+
+
+assignment operator 
+
+
+
+References m\-\_\-first\-\_\-line.
+
+\hypertarget{classpion_1_1http_1_1message_a668182618dfc614ddbe6c1af26552568}{\index{pion\-::http\-::message@{pion\-::http\-::message}!prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}}
+\index{prepare\-\_\-buffers\-\_\-for\-\_\-send@{prepare\-\_\-buffers\-\_\-for\-\_\-send}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{prepare\-\_\-buffers\-\_\-for\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::prepare\-\_\-buffers\-\_\-for\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{{\bf write\-\_\-buffers\-\_\-t} \&}]{write\-\_\-buffers, }
+\item[{const bool}]{keep\-\_\-alive, }
+\item[{const bool}]{using\-\_\-chunks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a668182618dfc614ddbe6c1af26552568}
+initializes a vector of write buffers with the H\-T\-T\-P message information
+
+
+\begin{DoxyParams}{Parameters}
+{\em write\-\_\-buffers} & vector of write buffers to initialize \\
+\hline
+{\em keep\-\_\-alive} & true if the connection should be kept alive \\
+\hline
+{\em using\-\_\-chunks} & true if the payload content will be sent in chunks \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by send(), and write().
+
+\hypertarget{classpion_1_1http_1_1message_a1addd3b90c3b048c895f9723371f329f}{\index{pion\-::http\-::message@{pion\-::http\-::message}!prepare\-\_\-headers\-\_\-for\-\_\-send@{prepare\-\_\-headers\-\_\-for\-\_\-send}}
+\index{prepare\-\_\-headers\-\_\-for\-\_\-send@{prepare\-\_\-headers\-\_\-for\-\_\-send}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{prepare\-\_\-headers\-\_\-for\-\_\-send}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::prepare\-\_\-headers\-\_\-for\-\_\-send (
+\begin{DoxyParamCaption}
+\item[{const bool}]{keep\-\_\-alive, }
+\item[{const bool}]{using\-\_\-chunks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_a1addd3b90c3b048c895f9723371f329f}
+prepares H\-T\-T\-P headers for a send operation
+
+
+\begin{DoxyParams}{Parameters}
+{\em keep\-\_\-alive} & true if the connection should be kept alive \\
+\hline
+{\em using\-\_\-chunks} & true if the payload content will be sent in chunks \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1http_1_1message_a7b67f3e8303d838bb5d379ab72a35e2d}{\index{pion\-::http\-::message@{pion\-::http\-::message}!read@{read}}
+\index{read@{read}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::read (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{in, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{{\bf parser} \&}]{http\-\_\-parser}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_a7b67f3e8303d838bb5d379ab72a35e2d}
+reads a new message from a std\-::istream (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & std\-::istream to use \\
+\hline
+{\em ec} & contains error code if the read fails \\
+\hline
+{\em http\-\_\-parser} & http parser object to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes read from the connection 
+\end{DoxyReturn}
+
+
+References pion\-::http\-::parser\-::check\-\_\-premature\-\_\-eof(), clear(), pion\-::http\-::parser\-::get\-\_\-total\-\_\-bytes\-\_\-read(), pion\-::http\-::parser\-::parse(), and pion\-::http\-::parser\-::set\-\_\-read\-\_\-buffer().
+
+
+
+Referenced by read().
+
+\hypertarget{classpion_1_1http_1_1message_ae99b6c39dd1b878520125f7037c035de}{\index{pion\-::http\-::message@{pion\-::http\-::message}!read@{read}}
+\index{read@{read}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::read (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{in, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{bool}]{headers\-\_\-only = {\ttfamily false}, }
+\item[{std\-::size\-\_\-t}]{max\-\_\-content\-\_\-length = {\ttfamily static\-\_\-cast$<$size\-\_\-t$>$(-\/1)}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_ae99b6c39dd1b878520125f7037c035de}
+reads a new message from a std\-::istream (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & std\-::istream to use \\
+\hline
+{\em ec} & contains error code if the read fails \\
+\hline
+{\em headers\-\_\-only} & if true then only H\-T\-T\-P headers are read \\
+\hline
+{\em max\-\_\-content\-\_\-length} & maximum number of content bytes received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes read from the connection 
+\end{DoxyReturn}
+
+
+References pion\-::http\-::parser\-::parse\-\_\-headers\-\_\-only(), read(), and pion\-::http\-::parser\-::set\-\_\-max\-\_\-content\-\_\-length().
+
+\hypertarget{classpion_1_1http_1_1message_a7e3c3f1ea265f91b87a9e075234b5d31}{\index{pion\-::http\-::message@{pion\-::http\-::message}!receive@{receive}}
+\index{receive@{receive}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{receive}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::receive (
+\begin{DoxyParamCaption}
+\item[{{\bf tcp\-::connection} \&}]{tcp\-\_\-conn, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{{\bf parser} \&}]{http\-\_\-parser}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_a7e3c3f1ea265f91b87a9e075234b5d31}
+receives a new message from a T\-C\-P connection (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection to use \\
+\hline
+{\em ec} & contains error code if the receive fails \\
+\hline
+{\em http\-\_\-parser} & http parser object to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes read from the connection 
+\end{DoxyReturn}
+
+
+References check\-\_\-keep\-\_\-alive(), pion\-::http\-::parser\-::check\-\_\-premature\-\_\-eof(), clear(), pion\-::http\-::parser\-::eof(), pion\-::http\-::parser\-::get\-\_\-parse\-\_\-headers\-\_\-only(), pion\-::tcp\-::connection\-::get\-\_\-pipelined(), pion\-::tcp\-::connection\-::get\-\_\-read\-\_\-buffer(), pion\-::http\-::parser\-::get\-\_\-total\-\_\-bytes\-\_\-read(), pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-C\-L\-O\-S\-E, pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-K\-E\-E\-P\-A\-L\-I\-V\-E, pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-P\-I\-P\-E\-L\-I\-N\-E\-D, pion\-::http\-::parser\-::load\-\_\-read\-\_\-pos(), pion\-::tcp\-::connection\-::load\-\_\-read\-\_\-pos(), pion\-::http\-::parser\-::parse(), pion\-::tcp\-::connection\-::read\-\_\-some(), pion\-::tcp\-::connection\-::save\-\_\-read\-\_\-pos(), pion\-::tcp\-::connection\-::set\-\_\-lifecycle(), and pion\-::http\-::parser\-::set\-\_\-read\-\_\-buffer().
+
+
+
+Referenced by receive().
+
+\hypertarget{classpion_1_1http_1_1message_a029d3c6260deabf91fdcc9f1f0157268}{\index{pion\-::http\-::message@{pion\-::http\-::message}!receive@{receive}}
+\index{receive@{receive}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{receive}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::receive (
+\begin{DoxyParamCaption}
+\item[{{\bf tcp\-::connection} \&}]{tcp\-\_\-conn, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{bool}]{headers\-\_\-only = {\ttfamily false}, }
+\item[{std\-::size\-\_\-t}]{max\-\_\-content\-\_\-length = {\ttfamily static\-\_\-cast$<$size\-\_\-t$>$(-\/1)}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_a029d3c6260deabf91fdcc9f1f0157268}
+receives a new message from a T\-C\-P connection (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection to use \\
+\hline
+{\em ec} & contains error code if the receive fails \\
+\hline
+{\em headers\-\_\-only} & if true then only H\-T\-T\-P headers are received \\
+\hline
+{\em max\-\_\-content\-\_\-length} & maximum number of content bytes received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes read from the connection 
+\end{DoxyReturn}
+
+
+References pion\-::http\-::parser\-::parse\-\_\-headers\-\_\-only(), receive(), and pion\-::http\-::parser\-::set\-\_\-max\-\_\-content\-\_\-length().
+
+\hypertarget{classpion_1_1http_1_1message_ab90f91badb0f98f900a7624418781bea}{\index{pion\-::http\-::message@{pion\-::http\-::message}!send@{send}}
+\index{send@{send}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::send (
+\begin{DoxyParamCaption}
+\item[{{\bf tcp\-::connection} \&}]{tcp\-\_\-conn, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{bool}]{headers\-\_\-only = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_ab90f91badb0f98f900a7624418781bea}
+sends the message over a T\-C\-P connection (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & T\-C\-P connection to use \\
+\hline
+{\em ec} & contains error code if the send fails \\
+\hline
+{\em headers\-\_\-only} & if true then only H\-T\-T\-P headers are sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes written to the connection 
+\end{DoxyReturn}
+
+
+References get\-\_\-content(), get\-\_\-content\-\_\-length(), pion\-::tcp\-::connection\-::get\-\_\-keep\-\_\-alive(), prepare\-\_\-buffers\-\_\-for\-\_\-send(), and pion\-::tcp\-::connection\-::write().
+
+\hypertarget{classpion_1_1http_1_1message_a524e682e0c1843d2bee6ad83c6b9e218}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-chunks\-\_\-supported@{set\-\_\-chunks\-\_\-supported}}
+\index{set\-\_\-chunks\-\_\-supported@{set\-\_\-chunks\-\_\-supported}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-chunks\-\_\-supported}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-chunks\-\_\-supported (
+\begin{DoxyParamCaption}
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a524e682e0c1843d2bee6ad83c6b9e218}
+
+
+set to true if chunked transfer encodings are supported 
+
+
+
+Referenced by pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1message_a3600676865fc813897e0ed45b58e5600}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-content@{set\-\_\-content}}
+\index{set\-\_\-content@{set\-\_\-content}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-content}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-content (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{content}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a3600676865fc813897e0ed45b58e5600}
+
+
+resets payload content to match the value of a string 
+
+\hypertarget{classpion_1_1http_1_1message_a81612c01ac85ebe08b947b1f9cfc2a75}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-content\-\_\-length@{set\-\_\-content\-\_\-length}}
+\index{set\-\_\-content\-\_\-length@{set\-\_\-content\-\_\-length}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-content\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-content\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a81612c01ac85ebe08b947b1f9cfc2a75}
+
+
+sets the length of the payload content (in bytes) 
+
+
+
+Referenced by concatenate\-\_\-chunks(), pion\-::http\-::parser\-::finish(), pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing(), pion\-::http\-::request\-::set\-\_\-content(), and pion\-::http\-::request\-::use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content().
+
+\hypertarget{classpion_1_1http_1_1message_add4f889bb2d22e163556c2fd5fd993a8}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-content\-\_\-type@{set\-\_\-content\-\_\-type}}
+\index{set\-\_\-content\-\_\-type@{set\-\_\-content\-\_\-type}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-content\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-content\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_add4f889bb2d22e163556c2fd5fd993a8}
+
+
+sets the content type for the message payload 
+
+
+
+Referenced by pion\-::http\-::request\-::use\-\_\-query\-\_\-params\-\_\-for\-\_\-post\-\_\-content().
+
+\hypertarget{classpion_1_1http_1_1message_af9081484fde89d5e8bdfcb689bebdeb1}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet@{set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet}}
+\index{set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet@{set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-data\-\_\-after\-\_\-missing\-\_\-packet (
+\begin{DoxyParamCaption}
+\item[{bool}]{new\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_af9081484fde89d5e8bdfcb689bebdeb1}
+
+
+Referenced by pion\-::http\-::parser\-::parse().
+
+\hypertarget{classpion_1_1http_1_1message_af6cf5b229cacaaec5ea2bac0df53e199}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length@{set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length}}
+\index{set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length@{set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-do\-\_\-not\-\_\-send\-\_\-content\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_af6cf5b229cacaaec5ea2bac0df53e199}
+
+
+if called, the content-\/length will not be sent in the H\-T\-T\-P headers 
+
+\hypertarget{classpion_1_1http_1_1message_a24b208fd31a21a5bdb76a6ba8683321e}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-is\-\_\-valid@{set\-\_\-is\-\_\-valid}}
+\index{set\-\_\-is\-\_\-valid@{set\-\_\-is\-\_\-valid}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-is\-\_\-valid}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-is\-\_\-valid (
+\begin{DoxyParamCaption}
+\item[{bool}]{b = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a24b208fd31a21a5bdb76a6ba8683321e}
+
+
+sets whether or not the message is valid 
+
+
+
+Referenced by pion\-::http\-::reader\-::consume\-\_\-bytes(), and pion\-::http\-::parser\-::finish().
+
+\hypertarget{classpion_1_1http_1_1message_ac0749dac4643586e3925d73782840b26}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-missing\-\_\-packets@{set\-\_\-missing\-\_\-packets}}
+\index{set\-\_\-missing\-\_\-packets@{set\-\_\-missing\-\_\-packets}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-missing\-\_\-packets}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-missing\-\_\-packets (
+\begin{DoxyParamCaption}
+\item[{bool}]{new\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ac0749dac4643586e3925d73782840b26}
+
+
+set to true when missing packets detected 
+
+
+
+Referenced by pion\-::http\-::parser\-::parse\-\_\-missing\-\_\-data().
+
+\hypertarget{classpion_1_1http_1_1message_a476f852158ecaefef8f3e93a84e1f76a}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-remote\-\_\-ip@{set\-\_\-remote\-\_\-ip}}
+\index{set\-\_\-remote\-\_\-ip@{set\-\_\-remote\-\_\-ip}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-remote\-\_\-ip}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-remote\-\_\-ip (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::address \&}]{ip}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a476f852158ecaefef8f3e93a84e1f76a}
+
+
+sets I\-P address of the remote endpoint 
+
+\hypertarget{classpion_1_1http_1_1message_ad24b94c3ad437b2044c2658fa34bd78d}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-status@{set\-\_\-status}}
+\index{set\-\_\-status@{set\-\_\-status}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-status (
+\begin{DoxyParamCaption}
+\item[{{\bf data\-\_\-status\-\_\-t}}]{new\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_ad24b94c3ad437b2044c2658fa34bd78d}
+
+
+Referenced by pion\-::http\-::parser\-::compute\-\_\-msg\-\_\-status().
+
+\hypertarget{classpion_1_1http_1_1message_aab454a1ce4eebd904b8ee7fff3dbe5d9}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-version\-\_\-major@{set\-\_\-version\-\_\-major}}
+\index{set\-\_\-version\-\_\-major@{set\-\_\-version\-\_\-major}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-version\-\_\-major}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-version\-\_\-major (
+\begin{DoxyParamCaption}
+\item[{const boost\-::uint16\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_aab454a1ce4eebd904b8ee7fff3dbe5d9}
+
+
+sets the major H\-T\-T\-P version number 
+
+
+
+Referenced by pion\-::http\-::parser\-::parse\-\_\-headers(), and pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1message_a311e93b0818ec735a4933e825a55c12e}{\index{pion\-::http\-::message@{pion\-::http\-::message}!set\-\_\-version\-\_\-minor@{set\-\_\-version\-\_\-minor}}
+\index{set\-\_\-version\-\_\-minor@{set\-\_\-version\-\_\-minor}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{set\-\_\-version\-\_\-minor}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::set\-\_\-version\-\_\-minor (
+\begin{DoxyParamCaption}
+\item[{const boost\-::uint16\-\_\-t}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a311e93b0818ec735a4933e825a55c12e}
+
+
+sets the minor H\-T\-T\-P version number 
+
+
+
+Referenced by pion\-::http\-::parser\-::parse\-\_\-headers(), and pion\-::http\-::response\-::update\-\_\-request\-\_\-info().
+
+\hypertarget{classpion_1_1http_1_1message_a6a7a6a5114da843c033283a6c1db48aa}{\index{pion\-::http\-::message@{pion\-::http\-::message}!update\-\_\-content\-\_\-length\-\_\-using\-\_\-header@{update\-\_\-content\-\_\-length\-\_\-using\-\_\-header}}
+\index{update\-\_\-content\-\_\-length\-\_\-using\-\_\-header@{update\-\_\-content\-\_\-length\-\_\-using\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{update\-\_\-content\-\_\-length\-\_\-using\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::update\-\_\-content\-\_\-length\-\_\-using\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a6a7a6a5114da843c033283a6c1db48aa}
+
+
+sets the length of the payload content using the Content-\/\-Length header 
+
+
+
+References pion\-::test\-::trim().
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing().
+
+\hypertarget{classpion_1_1http_1_1message_a697a832ab0741d02ddecd8df8da0265d}{\index{pion\-::http\-::message@{pion\-::http\-::message}!update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}}
+\index{update\-\_\-first\-\_\-line@{update\-\_\-first\-\_\-line}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{update\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::message\-::update\-\_\-first\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classpion_1_1http_1_1message_a697a832ab0741d02ddecd8df8da0265d}
+
+
+updates the string containing the first line for the H\-T\-T\-P message 
+
+
+
+Implemented in \hyperlink{classpion_1_1http_1_1response_a2777a77848e97f3ea205ccfaaa06c0bf}{pion\-::http\-::response}, and \hyperlink{classpion_1_1http_1_1request_a48f4d55f5be5e6bed2936ad8efa8b8ff}{pion\-::http\-::request}.
+
+\hypertarget{classpion_1_1http_1_1message_a8118770f69c9a479f3f5dcbc58d6d644}{\index{pion\-::http\-::message@{pion\-::http\-::message}!update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header@{update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header}}
+\index{update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header@{update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::message\-::update\-\_\-transfer\-\_\-encoding\-\_\-using\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1message_a8118770f69c9a479f3f5dcbc58d6d644}
+
+
+sets the transfer coding using the Transfer-\/\-Encoding header 
+
+
+
+Referenced by pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing().
+
+\hypertarget{classpion_1_1http_1_1message_a4a3911ad03031a1ddacfa4cedeb125a2}{\index{pion\-::http\-::message@{pion\-::http\-::message}!write@{write}}
+\index{write@{write}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::http\-::message\-::write (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{out, }
+\item[{boost\-::system\-::error\-\_\-code \&}]{ec, }
+\item[{bool}]{headers\-\_\-only = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1message_a4a3911ad03031a1ddacfa4cedeb125a2}
+writes the message to a std\-::ostream (blocks until finished)
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & std\-::ostream to use \\
+\hline
+{\em ec} & contains error code if the write fails \\
+\hline
+{\em headers\-\_\-only} & if true then only H\-T\-T\-P headers are written\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\-::size\-\_\-t number of bytes written to the connection 
+\end{DoxyReturn}
+
+
+References get\-\_\-content(), get\-\_\-content\-\_\-length(), and prepare\-\_\-buffers\-\_\-for\-\_\-send().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1http_1_1message_ad97c570395428af30074bd1b75672125}{\index{pion\-::http\-::message@{pion\-::http\-::message}!m\-\_\-first\-\_\-line@{m\-\_\-first\-\_\-line}}
+\index{m\-\_\-first\-\_\-line@{m\-\_\-first\-\_\-line}!pion::http::message@{pion\-::http\-::message}}
+\subsubsection[{m\-\_\-first\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string pion\-::http\-::message\-::m\-\_\-first\-\_\-line\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}}\label{classpion_1_1http_1_1message_ad97c570395428af30074bd1b75672125}
+first line sent in an H\-T\-T\-P message (i.\-e. \char`\"{}\-G\-E\-T / H\-T\-T\-P/1.\-1\char`\"{} for request, or \char`\"{}\-H\-T\-T\-P/1.\-1 200 O\-K\char`\"{} for response) 
+
+Referenced by operator=(), pion\-::http\-::request\-::update\-\_\-first\-\_\-line(), and pion\-::http\-::response\-::update\-\_\-first\-\_\-line().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{message_8hpp}{message.\-hpp}\item 
+src/\hyperlink{http__message_8cpp}{http\-\_\-message.\-cpp}\end{DoxyCompactItemize}

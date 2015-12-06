@@ -1,0 +1,104 @@
+\hypertarget{classpion_1_1admin__rights}{\section{pion\-:\-:admin\-\_\-rights Class Reference}
+\label{classpion_1_1admin__rights}\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}}
+}
+
+
+{\ttfamily \#include $<$admin\-\_\-rights.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1admin__rights_abfb9f3aea1e085f4a5a666a98fa36c7c}{admin\-\_\-rights} (bool use\-\_\-log=true)
+\item 
+virtual \hyperlink{classpion_1_1admin__rights_a3dd9a6d85bdeffe1243a25b78e562716}{$\sim$admin\-\_\-rights} ()
+\begin{DoxyCompactList}\small\item\em destructor releases administrative rights \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1admin__rights_a2979c3b20e89e29113a9593d14a563b8}{release} (void)
+\begin{DoxyCompactList}\small\item\em releases administrative rights \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static long \hyperlink{classpion_1_1admin__rights_ab8ebba2984ee6610829fbac64c149f06}{run\-\_\-as\-\_\-user} (const std\-::string \&user\-\_\-name)
+\begin{DoxyCompactList}\small\item\em calculates the user id based upon the user configuration parameter \end{DoxyCompactList}\item 
+static long \hyperlink{classpion_1_1admin__rights_ae2b1e96be191af3cf81851cdf2c69e2a}{run\-\_\-as\-\_\-group} (const std\-::string \&group\-\_\-name)
+\begin{DoxyCompactList}\small\item\em calculates the group id based upon the group configuration parameter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1admin__rights}{admin\-\_\-rights}\-: obtains administrative rights for the process 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1admin__rights_abfb9f3aea1e085f4a5a666a98fa36c7c}{\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}!admin\-\_\-rights@{admin\-\_\-rights}}
+\index{admin\-\_\-rights@{admin\-\_\-rights}!pion::admin_rights@{pion\-::admin\-\_\-rights}}
+\subsubsection[{admin\-\_\-rights}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::admin\-\_\-rights\-::admin\-\_\-rights (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\-\_\-log = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1admin__rights_abfb9f3aea1e085f4a5a666a98fa36c7c}
+constructs object, obtaining administrative rights; will block if another thread has already obtained rights
+
+
+\begin{DoxyParams}{Parameters}
+{\em use\-\_\-log} & if false, then no logging will be performed \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G, and P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R.
+
+\hypertarget{classpion_1_1admin__rights_a3dd9a6d85bdeffe1243a25b78e562716}{\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}!$\sim$admin\-\_\-rights@{$\sim$admin\-\_\-rights}}
+\index{$\sim$admin\-\_\-rights@{$\sim$admin\-\_\-rights}!pion::admin_rights@{pion\-::admin\-\_\-rights}}
+\subsubsection[{$\sim$admin\-\_\-rights}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::admin\-\_\-rights\-::$\sim$admin\-\_\-rights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1admin__rights_a3dd9a6d85bdeffe1243a25b78e562716}
+
+
+destructor releases administrative rights 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1admin__rights_a2979c3b20e89e29113a9593d14a563b8}{\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}!release@{release}}
+\index{release@{release}!pion::admin_rights@{pion\-::admin\-\_\-rights}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::admin\-\_\-rights\-::release (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1admin__rights_a2979c3b20e89e29113a9593d14a563b8}
+
+
+releases administrative rights 
+
+
+
+References P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G, and P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R.
+
+\hypertarget{classpion_1_1admin__rights_ae2b1e96be191af3cf81851cdf2c69e2a}{\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}!run\-\_\-as\-\_\-group@{run\-\_\-as\-\_\-group}}
+\index{run\-\_\-as\-\_\-group@{run\-\_\-as\-\_\-group}!pion::admin_rights@{pion\-::admin\-\_\-rights}}
+\subsubsection[{run\-\_\-as\-\_\-group}]{\setlength{\rightskip}{0pt plus 5cm}long pion\-::admin\-\_\-rights\-::run\-\_\-as\-\_\-group (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{group\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1admin__rights_ae2b1e96be191af3cf81851cdf2c69e2a}
+
+
+calculates the group id based upon the group configuration parameter 
+
+\hypertarget{classpion_1_1admin__rights_ab8ebba2984ee6610829fbac64c149f06}{\index{pion\-::admin\-\_\-rights@{pion\-::admin\-\_\-rights}!run\-\_\-as\-\_\-user@{run\-\_\-as\-\_\-user}}
+\index{run\-\_\-as\-\_\-user@{run\-\_\-as\-\_\-user}!pion::admin_rights@{pion\-::admin\-\_\-rights}}
+\subsubsection[{run\-\_\-as\-\_\-user}]{\setlength{\rightskip}{0pt plus 5cm}long pion\-::admin\-\_\-rights\-::run\-\_\-as\-\_\-user (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{user\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1admin__rights_ab8ebba2984ee6610829fbac64c149f06}
+
+
+calculates the user id based upon the user configuration parameter 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{admin__rights_8hpp}{admin\-\_\-rights.\-hpp}\item 
+src/\hyperlink{admin__rights_8cpp}{admin\-\_\-rights.\-cpp}\end{DoxyCompactItemize}

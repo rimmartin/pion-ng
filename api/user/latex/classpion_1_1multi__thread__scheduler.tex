@@ -1,0 +1,148 @@
+\hypertarget{classpion_1_1multi__thread__scheduler}{\section{pion\-:\-:multi\-\_\-thread\-\_\-scheduler Class Reference}
+\label{classpion_1_1multi__thread__scheduler}\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+}
+
+
+{\ttfamily \#include $<$scheduler.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:multi\-\_\-thread\-\_\-scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classpion_1_1multi__thread__scheduler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:multi\-\_\-thread\-\_\-scheduler\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classpion_1_1multi__thread__scheduler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1multi__thread__scheduler_a7e60ea90622a43533abd1c7c6106d66c}{multi\-\_\-thread\-\_\-scheduler} (void)
+\begin{DoxyCompactList}\small\item\em constructs a new \hyperlink{classpion_1_1multi__thread__scheduler}{multi\-\_\-thread\-\_\-scheduler} \end{DoxyCompactList}\item 
+virtual \hyperlink{classpion_1_1multi__thread__scheduler_a708525e3a1d80e350ca7030c8859221e}{$\sim$multi\-\_\-thread\-\_\-scheduler} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::vector\\*
+$<$ boost\-::shared\-\_\-ptr\\*
+$<$ boost\-::thread $>$ $>$ \hyperlink{classpion_1_1multi__thread__scheduler_a0cf5fa4c72b0c1f38043cf9ea61efeef}{Thread\-Pool}
+\begin{DoxyCompactList}\small\item\em typedef for a pool of worker threads \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1multi__thread__scheduler_a91945cc6c4a05a716fec36fc48474265}{stop\-\_\-threads} (void)
+\begin{DoxyCompactList}\small\item\em stops all threads used to perform work \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1multi__thread__scheduler_a5e602b3bb9fd7208e7d3325f596e8266}{finish\-\_\-threads} (void)
+\begin{DoxyCompactList}\small\item\em finishes all threads used to perform work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1multi__thread__scheduler_a0cf5fa4c72b0c1f38043cf9ea61efeef}{Thread\-Pool} \hyperlink{classpion_1_1multi__thread__scheduler_ad2b984248e4b064faae3cc3c7e75d30e}{m\-\_\-thread\-\_\-pool}
+\begin{DoxyCompactList}\small\item\em pool of threads used to perform work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1multi__thread__scheduler}{multi\-\_\-thread\-\_\-scheduler}\-: uses a pool of threads to perform work 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classpion_1_1multi__thread__scheduler_a0cf5fa4c72b0c1f38043cf9ea61efeef}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!Thread\-Pool@{Thread\-Pool}}
+\index{Thread\-Pool@{Thread\-Pool}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{Thread\-Pool}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::vector$<$boost\-::shared\-\_\-ptr$<$boost\-::thread$>$ $>$ {\bf pion\-::multi\-\_\-thread\-\_\-scheduler\-::\-Thread\-Pool}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1multi__thread__scheduler_a0cf5fa4c72b0c1f38043cf9ea61efeef}
+
+
+typedef for a pool of worker threads 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1multi__thread__scheduler_a7e60ea90622a43533abd1c7c6106d66c}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!multi\-\_\-thread\-\_\-scheduler@{multi\-\_\-thread\-\_\-scheduler}}
+\index{multi\-\_\-thread\-\_\-scheduler@{multi\-\_\-thread\-\_\-scheduler}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{multi\-\_\-thread\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::multi\-\_\-thread\-\_\-scheduler\-::multi\-\_\-thread\-\_\-scheduler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1multi__thread__scheduler_a7e60ea90622a43533abd1c7c6106d66c}
+
+
+constructs a new \hyperlink{classpion_1_1multi__thread__scheduler}{multi\-\_\-thread\-\_\-scheduler} 
+
+\hypertarget{classpion_1_1multi__thread__scheduler_a708525e3a1d80e350ca7030c8859221e}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!$\sim$multi\-\_\-thread\-\_\-scheduler@{$\sim$multi\-\_\-thread\-\_\-scheduler}}
+\index{$\sim$multi\-\_\-thread\-\_\-scheduler@{$\sim$multi\-\_\-thread\-\_\-scheduler}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{$\sim$multi\-\_\-thread\-\_\-scheduler}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::multi\-\_\-thread\-\_\-scheduler\-::$\sim$multi\-\_\-thread\-\_\-scheduler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1multi__thread__scheduler_a708525e3a1d80e350ca7030c8859221e}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1multi__thread__scheduler_a5e602b3bb9fd7208e7d3325f596e8266}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!finish\-\_\-threads@{finish\-\_\-threads}}
+\index{finish\-\_\-threads@{finish\-\_\-threads}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{finish\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::multi\-\_\-thread\-\_\-scheduler\-::finish\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1multi__thread__scheduler_a5e602b3bb9fd7208e7d3325f596e8266}
+
+
+finishes all threads used to perform work 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1scheduler_a6436e075a8c23734e55329f4286b5509}{pion\-::scheduler}.
+
+\hypertarget{classpion_1_1multi__thread__scheduler_a91945cc6c4a05a716fec36fc48474265}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!stop\-\_\-threads@{stop\-\_\-threads}}
+\index{stop\-\_\-threads@{stop\-\_\-threads}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{stop\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::multi\-\_\-thread\-\_\-scheduler\-::stop\-\_\-threads (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1multi__thread__scheduler_a91945cc6c4a05a716fec36fc48474265}
+
+
+stops all threads used to perform work 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1scheduler_abd7b1239bb9cf5a6ca1492341adfc4db}{pion\-::scheduler}.
+
+
+
+References P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1multi__thread__scheduler_ad2b984248e4b064faae3cc3c7e75d30e}{\index{pion\-::multi\-\_\-thread\-\_\-scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}!m\-\_\-thread\-\_\-pool@{m\-\_\-thread\-\_\-pool}}
+\index{m\-\_\-thread\-\_\-pool@{m\-\_\-thread\-\_\-pool}!pion::multi_thread_scheduler@{pion\-::multi\-\_\-thread\-\_\-scheduler}}
+\subsubsection[{m\-\_\-thread\-\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\-Pool} pion\-::multi\-\_\-thread\-\_\-scheduler\-::m\-\_\-thread\-\_\-pool\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1multi__thread__scheduler_ad2b984248e4b064faae3cc3c7e75d30e}
+
+
+pool of threads used to perform work 
+
+
+
+Referenced by pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), and pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup().
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{scheduler_8hpp}{scheduler.\-hpp}\end{DoxyCompactItemize}

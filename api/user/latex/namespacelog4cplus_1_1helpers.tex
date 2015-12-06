@@ -1,0 +1,792 @@
+\hypertarget{namespacelog4cplus_1_1helpers}{\section{log4cplus\-:\-:helpers Namespace Reference}
+\label{namespacelog4cplus_1_1helpers}\index{log4cplus\-::helpers@{log4cplus\-::helpers}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1AppenderAttachableImpl}{Appender\-Attachable\-Impl}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1IConnectorThreadClient}{I\-Connector\-Thread\-Client}
+\begin{DoxyCompactList}\small\item\em Interface implemented by users of \hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\-Thread}. \end{DoxyCompactList}\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread}{Connector\-Thread}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\-Info}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{Lock\-File}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\-Log}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\-Object}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1SharedObjectPtr}{Shared\-Object\-Ptr}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1snprintf__buf}{snprintf\-\_\-buf}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1AbstractSocket}{Abstract\-Socket}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1Socket}{Socket}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1ServerSocket}{Server\-Socket}
+\item 
+class \hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\-Buffer}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper}{Convert\-Integer\-To\-String\-Helper}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01true_01_4}{Convert\-Integer\-To\-String\-Helper$<$ int\-Type, char\-Type, true $>$}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1ConvertIntegerToStringHelper_3_01intType_00_01charType_00_01false_01_4}{Convert\-Integer\-To\-String\-Helper$<$ int\-Type, char\-Type, false $>$}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1addrinfo__deleter}{addrinfo\-\_\-deleter}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1socket__closer}{socket\-\_\-closer}
+\item 
+struct \hyperlink{structlog4cplus_1_1helpers_1_1socket__holder}{socket\-\_\-holder}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \\*
+\hyperlink{classlog4cplus_1_1thread_1_1SyncGuard}{log4cplus\-::thread\-::\-Sync\-Guard}\\*
+$<$ \hyperlink{classlog4cplus_1_1helpers_1_1LockFile}{Lock\-File} $>$ \hyperlink{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{Lock\-File\-Guard}
+\item 
+typedef std\-::ptrdiff\-\_\-t \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}
+\item 
+typedef chrono\-::system\-\_\-clock \hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}
+\item 
+typedef chrono\-::duration$<$ long \\*
+long, std\-::micro $>$ \hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration}
+\item 
+typedef chrono\-::time\-\_\-point\\*
+$<$ \hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}, \hyperlink{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{Duration} $>$ \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time}
+\item 
+typedef int \hyperlink{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{os\-\_\-socket\-\_\-type}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\-State} \{ \\*
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}{ok}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}{not\-\_\-opened}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}{bad\-\_\-address}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}{connection\-\_\-failed}, 
+\\*
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}{broken\-\_\-pipe}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}{invalid\-\_\-access\-\_\-mode}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}{message\-\_\-truncated}, 
+\hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}{accept\-\_\-interrupted}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}{get\-File\-Info} (\hyperlink{structlog4cplus_1_1helpers_1_1FileInfo}{File\-Info} $\ast$fi, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} const \&name)
+\begin{DoxyCompactList}\small\item\em O\-S independent abstraction of {\ttfamily stat()} function. \end{DoxyCompactList}\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{classlog4cplus_1_1helpers_1_1LogLog}{Log\-Log} \& \hyperlink{namespacelog4cplus_1_1helpers_ad330eb60c67283631cd16a0b45c9bfd9}{get\-Log\-Log} ()
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} \hyperlink{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}{open\-Socket} (unsigned short port, bool udp, bool ipv6, \hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\-State} \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} \hyperlink{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}{connect\-Socket} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&hostn, unsigned short port, bool udp, bool ipv6, \hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\-State} \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} \hyperlink{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}{accept\-Socket} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock, \hyperlink{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{Socket\-State} \&state)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}{close\-Socket} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}{shutdown\-Socket} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}{read} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock, \hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\-Buffer} \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}{write} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock, const \hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\-Buffer} \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long \hyperlink{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}{write} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} sock, const std\-::string \&buffer)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} \hyperlink{namespacelog4cplus_1_1helpers_a8bbc22ccb8a533bae0a8820fd97cd319}{get\-Hostname} (bool fqdn)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int \hyperlink{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}{set\-T\-C\-P\-No\-Delay} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}, bool)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{namespacelog4cplus_1_1helpers_a2df07e0033234268e8d698a2ef11afbc}{to\-Upper} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&s)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} \hyperlink{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}{to\-Upper} (\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar})
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{namespacelog4cplus_1_1helpers_ab5f1848c93434c55e2fb05066a916023}{to\-Lower} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&s)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} \hyperlink{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}{to\-Lower} (\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar})
+\item 
+{\footnotesize template$<$class String\-Type , class Output\-Iter $>$ }\\void \hyperlink{namespacelog4cplus_1_1helpers_a85d88f7190288c19c3020204f0630254}{tokenize} (const String\-Type \&s, typename String\-Type\-::value\-\_\-type c, Output\-Iter result, bool collapse\-Tokens=true)
+\item 
+{\footnotesize template$<$class string\-Type , class int\-Type $>$ }\\void \hyperlink{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{convert\-Integer\-To\-String} (string\-Type \&str, int\-Type value)
+\item 
+{\footnotesize template$<$class int\-Type $>$ }\\\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} \hyperlink{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}{convert\-Integer\-To\-String} (int\-Type value)
+\item 
+{\footnotesize template$<$class int\-Type $>$ }\\std\-::string \hyperlink{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{convert\-Integer\-To\-Narrow\-String} (int\-Type value)
+\item 
+{\footnotesize template$<$typename Iterator , typename Separator $>$ }\\void \hyperlink{namespacelog4cplus_1_1helpers_a343d1a0434df940daf84bf5472b723ab}{join\-\_\-worker} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} \&result, Iterator \&start, Iterator \&last, Separator const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespacelog4cplus_1_1helpers_a3b31785ea378484be4b279adbe6ba0a4}{join} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} \&result, Iterator start, Iterator last, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} const \&sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Iterator $>$ }\\void \hyperlink{namespacelog4cplus_1_1helpers_a4897be2f5dfa250fb216f7b072502e33}{join} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{tstring} \&result, Iterator start, Iterator last, tstring\-::value\-\_\-type sep)
+\begin{DoxyCompactList}\small\item\em Join a list of items into a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename From\-Duration $>$ }\\\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{time\-\_\-cast} (chrono\-::time\-\_\-point$<$ \hyperlink{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{Clock}, From\-Duration $>$ const \&tp)
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{now} ()
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{from\-\_\-time\-\_\-t} (time\-\_\-t t\-\_\-time)
+\item 
+time\-\_\-t \hyperlink{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{to\-\_\-time\-\_\-t} (\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&the\-\_\-time)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{from\-\_\-struct\-\_\-tm} (tm $\ast$t)
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{truncate\-\_\-fractions} (\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&the\-\_\-time)
+\item 
+long \hyperlink{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{microseconds\-\_\-part} (\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&the\-\_\-time)
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} \hyperlink{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{time\-\_\-from\-\_\-parts} (time\-\_\-t tv\-\_\-sec, long tv\-\_\-usec)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{gm\-Time} (tm $\ast$t, \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{local\-Time} (tm $\ast$t, \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{get\-Formatted\-Time} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&fmt, \hyperlink{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{Time} const \&the\-\_\-time, bool use\-\_\-gmtime=false)
+\item 
+static \hyperlink{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{os\-\_\-socket\-\_\-type} \hyperlink{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{to\-\_\-os\-\_\-socket} (\hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} const \&x)
+\item 
+static \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} \hyperlink{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{to\-\_\-log4cplus\-\_\-socket} (\hyperlink{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{os\-\_\-socket\-\_\-type} const \&x)
+\item 
+static void \hyperlink{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{set\-\_\-last\-\_\-socket\-\_\-error} (int err)
+\item 
+static int \hyperlink{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{get\-\_\-last\-\_\-socket\-\_\-error} ()
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \hyperlink{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}{convert\-To\-Buffer} (\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\-Buffer} \&buffer, const \hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\-::spi\-::\-Internal\-Logging\-Event} \&event, const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&server\-Name)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \\*
+\hyperlink{classlog4cplus_1_1spi_1_1InternalLoggingEvent}{log4cplus\-::spi\-::\-Internal\-Logging\-Event} \hyperlink{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}{read\-From\-Buffer} (\hyperlink{classlog4cplus_1_1helpers_1_1SocketBuffer}{Socket\-Buffer} \&buffer)
+\item 
+std\-::string \hyperlink{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{tostring} (char const $\ast$str)
+\item 
+std\-::string \hyperlink{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}{tostring} (std\-::string const \&str)
+\item 
+std\-::string const \& \hyperlink{namespacelog4cplus_1_1helpers_ac8fddba0683ced65297a1e1b057182f0}{tostring} (std\-::string \&str)
+\item 
+std\-::string \hyperlink{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}{tostring} (std\-::string \&\&str)
+\item 
+std\-::wstring \hyperlink{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{towstring} (wchar\-\_\-t const $\ast$str)
+\item 
+std\-::wstring \hyperlink{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}{towstring} (std\-::wstring const \&str)
+\item 
+std\-::wstring const \& \hyperlink{namespacelog4cplus_1_1helpers_a18a76d302c9e9a7f7e50135af386f8ae}{towstring} (std\-::wstring \&str)
+\item 
+std\-::wstring \hyperlink{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}{towstring} (std\-::wstring \&\&str)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::string \hyperlink{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}{tostring} (const std\-::wstring \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::string \hyperlink{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}{tostring} (wchar\-\_\-t const $\ast$)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::wstring \hyperlink{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}{towstring} (const std\-::string \&)
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::wstring \hyperlink{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}{towstring} (char const $\ast$)
+\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}{intrusive\-\_\-ptr\-\_\-add\-\_\-ref} (\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\-Object} const $\ast$so)
+\item 
+void \hyperlink{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}{intrusive\-\_\-ptr\-\_\-release} (\hyperlink{classlog4cplus_1_1helpers_1_1SharedObject}{Shared\-Object} const $\ast$so)
+\end{DoxyCompactItemize}
+
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}{Connector\-Thread}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} \hyperlink{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} const \hyperlink{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}{I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}
+\item 
+\hyperlink{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{os\-\_\-socket\-\_\-type} const \hyperlink{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Clock@{Clock}}
+\index{Clock@{Clock}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Clock}]{\setlength{\rightskip}{0pt plus 5cm}typedef chrono\-::system\-\_\-clock {\bf log4cplus\-::helpers\-::\-Clock}}}\label{namespacelog4cplus_1_1helpers_a9271a4862d21d1ec6e02b5d511bca6ae}
+\hypertarget{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Duration@{Duration}}
+\index{Duration@{Duration}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Duration}]{\setlength{\rightskip}{0pt plus 5cm}typedef chrono\-::duration$<$long long, std\-::micro$>$ {\bf log4cplus\-::helpers\-::\-Duration}}}\label{namespacelog4cplus_1_1helpers_a91aca34282a0dda3ca8568ccaa60950c}
+\hypertarget{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Lock\-File\-Guard@{Lock\-File\-Guard}}
+\index{Lock\-File\-Guard@{Lock\-File\-Guard}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Lock\-File\-Guard}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf log4cplus\-::thread\-::\-Sync\-Guard}$<${\bf Lock\-File}$>$ {\bf log4cplus\-::helpers\-::\-Lock\-File\-Guard}}}\label{namespacelog4cplus_1_1helpers_adf94dab7f623b7d4d8e7eb2eba4e86bd}
+\hypertarget{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!os\-\_\-socket\-\_\-type@{os\-\_\-socket\-\_\-type}}
+\index{os\-\_\-socket\-\_\-type@{os\-\_\-socket\-\_\-type}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{os\-\_\-socket\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf log4cplus\-::helpers\-::os\-\_\-socket\-\_\-type}}}\label{namespacelog4cplus_1_1helpers_a74064c46dd7651c68c1f58b73a1b14ca}
+\hypertarget{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E@{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}}
+\index{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E@{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::ptrdiff\-\_\-t {\bf log4cplus\-::helpers\-::\-S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}}}\label{namespacelog4cplus_1_1helpers_afe2a1567866b6a9e0bfd5d425c3323f2}
+\hypertarget{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Time@{Time}}
+\index{Time@{Time}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Time}]{\setlength{\rightskip}{0pt plus 5cm}typedef chrono\-::time\-\_\-point$<${\bf Clock}, {\bf Duration}$>$ {\bf log4cplus\-::helpers\-::\-Time}}}\label{namespacelog4cplus_1_1helpers_af05d40c37e1cccf9d11d0cbb7426bcd4}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Socket\-State@{Socket\-State}}
+\index{Socket\-State@{Socket\-State}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Socket\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf log4cplus\-::helpers\-::\-Socket\-State}}}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{ok@{ok}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!ok@{ok}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}{ok}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea656e63d7657f0283b5d6a81b05822108}
+}]\index{not\-\_\-opened@{not\-\_\-opened}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!not\-\_\-opened@{not\-\_\-opened}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}{not\-\_\-opened}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea5a2c77c16828a3e4ddcac053b8aef80f}
+}]\index{bad\-\_\-address@{bad\-\_\-address}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!bad\-\_\-address@{bad\-\_\-address}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}{bad\-\_\-address}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea13e8da70d59f3fa31c182bfbe4f5ba2c}
+}]\index{connection\-\_\-failed@{connection\-\_\-failed}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!connection\-\_\-failed@{connection\-\_\-failed}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}{connection\-\_\-failed}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079}
+}]\index{broken\-\_\-pipe@{broken\-\_\-pipe}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!broken\-\_\-pipe@{broken\-\_\-pipe}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}{broken\-\_\-pipe}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eaf30c94baf4631e08c79d2e77fad5b0f6}
+}]\index{invalid\-\_\-access\-\_\-mode@{invalid\-\_\-access\-\_\-mode}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!invalid\-\_\-access\-\_\-mode@{invalid\-\_\-access\-\_\-mode}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}{invalid\-\_\-access\-\_\-mode}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea3e772b1aeff8404a76c408a1181b6e7b}
+}]\index{message\-\_\-truncated@{message\-\_\-truncated}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!message\-\_\-truncated@{message\-\_\-truncated}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}{message\-\_\-truncated}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78ea1a157d0e1d1c00bf88229e2bc4b18c5c}
+}]\index{accept\-\_\-interrupted@{accept\-\_\-interrupted}!log4cplus\-::helpers@{log4cplus\-::helpers}}\index{log4cplus\-::helpers@{log4cplus\-::helpers}!accept\-\_\-interrupted@{accept\-\_\-interrupted}}\item[{\em 
+\hypertarget{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}{accept\-\_\-interrupted}\label{namespacelog4cplus_1_1helpers_ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!accept\-Socket@{accept\-Socket}}
+\index{accept\-Socket@{accept\-Socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{accept\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} log4cplus\-::helpers\-::accept\-Socket (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock, }
+\item[{Socket\-State \&}]{state}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a6446e750b6ca0bb0c56a5fded2b43ee1}
+\hypertarget{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!close\-Socket@{close\-Socket}}
+\index{close\-Socket@{close\-Socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{close\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int log4cplus\-::helpers\-::close\-Socket (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a3b3948988abc22a173de7815370a4527}
+\hypertarget{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!connect\-Socket@{connect\-Socket}}
+\index{connect\-Socket@{connect\-Socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{connect\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} log4cplus\-::helpers\-::connect\-Socket (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{hostn, }
+\item[{unsigned short}]{port, }
+\item[{bool}]{udp, }
+\item[{bool}]{ipv6, }
+\item[{Socket\-State \&}]{state}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_aacb4b2ff893d5b89ecd10e6656123df3}
+\hypertarget{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!convert\-Integer\-To\-Narrow\-String@{convert\-Integer\-To\-Narrow\-String}}
+\index{convert\-Integer\-To\-Narrow\-String@{convert\-Integer\-To\-Narrow\-String}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{convert\-Integer\-To\-Narrow\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class int\-Type $>$ std\-::string log4cplus\-::helpers\-::convert\-Integer\-To\-Narrow\-String (
+\begin{DoxyParamCaption}
+\item[{int\-Type}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a9c1047134c3478ca12f399ea5471fbaf}
+
+
+References convert\-Integer\-To\-String().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!convert\-Integer\-To\-String@{convert\-Integer\-To\-String}}
+\index{convert\-Integer\-To\-String@{convert\-Integer\-To\-String}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{convert\-Integer\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class string\-Type , class int\-Type $>$ void log4cplus\-::helpers\-::convert\-Integer\-To\-String (
+\begin{DoxyParamCaption}
+\item[{string\-Type \&}]{str, }
+\item[{int\-Type}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a5a2959bad8f5c127a8390e9c9c6212a5}
+
+
+References L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-T\-E\-X\-T, and L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-U\-N\-L\-I\-K\-E\-L\-Y.
+
+
+
+Referenced by convert\-Integer\-To\-Narrow\-String(), and convert\-Integer\-To\-String().
+
+\hypertarget{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!convert\-Integer\-To\-String@{convert\-Integer\-To\-String}}
+\index{convert\-Integer\-To\-String@{convert\-Integer\-To\-String}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{convert\-Integer\-To\-String}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class int\-Type $>$ {\bf tstring} log4cplus\-::helpers\-::convert\-Integer\-To\-String (
+\begin{DoxyParamCaption}
+\item[{int\-Type}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_ac468f8e03ad467003d2c7821404e704d}
+
+
+References convert\-Integer\-To\-String().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!convert\-To\-Buffer@{convert\-To\-Buffer}}
+\index{convert\-To\-Buffer@{convert\-To\-Buffer}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{convert\-To\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::helpers\-::convert\-To\-Buffer (
+\begin{DoxyParamCaption}
+\item[{Socket\-Buffer \&}]{buffer, }
+\item[{const {\bf log4cplus\-::spi\-::\-Internal\-Logging\-Event} \&}]{event, }
+\item[{const {\bf log4cplus\-::tstring} \&}]{server\-Name}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a663b18db3f4fbe30b6e81e543b1239c0}
+\hypertarget{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!from\-\_\-struct\-\_\-tm@{from\-\_\-struct\-\_\-tm}}
+\index{from\-\_\-struct\-\_\-tm@{from\-\_\-struct\-\_\-tm}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{from\-\_\-struct\-\_\-tm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf Time} log4cplus\-::helpers\-::from\-\_\-struct\-\_\-tm (
+\begin{DoxyParamCaption}
+\item[{tm $\ast$}]{t}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_aa86444ce227000233ba6806a68cca892}
+\hypertarget{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!from\-\_\-time\-\_\-t@{from\-\_\-time\-\_\-t}}
+\index{from\-\_\-time\-\_\-t@{from\-\_\-time\-\_\-t}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{from\-\_\-time\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} log4cplus\-::helpers\-::from\-\_\-time\-\_\-t (
+\begin{DoxyParamCaption}
+\item[{time\-\_\-t}]{t\-\_\-time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_ad3311ebfb278613d32dc70e4fef28686}
+
+
+References time\-\_\-cast().
+
+
+
+Referenced by microseconds\-\_\-part(), time\-\_\-from\-\_\-parts(), to\-\_\-time\-\_\-t(), and truncate\-\_\-fractions().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!get\-\_\-last\-\_\-socket\-\_\-error@{get\-\_\-last\-\_\-socket\-\_\-error}}
+\index{get\-\_\-last\-\_\-socket\-\_\-error@{get\-\_\-last\-\_\-socket\-\_\-error}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{get\-\_\-last\-\_\-socket\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}static int log4cplus\-::helpers\-::get\-\_\-last\-\_\-socket\-\_\-error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespacelog4cplus_1_1helpers_a9b90ba0a5cd5cc790f9737a2d76422a8}
+\hypertarget{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!get\-File\-Info@{get\-File\-Info}}
+\index{get\-File\-Info@{get\-File\-Info}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{get\-File\-Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int log4cplus\-::helpers\-::get\-File\-Info (
+\begin{DoxyParamCaption}
+\item[{File\-Info $\ast$}]{fi, }
+\item[{tstring const \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a4925e40c10820c28b753796a20a0b25e}
+
+
+O\-S independent abstraction of {\ttfamily stat()} function. 
+
+\hypertarget{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!get\-Formatted\-Time@{get\-Formatted\-Time}}
+\index{get\-Formatted\-Time@{get\-Formatted\-Time}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{get\-Formatted\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::tstring} log4cplus\-::helpers\-::get\-Formatted\-Time (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::tstring} const \&}]{fmt, }
+\item[{Time const \&}]{the\-\_\-time, }
+\item[{bool}]{use\-\_\-gmtime = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a0980d781aff80518b9c02774625a0ffd}
+Returns a string with a \char`\"{}formatted time\char`\"{} specified by {\ttfamily fmt}. It used the {\ttfamily strftime()} function to do this.
+
+Look at your platform's {\ttfamily strftime()} documentation for the formatting options available.
+
+The following additional options are provided\-:\par
+ {\ttfamily q} -\/ 3 character field that provides milliseconds {\ttfamily Q} -\/ 7 character field that provides fractional milliseconds. \hypertarget{namespacelog4cplus_1_1helpers_a8bbc22ccb8a533bae0a8820fd97cd319}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!get\-Hostname@{get\-Hostname}}
+\index{get\-Hostname@{get\-Hostname}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{get\-Hostname}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf tstring} log4cplus\-::helpers\-::get\-Hostname (
+\begin{DoxyParamCaption}
+\item[{bool}]{fqdn}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a8bbc22ccb8a533bae0a8820fd97cd319}
+\hypertarget{namespacelog4cplus_1_1helpers_ad330eb60c67283631cd16a0b45c9bfd9}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!get\-Log\-Log@{get\-Log\-Log}}
+\index{get\-Log\-Log@{get\-Log\-Log}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{get\-Log\-Log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf Log\-Log}\& log4cplus\-::helpers\-::get\-Log\-Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_ad330eb60c67283631cd16a0b45c9bfd9}
+\hypertarget{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!gm\-Time@{gm\-Time}}
+\index{gm\-Time@{gm\-Time}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{gm\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::helpers\-::gm\-Time (
+\begin{DoxyParamCaption}
+\item[{tm $\ast$}]{t, }
+\item[{Time const \&}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a56e65d05975cb29c843eca913eaa4135}
+Populates {\ttfamily tm} using the {\ttfamily gmtime()} function. \hypertarget{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!intrusive\-\_\-ptr\-\_\-add\-\_\-ref@{intrusive\-\_\-ptr\-\_\-add\-\_\-ref}}
+\index{intrusive\-\_\-ptr\-\_\-add\-\_\-ref@{intrusive\-\_\-ptr\-\_\-add\-\_\-ref}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{intrusive\-\_\-ptr\-\_\-add\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::helpers\-::intrusive\-\_\-ptr\-\_\-add\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{Shared\-Object const $\ast$}]{so}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a473255d4f61eb0672b86568c828aa768}
+Boost {\ttfamily intrusive\-\_\-ptr} helpers. 
+
+References log4cplus\-::helpers\-::\-Shared\-Object\-::add\-Reference().
+
+\hypertarget{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!intrusive\-\_\-ptr\-\_\-release@{intrusive\-\_\-ptr\-\_\-release}}
+\index{intrusive\-\_\-ptr\-\_\-release@{intrusive\-\_\-ptr\-\_\-release}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{intrusive\-\_\-ptr\-\_\-release}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::helpers\-::intrusive\-\_\-ptr\-\_\-release (
+\begin{DoxyParamCaption}
+\item[{Shared\-Object const $\ast$}]{so}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_ad52e2bb20a279dfba2bcd48bb33c6c74}
+
+
+References log4cplus\-::helpers\-::\-Shared\-Object\-::remove\-Reference().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a3b31785ea378484be4b279adbe6ba0a4}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!join@{join}}
+\index{join@{join}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void log4cplus\-::helpers\-::join (
+\begin{DoxyParamCaption}
+\item[{tstring \&}]{result, }
+\item[{Iterator}]{start, }
+\item[{Iterator}]{last, }
+\item[{tstring const \&}]{sep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a3b31785ea378484be4b279adbe6ba0a4}
+
+
+Join a list of items into a string. 
+
+
+
+References join\-\_\-worker().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a4897be2f5dfa250fb216f7b072502e33}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!join@{join}}
+\index{join@{join}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator $>$ void log4cplus\-::helpers\-::join (
+\begin{DoxyParamCaption}
+\item[{tstring \&}]{result, }
+\item[{Iterator}]{start, }
+\item[{Iterator}]{last, }
+\item[{tstring\-::value\-\_\-type}]{sep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a4897be2f5dfa250fb216f7b072502e33}
+
+
+Join a list of items into a string. 
+
+
+
+References join\-\_\-worker().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a343d1a0434df940daf84bf5472b723ab}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!join\-\_\-worker@{join\-\_\-worker}}
+\index{join\-\_\-worker@{join\-\_\-worker}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{join\-\_\-worker}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Iterator , typename Separator $>$ void log4cplus\-::helpers\-::join\-\_\-worker (
+\begin{DoxyParamCaption}
+\item[{tstring \&}]{result, }
+\item[{Iterator \&}]{start, }
+\item[{Iterator \&}]{last, }
+\item[{Separator const \&}]{sep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a343d1a0434df940daf84bf5472b723ab}
+
+
+Join a list of items into a string. 
+
+
+
+Referenced by join().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!local\-Time@{local\-Time}}
+\index{local\-Time@{local\-Time}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{local\-Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void log4cplus\-::helpers\-::local\-Time (
+\begin{DoxyParamCaption}
+\item[{tm $\ast$}]{t, }
+\item[{Time const \&}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a6b5aff14d7ce27e2ec1b775a886bd88d}
+Populates {\ttfamily tm} using the {\ttfamily localtime()} function. \hypertarget{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!microseconds\-\_\-part@{microseconds\-\_\-part}}
+\index{microseconds\-\_\-part@{microseconds\-\_\-part}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{microseconds\-\_\-part}]{\setlength{\rightskip}{0pt plus 5cm}long log4cplus\-::helpers\-::microseconds\-\_\-part (
+\begin{DoxyParamCaption}
+\item[{Time const \&}]{the\-\_\-time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a0b745663dd3601c1d5c2cca971c62a70}
+
+
+References from\-\_\-time\-\_\-t(), and to\-\_\-time\-\_\-t().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!now@{now}}
+\index{now@{now}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} log4cplus\-::helpers\-::now (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a1085a8b18eff5fed04b08ec6a2c3e452}
+
+
+References time\-\_\-cast().
+
+\hypertarget{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!open\-Socket@{open\-Socket}}
+\index{open\-Socket@{open\-Socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{open\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} log4cplus\-::helpers\-::open\-Socket (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{port, }
+\item[{bool}]{udp, }
+\item[{bool}]{ipv6, }
+\item[{Socket\-State \&}]{state}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_ae1a347e14ce1f2daadf2817a1b7bed1f}
+\hypertarget{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!read@{read}}
+\index{read@{read}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long log4cplus\-::helpers\-::read (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock, }
+\item[{Socket\-Buffer \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a34dfe75b9deb21d9c48a5c5a68baec87}
+
+
+Referenced by pion\-::tcp\-::connection\-::read().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!read\-From\-Buffer@{read\-From\-Buffer}}
+\index{read\-From\-Buffer@{read\-From\-Buffer}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{read\-From\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::spi\-::\-Internal\-Logging\-Event} log4cplus\-::helpers\-::read\-From\-Buffer (
+\begin{DoxyParamCaption}
+\item[{Socket\-Buffer \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a61dbd76844d1814eae74feabc7066549}
+\hypertarget{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!set\-\_\-last\-\_\-socket\-\_\-error@{set\-\_\-last\-\_\-socket\-\_\-error}}
+\index{set\-\_\-last\-\_\-socket\-\_\-error@{set\-\_\-last\-\_\-socket\-\_\-error}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{set\-\_\-last\-\_\-socket\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}static void log4cplus\-::helpers\-::set\-\_\-last\-\_\-socket\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{int}]{err}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespacelog4cplus_1_1helpers_a33574a4728cff5fbf0b7c0d8c4e5682e}
+\hypertarget{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!set\-T\-C\-P\-No\-Delay@{set\-T\-C\-P\-No\-Delay}}
+\index{set\-T\-C\-P\-No\-Delay@{set\-T\-C\-P\-No\-Delay}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{set\-T\-C\-P\-No\-Delay}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int log4cplus\-::helpers\-::set\-T\-C\-P\-No\-Delay (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{, }
+\item[{bool}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a7a91e8804b0b10d01c383256a7516a2d}
+\hypertarget{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!shutdown\-Socket@{shutdown\-Socket}}
+\index{shutdown\-Socket@{shutdown\-Socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{shutdown\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} int log4cplus\-::helpers\-::shutdown\-Socket (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_af5c4aabb0dd714fbec7cc7bc31222f5b}
+\hypertarget{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!time\-\_\-cast@{time\-\_\-cast}}
+\index{time\-\_\-cast@{time\-\_\-cast}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{time\-\_\-cast}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename From\-Duration $>$ {\bf Time} log4cplus\-::helpers\-::time\-\_\-cast (
+\begin{DoxyParamCaption}
+\item[{chrono\-::time\-\_\-point$<$ Clock, From\-Duration $>$ const \&}]{tp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_aa9b5ff03f853d69b72ec485f051163ee}
+
+
+Referenced by from\-\_\-time\-\_\-t(), and now().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!time\-\_\-from\-\_\-parts@{time\-\_\-from\-\_\-parts}}
+\index{time\-\_\-from\-\_\-parts@{time\-\_\-from\-\_\-parts}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{time\-\_\-from\-\_\-parts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} log4cplus\-::helpers\-::time\-\_\-from\-\_\-parts (
+\begin{DoxyParamCaption}
+\item[{time\-\_\-t}]{tv\-\_\-sec, }
+\item[{long}]{tv\-\_\-usec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a02b3e0f65785711bbc004c3a28fc7775}
+
+
+References from\-\_\-time\-\_\-t().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-\_\-log4cplus\-\_\-socket@{to\-\_\-log4cplus\-\_\-socket}}
+\index{to\-\_\-log4cplus\-\_\-socket@{to\-\_\-log4cplus\-\_\-socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-\_\-log4cplus\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} log4cplus\-::helpers\-::to\-\_\-log4cplus\-\_\-socket (
+\begin{DoxyParamCaption}
+\item[{os\-\_\-socket\-\_\-type const \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespacelog4cplus_1_1helpers_a650bf7ce806dc3fb21f3236b4a85aa46}
+\hypertarget{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-\_\-os\-\_\-socket@{to\-\_\-os\-\_\-socket}}
+\index{to\-\_\-os\-\_\-socket@{to\-\_\-os\-\_\-socket}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-\_\-os\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf os\-\_\-socket\-\_\-type} log4cplus\-::helpers\-::to\-\_\-os\-\_\-socket (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E const \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{namespacelog4cplus_1_1helpers_a8fe0be58538d32f7d5ad91e430617e2f}
+\hypertarget{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-\_\-time\-\_\-t@{to\-\_\-time\-\_\-t}}
+\index{to\-\_\-time\-\_\-t@{to\-\_\-time\-\_\-t}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-\_\-time\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}time\-\_\-t log4cplus\-::helpers\-::to\-\_\-time\-\_\-t (
+\begin{DoxyParamCaption}
+\item[{Time const \&}]{the\-\_\-time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a1de05f00a5784ffead1634d1b554afd9}
+
+
+References from\-\_\-time\-\_\-t().
+
+
+
+Referenced by microseconds\-\_\-part(), and truncate\-\_\-fractions().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a85d88f7190288c19c3020204f0630254}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tokenize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class String\-Type , class Output\-Iter $>$ void log4cplus\-::helpers\-::tokenize (
+\begin{DoxyParamCaption}
+\item[{const String\-Type \&}]{s, }
+\item[{typename String\-Type\-::value\-\_\-type}]{c, }
+\item[{Output\-Iter}]{result, }
+\item[{bool}]{collapse\-Tokens = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a85d88f7190288c19c3020204f0630254}
+Tokenize {\ttfamily s} using {\ttfamily c} as the delimiter and put the resulting tokens in {\ttfamily \-\_\-result}. If {\ttfamily collapse\-Tokens} is false, multiple adjacent delimiters will result in zero length tokens.
+
+{\bfseries Example\-:} 
+\begin{DoxyPre}
+  string s = // Set string with '.' as delimiters
+  list<log4cplus::tstring> tokens;
+  tokenize(s, '.', back\_insert\_iterator<list<string> >(tokens));
+\end{DoxyPre}
+ \hypertarget{namespacelog4cplus_1_1helpers_ab5f1848c93434c55e2fb05066a916023}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-Lower@{to\-Lower}}
+\index{to\-Lower@{to\-Lower}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-Lower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::tstring} log4cplus\-::helpers\-::to\-Lower (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_ab5f1848c93434c55e2fb05066a916023}
+Returns {\ttfamily s} in lower case. \hypertarget{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-Lower@{to\-Lower}}
+\index{to\-Lower@{to\-Lower}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-Lower}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf tchar} log4cplus\-::helpers\-::to\-Lower (
+\begin{DoxyParamCaption}
+\item[{tchar}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a6e10b2cb52741ff6253c82fe6e590358}
+\hypertarget{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a6389b24412a4f7bc49b4ea3efb8aff63}
+\hypertarget{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{std\-::string const \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a8c0f9cc5cee715514a1514d56f0833f0}
+\hypertarget{namespacelog4cplus_1_1helpers_ac8fddba0683ced65297a1e1b057182f0}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string const\& log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_ac8fddba0683ced65297a1e1b057182f0}
+\hypertarget{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&\&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a34d0ffa5c5af620670bdf71c740e0751}
+\hypertarget{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::string log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{const std\-::wstring \&}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_ade49c682216c83f6850ac9d0cdf11035}
+\hypertarget{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!tostring@{tostring}}
+\index{tostring@{tostring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{tostring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::string log4cplus\-::helpers\-::tostring (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t const $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a841a1a648f80f2eb5c0806de1d23dfe7}
+\hypertarget{namespacelog4cplus_1_1helpers_a2df07e0033234268e8d698a2ef11afbc}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-Upper@{to\-Upper}}
+\index{to\-Upper@{to\-Upper}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-Upper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::tstring} log4cplus\-::helpers\-::to\-Upper (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a2df07e0033234268e8d698a2ef11afbc}
+Returns {\ttfamily s} in upper case. \hypertarget{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!to\-Upper@{to\-Upper}}
+\index{to\-Upper@{to\-Upper}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{to\-Upper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf tchar} log4cplus\-::helpers\-::to\-Upper (
+\begin{DoxyParamCaption}
+\item[{tchar}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a1f1dc9f84d7ce9150439a28e0b39bad6}
+\hypertarget{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{wchar\-\_\-t const $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a16c11d76fa2abafe31072a3e76883c64}
+\hypertarget{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{std\-::wstring const \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_af33dba2b59d969e99a800319d416ffee}
+\hypertarget{namespacelog4cplus_1_1helpers_a18a76d302c9e9a7f7e50135af386f8ae}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring const\& log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{std\-::wstring \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a18a76d302c9e9a7f7e50135af386f8ae}
+\hypertarget{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}std\-::wstring log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{std\-::wstring \&\&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_a77368f05a01329131301039ec65f2e14}
+\hypertarget{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::wstring log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_a693c9e33224167abec16d98e08399993}
+\hypertarget{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!towstring@{towstring}}
+\index{towstring@{towstring}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{towstring}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} std\-::wstring log4cplus\-::helpers\-::towstring (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_aa1614cdfb05835a90b683dffaebe85f8}
+\hypertarget{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!truncate\-\_\-fractions@{truncate\-\_\-fractions}}
+\index{truncate\-\_\-fractions@{truncate\-\_\-fractions}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{truncate\-\_\-fractions}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time} log4cplus\-::helpers\-::truncate\-\_\-fractions (
+\begin{DoxyParamCaption}
+\item[{Time const \&}]{the\-\_\-time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1helpers_af13c1dfc48a42bd89348f46972fe78b6}
+
+
+References from\-\_\-time\-\_\-t(), and to\-\_\-time\-\_\-t().
+
+\hypertarget{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!write@{write}}
+\index{write@{write}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long log4cplus\-::helpers\-::write (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock, }
+\item[{const Socket\-Buffer \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_adf5c3e3ef3b2737e0dcf4dcb9cca2a41}
+
+
+Referenced by log4cplus\-::\-Device\-Appender$<$ Device $>$\-::append(), and pion\-::tcp\-::connection\-::write().
+
+\hypertarget{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!write@{write}}
+\index{write@{write}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} long log4cplus\-::helpers\-::write (
+\begin{DoxyParamCaption}
+\item[{S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E}]{sock, }
+\item[{const std\-::string \&}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1helpers_acb89fc8734cd72457defd8c9e7c85f19}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!Connector\-Thread@{Connector\-Thread}}
+\index{Connector\-Thread@{Connector\-Thread}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{Connector\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}class {\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf log4cplus\-::helpers\-::\-Connector\-Thread}}}\label{namespacelog4cplus_1_1helpers_a4e08b3a7dc0b8697a05ab70006c3cbff}
+\hypertarget{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E@{I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}}
+\index{I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E@{I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf os\-\_\-socket\-\_\-type} const log4cplus\-::helpers\-::\-I\-N\-V\-A\-L\-I\-D\-\_\-\-O\-S\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E = -\/1}}\label{namespacelog4cplus_1_1helpers_a0309d5f8b59dbb947659f53a50595de9}
+
+
+Referenced by log4cplus\-::helpers\-::socket\-\_\-holder\-::detach(), and log4cplus\-::helpers\-::socket\-\_\-holder\-::reset().
+
+\hypertarget{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}{\index{log4cplus\-::helpers@{log4cplus\-::helpers}!I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E@{I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}}
+\index{I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E@{I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}!log4cplus::helpers@{log4cplus\-::helpers}}
+\subsubsection[{I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} {\bf S\-O\-C\-K\-E\-T\-\_\-\-T\-Y\-P\-E} const log4cplus\-::helpers\-::\-I\-N\-V\-A\-L\-I\-D\-\_\-\-S\-O\-C\-K\-E\-T\-\_\-\-V\-A\-L\-U\-E}}\label{namespacelog4cplus_1_1helpers_a03901d2bf5f2a4ed622f4b1cdcb5e8a8}

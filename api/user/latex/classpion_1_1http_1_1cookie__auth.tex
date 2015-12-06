@@ -1,0 +1,280 @@
+\hypertarget{classpion_1_1http_1_1cookie__auth}{\section{pion\-:\-:http\-:\-:cookie\-\_\-auth Class Reference}
+\label{classpion_1_1http_1_1cookie__auth}\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}}
+}
+
+
+{\ttfamily \#include $<$cookie\-\_\-auth.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:cookie\-\_\-auth\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classpion_1_1http_1_1cookie__auth__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:cookie\-\_\-auth\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpion_1_1http_1_1cookie__auth__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1http_1_1cookie__auth_a769336238f9a20b74eb29be7db6e8bd3}{cookie\-\_\-auth} (\hyperlink{namespacepion_a20602680730b88b8efd08b3730d601af}{user\-\_\-manager\-\_\-ptr} user\-Manager, const std\-::string \&login=\char`\"{}/login\char`\"{}, const std\-::string \&logout=\char`\"{}/logout\char`\"{}, const std\-::string \&redirect=\char`\"{}\char`\"{})
+\item 
+virtual \hyperlink{classpion_1_1http_1_1cookie__auth_af161887edda25c1e95bae51a74dc843a}{$\sim$cookie\-\_\-auth} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classpion_1_1http_1_1cookie__auth_a585dc707d10e0e86ba33efdfc330c83a}{handle\-\_\-request} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1cookie__auth_a87eb9ebf16f524aaf672465c37299772}{set\-\_\-option} (const std\-::string \&name, const std\-::string \&value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classpion_1_1http_1_1cookie__auth_af6d045c98979589448f837899fd62a9e}{process\-\_\-login} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+void \hyperlink{classpion_1_1http_1_1cookie__auth_ae0280cc2c80137330c8c85d7a085325f}{handle\-\_\-unauthorized} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+void \hyperlink{classpion_1_1http_1_1cookie__auth_ac8bc179f19dfd34567e1bc45d1c0b7cb}{handle\-\_\-redirection} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const std\-::string \&redirection\-\_\-url, const std\-::string \&new\-\_\-cookie=\char`\"{}\char`\"{}, bool delete\-\_\-cookie=false)
+\item 
+void \hyperlink{classpion_1_1http_1_1cookie__auth_a5cd041c1fa661644fb29f98d4a5f4354}{handle\-\_\-ok} (const \hyperlink{namespacepion_1_1http_ace432b70a9459d50ff4969a7a47f0ccb}{http\-::request\-\_\-ptr} \&http\-\_\-request\-\_\-ptr, const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn, const std\-::string \&new\-\_\-cookie=\char`\"{}\char`\"{}, bool delete\-\_\-cookie=false)
+\item 
+void \hyperlink{classpion_1_1http_1_1cookie__auth_a2ed6fd5500e68795955aedd6570328f4}{expire\-\_\-cache} (const boost\-::posix\-\_\-time\-::ptime \&time\-\_\-now)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1http_1_1cookie__auth}{cookie\-\_\-auth}\-: handles H\-T\-T\-P authentication and session management in accordance with R\-F\-C 2617 (\href{http://tools.ietf.org/html/rfc2617}{\tt http\-://tools.\-ietf.\-org/html/rfc2617} ) using cookies. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1cookie__auth_a769336238f9a20b74eb29be7db6e8bd3}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!cookie\-\_\-auth@{cookie\-\_\-auth}}
+\index{cookie\-\_\-auth@{cookie\-\_\-auth}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{cookie\-\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::cookie\-\_\-auth\-::cookie\-\_\-auth (
+\begin{DoxyParamCaption}
+\item[{{\bf user\-\_\-manager\-\_\-ptr}}]{user\-Manager, }
+\item[{const std\-::string \&}]{login = {\ttfamily \char`\"{}/login\char`\"{}}, }
+\item[{const std\-::string \&}]{logout = {\ttfamily \char`\"{}/logout\char`\"{}}, }
+\item[{const std\-::string \&}]{redirect = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1cookie__auth_a769336238f9a20b74eb29be7db6e8bd3}
+default constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\-Manager} & \\
+\hline
+{\em login} & -\/ U\-R\-L resource for login request. Typical login request has format\-: \href{http://website/login?user=}{\tt http\-://website/login?user=}\char`\"{}username\char`\"{}\&pass=\char`\"{}password\char`\"{}\&url=\char`\"{}redirection\-\_\-url\char`\"{} \\
+\hline
+{\em logout} & -\/ U\-R\-L resource for logout request. Typical logout request has format\-: \href{http://website/logout?url=}{\tt http\-://website/logout?url=}\char`\"{}redirection\-\_\-url\char`\"{} \\
+\hline
+{\em redirect} & -\/ if not empty, U\-R\-L for redirection in case of authentication failure if empty -\/ send code 401 on authentication failure \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R, and pion\-::http\-::auth\-::set\-\_\-logger().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_af161887edda25c1e95bae51a74dc843a}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!$\sim$cookie\-\_\-auth@{$\sim$cookie\-\_\-auth}}
+\index{$\sim$cookie\-\_\-auth@{$\sim$cookie\-\_\-auth}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{$\sim$cookie\-\_\-auth}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::cookie\-\_\-auth\-::$\sim$cookie\-\_\-auth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1cookie__auth_af161887edda25c1e95bae51a74dc843a}
+
+
+virtual destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1cookie__auth_a2ed6fd5500e68795955aedd6570328f4}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!expire\-\_\-cache@{expire\-\_\-cache}}
+\index{expire\-\_\-cache@{expire\-\_\-cache}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{expire\-\_\-cache}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::cookie\-\_\-auth\-::expire\-\_\-cache (
+\begin{DoxyParamCaption}
+\item[{const boost\-::posix\-\_\-time\-::ptime \&}]{time\-\_\-now}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1cookie__auth_a2ed6fd5500e68795955aedd6570328f4}
+Cache expiration cleanup. (Call it periodically) 
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_a5cd041c1fa661644fb29f98d4a5f4354}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!handle\-\_\-ok@{handle\-\_\-ok}}
+\index{handle\-\_\-ok@{handle\-\_\-ok}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{handle\-\_\-ok}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::cookie\-\_\-auth\-::handle\-\_\-ok (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const std\-::string \&}]{new\-\_\-cookie = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{delete\-\_\-cookie = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1cookie__auth_a5cd041c1fa661644fb29f98d4a5f4354}
+used to send O\-K responses with new cookie
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-N\-O\-\_\-\-C\-O\-N\-T\-E\-N\-T, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-N\-O\-\_\-\-C\-O\-N\-T\-E\-N\-T.
+
+
+
+Referenced by process\-\_\-login().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_ac8bc179f19dfd34567e1bc45d1c0b7cb}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!handle\-\_\-redirection@{handle\-\_\-redirection}}
+\index{handle\-\_\-redirection@{handle\-\_\-redirection}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{handle\-\_\-redirection}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::cookie\-\_\-auth\-::handle\-\_\-redirection (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn, }
+\item[{const std\-::string \&}]{redirection\-\_\-url, }
+\item[{const std\-::string \&}]{new\-\_\-cookie = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{delete\-\_\-cookie = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1cookie__auth_ac8bc179f19dfd34567e1bc45d1c0b7cb}
+used to send redirection responses
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), pion\-::http\-::types\-::\-H\-E\-A\-D\-E\-R\-\_\-\-L\-O\-C\-A\-T\-I\-O\-N, pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-F\-O\-U\-N\-D, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-F\-O\-U\-N\-D.
+
+
+
+Referenced by handle\-\_\-unauthorized(), and process\-\_\-login().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_a585dc707d10e0e86ba33efdfc330c83a}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!handle\-\_\-request@{handle\-\_\-request}}
+\index{handle\-\_\-request@{handle\-\_\-request}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{handle\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::cookie\-\_\-auth\-::handle\-\_\-request (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1http_1_1cookie__auth_a585dc707d10e0e86ba33efdfc330c83a}
+attempts to validate authentication of a new H\-T\-T\-P request. If request valid, pointer to user identity object (if any) will be preserved in the request and return \char`\"{}true\char`\"{}. If request not authenticated, appropriate response is sent over tcp\-\_\-conn and return \char`\"{}false\char`\"{};
+
+Note\-: if request matches \char`\"{}login\char`\"{} resource, then login sequences attempted. If \char`\"{}name\char`\"{} and \char`\"{}pass\char`\"{} attributes match user definition, a random cookie is created and associated with given user session. If request contains \char`\"{}url\char`\"{} attribute, then page redirection response returned. Otherwise -\/ empty 204 response.
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if request valid and user identity inserted into request 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classpion_1_1http_1_1auth_ad59da7a2c24929b7dd4d41c5679bb8bf}{pion\-::http\-::auth}.
+
+
+
+References expire\-\_\-cache(), handle\-\_\-unauthorized(), pion\-::http\-::auth\-::need\-\_\-authentication(), and process\-\_\-login().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_ae0280cc2c80137330c8c85d7a085325f}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!handle\-\_\-unauthorized@{handle\-\_\-unauthorized}}
+\index{handle\-\_\-unauthorized@{handle\-\_\-unauthorized}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{handle\-\_\-unauthorized}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::cookie\-\_\-auth\-::handle\-\_\-unauthorized (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1cookie__auth_ae0280cc2c80137330c8c85d7a085325f}
+used to send responses when access to resource is not authorized
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::response\-\_\-writer\-::create(), pion\-::tcp\-::connection\-::finish(), handle\-\_\-redirection(), pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-C\-O\-D\-E\-\_\-\-U\-N\-A\-U\-T\-H\-O\-R\-I\-Z\-E\-D, and pion\-::http\-::types\-::\-R\-E\-S\-P\-O\-N\-S\-E\-\_\-\-M\-E\-S\-S\-A\-G\-E\-\_\-\-U\-N\-A\-U\-T\-H\-O\-R\-I\-Z\-E\-D.
+
+
+
+Referenced by handle\-\_\-request(), and process\-\_\-login().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_af6d045c98979589448f837899fd62a9e}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!process\-\_\-login@{process\-\_\-login}}
+\index{process\-\_\-login@{process\-\_\-login}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{process\-\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::http\-::cookie\-\_\-auth\-::process\-\_\-login (
+\begin{DoxyParamCaption}
+\item[{const {\bf http\-::request\-\_\-ptr} \&}]{http\-\_\-request\-\_\-ptr, }
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1http_1_1cookie__auth_af6d045c98979589448f837899fd62a9e}
+check if given request is a login/logout and process it
+
+
+\begin{DoxyParams}{Parameters}
+{\em http\-\_\-request\-\_\-ptr} & the new H\-T\-T\-P request to handle \\
+\hline
+{\em tcp\-\_\-conn} & the T\-C\-P connection that has the new request\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it was a login/logout request and no future processing required. 
+\end{DoxyReturn}
+
+
+References pion\-::algorithm\-::base64\-\_\-encode(), handle\-\_\-ok(), handle\-\_\-redirection(), handle\-\_\-unauthorized(), pion\-::http\-::auth\-::m\-\_\-user\-\_\-manager, and pion\-::http\-::server\-::strip\-\_\-trailing\-\_\-slash().
+
+
+
+Referenced by handle\-\_\-request().
+
+\hypertarget{classpion_1_1http_1_1cookie__auth_a87eb9ebf16f524aaf672465c37299772}{\index{pion\-::http\-::cookie\-\_\-auth@{pion\-::http\-::cookie\-\_\-auth}!set\-\_\-option@{set\-\_\-option}}
+\index{set\-\_\-option@{set\-\_\-option}!pion::http::cookie_auth@{pion\-::http\-::cookie\-\_\-auth}}
+\subsubsection[{set\-\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::cookie\-\_\-auth\-::set\-\_\-option (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classpion_1_1http_1_1cookie__auth_a87eb9ebf16f524aaf672465c37299772}
+sets a configuration option Valid options\-:
+\begin{DoxyItemize}
+\item \char`\"{}login\char`\"{} -\/ U\-R\-L resource for login request. Typical login request has format\-: \href{http://website/login?user=}{\tt http\-://website/login?user=}\char`\"{}username\char`\"{}\&pass=\char`\"{}password\char`\"{}\&url=\char`\"{}redirection\-\_\-url\char`\"{}
+\item \char`\"{}logout\char`\"{} -\/ U\-R\-L resource for logout request. Typical logout request has format\-: \href{http://website/logout?url=}{\tt http\-://website/logout?url=}\char`\"{}redirection\-\_\-url\char`\"{}
+\item \char`\"{}redirect\char`\"{} -\/ if not empty, U\-R\-L for redirection in case of authentication failure if empty -\/ send code 401 on authentication failure
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the option to change \\
+\hline
+{\em value} & the value of the option \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1auth_a49861152e006dc35880152ed0e7a6e92}{pion\-::http\-::auth}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{cookie__auth_8hpp}{cookie\-\_\-auth.\-hpp}\item 
+src/\hyperlink{http__cookie__auth_8cpp}{http\-\_\-cookie\-\_\-auth.\-cpp}\end{DoxyCompactItemize}

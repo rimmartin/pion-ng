@@ -1,0 +1,304 @@
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties}{\section{log4cplus\-:\-:helpers\-:\-:Properties Class Reference}
+\label{classlog4cplus_1_1helpers_1_1Properties}\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}}
+}
+
+
+{\ttfamily \#include $<$property.\-h$>$}
+
+
+
+Collaboration diagram for log4cplus\-:\-:helpers\-:\-:Properties\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classlog4cplus_1_1helpers_1_1Properties__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}{P\-Flags} \{ \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}{f\-Encoding\-Shift} = 3, 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}{f\-Encoding\-Mask} = 0x3, 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}{f\-Unspec\-Encoding} = (0 $<$$<$ f\-Encoding\-Shift)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}{Properties} ()
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}{Properties} (\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\-::tistream} \&input)
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}{Properties} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&input\-File, unsigned \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}{flags}=0)
+\item 
+virtual \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}{$\sim$\-Properties} ()
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a606da4f9114d4d087312fc78feb674a9}{exists} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_aefa7bf7a435bed2d88044ea0cfadf1c0}{exists} (\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} const $\ast$key) const 
+\item 
+std\-::size\-\_\-t \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ad8582a3c2dedabd6de88efc5c58e4a89}{size} () const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a72a8744530f061cffaa3937e4006bb91}{get\-Property} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&key) const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a939be84d862a99f845966c417cfc8936}{get\-Property} (\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} const $\ast$key) const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a5af98b2a8728940092786703f98c9f1d}{get\-Property} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&key, const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&default\-Val) const 
+\item 
+std\-::vector$<$ \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} $>$ \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a1d21656b6920f86020d495e2d6f59b89}{property\-Names} () const 
+\item 
+void \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}{set\-Property} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&key, const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&value)
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}{remove\-Property} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&key)
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties}{Properties} \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a4de21ebe41cfdbd3d3f7c7846a6a28f6}{get\-Property\-Subset} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&prefix) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ac99ba2d8e588f9f65468158cd8e52383}{get\-Int} (int \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ab2a5d2146b7bca3f04016d1f016eda17}{get\-U\-Int} (unsigned \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a6bca724ba2b39a38a8461eb10c51bde4}{get\-Long} (long \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a7b120e45f28e1d86e1a2507227cca6c4}{get\-U\-Long} (unsigned long \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a02e88c61c62a37ed44dab3dda12382f9}{get\-Bool} (bool \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\item 
+bool \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ac4ba6483e7c15a40cc3b12263ef08fc8}{get\-String} (\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&val, \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \&key) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} \hyperlink{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}{P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\-::map\\*
+$<$ \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring}, \\*
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} $>$ \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{String\-Map}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}{init} (\hyperlink{namespacelog4cplus_aa09fa8d7ec3f48e80ed15d5a1dbc38a7}{log4cplus\-::tistream} \&input)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{String\-Map} \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}{data}
+\item 
+unsigned \hyperlink{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}{flags}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1PropertyConfigurator}{log4cplus\-::\-Property\-Configurator} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!String\-Map@{String\-Map}}
+\index{String\-Map@{String\-Map}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{String\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::map$<${\bf log4cplus\-::tstring}, {\bf log4cplus\-::tstring}$>$ {\bf log4cplus\-::helpers\-::\-Properties\-::\-String\-Map}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1helpers_1_1Properties_a2e9fc9f64f8bc7de9f22021aedd25f1d}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!P\-Flags@{P\-Flags}}
+\index{P\-Flags@{P\-Flags}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{P\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf log4cplus\-::helpers\-::\-Properties\-::\-P\-Flags}}}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{f\-Encoding\-Shift@{f\-Encoding\-Shift}!log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}}\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!f\-Encoding\-Shift@{f\-Encoding\-Shift}}\item[{\em 
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}{f\-Encoding\-Shift}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c}
+}]\index{f\-Encoding\-Mask@{f\-Encoding\-Mask}!log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}}\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!f\-Encoding\-Mask@{f\-Encoding\-Mask}}\item[{\em 
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}{f\-Encoding\-Mask}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a}
+}]\index{f\-Unspec\-Encoding@{f\-Unspec\-Encoding}!log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}}\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!f\-Unspec\-Encoding@{f\-Unspec\-Encoding}}\item[{\em 
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}{f\-Unspec\-Encoding}\label{classlog4cplus_1_1helpers_1_1Properties_a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::helpers\-::\-Properties\-::\-Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1helpers_1_1Properties_aae05c822779b780b844d5f0ff32b017b}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::helpers\-::\-Properties\-::\-Properties (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::tistream} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classlog4cplus_1_1helpers_1_1Properties_a82babb86039af8233a7d6cd21de4348f}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!Properties@{Properties}}
+\index{Properties@{Properties}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{Properties}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::helpers\-::\-Properties\-::\-Properties (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{input\-File, }
+\item[{unsigned}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classlog4cplus_1_1helpers_1_1Properties_aca1c1dd5c5de7520e61f0d2ccbf30291}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!$\sim$\-Properties@{$\sim$\-Properties}}
+\index{$\sim$\-Properties@{$\sim$\-Properties}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{$\sim$\-Properties}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::helpers\-::\-Properties\-::$\sim$\-Properties (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1helpers_1_1Properties_a93d5aac3769b10c9ea740b2c5c215d8d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a606da4f9114d4d087312fc78feb674a9}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!exists@{exists}}
+\index{exists@{exists}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::exists (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a606da4f9114d4d087312fc78feb674a9}
+Tests to see if {\ttfamily key} can be found in this map. 
+
+Referenced by log4cplus\-::\-Device\-Appender$<$ Device $>$\-::\-Device\-Appender().
+
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_aefa7bf7a435bed2d88044ea0cfadf1c0}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!exists@{exists}}
+\index{exists@{exists}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::exists (
+\begin{DoxyParamCaption}
+\item[{{\bf tchar} const $\ast$}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_aefa7bf7a435bed2d88044ea0cfadf1c0}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a02e88c61c62a37ed44dab3dda12382f9}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Bool@{get\-Bool}}
+\index{get\-Bool@{get\-Bool}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-Bool (
+\begin{DoxyParamCaption}
+\item[{bool \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a02e88c61c62a37ed44dab3dda12382f9}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_ac99ba2d8e588f9f65468158cd8e52383}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Int@{get\-Int}}
+\index{get\-Int@{get\-Int}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Int}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-Int (
+\begin{DoxyParamCaption}
+\item[{int \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_ac99ba2d8e588f9f65468158cd8e52383}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a6bca724ba2b39a38a8461eb10c51bde4}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Long@{get\-Long}}
+\index{get\-Long@{get\-Long}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Long}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-Long (
+\begin{DoxyParamCaption}
+\item[{long \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a6bca724ba2b39a38a8461eb10c51bde4}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a72a8744530f061cffaa3937e4006bb91}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Property@{get\-Property}}
+\index{get\-Property@{get\-Property}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} const\& log4cplus\-::helpers\-::\-Properties\-::get\-Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a72a8744530f061cffaa3937e4006bb91}
+Searches for the property with the specified key in this property list. If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked. The method returns {\ttfamily null} if the property is not found. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_a939be84d862a99f845966c417cfc8936}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Property@{get\-Property}}
+\index{get\-Property@{get\-Property}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} const\& log4cplus\-::helpers\-::\-Properties\-::get\-Property (
+\begin{DoxyParamCaption}
+\item[{{\bf tchar} const $\ast$}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a939be84d862a99f845966c417cfc8936}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a5af98b2a8728940092786703f98c9f1d}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Property@{get\-Property}}
+\index{get\-Property@{get\-Property}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Property}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::helpers\-::\-Properties\-::get\-Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{key, }
+\item[{const {\bf log4cplus\-::tstring} \&}]{default\-Val}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a5af98b2a8728940092786703f98c9f1d}
+Searches for the property with the specified key in this property list. If the key is not found in this property list, the default property list, and its defaults, recursively, are then checked. The method returns the default value argument if the property is not found. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_a4de21ebe41cfdbd3d3f7c7846a6a28f6}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-Property\-Subset@{get\-Property\-Subset}}
+\index{get\-Property\-Subset@{get\-Property\-Subset}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-Property\-Subset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Properties} log4cplus\-::helpers\-::\-Properties\-::get\-Property\-Subset (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{prefix}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a4de21ebe41cfdbd3d3f7c7846a6a28f6}
+Returns a subset of the \char`\"{}properties\char`\"{} whose keys start with \char`\"{}prefix\char`\"{}. The returned \char`\"{}properties\char`\"{} have \char`\"{}prefix\char`\"{} trimmed from their keys. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_ac4ba6483e7c15a40cc3b12263ef08fc8}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-String@{get\-String}}
+\index{get\-String@{get\-String}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-String}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-String (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::tstring} \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_ac4ba6483e7c15a40cc3b12263ef08fc8}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_ab2a5d2146b7bca3f04016d1f016eda17}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-U\-Int@{get\-U\-Int}}
+\index{get\-U\-Int@{get\-U\-Int}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-U\-Int}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-U\-Int (
+\begin{DoxyParamCaption}
+\item[{unsigned \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_ab2a5d2146b7bca3f04016d1f016eda17}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a7b120e45f28e1d86e1a2507227cca6c4}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!get\-U\-Long@{get\-U\-Long}}
+\index{get\-U\-Long@{get\-U\-Long}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{get\-U\-Long}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::get\-U\-Long (
+\begin{DoxyParamCaption}
+\item[{unsigned long \&}]{val, }
+\item[{{\bf log4cplus\-::tstring} const \&}]{key}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a7b120e45f28e1d86e1a2507227cca6c4}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!init@{init}}
+\index{init@{init}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::helpers\-::\-Properties\-::init (
+\begin{DoxyParamCaption}
+\item[{{\bf log4cplus\-::tistream} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1helpers_1_1Properties_aaab0a3cc31361a8fc0fb08bfa9cb3dcf}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a1d21656b6920f86020d495e2d6f59b89}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!property\-Names@{property\-Names}}
+\index{property\-Names@{property\-Names}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{property\-Names}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf log4cplus\-::tstring}$>$ log4cplus\-::helpers\-::\-Properties\-::property\-Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1helpers_1_1Properties_a1d21656b6920f86020d495e2d6f59b89}
+Returns all the keys in this property list. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!remove\-Property@{remove\-Property}}
+\index{remove\-Property@{remove\-Property}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{remove\-Property}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::helpers\-::\-Properties\-::remove\-Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{key}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1helpers_1_1Properties_ab775e65a6af449c73e7a54ead00556c4}
+Removed the property index by {\ttfamily key} from this map. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!set\-Property@{set\-Property}}
+\index{set\-Property@{set\-Property}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{set\-Property}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::helpers\-::\-Properties\-::set\-Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{key, }
+\item[{const {\bf log4cplus\-::tstring} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1helpers_1_1Properties_a5771f64994bae41744a0fcad82746477}
+Inserts {\ttfamily value} into this map indexed by {\ttfamily key}. \hypertarget{classlog4cplus_1_1helpers_1_1Properties_ad8582a3c2dedabd6de88efc5c58e4a89}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!size@{size}}
+\index{size@{size}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t log4cplus\-::helpers\-::\-Properties\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlog4cplus_1_1helpers_1_1Properties_ad8582a3c2dedabd6de88efc5c58e4a89}
+Returns the number of entries in this map. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!data@{data}}
+\index{data@{data}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String\-Map} log4cplus\-::helpers\-::\-Properties\-::data\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1helpers_1_1Properties_a60cbb0e1ff347173db23c27d541da0b8}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!flags@{flags}}
+\index{flags@{flags}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned log4cplus\-::helpers\-::\-Properties\-::flags\hspace{0.3cm}{\ttfamily [protected]}}}\label{classlog4cplus_1_1helpers_1_1Properties_a421e8c2c017bceb1f21d3811a9839b00}
+\hypertarget{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}{\index{log4cplus\-::helpers\-::\-Properties@{log4cplus\-::helpers\-::\-Properties}!P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R@{P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}}
+\index{P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R@{P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}!log4cplus::helpers::Properties@{log4cplus\-::helpers\-::\-Properties}}
+\subsubsection[{P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf tchar} log4cplus\-::helpers\-::\-Properties\-::\-P\-R\-O\-P\-E\-R\-T\-I\-E\-S\-\_\-\-C\-O\-M\-M\-E\-N\-T\-\_\-\-C\-H\-A\-R\hspace{0.3cm}{\ttfamily [static]}}}\label{classlog4cplus_1_1helpers_1_1Properties_ad8750ca144fb7997867bf4d707993ba8}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/helpers/\hyperlink{property_8h}{property.\-h}\end{DoxyCompactItemize}

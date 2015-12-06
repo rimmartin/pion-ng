@@ -1,0 +1,17 @@
+<map id="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/fileappender.h" name="/home/roger/NetBeansProjects/log4cplus/include/log4cplus/fileappender.h">
+<area shape="rect" id="node2" href="$config_8hxx.html" title="log4cplus/config.hxx" alt="" coords="843,483,977,509"/>
+<area shape="rect" id="node5" href="$appender_8h.html" title="log4cplus/appender.h" alt="" coords="557,109,699,136"/>
+<area shape="rect" id="node14" href="$timehelper_8h.html" title="log4cplus/helpers/timehelper.h" alt="" coords="1417,259,1612,285"/>
+<area shape="rect" id="node27" href="$lockfile_8h.html" title="log4cplus/helpers/lockfile.h" alt="" coords="613,259,787,285"/>
+<area shape="rect" id="node28" href="$fstreams_8h.html" title="log4cplus/fstreams.h" alt="" coords="1272,333,1411,360"/>
+<area shape="rect" id="node3" href="$defines_8hxx.html" title="log4cplus/config/defines.hxx" alt="" coords="723,565,903,592"/>
+<area shape="rect" id="node4" href="$thread-config_8h.html" title="log4cplus/helpers/thread\l&#45;config.h" alt="" coords="927,558,1088,599"/>
+<area shape="rect" id="node6" href="$layout_8h.html" title="log4cplus/layout.h" alt="" coords="997,184,1120,211"/>
+<area shape="rect" id="node7" href="$loglevel_8h.html" title="log4cplus/loglevel.h" alt="" coords="812,259,945,285"/>
+<area shape="rect" id="node9" href="$tstring_8h.html" title="log4cplus/tstring.h" alt="" coords="963,333,1088,360"/>
+<area shape="rect" id="node18" href="$pointer_8h.html" title="log4cplus/helpers/pointer.h" alt="" coords="207,259,381,285"/>
+<area shape="rect" id="node25" href="$filter_8h.html" title="log4cplus/spi/filter.h" alt="" coords="507,184,641,211"/>
+<area shape="rect" id="node12" href="$streams_8h.html" title="log4cplus/streams.h" alt="" coords="1113,333,1247,360"/>
+<area shape="rect" id="node11" href="$tchar_8h.html" title="log4cplus/tchar.h" alt="" coords="1127,408,1245,435"/>
+<area shape="rect" id="node19" href="$syncprims_8h.html" title="log4cplus/thread/syncprims.h" alt="" coords="416,333,603,360"/>
+</map>

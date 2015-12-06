@@ -1,0 +1,123 @@
+\hypertarget{classpion_1_1spdy_1_1decompressor}{\section{pion\-:\-:spdy\-:\-:decompressor Class Reference}
+\label{classpion_1_1spdy_1_1decompressor}\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}}
+}
+
+
+{\ttfamily \#include $<$decompressor.\-hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818}{data\-\_\-size\-\_\-t} \{ \hyperlink{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818a44ab53316cb7bd9c9d66621b6e537e08}{M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E} = 16384
+ \}
+\begin{DoxyCompactList}\small\item\em data size constants \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1spdy_1_1decompressor_ab60b284101b5b7ffedc2fb4daab2f77d}{decompressor} ()
+\begin{DoxyCompactList}\small\item\em constructs a new decompressor object (default constructor) \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1spdy_1_1decompressor_adc518d8ec91bb78d58077f7fb661881f}{$\sim$decompressor} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classpion_1_1spdy_1_1decompressor_a9e6e8b557657365b9e30a501c9bdd00b}{decompress} (const char $\ast$compressed\-\_\-data\-\_\-ptr, boost\-::uint32\-\_\-t stream\-\_\-id, const \hyperlink{structpion_1_1spdy_1_1spdy__control__frame__info}{spdy\-\_\-control\-\_\-frame\-\_\-info} \&frame, boost\-::uint32\-\_\-t header\-\_\-block\-\_\-length)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classpion_1_1spdy_1_1decompressor_ab6c148eb985c1e016235cef3863913c8}{spdy\-\_\-decompress\-\_\-header} (const char $\ast$compressed\-\_\-data\-\_\-ptr, z\-\_\-streamp decomp, boost\-::uint32\-\_\-t length, boost\-::uint32\-\_\-t \&uncomp\-\_\-length)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\-P\-D\-Y\-Decompressor \-: Decompresses S\-P\-D\-Y frames 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818}{\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!data\-\_\-size\-\_\-t@{data\-\_\-size\-\_\-t}}
+\index{data\-\_\-size\-\_\-t@{data\-\_\-size\-\_\-t}!pion::spdy::decompressor@{pion\-::spdy\-::decompressor}}
+\subsubsection[{data\-\_\-size\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf pion\-::spdy\-::decompressor\-::data\-\_\-size\-\_\-t}}}\label{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818}
+
+
+data size constants 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}!pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}}\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}}\item[{\em 
+\hypertarget{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818a44ab53316cb7bd9c9d66621b6e537e08}{M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E}\label{classpion_1_1spdy_1_1decompressor_a9fb34f033b4d95e5f23fa9b0d03c4818a44ab53316cb7bd9c9d66621b6e537e08}
+}]maximum size of an uncompressed spdy header \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1spdy_1_1decompressor_ab60b284101b5b7ffedc2fb4daab2f77d}{\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!decompressor@{decompressor}}
+\index{decompressor@{decompressor}!pion::spdy::decompressor@{pion\-::spdy\-::decompressor}}
+\subsubsection[{decompressor}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::spdy\-::decompressor\-::decompressor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1spdy_1_1decompressor_ab60b284101b5b7ffedc2fb4daab2f77d}
+
+
+constructs a new decompressor object (default constructor) 
+
+\hypertarget{classpion_1_1spdy_1_1decompressor_adc518d8ec91bb78d58077f7fb661881f}{\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!$\sim$decompressor@{$\sim$decompressor}}
+\index{$\sim$decompressor@{$\sim$decompressor}!pion::spdy::decompressor@{pion\-::spdy\-::decompressor}}
+\subsubsection[{$\sim$decompressor}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::spdy\-::decompressor\-::$\sim$decompressor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1spdy_1_1decompressor_adc518d8ec91bb78d58077f7fb661881f}
+
+
+destructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1spdy_1_1decompressor_a9e6e8b557657365b9e30a501c9bdd00b}{\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!decompress@{decompress}}
+\index{decompress@{decompress}!pion::spdy::decompressor@{pion\-::spdy\-::decompressor}}
+\subsubsection[{decompress}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ pion\-::spdy\-::decompressor\-::decompress (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{compressed\-\_\-data\-\_\-ptr, }
+\item[{boost\-::uint32\-\_\-t}]{stream\-\_\-id, }
+\item[{const {\bf spdy\-\_\-control\-\_\-frame\-\_\-info} \&}]{frame, }
+\item[{boost\-::uint32\-\_\-t}]{header\-\_\-block\-\_\-length}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1spdy_1_1decompressor_a9e6e8b557657365b9e30a501c9bdd00b}
+decompresses the http content
+
+\begin{DoxyReturn}{Returns}
+the uncompressed string, or null on failure 
+\end{DoxyReturn}
+Get our decompressor. 
+
+References spdy\-\_\-decompress\-\_\-header(), S\-P\-D\-Y\-\_\-\-H\-E\-A\-D\-E\-R\-S, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-R\-E\-P\-L\-Y, S\-P\-D\-Y\-\_\-\-S\-Y\-N\-\_\-\-S\-T\-R\-E\-A\-M, and pion\-::spdy\-::spdy\-\_\-control\-\_\-frame\-\_\-info\-::type.
+
+\hypertarget{classpion_1_1spdy_1_1decompressor_ab6c148eb985c1e016235cef3863913c8}{\index{pion\-::spdy\-::decompressor@{pion\-::spdy\-::decompressor}!spdy\-\_\-decompress\-\_\-header@{spdy\-\_\-decompress\-\_\-header}}
+\index{spdy\-\_\-decompress\-\_\-header@{spdy\-\_\-decompress\-\_\-header}!pion::spdy::decompressor@{pion\-::spdy\-::decompressor}}
+\subsubsection[{spdy\-\_\-decompress\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::spdy\-::decompressor\-::spdy\-\_\-decompress\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{compressed\-\_\-data\-\_\-ptr, }
+\item[{z\-\_\-streamp}]{decomp, }
+\item[{boost\-::uint32\-\_\-t}]{length, }
+\item[{boost\-::uint32\-\_\-t \&}]{uncomp\-\_\-length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1spdy_1_1decompressor_ab6c148eb985c1e016235cef3863913c8}
+decompresses the spdy header
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+
+References M\-A\-X\-\_\-\-U\-N\-C\-O\-M\-P\-R\-E\-S\-S\-E\-D\-\_\-\-D\-A\-T\-A\-\_\-\-B\-U\-F\-\_\-\-S\-I\-Z\-E.
+
+
+
+Referenced by decompress().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/spdy/\hyperlink{decompressor_8hpp}{decompressor.\-hpp}\item 
+src/\hyperlink{spdy__decompressor_8cpp}{spdy\-\_\-decompressor.\-cpp}\end{DoxyCompactItemize}

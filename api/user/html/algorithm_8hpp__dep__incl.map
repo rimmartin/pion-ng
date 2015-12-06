@@ -1,0 +1,12 @@
+<map id="include/pion/algorithm.hpp" name="include/pion/algorithm.hpp">
+<area shape="rect" id="node2" href="$plugin__service_8hpp.html" title="include/pion/http/plugin\l_service.hpp" alt="" coords="13,81,167,122"/>
+<area shape="rect" id="node5" href="$algorithm_8cpp.html" title="src/algorithm.cpp" alt="" coords="192,88,312,115"/>
+<area shape="rect" id="node6" href="$http__basic__auth_8cpp.html" title="src/http_basic_auth.cpp" alt="" coords="337,88,495,115"/>
+<area shape="rect" id="node7" href="$http__cookie__auth_8cpp.html" title="src/http_cookie_auth.cpp" alt="" coords="519,88,685,115"/>
+<area shape="rect" id="node8" href="$http__parser_8cpp.html" title="src/http_parser.cpp" alt="" coords="711,88,840,115"/>
+<area shape="rect" id="node9" href="$http__server_8cpp.html" title="src/http_server.cpp" alt="" coords="865,88,995,115"/>
+<area shape="rect" id="node10" href="$http__types_8cpp.html" title="src/http_types.cpp" alt="" coords="1021,88,1147,115"/>
+<area shape="rect" id="node11" href="$spdy__parser_8cpp.html" title="src/spdy_parser.cpp" alt="" coords="1171,88,1305,115"/>
+<area shape="rect" id="node3" href="$plugin__server_8hpp.html" title="include/pion/http/plugin\l_server.hpp" alt="" coords="13,171,167,213"/>
+<area shape="rect" id="node4" href="$http__plugin__server_8cpp.html" title="src/http_plugin_server.cpp" alt="" coords="5,261,176,288"/>
+</map>

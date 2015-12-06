@@ -1,0 +1,263 @@
+\hypertarget{classlog4cplus_1_1NDC}{\section{log4cplus\-:\-:N\-D\-C Class Reference}
+\label{classlog4cplus_1_1NDC}\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}}
+}
+
+
+{\ttfamily \#include $<$ndc.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}{clear} ()
+\item 
+\hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{Diagnostic\-Context\-Stack} \hyperlink{classlog4cplus_1_1NDC_a7a41cf75e0c46a6529dbd17755c5a97b}{clone\-Stack} () const 
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{inherit} (const \hyperlink{namespacelog4cplus_ac62a7721683971c9b4f2b697aa7f03fb}{Diagnostic\-Context\-Stack} \&stack)
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{classlog4cplus_1_1NDC_a58701f2f6eb7c75963c1edd1b6d79ad9}{get} () const 
+\item 
+std\-::size\-\_\-t \hyperlink{classlog4cplus_1_1NDC_a87b46fd51e682014337868fa7a8d9257}{get\-Depth} () const 
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop} ()
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_ac5334784c1ddcc371d0140f5d97a6a1e}{pop\-\_\-void} ()
+\item 
+\hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} const \& \hyperlink{classlog4cplus_1_1NDC_a4495adedb1c656f4199b9013e2521df9}{peek} () const 
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push} (const \hyperlink{namespacelog4cplus_a3c9287f6ebcddc50355e29d71152117b}{log4cplus\-::tstring} \&message)
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_a5b4fb3774bbf66b9d8c995a57ee26feb}{push} (\hyperlink{namespacelog4cplus_a7b80b5711ae9e7a1ddd97dbaefbe3583}{tchar} const $\ast$message)
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove} ()
+\item 
+void \hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{set\-Max\-Depth} (std\-::size\-\_\-t max\-Depth)
+\item 
+\hyperlink{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}{N\-D\-C} ()
+\item 
+virtual \hyperlink{classlog4cplus_1_1NDC_a574bfc5324baa601923df750a65e5c48}{$\sim$\-N\-D\-C} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} class implements {\itshape nested diagnostic contexts} as defined by Neil Harrison in the article \char`\"{}\-Patterns for Logging
+\-Diagnostic Messages\char`\"{} part of the book {\itshape \char`\"{}\-Pattern Languages of
+\-Program Design 3\char`\"{}} edited by Martin et al.
+
+A Nested Diagnostic Context, or \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} in short, is an instrument to distinguish interleaved log output from different sources. Log output is typically interleaved when a server handles multiple clients near-\/simultaneously.
+
+Interleaved log output can still be meaningful if each log entry from different contexts had a distinctive stamp. This is where N\-D\-Cs come into play.
+
+{\itshape {\bfseries Note that N\-D\-Cs are managed on a per thread basis}}. \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} operations such as \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push}, \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop}, \hyperlink{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}{clear}, \hyperlink{classlog4cplus_1_1NDC_a87b46fd51e682014337868fa7a8d9257}{get\-Depth} and \hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{set\-Max\-Depth} affect the \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} of the {\itshape current} thread only. N\-D\-Cs of other threads remain unaffected.
+
+For example, a server can build a per client request \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} consisting the clients host name and other information contained in the the request. {\itshape Cookies} are another source of distinctive information. To build an \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} one uses the \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push} operation. Simply put,
+
+
+\begin{DoxyItemize}
+\item Contexts can be nested.
+\item When entering a context, call {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()}}. As a side effect, if there is no nested diagnostic context for the current thread, this method will create it.
+\item When leaving a context, call {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}}.
+\item When exiting a thread make sure to call {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove()}}.
+\end{DoxyItemize}
+
+There is no penalty for forgetting to match each \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()} operation with a corresponding \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}, except the obvious mismatch between the real application context and the context set in the \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C}. Use of the \hyperlink{classlog4cplus_1_1NDCContextCreator}{N\-D\-C\-Context\-Creator} class can automate this process and make your code exception-\/safe.
+
+If configured to do so, \hyperlink{classlog4cplus_1_1PatternLayout}{log4cplus\-::\-Pattern\-Layout} and \hyperlink{classlog4cplus_1_1TTCCLayout}{log4cplus\-::\-T\-T\-C\-C\-Layout} instances automatically retrieve the nested diagnostic context for the current thread without any user intervention. Hence, even if a server is serving multiple clients simultaneously, the logs emanating from the same code (belonging to the same logger) can still be distinguished because each client request will have a different \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} tag.
+
+Heavy duty systems should call the \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove} method when leaving the run method of a thread. This ensures that the memory used by the thread can be freed.
+
+A thread may inherit the nested diagnostic context of another (possibly parent) thread using the \hyperlink{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{inherit} method. A thread may obtain a copy of its \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} with the \hyperlink{classlog4cplus_1_1NDC_a7a41cf75e0c46a6529dbd17755c5a97b}{clone\-Stack} method and pass the reference to any other thread, in particular to a child. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!N\-D\-C@{N\-D\-C}}
+\index{N\-D\-C@{N\-D\-C}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{N\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::\-N\-D\-C\-::\-N\-D\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}
+\hypertarget{classlog4cplus_1_1NDC_a574bfc5324baa601923df750a65e5c48}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!$\sim$\-N\-D\-C@{$\sim$\-N\-D\-C}}
+\index{$\sim$\-N\-D\-C@{$\sim$\-N\-D\-C}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{$\sim$\-N\-D\-C}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::\-N\-D\-C\-::$\sim$\-N\-D\-C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1NDC_a574bfc5324baa601923df750a65e5c48}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!clear@{clear}}
+\index{clear@{clear}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a822956761c830e6b9c37795fc0252211}
+Clear any nested diagnostic information if any. This method is useful in cases where the same thread can be potentially used over and over in different unrelated contexts.
+
+This method is equivalent to calling the \hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{set\-Max\-Depth} method with a zero {\ttfamily max\-Depth} argument. \hypertarget{classlog4cplus_1_1NDC_a7a41cf75e0c46a6529dbd17755c5a97b}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!clone\-Stack@{clone\-Stack}}
+\index{clone\-Stack@{clone\-Stack}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{clone\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Diagnostic\-Context\-Stack} log4cplus\-::\-N\-D\-C\-::clone\-Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1NDC_a7a41cf75e0c46a6529dbd17755c5a97b}
+Clone the diagnostic context for the current thread.
+
+Internally a diagnostic context is represented as a stack. A given thread can supply the stack (i.\-e. diagnostic context) to a child thread so that the child can inherit the parent thread's diagnostic context.
+
+The child thread uses the \hyperlink{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{inherit} method to inherit the parent's diagnostic context.
+
+\begin{DoxyReturn}{Returns}
+Stack A clone of the current thread's diagnostic context. 
+\end{DoxyReturn}
+\hypertarget{classlog4cplus_1_1NDC_a58701f2f6eb7c75963c1edd1b6d79ad9}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!get@{get}}
+\index{get@{get}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} const\& log4cplus\-::\-N\-D\-C\-::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1NDC_a58701f2f6eb7c75963c1edd1b6d79ad9}
+Used when printing the diagnostic context. 
+
+Referenced by log4cplus\-::spi\-::\-Internal\-Logging\-Event\-::get\-N\-D\-C().
+
+\hypertarget{classlog4cplus_1_1NDC_a87b46fd51e682014337868fa7a8d9257}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!get\-Depth@{get\-Depth}}
+\index{get\-Depth@{get\-Depth}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{get\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t log4cplus\-::\-N\-D\-C\-::get\-Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1NDC_a87b46fd51e682014337868fa7a8d9257}
+Get the current nesting depth of this diagnostic context.
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{set\-Max\-Depth} 
+\end{DoxySeeAlso}
+\hypertarget{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!inherit@{inherit}}
+\index{inherit@{inherit}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{inherit}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::inherit (
+\begin{DoxyParamCaption}
+\item[{const {\bf Diagnostic\-Context\-Stack} \&}]{stack}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a64169c244e495627d267f8d2d1105d32}
+Inherit the diagnostic context of another thread.
+
+The parent thread can obtain a reference to its diagnostic context using the \hyperlink{classlog4cplus_1_1NDC_a7a41cf75e0c46a6529dbd17755c5a97b}{clone\-Stack} method. It should communicate this information to its child so that it may inherit the parent's diagnostic context.
+
+The parent's diagnostic context is cloned before being inherited. In other words, once inherited, the two diagnostic contexts can be managed independently.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & The diagnostic context of the parent thread. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classlog4cplus_1_1NDC_a4495adedb1c656f4199b9013e2521df9}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!peek@{peek}}
+\index{peek@{peek}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} const\& log4cplus\-::\-N\-D\-C\-::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1NDC_a4495adedb1c656f4199b9013e2521df9}
+Looks at the last diagnostic context at the top of this \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} without removing it.
+
+The returned value is the value that was pushed last. If no context is available, then the empty string is returned.
+
+\begin{DoxyReturn}{Returns}
+String The innermost diagnostic context. 
+\end{DoxyReturn}
+\hypertarget{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!pop@{pop}}
+\index{pop@{pop}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf log4cplus\-::tstring} log4cplus\-::\-N\-D\-C\-::pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}
+Clients should call this method before leaving a diagnostic context.
+
+The returned value is the value that was pushed last. If no context is available, then the empty string is returned. If each call to {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()}} is paired with a call to {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}} (even in presence of thrown exceptions), the last {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}} call frees the memory used by \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} for this thread. Otherwise, {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove()}} must be called at the end of the thread to free the memory used by \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} for the thread.
+
+\begin{DoxyReturn}{Returns}
+String The innermost diagnostic context.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1NDCContextCreator}{N\-D\-C\-Context\-Creator}, \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove()}, \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()} 
+\end{DoxySeeAlso}
+\hypertarget{classlog4cplus_1_1NDC_ac5334784c1ddcc371d0140f5d97a6a1e}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!pop\-\_\-void@{pop\-\_\-void}}
+\index{pop\-\_\-void@{pop\-\_\-void}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{pop\-\_\-void}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::pop\-\_\-void (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_ac5334784c1ddcc371d0140f5d97a6a1e}
+Same as \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()} but without the return value. \hypertarget{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!push@{push}}
+\index{push@{push}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::push (
+\begin{DoxyParamCaption}
+\item[{const {\bf log4cplus\-::tstring} \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}
+Push new diagnostic context information for the current thread.
+
+The contents of the {\ttfamily message} parameter is determined solely by the client. Each call to \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()} should be paired with a call to \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The new diagnostic context information.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1NDCContextCreator}{N\-D\-C\-Context\-Creator}, \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}, \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove()} 
+\end{DoxySeeAlso}
+\hypertarget{classlog4cplus_1_1NDC_a5b4fb3774bbf66b9d8c995a57ee26feb}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!push@{push}}
+\index{push@{push}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::push (
+\begin{DoxyParamCaption}
+\item[{{\bf tchar} const $\ast$}]{message}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a5b4fb3774bbf66b9d8c995a57ee26feb}
+\hypertarget{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!remove@{remove}}
+\index{remove@{remove}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}
+Remove the diagnostic context for this thread.
+
+Each thread that created a diagnostic context by calling \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()} should call this method before exiting. Otherwise, the memory used by the thread cannot be reclaimed. It is possible to omit this call if and only if each \hyperlink{classlog4cplus_1_1NDC_a5ce2b0d8e4c225613fdd8a642a01c992}{push()} call is always paired with a \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()} call (even in presence of thrown exceptions). Then the memory used by \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} will be returned by the last \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()} call and a call to \hyperlink{classlog4cplus_1_1NDC_a43f2d8571dc52f6dc2bd737bb3f88099}{remove()} will be no-\/op. \hypertarget{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{\index{log4cplus\-::\-N\-D\-C@{log4cplus\-::\-N\-D\-C}!set\-Max\-Depth@{set\-Max\-Depth}}
+\index{set\-Max\-Depth@{set\-Max\-Depth}!log4cplus::NDC@{log4cplus\-::\-N\-D\-C}}
+\subsubsection[{set\-Max\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::\-N\-D\-C\-::set\-Max\-Depth (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{max\-Depth}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}
+Set maximum depth of this diagnostic context. If the current depth is smaller or equal to {\ttfamily max\-Depth}, then no action is taken.
+
+This method is a convenient alternative to multiple {\ttfamily \hyperlink{classlog4cplus_1_1NDC_a3f446e2479800b222b31cf7e30628c41}{pop()}} calls. Moreover, it is often the case that at the end of complex call sequences, the depth of the \hyperlink{classlog4cplus_1_1NDC}{N\-D\-C} is unpredictable. The {\ttfamily \hyperlink{classlog4cplus_1_1NDC_af905c21dfc8a4aedb0ac46a6a66936ff}{set\-Max\-Depth()}} method circumvents this problem.
+
+For example, the combination
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} foo() \{
+    \hyperlink{classlog4cplus_1_1NDC_a8da3dcc190abd896c5f73cf1b968251f}{NDC} & ndc = \hyperlink{namespacelog4cplus_a091093fda05383d6415ed5d146bc589f}{getNDC}();
+    std::size\_t depth = ndc.getDepth();
+    \textcolor{comment}{//... complex sequence of calls}
+    ndc.setMaxDepth(depth);
+\}
+\end{DoxyCode}
+
+
+ensures that between the entry and exit of foo the depth of the diagnostic stack is conserved.
+
+\begin{DoxyNote}{Note}
+Use of the \hyperlink{classlog4cplus_1_1NDCContextCreator}{N\-D\-C\-Context\-Creator} class will solve this particular problem.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classlog4cplus_1_1NDC_a87b46fd51e682014337868fa7a8d9257}{N\-D\-C\-::get\-Depth()} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/\hyperlink{ndc_8h}{ndc.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,220 @@
+\hypertarget{logger_8hpp}{\section{include/pion/logger.hpp File Reference}
+\label{logger_8hpp}\index{include/pion/logger.\-hpp@{include/pion/logger.\-hpp}}
+}
+{\ttfamily \#include $<$pion/config.\-hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+Include dependency graph for logger.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{logger_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logger_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpion_1_1logger}{pion\-::logger}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{logger_8hpp_adb316dd84e5ca3d3ce11c77d21364ad2}{P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G}
+\item 
+\#define \hyperlink{logger_8hpp_ad345e82edaf6e2e841ccc277d3d8e26d}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C}~\{\}
+\item 
+\#define \hyperlink{logger_8hpp_a2e1718f2a774ac62a24afb4bc18b901a}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G}(F\-I\-L\-E)~\{\}
+\item 
+\#define \hyperlink{logger_8hpp_ab799921481c48386dc6d3ac8c3738f7b}{P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R}(N\-A\-M\-E)~\hyperlink{structpion_1_1logger}{pion\-::logger}(N\-A\-M\-E)
+\item 
+\#define \hyperlink{logger_8hpp_a2e0a99762d74cdb622d8a09319f7037a}{P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R}~\{\}
+\item 
+\#define \hyperlink{logger_8hpp_a3e9e6b25f12c5166af10b6f8f7f34ad7}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}(L\-O\-G)~\{ L\-O\-G.\-m\-\_\-priority = \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a36ae33c70511f0e2755ad24b009cd378}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}; \}
+\item 
+\#define \hyperlink{logger_8hpp_a0682f397d094613f17178d9109804503}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}(L\-O\-G)~\{ L\-O\-G.\-m\-\_\-priority = \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a469a91269377b34699eb188ca935dade}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}; \}
+\item 
+\#define \hyperlink{logger_8hpp_ab7b1ec36fd515d164689e45cfead8b06}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}(L\-O\-G)~\{ L\-O\-G.\-m\-\_\-priority = \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8aa53e46352ecd58083e2a70b5c37fc445}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}; \}
+\item 
+\#define \hyperlink{logger_8hpp_a361f62c32696f909200ee1b0f591ab07}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}(L\-O\-G)~\{ L\-O\-G.\-m\-\_\-priority = \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a54e5ff73e35f679b488ed307d0d1ad99}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}; \}
+\item 
+\#define \hyperlink{logger_8hpp_af0a1500451daf1eca476d1ecd54d0704}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}(L\-O\-G)~\{ L\-O\-G.\-m\-\_\-priority = \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8aa3d4b8849e02f23d00e081703280a9e7}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}; \}
+\item 
+\#define \hyperlink{logger_8hpp_aea1c8dbeb343b71abb4e548090487686}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P}(L\-O\-G)~\{ ++L\-O\-G.\-m\-\_\-priority; \}
+\item 
+\#define \hyperlink{logger_8hpp_a735afafde3e1a0b51f23f22645ead1ff}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N}(L\-O\-G)~\{ -\/-\/L\-O\-G.\-m\-\_\-priority; \}
+\item 
+\#define \hyperlink{logger_8hpp_abe19bc22ad50b995922c60501b9485d0}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}(L\-O\-G, M\-S\-G)~if (L\-O\-G.\-m\-\_\-priority $<$= \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a36ae33c70511f0e2755ad24b009cd378}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}) \{ std\-::cout $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} D\-E\-B\-U\-G \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}
+\item 
+\#define \hyperlink{logger_8hpp_a4aabb7c61208f820c8d08a6798a0cbc7}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}(L\-O\-G, M\-S\-G)~if (L\-O\-G.\-m\-\_\-priority $<$= \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a469a91269377b34699eb188ca935dade}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}) \{ std\-::cout $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} I\-N\-F\-O \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}
+\item 
+\#define \hyperlink{logger_8hpp_a0c8babdf3b347113397b33ab9538b9d4}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N}(L\-O\-G, M\-S\-G)~if (L\-O\-G.\-m\-\_\-priority $<$= \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8aa53e46352ecd58083e2a70b5c37fc445}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} W\-A\-R\-N \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}
+\item 
+\#define \hyperlink{logger_8hpp_ac5efb38d858b4fbc7b81c4d5cde876a2}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}(L\-O\-G, M\-S\-G)~if (L\-O\-G.\-m\-\_\-priority $<$= \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8a54e5ff73e35f679b488ed307d0d1ad99}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} E\-R\-R\-O\-R \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}
+\item 
+\#define \hyperlink{logger_8hpp_a99a21d74a682b3223466d23b315b6381}{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L}(L\-O\-G, M\-S\-G)~if (L\-O\-G.\-m\-\_\-priority $<$= \hyperlink{structpion_1_1logger_a028e0caa7e4d190f0bbf629cd15456b8aa3d4b8849e02f23d00e081703280a9e7}{pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} F\-A\-T\-A\-L \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{namespacepion_a0ae721a15721415f669eea72b5410bfb}{pion\-::log\-\_\-appender}
+\item 
+typedef log\-\_\-appender $\ast$ \hyperlink{namespacepion_a66164fd1ba2d2866081712f2c82300d5}{pion\-::log\-\_\-appender\-\_\-ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{logger_8hpp_ab799921481c48386dc6d3ac8c3738f7b}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R@{P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R}}
+\index{P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R@{P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf pion\-::logger}(N\-A\-M\-E)}}\label{logger_8hpp_ab799921481c48386dc6d3ac8c3738f7b}
+
+
+Referenced by pion\-::http\-::basic\-\_\-auth\-::basic\-\_\-auth(), pion\-::test\-::config\-::config(), pion\-::http\-::cookie\-\_\-auth\-::cookie\-\_\-auth(), pion\-::http\-::plugin\-\_\-server\-::plugin\-\_\-server(), pion\-::http\-::request\-\_\-reader\-::request\-\_\-reader(), pion\-::http\-::request\-\_\-writer\-::request\-\_\-writer(), pion\-::http\-::response\-\_\-reader\-::response\-\_\-reader(), pion\-::http\-::response\-\_\-writer\-::response\-\_\-writer(), and pion\-::http\-::server\-::server().
+
+\hypertarget{logger_8hpp_a2e1718f2a774ac62a24afb4bc18b901a}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G(
+\begin{DoxyParamCaption}
+\item[{}]{F\-I\-L\-E}
+\end{DoxyParamCaption}
+)~\{\}}}\label{logger_8hpp_a2e1718f2a774ac62a24afb4bc18b901a}
+\hypertarget{logger_8hpp_ad345e82edaf6e2e841ccc277d3d8e26d}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-C\-O\-N\-F\-I\-G\-\_\-\-B\-A\-S\-I\-C~\{\}}}\label{logger_8hpp_ad345e82edaf6e2e841ccc277d3d8e26d}
+
+
+Referenced by pion\-::test\-::config\-::config().
+
+\hypertarget{logger_8hpp_abe19bc22ad50b995922c60501b9485d0}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G, }
+\item[{}]{M\-S\-G}
+\end{DoxyParamCaption}
+)~if (L\-O\-G.\-m\-\_\-priority $<$= {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}) \{ std\-::cout $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} D\-E\-B\-U\-G \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}}}\label{logger_8hpp_abe19bc22ad50b995922c60501b9485d0}
+
+
+Referenced by pion\-::admin\-\_\-rights\-::admin\-\_\-rights(), pion\-::http\-::reader\-::consume\-\_\-bytes(), pion\-::http\-::server\-::handle\-\_\-request(), pion\-::http\-::request\-\_\-writer\-::handle\-\_\-write(), pion\-::http\-::response\-\_\-writer\-::handle\-\_\-write(), pion\-::http\-::parser\-::parse\-\_\-chunks(), pion\-::http\-::parser\-::parse\-\_\-headers(), pion\-::admin\-\_\-rights\-::release(), and pion\-::multi\-\_\-thread\-\_\-scheduler\-::stop\-\_\-threads().
+
+\hypertarget{logger_8hpp_ac5efb38d858b4fbc7b81c4d5cde876a2}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G, }
+\item[{}]{M\-S\-G}
+\end{DoxyParamCaption}
+)~if (L\-O\-G.\-m\-\_\-priority $<$= {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} E\-R\-R\-O\-R \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}}}\label{logger_8hpp_ac5efb38d858b4fbc7b81c4d5cde876a2}
+
+
+Referenced by pion\-::admin\-\_\-rights\-::admin\-\_\-rights(), pion\-::http\-::parser\-::finish\-\_\-header\-\_\-parsing(), pion\-::http\-::server\-::handle\-\_\-request(), pion\-::spdy\-::parser\-::parse\-\_\-header\-\_\-payload(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-goaway\-\_\-frame(), pion\-::spdy\-::parser\-::populate\-\_\-frame(), pion\-::scheduler\-::process\-\_\-service\-\_\-work(), pion\-::admin\-\_\-rights\-::release(), and pion\-::tcp\-::server\-::start().
+
+\hypertarget{logger_8hpp_a99a21d74a682b3223466d23b315b6381}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-F\-A\-T\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G, }
+\item[{}]{M\-S\-G}
+\end{DoxyParamCaption}
+)~if (L\-O\-G.\-m\-\_\-priority $<$= {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} F\-A\-T\-A\-L \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}}}\label{logger_8hpp_a99a21d74a682b3223466d23b315b6381}
+\hypertarget{logger_8hpp_a4aabb7c61208f820c8d08a6798a0cbc7}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G, }
+\item[{}]{M\-S\-G}
+\end{DoxyParamCaption}
+)~if (L\-O\-G.\-m\-\_\-priority $<$= {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}) \{ std\-::cout $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} I\-N\-F\-O \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}}}\label{logger_8hpp_a4aabb7c61208f820c8d08a6798a0cbc7}
+
+
+Referenced by pion\-::http\-::auth\-::add\-\_\-permit(), pion\-::http\-::server\-::add\-\_\-redirect(), pion\-::http\-::server\-::add\-\_\-resource(), pion\-::http\-::auth\-::add\-\_\-restrict(), pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service(), pion\-::http\-::server\-::handle\-\_\-request(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-goaway\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-ping\-\_\-frame(), pion\-::spdy\-::parser\-::parse\-\_\-spdy\-\_\-rst\-\_\-stream(), pion\-::http\-::server\-::remove\-\_\-resource(), pion\-::http\-::plugin\-\_\-server\-::set\-\_\-service\-\_\-option(), pion\-::scheduler\-::shutdown(), pion\-::tcp\-::server\-::start(), pion\-::single\-\_\-service\-\_\-scheduler\-::startup(), pion\-::one\-\_\-to\-\_\-one\-\_\-scheduler\-::startup(), and pion\-::tcp\-::server\-::stop().
+
+\hypertarget{logger_8hpp_a3e9e6b25f12c5166af10b6f8f7f34ad7}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ L\-O\-G.\-m\-\_\-priority = {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}; \}}}\label{logger_8hpp_a3e9e6b25f12c5166af10b6f8f7f34ad7}
+\hypertarget{logger_8hpp_a735afafde3e1a0b51f23f22645ead1ff}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-D\-O\-W\-N(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ -\/-\/L\-O\-G.\-m\-\_\-priority; \}}}\label{logger_8hpp_a735afafde3e1a0b51f23f22645ead1ff}
+\hypertarget{logger_8hpp_a361f62c32696f909200ee1b0f591ab07}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ L\-O\-G.\-m\-\_\-priority = {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}; \}}}\label{logger_8hpp_a361f62c32696f909200ee1b0f591ab07}
+\hypertarget{logger_8hpp_af0a1500451daf1eca476d1ecd54d0704}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ L\-O\-G.\-m\-\_\-priority = {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-F\-A\-T\-A\-L}; \}}}\label{logger_8hpp_af0a1500451daf1eca476d1ecd54d0704}
+\hypertarget{logger_8hpp_a0682f397d094613f17178d9109804503}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ L\-O\-G.\-m\-\_\-priority = {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-I\-N\-F\-O}; \}}}\label{logger_8hpp_a0682f397d094613f17178d9109804503}
+\hypertarget{logger_8hpp_aea1c8dbeb343b71abb4e548090487686}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-U\-P(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ ++L\-O\-G.\-m\-\_\-priority; \}}}\label{logger_8hpp_aea1c8dbeb343b71abb4e548090487686}
+\hypertarget{logger_8hpp_ab7b1ec36fd515d164689e45cfead8b06}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-S\-E\-T\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G}
+\end{DoxyParamCaption}
+)~\{ L\-O\-G.\-m\-\_\-priority = {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}; \}}}\label{logger_8hpp_ab7b1ec36fd515d164689e45cfead8b06}
+
+
+Referenced by pion\-::test\-::config\-::config().
+
+\hypertarget{logger_8hpp_a0c8babdf3b347113397b33ab9538b9d4}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N}}
+\index{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N@{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{L\-O\-G, }
+\item[{}]{M\-S\-G}
+\end{DoxyParamCaption}
+)~if (L\-O\-G.\-m\-\_\-priority $<$= {\bf pion\-::logger\-::\-L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N}) \{ std\-::cerr $<$$<$ time(N\-U\-L\-L) $<$$<$ \char`\"{} W\-A\-R\-N \char`\"{} $<$$<$ L\-O\-G.\-m\-\_\-name $<$$<$ ' ' $<$$<$ M\-S\-G $<$$<$ std\-::endl; \}}}\label{logger_8hpp_a0c8babdf3b347113397b33ab9538b9d4}
+
+
+Referenced by pion\-::http\-::parser\-::finish(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config(), and pion\-::http\-::parser\-::update\-\_\-message\-\_\-with\-\_\-header\-\_\-data().
+
+\hypertarget{logger_8hpp_a2e0a99762d74cdb622d8a09319f7037a}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R@{P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R}}
+\index{P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R@{P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-S\-H\-U\-T\-D\-O\-W\-N\-\_\-\-L\-O\-G\-G\-E\-R~\{\}}}\label{logger_8hpp_a2e0a99762d74cdb622d8a09319f7037a}
+\hypertarget{logger_8hpp_adb316dd84e5ca3d3ce11c77d21364ad2}{\index{logger.\-hpp@{logger.\-hpp}!P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G@{P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G}}
+\index{P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G@{P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G}!logger.hpp@{logger.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-U\-S\-E\-\_\-\-O\-S\-T\-R\-E\-A\-M\-\_\-\-L\-O\-G\-G\-I\-N\-G}}\label{logger_8hpp_adb316dd84e5ca3d3ce11c77d21364ad2}

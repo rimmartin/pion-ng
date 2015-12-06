@@ -1,0 +1,19 @@
+<map id="src/http_plugin_server.cpp" name="src/http_plugin_server.cpp">
+<area shape="rect" id="node3" href="$error_8hpp.html" title="pion/error.hpp" alt="" coords="3885,469,3984,496"/>
+<area shape="rect" id="node14" href="$plugin__server_8hpp.html" title="pion/http/plugin_server.hpp" alt="" coords="1979,88,2153,115"/>
+<area shape="rect" id="node37" href="$request_8hpp.html" title="pion/http/request.hpp" alt="" coords="1449,320,1591,347"/>
+<area shape="rect" id="node47" href="$basic__auth_8hpp.html" title="pion/http/basic_auth.hpp" alt="" coords="3461,171,3624,197"/>
+<area shape="rect" id="node48" href="$cookie__auth_8hpp.html" title="pion/http/cookie_auth.hpp" alt="" coords="3648,171,3819,197"/>
+<area shape="rect" id="node13" href="$config_8hpp.html" title="pion/config.hpp" alt="" coords="1723,552,1831,579"/>
+<area shape="rect" id="node18" href="$plugin_8hpp.html" title="pion/plugin.hpp" alt="" coords="3042,395,3149,421"/>
+<area shape="rect" id="node26" href="$plugin__manager_8hpp.html" title="pion/plugin_manager.hpp" alt="" coords="2852,320,3016,347"/>
+<area shape="rect" id="node31" href="$http_2server_8hpp.html" title="pion/http/server.hpp" alt="" coords="1483,171,1617,197"/>
+<area shape="rect" id="node45" href="$plugin__service_8hpp.html" title="pion/http/plugin_service.hpp" alt="" coords="1931,245,2112,272"/>
+<area shape="rect" id="node34" href="$tcp_2server_8hpp.html" title="pion/tcp/server.hpp" alt="" coords="1295,320,1424,347"/>
+<area shape="rect" id="node35" href="$connection_8hpp.html" title="pion/tcp/connection.hpp" alt="" coords="1109,395,1267,421"/>
+<area shape="rect" id="node43" href="$auth_8hpp.html" title="pion/http/auth.hpp" alt="" coords="2325,245,2451,272"/>
+<area shape="rect" id="node44" href="$http_2parser_8hpp.html" title="pion/http/parser.hpp" alt="" coords="1718,320,1852,347"/>
+<area shape="rect" id="node38" href="$message_8hpp.html" title="pion/http/message.hpp" alt="" coords="1434,395,1584,421"/>
+<area shape="rect" id="node42" href="$user_8hpp.html" title="pion/user.hpp" alt="" coords="2339,395,2437,421"/>
+<area shape="rect" id="node46" href="$algorithm_8hpp.html" title="pion/algorithm.hpp" alt="" coords="2187,395,2313,421"/>
+</map>

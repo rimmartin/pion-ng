@@ -1,0 +1,5 @@
+<map id="log4cplus::helpers::AppenderAttachableImpl" name="log4cplus::helpers::AppenderAttachableImpl">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1spi_1_1AppenderAttachable.html" title="log4cplus::spi::Appender\lAttachable" alt="" coords="278,5,437,46"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1thread_1_1Mutex.html" title="log4cplus::thread::\lMutex" alt="" coords="295,70,419,111"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1helpers_1_1SharedObjectPtr.html" title="log4cplus::helpers\l::SharedObjectPtr\&lt; T \&gt;" alt="" coords="5,135,160,177"/>
+</map>

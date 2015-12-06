@@ -1,0 +1,315 @@
+\hypertarget{classpion_1_1http_1_1plugin__server}{\section{pion\-:\-:http\-:\-:plugin\-\_\-server Class Reference}
+\label{classpion_1_1http_1_1plugin__server}\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}}
+}
+
+
+{\ttfamily \#include $<$plugin\-\_\-server.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:http\-:\-:plugin\-\_\-server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classpion_1_1http_1_1plugin__server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:http\-:\-:plugin\-\_\-server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classpion_1_1http_1_1plugin__server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1http_1_1plugin__server_a1a13fd90941df5f55fe031fb3e7cd112}{$\sim$plugin\-\_\-server} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1http_1_1plugin__server_a1665134bc973811e4f56d9f9824a3d2e}{plugin\-\_\-server} (const unsigned int tcp\-\_\-port=0)
+\item 
+\hyperlink{classpion_1_1http_1_1plugin__server_abeb581d6ccb5b2a2e7758fdda5f823a1}{plugin\-\_\-server} (const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+\hyperlink{classpion_1_1http_1_1plugin__server_aded4ff4815ca2b9823e0b1d2d41d5e36}{plugin\-\_\-server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const unsigned int tcp\-\_\-port=0)
+\item 
+\hyperlink{classpion_1_1http_1_1plugin__server_a31afd25acb341046ed1bb02ae7097776}{plugin\-\_\-server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+void \hyperlink{classpion_1_1http_1_1plugin__server_a03cfde741f7ab4cfd55477c138b7e222}{add\-\_\-service} (const std\-::string \&resource, \hyperlink{classpion_1_1http_1_1plugin__service}{http\-::plugin\-\_\-service} $\ast$service\-\_\-ptr)
+\item 
+void \hyperlink{classpion_1_1http_1_1plugin__server_af528e5b824fe420f2193512a3ccb204f}{load\-\_\-service} (const std\-::string \&resource, const std\-::string \&service\-\_\-name)
+\item 
+void \hyperlink{classpion_1_1http_1_1plugin__server_abc695deb661af5e24953a1a43e9b56fd}{set\-\_\-service\-\_\-option} (const std\-::string \&resource, const std\-::string \&name, const std\-::string \&value)
+\item 
+void \hyperlink{classpion_1_1http_1_1plugin__server_a5da474d4ecbc39ef8ab6ab92e4b5e526}{load\-\_\-service\-\_\-config} (const std\-::string \&config\-\_\-name)
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1plugin__server_a81c0779f8ddda5cdb6e05e1b74ec2fee}{clear} (void)
+\begin{DoxyCompactList}\small\item\em clears all the web services that are currently configured \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classpion_1_1http_1_1plugin__server_af1384c8177300053f36bc705ca0fa9bf}{before\-\_\-starting} (void)
+\begin{DoxyCompactList}\small\item\em called before the T\-C\-P server starts listening for new connections \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1http_1_1plugin__server_aacd60688763e91387f6bd885cad5acfe}{after\-\_\-stopping} (void)
+\begin{DoxyCompactList}\small\item\em called after the T\-C\-P server has stopped listening for new connections \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1http_1_1plugin__server}{plugin\-\_\-server}\-: a server that handles H\-T\-T\-P connections using \href{http::plugin_service}{\tt http\-::plugin\-\_\-service} plug-\/ins 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1http_1_1plugin__server_a1a13fd90941df5f55fe031fb3e7cd112}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!$\sim$plugin\-\_\-server@{$\sim$plugin\-\_\-server}}
+\index{$\sim$plugin\-\_\-server@{$\sim$plugin\-\_\-server}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{$\sim$plugin\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::http\-::plugin\-\_\-server\-::$\sim$plugin\-\_\-server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1plugin__server_a1a13fd90941df5f55fe031fb3e7cd112}
+
+
+default destructor 
+
+\hypertarget{classpion_1_1http_1_1plugin__server_a1665134bc973811e4f56d9f9824a3d2e}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!plugin\-\_\-server@{plugin\-\_\-server}}
+\index{plugin\-\_\-server@{plugin\-\_\-server}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{plugin\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::plugin\-\_\-server\-::plugin\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{tcp\-\_\-port = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1plugin__server_a1665134bc973811e4f56d9f9824a3d2e}
+creates a new \hyperlink{classpion_1_1http_1_1plugin__server}{plugin\-\_\-server} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1plugin__server_abeb581d6ccb5b2a2e7758fdda5f823a1}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!plugin\-\_\-server@{plugin\-\_\-server}}
+\index{plugin\-\_\-server@{plugin\-\_\-server}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{plugin\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::plugin\-\_\-server\-::plugin\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1plugin__server_abeb581d6ccb5b2a2e7758fdda5f823a1}
+creates a new \hyperlink{classpion_1_1http_1_1plugin__server}{plugin\-\_\-server} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1plugin__server_aded4ff4815ca2b9823e0b1d2d41d5e36}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!plugin\-\_\-server@{plugin\-\_\-server}}
+\index{plugin\-\_\-server@{plugin\-\_\-server}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{plugin\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::plugin\-\_\-server\-::plugin\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const unsigned int}]{tcp\-\_\-port = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}}\label{classpion_1_1http_1_1plugin__server_aded4ff4815ca2b9823e0b1d2d41d5e36}
+creates a new \hyperlink{classpion_1_1http_1_1plugin__server}{plugin\-\_\-server} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+\hypertarget{classpion_1_1http_1_1plugin__server_a31afd25acb341046ed1bb02ae7097776}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!plugin\-\_\-server@{plugin\-\_\-server}}
+\index{plugin\-\_\-server@{plugin\-\_\-server}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{plugin\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::http\-::plugin\-\_\-server\-::plugin\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1http_1_1plugin__server_a31afd25acb341046ed1bb02ae7097776}
+creates a new \hyperlink{classpion_1_1http_1_1plugin__server}{plugin\-\_\-server} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+
+
+References P\-I\-O\-N\-\_\-\-G\-E\-T\-\_\-\-L\-O\-G\-G\-E\-R.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1http_1_1plugin__server_a03cfde741f7ab4cfd55477c138b7e222}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!add\-\_\-service@{add\-\_\-service}}
+\index{add\-\_\-service@{add\-\_\-service}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{add\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource, }
+\item[{{\bf http\-::plugin\-\_\-service} $\ast$}]{service\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1plugin__server_a03cfde741f7ab4cfd55477c138b7e222}
+adds a new web service to the web server
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the resource name or uri-\/stem to bind to the web service \\
+\hline
+{\em service\-\_\-ptr} & a pointer to the web service \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::add(), pion\-::http\-::server\-::add\-\_\-resource(), pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, pion\-::http\-::plugin\-\_\-service\-::set\-\_\-resource(), and pion\-::http\-::server\-::strip\-\_\-trailing\-\_\-slash().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_aacd60688763e91387f6bd885cad5acfe}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!after\-\_\-stopping@{after\-\_\-stopping}}
+\index{after\-\_\-stopping@{after\-\_\-stopping}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{after\-\_\-stopping}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::plugin\-\_\-server\-::after\-\_\-stopping (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1plugin__server_aacd60688763e91387f6bd885cad5acfe}
+
+
+called after the T\-C\-P server has stopped listening for new connections 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1tcp_1_1server_a23766baf23b7b5be2e43da55547c3a31}{pion\-::tcp\-::server}.
+
+
+
+References pion\-::http\-::plugin\-\_\-service\-::stop().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_af1384c8177300053f36bc705ca0fa9bf}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!before\-\_\-starting@{before\-\_\-starting}}
+\index{before\-\_\-starting@{before\-\_\-starting}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{before\-\_\-starting}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::plugin\-\_\-server\-::before\-\_\-starting (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1plugin__server_af1384c8177300053f36bc705ca0fa9bf}
+
+
+called before the T\-C\-P server starts listening for new connections 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1tcp_1_1server_a814a44fc3d677071b9e2407898765316}{pion\-::tcp\-::server}.
+
+
+
+References pion\-::http\-::plugin\-\_\-service\-::start().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_a81c0779f8ddda5cdb6e05e1b74ec2fee}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!clear@{clear}}
+\index{clear@{clear}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::http\-::plugin\-\_\-server\-::clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1http_1_1plugin__server_a81c0779f8ddda5cdb6e05e1b74ec2fee}
+
+
+clears all the web services that are currently configured 
+
+
+
+Reimplemented from \hyperlink{classpion_1_1http_1_1server_af7e7f7b23f1d90d1e1e7171a33b29d7b}{pion\-::http\-::server}.
+
+
+
+References pion\-::http\-::server\-::clear().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_af528e5b824fe420f2193512a3ccb204f}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!load\-\_\-service@{load\-\_\-service}}
+\index{load\-\_\-service@{load\-\_\-service}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{load\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource, }
+\item[{const std\-::string \&}]{service\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1plugin__server_af528e5b824fe420f2193512a3ccb204f}
+loads a web service from a shared object file
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the resource name or uri-\/stem to bind to the web service \\
+\hline
+{\em service\-\_\-name} & the name of the web service to load (searches plug-\/in directories and appends extensions) \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::http\-::server\-::add\-\_\-resource(), pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::load(), pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, pion\-::http\-::plugin\-\_\-service\-::set\-\_\-resource(), and pion\-::http\-::server\-::strip\-\_\-trailing\-\_\-slash().
+
+
+
+Referenced by load\-\_\-service\-\_\-config().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_a5da474d4ecbc39ef8ab6ab92e4b5e526}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!load\-\_\-service\-\_\-config@{load\-\_\-service\-\_\-config}}
+\index{load\-\_\-service\-\_\-config@{load\-\_\-service\-\_\-config}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{load\-\_\-service\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{config\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1plugin__server_a5da474d4ecbc39ef8ab6ab92e4b5e526}
+Parses a simple web service configuration file. Each line in the file starts with one of the following commands\-:
+
+path V\-A\-L\-U\-E \-: adds a directory to the web service search path service R\-E\-S\-O\-U\-R\-C\-E F\-I\-L\-E \-: loads web service bound to R\-E\-S\-O\-U\-R\-C\-E from F\-I\-L\-E option R\-E\-S\-O\-U\-R\-C\-E N\-A\-M\-E=V\-A\-L\-U\-E \-: sets web service option N\-A\-M\-E to V\-A\-L\-U\-E
+
+Blank lines or lines that begin with \# are ignored as comments.
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\-\_\-name} & the name of the config file to parse \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::plugin\-::add\-\_\-plugin\-\_\-directory(), pion\-::diagnostic\-\_\-information(), pion\-::plugin\-::find\-\_\-config\-\_\-file(), load\-\_\-service(), pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-W\-A\-R\-N, pion\-::http\-::server\-::set\-\_\-authentication(), and set\-\_\-service\-\_\-option().
+
+\hypertarget{classpion_1_1http_1_1plugin__server_abc695deb661af5e24953a1a43e9b56fd}{\index{pion\-::http\-::plugin\-\_\-server@{pion\-::http\-::plugin\-\_\-server}!set\-\_\-service\-\_\-option@{set\-\_\-service\-\_\-option}}
+\index{set\-\_\-service\-\_\-option@{set\-\_\-service\-\_\-option}!pion::http::plugin_server@{pion\-::http\-::plugin\-\_\-server}}
+\subsubsection[{set\-\_\-service\-\_\-option}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::http\-::plugin\-\_\-server\-::set\-\_\-service\-\_\-option (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{resource, }
+\item[{const std\-::string \&}]{name, }
+\item[{const std\-::string \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1http_1_1plugin__server_abc695deb661af5e24953a1a43e9b56fd}
+sets a configuration option for the web service associated with resource
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & the resource name or uri-\/stem that identifies the web service \\
+\hline
+{\em name} & the name of the configuration option \\
+\hline
+{\em value} & the value to set the option to \\
+\hline
+\end{DoxyParams}
+
+
+References pion\-::tcp\-::server\-::m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, pion\-::plugin\-\_\-manager$<$ Plugin\-Type $>$\-::run(), pion\-::http\-::plugin\-\_\-service\-::set\-\_\-option(), and pion\-::http\-::server\-::strip\-\_\-trailing\-\_\-slash().
+
+
+
+Referenced by load\-\_\-service\-\_\-config().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/http/\hyperlink{plugin__server_8hpp}{plugin\-\_\-server.\-hpp}\item 
+src/\hyperlink{http__plugin__server_8cpp}{http\-\_\-plugin\-\_\-server.\-cpp}\end{DoxyCompactItemize}

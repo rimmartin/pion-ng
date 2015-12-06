@@ -1,0 +1,90 @@
+\hypertarget{classpion_1_1tcp_1_1timer}{\section{pion\-:\-:tcp\-:\-:timer Class Reference}
+\label{classpion_1_1tcp_1_1timer}\index{pion\-::tcp\-::timer@{pion\-::tcp\-::timer}}
+}
+
+
+{\ttfamily \#include $<$timer.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:tcp\-:\-:timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classpion_1_1tcp_1_1timer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:tcp\-:\-:timer\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classpion_1_1tcp_1_1timer__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1tcp_1_1timer_a8111536240a1ae4f3fcd0e82b407ae5b}{timer} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&conn\-\_\-ptr)
+\item 
+void \hyperlink{classpion_1_1tcp_1_1timer_a010cc63b390056d13a9924d026ae6213}{start} (const boost\-::uint32\-\_\-t seconds)
+\item 
+void \hyperlink{classpion_1_1tcp_1_1timer_aedd7c27267aecc30be218727c38135bc}{cancel} (void)
+\begin{DoxyCompactList}\small\item\em cancel the timer (operation completed) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+timer\-: helper class used to time-\/out T\-C\-P connections 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1tcp_1_1timer_a8111536240a1ae4f3fcd0e82b407ae5b}{\index{pion\-::tcp\-::timer@{pion\-::tcp\-::timer}!timer@{timer}}
+\index{timer@{timer}!pion::tcp::timer@{pion\-::tcp\-::timer}}
+\subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::timer\-::timer (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{conn\-\_\-ptr}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1timer_a8111536240a1ae4f3fcd0e82b407ae5b}
+creates a new T\-C\-P connection timer
+
+
+\begin{DoxyParams}{Parameters}
+{\em conn\-\_\-ptr} & pointer to T\-C\-P connection to monitor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1tcp_1_1timer_aedd7c27267aecc30be218727c38135bc}{\index{pion\-::tcp\-::timer@{pion\-::tcp\-::timer}!cancel@{cancel}}
+\index{cancel@{cancel}!pion::tcp::timer@{pion\-::tcp\-::timer}}
+\subsubsection[{cancel}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::timer\-::cancel (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1timer_aedd7c27267aecc30be218727c38135bc}
+
+
+cancel the timer (operation completed) 
+
+\hypertarget{classpion_1_1tcp_1_1timer_a010cc63b390056d13a9924d026ae6213}{\index{pion\-::tcp\-::timer@{pion\-::tcp\-::timer}!start@{start}}
+\index{start@{start}!pion::tcp::timer@{pion\-::tcp\-::timer}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::timer\-::start (
+\begin{DoxyParamCaption}
+\item[{const boost\-::uint32\-\_\-t}]{seconds}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1timer_a010cc63b390056d13a9924d026ae6213}
+starts a timer for closing a T\-C\-P connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & number of seconds before the timeout triggers \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/tcp/\hyperlink{timer_8hpp}{timer.\-hpp}\item 
+src/\hyperlink{tcp__timer_8cpp}{tcp\-\_\-timer.\-cpp}\end{DoxyCompactItemize}

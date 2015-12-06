@@ -1,0 +1,87 @@
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl}{\section{log4cplus\-:\-:thread\-:\-:impl Namespace Reference}
+\label{namespacelog4cplus_1_1thread_1_1impl}\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlog4cplus_1_1thread_1_1impl_1_1SharedMutex}{Shared\-Mutex}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\-\_\-value\-\_\-type}
+\item 
+typedef void($\ast$ \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a4a2c43d8790236ed72370694f70a08c2}{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type} )(void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{config_8hxx_ab13cb1a5317c245ee2ef4f2bfe0cfb2d}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void \\*
+\hyperlink{config_8hxx_a9e2009a9383c0007ef30ca204ad8b3e3}{L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N} \hyperlink{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}{syncprims\-\_\-throw\-\_\-exception} (char const $\ast$const msg, char const $\ast$const file, int line)
+\item 
+tls\-\_\-key\-\_\-type \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{tls\-\_\-init} (\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a4a2c43d8790236ed72370694f70a08c2}{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type})
+\item 
+\hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\-\_\-value\-\_\-type} \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{tls\-\_\-get\-\_\-value} (tls\-\_\-key\-\_\-type)
+\item 
+void \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{tls\-\_\-set\-\_\-value} (tls\-\_\-key\-\_\-type, \hyperlink{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{tls\-\_\-value\-\_\-type})
+\item 
+void \hyperlink{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{tls\-\_\-cleanup} (tls\-\_\-key\-\_\-type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_a4a2c43d8790236ed72370694f70a08c2}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type@{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type}}
+\index{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type@{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$  log4cplus\-::thread\-::impl\-::tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type)(void $\ast$)}}\label{namespacelog4cplus_1_1thread_1_1impl_a4a2c43d8790236ed72370694f70a08c2}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-value\-\_\-type@{tls\-\_\-value\-\_\-type}}
+\index{tls\-\_\-value\-\_\-type@{tls\-\_\-value\-\_\-type}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-value\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$ {\bf log4cplus\-::thread\-::impl\-::tls\-\_\-value\-\_\-type}}}\label{namespacelog4cplus_1_1thread_1_1impl_a7964c384af774778b462bec9cc6581ea}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!syncprims\-\_\-throw\-\_\-exception@{syncprims\-\_\-throw\-\_\-exception}}
+\index{syncprims\-\_\-throw\-\_\-exception@{syncprims\-\_\-throw\-\_\-exception}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{syncprims\-\_\-throw\-\_\-exception}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-E\-X\-P\-O\-R\-T} void {\bf L\-O\-G4\-C\-P\-L\-U\-S\-\_\-\-A\-T\-T\-R\-I\-B\-U\-T\-E\-\_\-\-N\-O\-R\-E\-T\-U\-R\-N} log4cplus\-::thread\-::impl\-::syncprims\-\_\-throw\-\_\-exception (
+\begin{DoxyParamCaption}
+\item[{char const $\ast$const}]{msg, }
+\item[{char const $\ast$const}]{file, }
+\item[{int}]{line}
+\end{DoxyParamCaption}
+)}}\label{namespacelog4cplus_1_1thread_1_1impl_ae8a0c65e304c0b6f4517d161a3fefc4c}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-cleanup@{tls\-\_\-cleanup}}
+\index{tls\-\_\-cleanup@{tls\-\_\-cleanup}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::thread\-::impl\-::tls\-\_\-cleanup (
+\begin{DoxyParamCaption}
+\item[{tls\-\_\-key\-\_\-type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1thread_1_1impl_ab1606f760355d2e28d2ed8c630521f0f}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-get\-\_\-value@{tls\-\_\-get\-\_\-value}}
+\index{tls\-\_\-get\-\_\-value@{tls\-\_\-get\-\_\-value}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-get\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tls\-\_\-value\-\_\-type} log4cplus\-::thread\-::impl\-::tls\-\_\-get\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{tls\-\_\-key\-\_\-type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1thread_1_1impl_a5bb3a0df53f5294814544c31c5af238e}
+
+
+Referenced by log4cplus\-::internal\-::get\-\_\-ptd().
+
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-init@{tls\-\_\-init}}
+\index{tls\-\_\-init@{tls\-\_\-init}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}tls\-\_\-key\-\_\-type log4cplus\-::thread\-::impl\-::tls\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{tls\-\_\-init\-\_\-cleanup\-\_\-func\-\_\-type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1thread_1_1impl_a2d9e610bc473a7dbf97926a4238be82f}
+\hypertarget{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}{\index{log4cplus\-::thread\-::impl@{log4cplus\-::thread\-::impl}!tls\-\_\-set\-\_\-value@{tls\-\_\-set\-\_\-value}}
+\index{tls\-\_\-set\-\_\-value@{tls\-\_\-set\-\_\-value}!log4cplus::thread::impl@{log4cplus\-::thread\-::impl}}
+\subsubsection[{tls\-\_\-set\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::thread\-::impl\-::tls\-\_\-set\-\_\-value (
+\begin{DoxyParamCaption}
+\item[{tls\-\_\-key\-\_\-type}]{, }
+\item[{tls\-\_\-value\-\_\-type}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{namespacelog4cplus_1_1thread_1_1impl_a425a3d17d8589296a321aa3c556c2bca}
+
+
+Referenced by log4cplus\-::internal\-::set\-\_\-ptd().
+

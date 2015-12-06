@@ -1,0 +1,124 @@
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread}{\section{log4cplus\-:\-:thread\-:\-:Abstract\-Thread Class Reference}
+\label{classlog4cplus_1_1thread_1_1AbstractThread}\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+}
+
+
+{\ttfamily \#include $<$threads.\-h$>$}
+
+
+
+Inheritance diagram for log4cplus\-:\-:thread\-:\-:Abstract\-Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classlog4cplus_1_1thread_1_1AbstractThread__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for log4cplus\-:\-:thread\-:\-:Abstract\-Thread\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classlog4cplus_1_1thread_1_1AbstractThread__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}{Abstract\-Thread} ()
+\item 
+\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}{Abstract\-Thread} (const \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\-Thread} \&)=delete
+\item 
+\hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\-Thread} \& \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_aca172f95f784af5c5efb27c51298c73a}{operator=} (const \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread}{Abstract\-Thread} \&)=delete
+\item 
+bool \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_aada9303305eddc4c0f80081e80cb7db7}{is\-Running} () const 
+\item 
+virtual void \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}{start} ()
+\item 
+void \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a99b675802f48422f34783c88346de949}{join} () const 
+\item 
+virtual void \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{run} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}{$\sim$\-Abstract\-Thread} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+There are many cross-\/platform C++ Threading libraries. The goal of this class is not to replace (or match in functionality) those libraries. The goal of this class is to provide a simple Threading class with basic functionality. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!Abstract\-Thread@{Abstract\-Thread}}
+\index{Abstract\-Thread@{Abstract\-Thread}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{Abstract\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::thread\-::\-Abstract\-Thread\-::\-Abstract\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlog4cplus_1_1thread_1_1AbstractThread_a22f5a0c5a44609886f1c42331b34bb29}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!Abstract\-Thread@{Abstract\-Thread}}
+\index{Abstract\-Thread@{Abstract\-Thread}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{Abstract\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}log4cplus\-::thread\-::\-Abstract\-Thread\-::\-Abstract\-Thread (
+\begin{DoxyParamCaption}
+\item[{const {\bf Abstract\-Thread} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1thread_1_1AbstractThread_ae47be1fb293b51c3249feec8d24d0963}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!$\sim$\-Abstract\-Thread@{$\sim$\-Abstract\-Thread}}
+\index{$\sim$\-Abstract\-Thread@{$\sim$\-Abstract\-Thread}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{$\sim$\-Abstract\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}virtual log4cplus\-::thread\-::\-Abstract\-Thread\-::$\sim$\-Abstract\-Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classlog4cplus_1_1thread_1_1AbstractThread_a4199b7599176d086fcfa764cef264b10}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_aada9303305eddc4c0f80081e80cb7db7}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!is\-Running@{is\-Running}}
+\index{is\-Running@{is\-Running}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{is\-Running}]{\setlength{\rightskip}{0pt plus 5cm}bool log4cplus\-::thread\-::\-Abstract\-Thread\-::is\-Running (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1thread_1_1AbstractThread_aada9303305eddc4c0f80081e80cb7db7}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a99b675802f48422f34783c88346de949}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!join@{join}}
+\index{join@{join}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}void log4cplus\-::thread\-::\-Abstract\-Thread\-::join (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlog4cplus_1_1thread_1_1AbstractThread_a99b675802f48422f34783c88346de949}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_aca172f95f784af5c5efb27c51298c73a}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!operator=@{operator=}}
+\index{operator=@{operator=}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Abstract\-Thread}\& log4cplus\-::thread\-::\-Abstract\-Thread\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Abstract\-Thread} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{classlog4cplus_1_1thread_1_1AbstractThread_aca172f95f784af5c5efb27c51298c73a}
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!run@{run}}
+\index{run@{run}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::thread\-::\-Abstract\-Thread\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classlog4cplus_1_1thread_1_1AbstractThread_ae5648c74ce21204d012849ca281b10b4}
+
+
+Implemented in \hyperlink{classlog4cplus_1_1helpers_1_1ConnectorThread_a1153bf634862c1d555e8d44f87df8b71}{log4cplus\-::helpers\-::\-Connector\-Thread}.
+
+\hypertarget{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}{\index{log4cplus\-::thread\-::\-Abstract\-Thread@{log4cplus\-::thread\-::\-Abstract\-Thread}!start@{start}}
+\index{start@{start}!log4cplus::thread::AbstractThread@{log4cplus\-::thread\-::\-Abstract\-Thread}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}virtual void log4cplus\-::thread\-::\-Abstract\-Thread\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlog4cplus_1_1thread_1_1AbstractThread_a37650cc367951e2c424254f3968f8349}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/roger/\-Net\-Beans\-Projects/log4cplus/include/log4cplus/thread/\hyperlink{threads_8h}{threads.\-h}\end{DoxyCompactItemize}

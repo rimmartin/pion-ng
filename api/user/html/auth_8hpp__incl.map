@@ -1,0 +1,11 @@
+<map id="include/pion/http/auth.hpp" name="include/pion/http/auth.hpp">
+<area shape="rect" id="node6" href="$config_8hpp.html" title="pion/config.hpp" alt="" coords="2245,427,2352,453"/>
+<area shape="rect" id="node7" href="$error_8hpp.html" title="pion/error.hpp" alt="" coords="1057,253,1156,280"/>
+<area shape="rect" id="node17" href="$logger_8hpp.html" title="pion/logger.hpp" alt="" coords="119,344,228,371"/>
+<area shape="rect" id="node20" href="$hash__map_8hpp.html" title="pion/hash_map.hpp" alt="" coords="1932,344,2065,371"/>
+<area shape="rect" id="node25" href="$connection_8hpp.html" title="pion/tcp/connection.hpp" alt="" coords="762,171,920,197"/>
+<area shape="rect" id="node32" href="$user_8hpp.html" title="pion/user.hpp" alt="" coords="1433,171,1532,197"/>
+<area shape="rect" id="node37" href="$request_8hpp.html" title="pion/http/request.hpp" alt="" coords="1411,88,1553,115"/>
+<area shape="rect" id="node38" href="$message_8hpp.html" title="pion/http/message.hpp" alt="" coords="2639,171,2789,197"/>
+<area shape="rect" id="node45" href="$http_2types_8hpp.html" title="pion/http/types.hpp" alt="" coords="2411,253,2540,280"/>
+</map>

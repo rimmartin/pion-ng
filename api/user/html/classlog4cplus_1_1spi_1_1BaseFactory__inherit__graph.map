@@ -1,0 +1,6 @@
+<map id="log4cplus::spi::BaseFactory" name="log4cplus::spi::BaseFactory">
+<area shape="rect" id="node2" href="$classlog4cplus_1_1spi_1_1AppenderFactory.html" title="log4cplus::spi::Appender\lFactory" alt="" coords="243,5,402,46"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1spi_1_1FilterFactory.html" title="log4cplus::spi::FilterFactory" alt="" coords="235,71,411,97"/>
+<area shape="rect" id="node4" href="$classlog4cplus_1_1spi_1_1LayoutFactory.html" title="log4cplus::spi::LayoutFactory" alt="" coords="230,121,415,148"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1spi_1_1LocaleFactory.html" title="log4cplus::spi::LocaleFactory" alt="" coords="230,172,415,199"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="log4cplus::FileAppender" name="log4cplus::FileAppender">
+<area shape="rect" id="node4" href="$classlog4cplus_1_1DailyRollingFileAppender.html" title="log4cplus::DailyRollingFile\lAppender" alt="" coords="5,246,176,287"/>
+<area shape="rect" id="node5" href="$classlog4cplus_1_1RollingFileAppender.html" title="log4cplus::RollingFileAppender" alt="" coords="200,253,397,280"/>
+<area shape="rect" id="node2" href="$classlog4cplus_1_1Appender.html" title="log4cplus::Appender" alt="" coords="126,96,263,123"/>
+<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1SharedObject.html" title="log4cplus::helpers\l::SharedObject" alt="" coords="133,6,256,47"/>
+</map>

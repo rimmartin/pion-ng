@@ -1,0 +1,69 @@
+\hypertarget{plugin_8hpp}{\section{include/pion/plugin.hpp File Reference}
+\label{plugin_8hpp}\index{include/pion/plugin.\-hpp@{include/pion/plugin.\-hpp}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$boost/noncopyable.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread/once.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/thread/mutex.\-hpp$>$}\\*
+{\ttfamily \#include $<$boost/filesystem/path.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/config.\-hpp$>$}\\*
+{\ttfamily \#include $<$pion/error.\-hpp$>$}\\*
+Include dependency graph for plugin.\-hpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{plugin_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{plugin_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1plugin}{pion\-::plugin}
+\item 
+struct \hyperlink{structpion_1_1plugin_1_1data__type}{pion\-::plugin\-::data\-\_\-type}
+\item 
+class \hyperlink{classpion_1_1plugin__ptr}{pion\-::plugin\-\_\-ptr$<$ Interface\-Class\-Type $>$}
+\item 
+class \hyperlink{classpion_1_1plugin__instance__ptr}{pion\-::plugin\-\_\-instance\-\_\-ptr$<$ Interface\-Class\-Type $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacepion}{pion}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N}(plugin\-\_\-name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}{\index{plugin.\-hpp@{plugin.\-hpp}!P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N@{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N}}
+\index{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N@{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N}!plugin.hpp@{plugin.\-hpp}}
+\subsubsection[{P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I\-O\-N\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-P\-L\-U\-G\-I\-N(
+\begin{DoxyParamCaption}
+\item[{}]{plugin\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}
+Macros to declare entry points for statically linked plugins in accordance with the general naming convention.
+
+Typical use\-: 
+\begin{DoxyCode}
+\hyperlink{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}{PION\_DECLARE\_PLUGIN}(EchoService)
+....
+\hyperlink{plugin_8hpp_aa24de1879a08dddbc32d19df5b272b0e}{PION\_DECLARE\_PLUGIN}(FileService)
+\end{DoxyCode}
+ 

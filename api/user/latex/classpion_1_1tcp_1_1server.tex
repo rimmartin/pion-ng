@@ -1,0 +1,508 @@
+\hypertarget{classpion_1_1tcp_1_1server}{\section{pion\-:\-:tcp\-:\-:server Class Reference}
+\label{classpion_1_1tcp_1_1server}\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}}
+}
+
+
+{\ttfamily \#include $<$server.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:tcp\-:\-:server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classpion_1_1tcp_1_1server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:tcp\-:\-:server\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classpion_1_1tcp_1_1server__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classpion_1_1tcp_1_1server_a728020c37ae9ec06197d01b195a24f9e}{$\sim$server} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_ad01034396caf2a31566c547d85478ea5}{start} (void)
+\begin{DoxyCompactList}\small\item\em starts listening for new connections \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_a855d4cd90004c47b924eab1fe0ffaa14}{stop} (bool wait\-\_\-until\-\_\-finished=false)
+\item 
+void \hyperlink{classpion_1_1tcp_1_1server_a50495c432f7a3441654b2d41a6f942a7}{join} (void)
+\begin{DoxyCompactList}\small\item\em the calling thread will sleep until the server has stopped listening for connections \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_a0d74cb19ac80dfc81cd92272f9f82905}{set\-\_\-ssl\-\_\-key\-\_\-file} (const std\-::string \&pem\-\_\-key\-\_\-file)
+\item 
+std\-::size\-\_\-t \hyperlink{classpion_1_1tcp_1_1server_aa56c4aebede625c3c70617552d0f08af}{get\-\_\-connections} (void) const 
+\begin{DoxyCompactList}\small\item\em returns the number of active tcp connections \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classpion_1_1tcp_1_1server_a46c1027475b8748e2a3047c7b738ef0b}{get\-\_\-port} (void) const 
+\begin{DoxyCompactList}\small\item\em returns tcp port number that the server listens for connections on \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_a392e9ede66cf2f96af52655363951e96}{set\-\_\-port} (unsigned int p)
+\begin{DoxyCompactList}\small\item\em sets tcp port number that the server listens for connections on \end{DoxyCompactList}\item 
+boost\-::asio\-::ip\-::address \hyperlink{classpion_1_1tcp_1_1server_a4ed7743219642eb5969e3599403ad99f}{get\-\_\-address} (void) const 
+\begin{DoxyCompactList}\small\item\em returns I\-P address that the server listens for connections on \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_aa711c8de12d16c2806dc5fe57bed512e}{set\-\_\-address} (const boost\-::asio\-::ip\-::address \&addr)
+\begin{DoxyCompactList}\small\item\em sets I\-P address that the server listens for connections on \end{DoxyCompactList}\item 
+const \\*
+boost\-::asio\-::ip\-::tcp\-::endpoint \& \hyperlink{classpion_1_1tcp_1_1server_adb38f532cf2c4f798c10a9273e7af436}{get\-\_\-endpoint} (void) const 
+\begin{DoxyCompactList}\small\item\em returns tcp endpoint that the server listens for connections on \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_a2f460aa6795aa6169c1b1fca5c4daa21}{set\-\_\-endpoint} (const boost\-::asio\-::ip\-::tcp\-::endpoint \&ep)
+\begin{DoxyCompactList}\small\item\em sets tcp endpoint that the server listens for connections on \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1tcp_1_1server_a90c7fd50d43652de3f283988380968bb}{get\-\_\-ssl\-\_\-flag} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the server uses S\-S\-L to encrypt connections \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_ac6bb13e1f833a39b28bff7fa71029476}{set\-\_\-ssl\-\_\-flag} (bool b=true)
+\begin{DoxyCompactList}\small\item\em sets value of S\-S\-L flag (true if the server uses S\-S\-L to encrypt connections) \end{DoxyCompactList}\item 
+\hyperlink{classpion_1_1tcp_1_1connection_a8587c35bbf48a119aa82f228e779a30e}{connection\-::ssl\-\_\-context\-\_\-type} \& \hyperlink{classpion_1_1tcp_1_1server_a11201c6b34424ff5ec11c963629281ed}{get\-\_\-ssl\-\_\-context\-\_\-type} (void)
+\begin{DoxyCompactList}\small\item\em returns the S\-S\-L context for configuration \end{DoxyCompactList}\item 
+bool \hyperlink{classpion_1_1tcp_1_1server_acf9efd8fcf78fc352744489e388b0f7c}{is\-\_\-listening} (void) const 
+\begin{DoxyCompactList}\small\item\em returns true if the server is listening for connections \end{DoxyCompactList}\item 
+void \hyperlink{classpion_1_1tcp_1_1server_abe68393818a75e45d49757532802361e}{set\-\_\-logger} (\hyperlink{structpion_1_1logger}{logger} log\-\_\-ptr)
+\begin{DoxyCompactList}\small\item\em sets the logger to be used \end{DoxyCompactList}\item 
+\hyperlink{structpion_1_1logger}{logger} \hyperlink{classpion_1_1tcp_1_1server_af038c70801875d3d6a3826eb7a80b1c3}{get\-\_\-logger} (void)
+\begin{DoxyCompactList}\small\item\em returns the logger currently in use \end{DoxyCompactList}\item 
+boost\-::asio\-::ip\-::tcp\-::acceptor \& \hyperlink{classpion_1_1tcp_1_1server_a41d5b598e52f70db5ae4302bb02370b8}{get\-\_\-acceptor} (void)
+\begin{DoxyCompactList}\small\item\em returns mutable reference to the T\-C\-P connection acceptor \end{DoxyCompactList}\item 
+const \\*
+boost\-::asio\-::ip\-::tcp\-::acceptor \& \hyperlink{classpion_1_1tcp_1_1server_a98de565795e8a1e978d21e7232990efe}{get\-\_\-acceptor} (void) const 
+\begin{DoxyCompactList}\small\item\em returns const reference to the T\-C\-P connection acceptor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1tcp_1_1server_a2129bce03fd902c051e2a4b96d6bdf49}{server} (const unsigned int tcp\-\_\-port)
+\item 
+\hyperlink{classpion_1_1tcp_1_1server_a0e08d42a00d597952109e6a739942e94}{server} (const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+\hyperlink{classpion_1_1tcp_1_1server_a1ddc1887495e6bf0b236cd424929a1eb}{server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const unsigned int tcp\-\_\-port=0)
+\item 
+\hyperlink{classpion_1_1tcp_1_1server_a1c66625024db0e229eab6d825d8fee2e}{server} (\hyperlink{classpion_1_1scheduler}{scheduler} \&sched, const boost\-::asio\-::ip\-::tcp\-::endpoint \&endpoint)
+\item 
+virtual void \hyperlink{classpion_1_1tcp_1_1server_a1e8ae789868cd0b8eb08e5c3da9b33a4}{handle\-\_\-connection} (const \hyperlink{namespacepion_1_1tcp_a6c9b7497068009f6d81d95ec0b0627d6}{tcp\-::connection\-\_\-ptr} \&tcp\-\_\-conn)
+\item 
+virtual void \hyperlink{classpion_1_1tcp_1_1server_a814a44fc3d677071b9e2407898765316}{before\-\_\-starting} (void)
+\begin{DoxyCompactList}\small\item\em called before the T\-C\-P server starts listening for new connections \end{DoxyCompactList}\item 
+virtual void \hyperlink{classpion_1_1tcp_1_1server_a23766baf23b7b5be2e43da55547c3a31}{after\-\_\-stopping} (void)
+\begin{DoxyCompactList}\small\item\em called after the T\-C\-P server has stopped listing for new connections \end{DoxyCompactList}\item 
+boost\-::asio\-::io\-\_\-service \& \hyperlink{classpion_1_1tcp_1_1server_a436e6dbcc3b128b2f9a9be6fd99421b6}{get\-\_\-io\-\_\-service} (void)
+\begin{DoxyCompactList}\small\item\em returns an async I/\-O service used to schedule work \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpion_1_1logger}{logger} \hyperlink{classpion_1_1tcp_1_1server_a0fd391b946961fca8604b902ddb06f7d}{m\-\_\-logger}
+\begin{DoxyCompactList}\small\item\em primary logging interface used by this class \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpion_1_1tcp_1_1server}{tcp\-::server}\-: a multi-\/threaded, asynchronous T\-C\-P server 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1tcp_1_1server_a728020c37ae9ec06197d01b195a24f9e}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!$\sim$server@{$\sim$server}}
+\index{$\sim$server@{$\sim$server}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{$\sim$server}]{\setlength{\rightskip}{0pt plus 5cm}virtual pion\-::tcp\-::server\-::$\sim$server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1server_a728020c37ae9ec06197d01b195a24f9e}
+
+
+default destructor 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1server_a5632ccba73177582414d649c6316362d}{pion\-::http\-::server}.
+
+\hypertarget{classpion_1_1tcp_1_1server_a2129bce03fd902c051e2a4b96d6bdf49}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!server@{server}}
+\index{server@{server}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{const unsigned int}]{tcp\-\_\-port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a2129bce03fd902c051e2a4b96d6bdf49}
+protected constructor so that only derived objects may be created
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1tcp_1_1server_a0e08d42a00d597952109e6a739942e94}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!server@{server}}
+\index{server@{server}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a0e08d42a00d597952109e6a739942e94}
+protected constructor so that only derived objects may be created
+
+
+\begin{DoxyParams}{Parameters}
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1tcp_1_1server_a1ddc1887495e6bf0b236cd424929a1eb}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!server@{server}}
+\index{server@{server}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const unsigned int}]{tcp\-\_\-port = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a1ddc1887495e6bf0b236cd424929a1eb}
+protected constructor so that only derived objects may be created
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em tcp\-\_\-port} & port number used to listen for new connections (I\-Pv4) \\
+\hline
+\end{DoxyParams}
+\hypertarget{classpion_1_1tcp_1_1server_a1c66625024db0e229eab6d825d8fee2e}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!server@{server}}
+\index{server@{server}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::tcp\-::server\-::server (
+\begin{DoxyParamCaption}
+\item[{{\bf scheduler} \&}]{sched, }
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{endpoint}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a1c66625024db0e229eab6d825d8fee2e}
+protected constructor so that only derived objects may be created
+
+
+\begin{DoxyParams}{Parameters}
+{\em sched} & the scheduler that will be used to manage worker threads \\
+\hline
+{\em endpoint} & T\-C\-P endpoint used to listen for new connections (see A\-S\-I\-O docs) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1tcp_1_1server_a23766baf23b7b5be2e43da55547c3a31}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!after\-\_\-stopping@{after\-\_\-stopping}}
+\index{after\-\_\-stopping@{after\-\_\-stopping}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{after\-\_\-stopping}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::tcp\-::server\-::after\-\_\-stopping (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1server_a23766baf23b7b5be2e43da55547c3a31}
+
+
+called after the T\-C\-P server has stopped listing for new connections 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1plugin__server_aacd60688763e91387f6bd885cad5acfe}{pion\-::http\-::plugin\-\_\-server}.
+
+
+
+Referenced by stop().
+
+\hypertarget{classpion_1_1tcp_1_1server_a814a44fc3d677071b9e2407898765316}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!before\-\_\-starting@{before\-\_\-starting}}
+\index{before\-\_\-starting@{before\-\_\-starting}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{before\-\_\-starting}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::tcp\-::server\-::before\-\_\-starting (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1server_a814a44fc3d677071b9e2407898765316}
+
+
+called before the T\-C\-P server starts listening for new connections 
+
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1plugin__server_af1384c8177300053f36bc705ca0fa9bf}{pion\-::http\-::plugin\-\_\-server}.
+
+
+
+Referenced by start().
+
+\hypertarget{classpion_1_1tcp_1_1server_a41d5b598e52f70db5ae4302bb02370b8}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-acceptor@{get\-\_\-acceptor}}
+\index{get\-\_\-acceptor@{get\-\_\-acceptor}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-acceptor}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::ip\-::tcp\-::acceptor\& pion\-::tcp\-::server\-::get\-\_\-acceptor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a41d5b598e52f70db5ae4302bb02370b8}
+
+
+returns mutable reference to the T\-C\-P connection acceptor 
+
+\hypertarget{classpion_1_1tcp_1_1server_a98de565795e8a1e978d21e7232990efe}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-acceptor@{get\-\_\-acceptor}}
+\index{get\-\_\-acceptor@{get\-\_\-acceptor}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-acceptor}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::asio\-::ip\-::tcp\-::acceptor\& pion\-::tcp\-::server\-::get\-\_\-acceptor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a98de565795e8a1e978d21e7232990efe}
+
+
+returns const reference to the T\-C\-P connection acceptor 
+
+\hypertarget{classpion_1_1tcp_1_1server_a4ed7743219642eb5969e3599403ad99f}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-address@{get\-\_\-address}}
+\index{get\-\_\-address@{get\-\_\-address}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::ip\-::address pion\-::tcp\-::server\-::get\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a4ed7743219642eb5969e3599403ad99f}
+
+
+returns I\-P address that the server listens for connections on 
+
+\hypertarget{classpion_1_1tcp_1_1server_aa56c4aebede625c3c70617552d0f08af}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-connections@{get\-\_\-connections}}
+\index{get\-\_\-connections@{get\-\_\-connections}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t pion\-::tcp\-::server\-::get\-\_\-connections (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classpion_1_1tcp_1_1server_aa56c4aebede625c3c70617552d0f08af}
+
+
+returns the number of active tcp connections 
+
+\hypertarget{classpion_1_1tcp_1_1server_adb38f532cf2c4f798c10a9273e7af436}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-endpoint@{get\-\_\-endpoint}}
+\index{get\-\_\-endpoint@{get\-\_\-endpoint}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-endpoint}]{\setlength{\rightskip}{0pt plus 5cm}const boost\-::asio\-::ip\-::tcp\-::endpoint\& pion\-::tcp\-::server\-::get\-\_\-endpoint (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_adb38f532cf2c4f798c10a9273e7af436}
+
+
+returns tcp endpoint that the server listens for connections on 
+
+\hypertarget{classpion_1_1tcp_1_1server_a436e6dbcc3b128b2f9a9be6fd99421b6}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}}
+\index{get\-\_\-io\-\_\-service@{get\-\_\-io\-\_\-service}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-io\-\_\-service}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::asio\-::io\-\_\-service\& pion\-::tcp\-::server\-::get\-\_\-io\-\_\-service (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a436e6dbcc3b128b2f9a9be6fd99421b6}
+
+
+returns an async I/\-O service used to schedule work 
+
+\hypertarget{classpion_1_1tcp_1_1server_af038c70801875d3d6a3826eb7a80b1c3}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-logger@{get\-\_\-logger}}
+\index{get\-\_\-logger@{get\-\_\-logger}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} pion\-::tcp\-::server\-::get\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_af038c70801875d3d6a3826eb7a80b1c3}
+
+
+returns the logger currently in use 
+
+\hypertarget{classpion_1_1tcp_1_1server_a46c1027475b8748e2a3047c7b738ef0b}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-port@{get\-\_\-port}}
+\index{get\-\_\-port@{get\-\_\-port}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int pion\-::tcp\-::server\-::get\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a46c1027475b8748e2a3047c7b738ef0b}
+
+
+returns tcp port number that the server listens for connections on 
+
+
+
+Referenced by pion\-::http\-::server\-::handle\-\_\-request(), start(), and stop().
+
+\hypertarget{classpion_1_1tcp_1_1server_a11201c6b34424ff5ec11c963629281ed}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-ssl\-\_\-context\-\_\-type@{get\-\_\-ssl\-\_\-context\-\_\-type}}
+\index{get\-\_\-ssl\-\_\-context\-\_\-type@{get\-\_\-ssl\-\_\-context\-\_\-type}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-ssl\-\_\-context\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf connection\-::ssl\-\_\-context\-\_\-type}\& pion\-::tcp\-::server\-::get\-\_\-ssl\-\_\-context\-\_\-type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a11201c6b34424ff5ec11c963629281ed}
+
+
+returns the S\-S\-L context for configuration 
+
+\hypertarget{classpion_1_1tcp_1_1server_a90c7fd50d43652de3f283988380968bb}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!get\-\_\-ssl\-\_\-flag@{get\-\_\-ssl\-\_\-flag}}
+\index{get\-\_\-ssl\-\_\-flag@{get\-\_\-ssl\-\_\-flag}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{get\-\_\-ssl\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::tcp\-::server\-::get\-\_\-ssl\-\_\-flag (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a90c7fd50d43652de3f283988380968bb}
+
+
+returns true if the server uses S\-S\-L to encrypt connections 
+
+\hypertarget{classpion_1_1tcp_1_1server_a1e8ae789868cd0b8eb08e5c3da9b33a4}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!handle\-\_\-connection@{handle\-\_\-connection}}
+\index{handle\-\_\-connection@{handle\-\_\-connection}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{handle\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}virtual void pion\-::tcp\-::server\-::handle\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{const {\bf tcp\-::connection\-\_\-ptr} \&}]{tcp\-\_\-conn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classpion_1_1tcp_1_1server_a1e8ae789868cd0b8eb08e5c3da9b33a4}
+handles a new T\-C\-P connection; derived classes S\-H\-O\-U\-L\-D override this since the default behavior does nothing
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcp\-\_\-conn} & the new T\-C\-P connection to handle \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classpion_1_1http_1_1server_a7f15a7abd45216a7e03e3f3b5c0b83c1}{pion\-::http\-::server}.
+
+
+
+References pion\-::tcp\-::connection\-::\-L\-I\-F\-E\-C\-Y\-C\-L\-E\-\_\-\-C\-L\-O\-S\-E.
+
+\hypertarget{classpion_1_1tcp_1_1server_acf9efd8fcf78fc352744489e388b0f7c}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!is\-\_\-listening@{is\-\_\-listening}}
+\index{is\-\_\-listening@{is\-\_\-listening}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{is\-\_\-listening}]{\setlength{\rightskip}{0pt plus 5cm}bool pion\-::tcp\-::server\-::is\-\_\-listening (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_acf9efd8fcf78fc352744489e388b0f7c}
+
+
+returns true if the server is listening for connections 
+
+\hypertarget{classpion_1_1tcp_1_1server_a50495c432f7a3441654b2d41a6f942a7}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!join@{join}}
+\index{join@{join}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{join}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::join (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1server_a50495c432f7a3441654b2d41a6f942a7}
+
+
+the calling thread will sleep until the server has stopped listening for connections 
+
+\hypertarget{classpion_1_1tcp_1_1server_aa711c8de12d16c2806dc5fe57bed512e}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-address@{set\-\_\-address}}
+\index{set\-\_\-address@{set\-\_\-address}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::address \&}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_aa711c8de12d16c2806dc5fe57bed512e}
+
+
+sets I\-P address that the server listens for connections on 
+
+\hypertarget{classpion_1_1tcp_1_1server_a2f460aa6795aa6169c1b1fca5c4daa21}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-endpoint@{set\-\_\-endpoint}}
+\index{set\-\_\-endpoint@{set\-\_\-endpoint}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-endpoint}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-endpoint (
+\begin{DoxyParamCaption}
+\item[{const boost\-::asio\-::ip\-::tcp\-::endpoint \&}]{ep}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a2f460aa6795aa6169c1b1fca5c4daa21}
+
+
+sets tcp endpoint that the server listens for connections on 
+
+\hypertarget{classpion_1_1tcp_1_1server_abe68393818a75e45d49757532802361e}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-logger@{set\-\_\-logger}}
+\index{set\-\_\-logger@{set\-\_\-logger}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-logger (
+\begin{DoxyParamCaption}
+\item[{{\bf logger}}]{log\-\_\-ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_abe68393818a75e45d49757532802361e}
+
+
+sets the logger to be used 
+
+\hypertarget{classpion_1_1tcp_1_1server_a392e9ede66cf2f96af52655363951e96}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-port@{set\-\_\-port}}
+\index{set\-\_\-port@{set\-\_\-port}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_a392e9ede66cf2f96af52655363951e96}
+
+
+sets tcp port number that the server listens for connections on 
+
+\hypertarget{classpion_1_1tcp_1_1server_ac6bb13e1f833a39b28bff7fa71029476}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-ssl\-\_\-flag@{set\-\_\-ssl\-\_\-flag}}
+\index{set\-\_\-ssl\-\_\-flag@{set\-\_\-ssl\-\_\-flag}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-ssl\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-ssl\-\_\-flag (
+\begin{DoxyParamCaption}
+\item[{bool}]{b = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1tcp_1_1server_ac6bb13e1f833a39b28bff7fa71029476}
+
+
+sets value of S\-S\-L flag (true if the server uses S\-S\-L to encrypt connections) 
+
+
+
+Referenced by set\-\_\-ssl\-\_\-key\-\_\-file().
+
+\hypertarget{classpion_1_1tcp_1_1server_a0d74cb19ac80dfc81cd92272f9f82905}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!set\-\_\-ssl\-\_\-key\-\_\-file@{set\-\_\-ssl\-\_\-key\-\_\-file}}
+\index{set\-\_\-ssl\-\_\-key\-\_\-file@{set\-\_\-ssl\-\_\-key\-\_\-file}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{set\-\_\-ssl\-\_\-key\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::set\-\_\-ssl\-\_\-key\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{pem\-\_\-key\-\_\-file}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1server_a0d74cb19ac80dfc81cd92272f9f82905}
+configures server for S\-S\-L using a P\-E\-M-\/encoded R\-S\-A private key file
+
+
+\begin{DoxyParams}{Parameters}
+{\em pem\-\_\-key\-\_\-file} & name of the file containing a P\-E\-M-\/encoded private key \\
+\hline
+\end{DoxyParams}
+
+
+References set\-\_\-ssl\-\_\-flag().
+
+\hypertarget{classpion_1_1tcp_1_1server_ad01034396caf2a31566c547d85478ea5}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!start@{start}}
+\index{start@{start}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::start (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1server_ad01034396caf2a31566c547d85478ea5}
+
+
+starts listening for new connections 
+
+
+
+References pion\-::scheduler\-::add\-\_\-active\-\_\-user(), before\-\_\-starting(), get\-\_\-port(), m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R, and P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O.
+
+\hypertarget{classpion_1_1tcp_1_1server_a855d4cd90004c47b924eab1fe0ffaa14}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!stop@{stop}}
+\index{stop@{stop}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::tcp\-::server\-::stop (
+\begin{DoxyParamCaption}
+\item[{bool}]{wait\-\_\-until\-\_\-finished = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classpion_1_1tcp_1_1server_a855d4cd90004c47b924eab1fe0ffaa14}
+stops listening for new connections
+
+
+\begin{DoxyParams}{Parameters}
+{\em wait\-\_\-until\-\_\-finished} & if true, blocks until all pending connections have closed \\
+\hline
+\end{DoxyParams}
+
+
+References after\-\_\-stopping(), pion\-::tcp\-::connection\-::close(), get\-\_\-port(), m\-\_\-logger, P\-I\-O\-N\-\_\-\-L\-O\-G\-\_\-\-I\-N\-F\-O, pion\-::scheduler\-::remove\-\_\-active\-\_\-user(), and pion\-::scheduler\-::sleep().
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classpion_1_1tcp_1_1server_a0fd391b946961fca8604b902ddb06f7d}{\index{pion\-::tcp\-::server@{pion\-::tcp\-::server}!m\-\_\-logger@{m\-\_\-logger}}
+\index{m\-\_\-logger@{m\-\_\-logger}!pion::tcp::server@{pion\-::tcp\-::server}}
+\subsubsection[{m\-\_\-logger}]{\setlength{\rightskip}{0pt plus 5cm}{\bf logger} pion\-::tcp\-::server\-::m\-\_\-logger\hspace{0.3cm}{\ttfamily [protected]}}}\label{classpion_1_1tcp_1_1server_a0fd391b946961fca8604b902ddb06f7d}
+
+
+primary logging interface used by this class 
+
+
+
+Referenced by pion\-::http\-::server\-::add\-\_\-redirect(), pion\-::http\-::server\-::add\-\_\-resource(), pion\-::http\-::plugin\-\_\-server\-::add\-\_\-service(), pion\-::http\-::server\-::handle\-\_\-request(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service(), pion\-::http\-::plugin\-\_\-server\-::load\-\_\-service\-\_\-config(), pion\-::http\-::server\-::remove\-\_\-resource(), pion\-::http\-::plugin\-\_\-server\-::set\-\_\-service\-\_\-option(), start(), and stop().
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/tcp/\hyperlink{tcp_2server_8hpp}{server.\-hpp}\item 
+src/\hyperlink{tcp__server_8cpp}{tcp\-\_\-server.\-cpp}\end{DoxyCompactItemize}

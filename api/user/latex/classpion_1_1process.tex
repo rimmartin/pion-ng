@@ -1,0 +1,163 @@
+\hypertarget{classpion_1_1process}{\section{pion\-:\-:process Class Reference}
+\label{classpion_1_1process}\index{pion\-::process@{pion\-::process}}
+}
+
+
+{\ttfamily \#include $<$process.\-hpp$>$}
+
+
+
+Inheritance diagram for pion\-:\-:process\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classpion_1_1process__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pion\-:\-:process\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{classpion_1_1process__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpion_1_1process_1_1config__type}{config\-\_\-type}
+\begin{DoxyCompactList}\small\item\em data type for static/global process configuration information \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpion_1_1process_a3a22ab2acbed153003375aba7c336b47}{$\sim$process} ()
+\item 
+\hyperlink{classpion_1_1process_a75bde31b3d1651f92705ae06eda36917}{process} (void)
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classpion_1_1process_aed3145650f11fcea4e968efc55127aba}{shutdown} (void)
+\begin{DoxyCompactList}\small\item\em signals the shutdown condition \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1process_a0141a4c774af4e4e605230c277cfa4f7}{wait\-\_\-for\-\_\-shutdown} (void)
+\begin{DoxyCompactList}\small\item\em blocks until the shutdown condition has been signaled \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1process_af6bf25c64faa04c8dba9cb215201d50e}{initialize} (void)
+\begin{DoxyCompactList}\small\item\em sets up basic signal handling for the process \end{DoxyCompactList}\item 
+static void \hyperlink{classpion_1_1process_af944a4e1fc8b6e4c1d8b4d8be52d1a8b}{daemonize} (void)
+\begin{DoxyCompactList}\small\item\em fork process and run as a background daemon \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structpion_1_1process_1_1config__type}{config\-\_\-type} \& \hyperlink{classpion_1_1process_ae3a984eb1083aa0d3d45af1f96e90a29}{get\-\_\-config} (void)
+\begin{DoxyCompactList}\small\item\em returns a singleton instance of \hyperlink{structpion_1_1process_1_1config__type}{config\-\_\-type} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+process\-: class for managing process/service related functions 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpion_1_1process_a3a22ab2acbed153003375aba7c336b47}{\index{pion\-::process@{pion\-::process}!$\sim$process@{$\sim$process}}
+\index{$\sim$process@{$\sim$process}!pion::process@{pion\-::process}}
+\subsubsection[{$\sim$process}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::process\-::$\sim$process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1process_a3a22ab2acbed153003375aba7c336b47}
+\hypertarget{classpion_1_1process_a75bde31b3d1651f92705ae06eda36917}{\index{pion\-::process@{pion\-::process}!process@{process}}
+\index{process@{process}!pion::process@{pion\-::process}}
+\subsubsection[{process}]{\setlength{\rightskip}{0pt plus 5cm}pion\-::process\-::process (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classpion_1_1process_a75bde31b3d1651f92705ae06eda36917}
+
+
+default constructor 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpion_1_1process_af944a4e1fc8b6e4c1d8b4d8be52d1a8b}{\index{pion\-::process@{pion\-::process}!daemonize@{daemonize}}
+\index{daemonize@{daemonize}!pion::process@{pion\-::process}}
+\subsubsection[{daemonize}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::process\-::daemonize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1process_af944a4e1fc8b6e4c1d8b4d8be52d1a8b}
+
+
+fork process and run as a background daemon 
+
+\hypertarget{classpion_1_1process_ae3a984eb1083aa0d3d45af1f96e90a29}{\index{pion\-::process@{pion\-::process}!get\-\_\-config@{get\-\_\-config}}
+\index{get\-\_\-config@{get\-\_\-config}!pion::process@{pion\-::process}}
+\subsubsection[{get\-\_\-config}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf config\-\_\-type}\& pion\-::process\-::get\-\_\-config (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}}\label{classpion_1_1process_ae3a984eb1083aa0d3d45af1f96e90a29}
+
+
+returns a singleton instance of \hyperlink{structpion_1_1process_1_1config__type}{config\-\_\-type} 
+
+
+
+Referenced by shutdown(), and wait\-\_\-for\-\_\-shutdown().
+
+\hypertarget{classpion_1_1process_af6bf25c64faa04c8dba9cb215201d50e}{\index{pion\-::process@{pion\-::process}!initialize@{initialize}}
+\index{initialize@{initialize}!pion::process@{pion\-::process}}
+\subsubsection[{initialize}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::process\-::initialize (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1process_af6bf25c64faa04c8dba9cb215201d50e}
+
+
+sets up basic signal handling for the process 
+
+
+
+References pion\-::handle\-\_\-signal().
+
+\hypertarget{classpion_1_1process_aed3145650f11fcea4e968efc55127aba}{\index{pion\-::process@{pion\-::process}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!pion::process@{pion\-::process}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::process\-::shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1process_aed3145650f11fcea4e968efc55127aba}
+
+
+signals the shutdown condition 
+
+
+
+References get\-\_\-config(), pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-cond, pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-mutex, and pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-now.
+
+
+
+Referenced by pion\-::handle\-\_\-signal().
+
+\hypertarget{classpion_1_1process_a0141a4c774af4e4e605230c277cfa4f7}{\index{pion\-::process@{pion\-::process}!wait\-\_\-for\-\_\-shutdown@{wait\-\_\-for\-\_\-shutdown}}
+\index{wait\-\_\-for\-\_\-shutdown@{wait\-\_\-for\-\_\-shutdown}!pion::process@{pion\-::process}}
+\subsubsection[{wait\-\_\-for\-\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void pion\-::process\-::wait\-\_\-for\-\_\-shutdown (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classpion_1_1process_a0141a4c774af4e4e605230c277cfa4f7}
+
+
+blocks until the shutdown condition has been signaled 
+
+
+
+References get\-\_\-config(), pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-cond, pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-mutex, and pion\-::process\-::config\-\_\-type\-::shutdown\-\_\-now.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/pion/\hyperlink{process_8hpp}{process.\-hpp}\item 
+src/\hyperlink{process_8cpp}{process.\-cpp}\end{DoxyCompactItemize}

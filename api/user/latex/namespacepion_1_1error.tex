@@ -1,0 +1,102 @@
+\hypertarget{namespacepion_1_1error}{\section{pion\-:\-:error Namespace Reference}
+\label{namespacepion_1_1error}\index{pion\-::error@{pion\-::error}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classpion_1_1error_1_1bad__arg}{bad\-\_\-arg}
+\begin{DoxyCompactList}\small\item\em exception thrown for an invalid configuration argument or option \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1bad__config}{bad\-\_\-config}
+\begin{DoxyCompactList}\small\item\em exception thrown if there is an error parsing a configuration file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1open__file}{open\-\_\-file}
+\begin{DoxyCompactList}\small\item\em exception thrown if we failed to open a file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1open__plugin}{open\-\_\-plugin}
+\begin{DoxyCompactList}\small\item\em exception thrown if we are unable to open a plugin \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1read__file}{read\-\_\-file}
+\begin{DoxyCompactList}\small\item\em exception thrown if we failed to read data from a file \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1file__not__found}{file\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a file is not found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1directory__not__found}{directory\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a required directory is not found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__not__found}{plugin\-\_\-not\-\_\-found}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin cannot be found \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1duplicate__plugin}{duplicate\-\_\-plugin}
+\begin{DoxyCompactList}\small\item\em exception thrown if we try to add or load a duplicate plugin \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__missing__symbol}{plugin\-\_\-missing\-\_\-symbol}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin is missing a required symbol \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1plugin__undefined}{plugin\-\_\-undefined}
+\begin{DoxyCompactList}\small\item\em exception thrown if a plugin has an undefined state \end{DoxyCompactList}\item 
+class \hyperlink{classpion_1_1error_1_1bad__password__hash}{bad\-\_\-password\-\_\-hash}
+\begin{DoxyCompactList}\small\item\em exception thrown if a bad password hash is provided \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-arg\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a5ee8b972a03980d77e8abf0c12349449}{errinfo\-\_\-message}
+\begin{DoxyCompactList}\small\item\em generic error message \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-arg\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a490aee146b33a07ff0cf1054379633cf}{errinfo\-\_\-arg\-\_\-name}
+\begin{DoxyCompactList}\small\item\em name of an unrecognized configuration argument or option \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-file\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a5526ef1c3e6ab8db270a0d49a66a5782}{errinfo\-\_\-file\-\_\-name}
+\begin{DoxyCompactList}\small\item\em file name/path \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-dir\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_ac098c77a623d21817e85bc6ee8df5c09}{errinfo\-\_\-dir\-\_\-name}
+\begin{DoxyCompactList}\small\item\em directory name/path \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-plugin\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a7327ab3a3df1bd5f5ca8fb259260da2f}{errinfo\-\_\-plugin\-\_\-name}
+\begin{DoxyCompactList}\small\item\em plugin identifier \end{DoxyCompactList}\item 
+typedef boost\-::error\-\_\-info\\*
+$<$ struct errinfo\-\_\-dir\-\_\-name\-\_\-, \\*
+std\-::string $>$ \hyperlink{namespacepion_1_1error_a13c185094e103a8c0bb136923ccfa717}{errinfo\-\_\-symbol\-\_\-name}
+\begin{DoxyCompactList}\small\item\em plugin symbol name \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacepion_1_1error_a490aee146b33a07ff0cf1054379633cf}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-arg\-\_\-name@{errinfo\-\_\-arg\-\_\-name}}
+\index{errinfo\-\_\-arg\-\_\-name@{errinfo\-\_\-arg\-\_\-name}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-arg\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-arg\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-arg\-\_\-name}}}\label{namespacepion_1_1error_a490aee146b33a07ff0cf1054379633cf}
+
+
+name of an unrecognized configuration argument or option 
+
+\hypertarget{namespacepion_1_1error_ac098c77a623d21817e85bc6ee8df5c09}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-dir\-\_\-name@{errinfo\-\_\-dir\-\_\-name}}
+\index{errinfo\-\_\-dir\-\_\-name@{errinfo\-\_\-dir\-\_\-name}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-dir\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-dir\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-dir\-\_\-name}}}\label{namespacepion_1_1error_ac098c77a623d21817e85bc6ee8df5c09}
+
+
+directory name/path 
+
+\hypertarget{namespacepion_1_1error_a5526ef1c3e6ab8db270a0d49a66a5782}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-file\-\_\-name@{errinfo\-\_\-file\-\_\-name}}
+\index{errinfo\-\_\-file\-\_\-name@{errinfo\-\_\-file\-\_\-name}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-file\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-file\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-file\-\_\-name}}}\label{namespacepion_1_1error_a5526ef1c3e6ab8db270a0d49a66a5782}
+
+
+file name/path 
+
+\hypertarget{namespacepion_1_1error_a5ee8b972a03980d77e8abf0c12349449}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-message@{errinfo\-\_\-message}}
+\index{errinfo\-\_\-message@{errinfo\-\_\-message}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-arg\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-message}}}\label{namespacepion_1_1error_a5ee8b972a03980d77e8abf0c12349449}
+
+
+generic error message 
+
+\hypertarget{namespacepion_1_1error_a7327ab3a3df1bd5f5ca8fb259260da2f}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-plugin\-\_\-name@{errinfo\-\_\-plugin\-\_\-name}}
+\index{errinfo\-\_\-plugin\-\_\-name@{errinfo\-\_\-plugin\-\_\-name}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-plugin\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-plugin\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-plugin\-\_\-name}}}\label{namespacepion_1_1error_a7327ab3a3df1bd5f5ca8fb259260da2f}
+
+
+plugin identifier 
+
+\hypertarget{namespacepion_1_1error_a13c185094e103a8c0bb136923ccfa717}{\index{pion\-::error@{pion\-::error}!errinfo\-\_\-symbol\-\_\-name@{errinfo\-\_\-symbol\-\_\-name}}
+\index{errinfo\-\_\-symbol\-\_\-name@{errinfo\-\_\-symbol\-\_\-name}!pion::error@{pion\-::error}}
+\subsubsection[{errinfo\-\_\-symbol\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}typedef boost\-::error\-\_\-info$<$struct errinfo\-\_\-dir\-\_\-name\-\_\-,std\-::string$>$ {\bf pion\-::error\-::errinfo\-\_\-symbol\-\_\-name}}}\label{namespacepion_1_1error_a13c185094e103a8c0bb136923ccfa717}
+
+
+plugin symbol name 
+
