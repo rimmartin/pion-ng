@@ -1,0 +1,1 @@
+../_posts/2015-12-06-embed-service-in-app.md

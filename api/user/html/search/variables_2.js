@@ -1,22 +1,6 @@
 var searchData=
 [
-  ['category_5fprefixing',['category_prefixing',['../classlog4cplus_1_1TTCCLayout.html#a8c599f48cbb004c16df075254b483205',1,'log4cplus::TTCCLayout']]],
-  ['chstr',['chstr',['../structlog4cplus_1_1internal_1_1appender__sratch__pad.html#a451c609cb08beff734b82c65856a276b',1,'log4cplus::internal::appender_sratch_pad']]],
-  ['close_5fflag',['close_flag',['../classlog4cplus_1_1DeviceAppender.html#a857d0eeeb46a5a18a77d7602cf98b86f',1,'log4cplus::DeviceAppender']]],
-  ['closed',['closed',['../classlog4cplus_1_1Appender.html#a73bd088d54955fd0153c74644e2b944c',1,'log4cplus::Appender']]],
-  ['connected',['connected',['../classlog4cplus_1_1SocketAppender.html#afe3a09cb66c1948206291aa45d1a82cc',1,'log4cplus::SocketAppender::connected()'],['../classlog4cplus_1_1SysLogAppender.html#a2d27430b27c79fa3744d5b549c7c1c83',1,'log4cplus::SysLogAppender::connected()']]],
-  ['connector',['connector',['../classlog4cplus_1_1SocketAppender.html#aa50560397e03ddeb90e769159edfdf93',1,'log4cplus::SocketAppender::connector()'],['../classlog4cplus_1_1SysLogAppender.html#afb0fa118a282160d7add4fd4c296130f',1,'log4cplus::SysLogAppender::connector()']]],
-  ['connectorthread',['ConnectorThread',['../namespacelog4cplus_1_1helpers.html#a4e08b3a7dc0b8697a05ab70006c3cbff',1,'log4cplus::helpers']]],
-  ['content_5ftype_5fhtml',['CONTENT_TYPE_HTML',['../structpion_1_1http_1_1types.html#a02850c07dccf6c375ee662bb46cbcfed',1,'pion::http::types']]],
-  ['content_5ftype_5fmultipart_5fform_5fdata',['CONTENT_TYPE_MULTIPART_FORM_DATA',['../structpion_1_1http_1_1types.html#ab85889d9ccd680e47988646d290b0725',1,'pion::http::types']]],
-  ['content_5ftype_5ftext',['CONTENT_TYPE_TEXT',['../structpion_1_1http_1_1types.html#a503a1918d9f37cc4ec6bd4229d3952bf',1,'pion::http::types']]],
-  ['content_5ftype_5furlencoded',['CONTENT_TYPE_URLENCODED',['../structpion_1_1http_1_1types.html#a7c3a7283e007c9666c2e97ad9b5eecfa',1,'pion::http::types']]],
-  ['content_5ftype_5fxml',['CONTENT_TYPE_XML',['../structpion_1_1http_1_1types.html#a49900068a6ffb8699df017f689a3bdb9',1,'pion::http::types']]],
-  ['context_5fprinting',['context_printing',['../classlog4cplus_1_1TTCCLayout.html#ab4d7656df1d9688045231c93bb0e09fb',1,'log4cplus::TTCCLayout']]],
-  ['control_5fbit',['control_bit',['../structpion_1_1spdy_1_1spdy__control__frame__info.html#aab8a4df01cd7ab33225e75d3f2d6eac2',1,'pion::spdy::spdy_control_frame_info']]],
-  ['cookie_5fname_5fmax',['COOKIE_NAME_MAX',['../classpion_1_1http_1_1parser.html#a12cb4b88d7debd8467cc9de786721be2',1,'pion::http::parser']]],
-  ['cookie_5fname_5fvalue_5fdelimiter',['COOKIE_NAME_VALUE_DELIMITER',['../structpion_1_1http_1_1types.html#a8f2d833388e71b234d388a1f2770480a',1,'pion::http::types']]],
-  ['cookie_5fvalue_5fmax',['COOKIE_VALUE_MAX',['../classpion_1_1http_1_1parser.html#a50ae5c379ee3ad611fa6874bfcd8ed83',1,'pion::http::parser']]],
-  ['createdirs',['createDirs',['../classlog4cplus_1_1FileAppender.html#aa9b466ab8de95868505db1b05c645e3f',1,'log4cplus::FileAppender']]],
-  ['ctc',['ctc',['../classlog4cplus_1_1helpers_1_1ConnectorThread.html#a77c47fd9b4381f10122379ad987c8e85',1,'log4cplus::helpers::ConnectorThread']]]
+  ['first',['first',['../structpion_1_1one__to__one__scheduler_1_1service__pair__type.html#a74fee2ba10cca771f6db6da000b0d9bb',1,'pion::one_to_one_scheduler::service_pair_type']]],
+  ['flags',['flags',['../structpion_1_1spdy_1_1spdy__control__frame__info.html#a29431bbcacc702fe6e24ad5f0c11e6b4',1,'pion::spdy::spdy_control_frame_info']]],
+  ['frame_5ftype',['frame_type',['../structpion_1_1spdy_1_1__spdy__header__info.html#afa1a89722edd7a2eda6fd7a15abf7e76',1,'pion::spdy::_spdy_header_info']]]
 ];

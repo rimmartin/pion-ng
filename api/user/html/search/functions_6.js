@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['factorytempl',['FactoryTempl',['../classlog4cplus_1_1spi_1_1FactoryTempl.html#a44cfba1fd8f67cafe99ab3ab76316c78',1,'log4cplus::spi::FactoryTempl']]],
-  ['fileappender',['FileAppender',['../classlog4cplus_1_1FileAppender.html#a34a56fce967c5745257a29895dfe1b57',1,'log4cplus::FileAppender::FileAppender(const log4cplus::tstring &amp;filename, std::ios_base::openmode mode=std::ios_base::trunc, bool immediateFlush=true, bool createDirs=false)'],['../classlog4cplus_1_1FileAppender.html#ad8419f6c44e79e297ad67c5aa13a153b',1,'log4cplus::FileAppender::FileAppender(const log4cplus::helpers::Properties &amp;properties, std::ios_base::openmode mode=std::ios_base::trunc)']]],
-  ['filter',['Filter',['../classlog4cplus_1_1spi_1_1Filter.html#acbdc515a91d5fd7f5c03b3225a1593ac',1,'log4cplus::spi::Filter']]],
-  ['filterfactory',['FilterFactory',['../classlog4cplus_1_1spi_1_1FilterFactory.html#af0c9844b97589c15422d7dfeeb93fe5e',1,'log4cplus::spi::FilterFactory']]],
   ['find',['find',['../classpion_1_1plugin__manager.html#ab58061848dde1682a7c013c7f468d191',1,'pion::plugin_manager']]],
   ['find_5fconfig_5ffile',['find_config_file',['../classpion_1_1plugin.html#a885fb365fc2fedf251853eb949fcf38a',1,'pion::plugin']]],
   ['find_5fplugin_5ffile',['find_plugin_file',['../classpion_1_1plugin.html#a8bded1e5b0c6e5008fb62613bf7bed63',1,'pion::plugin']]],
@@ -19,9 +15,6 @@ var searchData=
   ['float_5ffrom_5fbytes',['float_from_bytes',['../structpion_1_1algorithm.html#ab3cce74846661c3585ec5f540a99ff07',1,'pion::algorithm']]],
   ['float_5fto_5fbytes',['float_to_bytes',['../structpion_1_1algorithm.html#a61872c7ccf75793a16d8ce7961f28842',1,'pion::algorithm']]],
   ['flush_5foutput',['flush_output',['../classpion_1_1tcp_1_1stream__buffer.html#a3fb6c729f62844f052043c472f92b59f',1,'pion::tcp::stream_buffer']]],
-  ['forcedlog',['forcedLog',['../classlog4cplus_1_1Logger.html#a1dc28745b1d7800f160f56d02ccfb7c4',1,'log4cplus::Logger::forcedLog(LogLevel ll, const log4cplus::tstring &amp;message, const char *file=LOG4CPLUS_CALLER_FILE(), int line=LOG4CPLUS_CALLER_LINE(), const char *function=LOG4CPLUS_CALLER_FUNCTION()) const '],['../classlog4cplus_1_1Logger.html#a8f5e72d12d6870790af52ce0ab26bc19',1,'log4cplus::Logger::forcedLog(spi::InternalLoggingEvent const &amp;) const '],['../classlog4cplus_1_1spi_1_1LoggerImpl.html#afc768816ab0e28e4c4bbfcd964ffa572',1,'log4cplus::spi::LoggerImpl::forcedLog(LogLevel ll, const log4cplus::tstring &amp;message, const char *file, int line, const char *function)'],['../classlog4cplus_1_1spi_1_1LoggerImpl.html#a86133683d8240c71aef7c7f209460b97',1,'log4cplus::spi::LoggerImpl::forcedLog(spi::InternalLoggingEvent const &amp;ev)']]],
-  ['formatandappend',['formatAndAppend',['../classlog4cplus_1_1Layout.html#afbcbad298d1a40aa6f717ac039e0e341',1,'log4cplus::Layout::formatAndAppend()'],['../classlog4cplus_1_1SimpleLayout.html#ad9b1bd2e2b87c03af6eed27258ddb386',1,'log4cplus::SimpleLayout::formatAndAppend()'],['../classlog4cplus_1_1TTCCLayout.html#ac1ccbeb83be9a15f15f67bb2690a8f1b',1,'log4cplus::TTCCLayout::formatAndAppend()'],['../classlog4cplus_1_1PatternLayout.html#aa442699685fb1faea7ac05e764a90c8c',1,'log4cplus::PatternLayout::formatAndAppend()']]],
-  ['formatevent',['formatEvent',['../classlog4cplus_1_1Appender.html#a35f7ed15b11db14559f15a12b5cc89c7',1,'log4cplus::Appender']]],
   ['from_5fdouble',['from_double',['../structpion_1_1algorithm.html#a241c29e87904952a01f40624d5494aef',1,'pion::algorithm']]],
   ['from_5ffloat',['from_float',['../structpion_1_1algorithm.html#a281972f7e3f6a234080e1c792d920723',1,'pion::algorithm']]],
   ['from_5fint16',['from_int16',['../structpion_1_1algorithm.html#a7668dc2bd3cc56d59353e8664ca128d5',1,'pion::algorithm']]],
@@ -30,13 +23,9 @@ var searchData=
   ['from_5fint64',['from_int64',['../structpion_1_1algorithm.html#ad89ffdbdeab62a40643b566a166ec726',1,'pion::algorithm']]],
   ['from_5fint8',['from_int8',['../structpion_1_1algorithm.html#aaf784c8b8c422a15929fb1486d3a7282',1,'pion::algorithm']]],
   ['from_5flong_5fdouble',['from_long_double',['../structpion_1_1algorithm.html#a387c15c00a1d229059e9da8ff9e0aa84',1,'pion::algorithm']]],
-  ['from_5fstruct_5ftm',['from_struct_tm',['../namespacelog4cplus_1_1helpers.html#aa86444ce227000233ba6806a68cca892',1,'log4cplus::helpers']]],
-  ['from_5ftime_5ft',['from_time_t',['../namespacelog4cplus_1_1helpers.html#ad3311ebfb278613d32dc70e4fef28686',1,'log4cplus::helpers']]],
   ['from_5fuint16',['from_uint16',['../structpion_1_1algorithm.html#a9c5dbfc05e297e824b47e03c6cf4ce26',1,'pion::algorithm']]],
   ['from_5fuint24',['from_uint24',['../structpion_1_1algorithm.html#a72de6ae9d5cee3b2fed7014a0bbe612c',1,'pion::algorithm']]],
   ['from_5fuint32',['from_uint32',['../structpion_1_1algorithm.html#a5c78cafafadb680180ff97f1eaf58fce',1,'pion::algorithm']]],
   ['from_5fuint64',['from_uint64',['../structpion_1_1algorithm.html#a5b030d4284869249e23311d75eaedd57',1,'pion::algorithm']]],
-  ['from_5fuint8',['from_uint8',['../structpion_1_1algorithm.html#a8ef52bc60dfefc940b6fdf5a1dcb5ad7',1,'pion::algorithm']]],
-  ['fromstring',['fromString',['../classlog4cplus_1_1LogLevelManager.html#a7bd4b3b5ef7dcae759860282465187bc',1,'log4cplus::LogLevelManager']]],
-  ['functionfilter',['FunctionFilter',['../classlog4cplus_1_1spi_1_1FunctionFilter.html#aac161f1899eb48d2815c8d3d588b81cc',1,'log4cplus::spi::FunctionFilter']]]
+  ['from_5fuint8',['from_uint8',['../structpion_1_1algorithm.html#a8ef52bc60dfefc940b6fdf5a1dcb5ad7',1,'pion::algorithm']]]
 ];

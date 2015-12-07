@@ -4,9 +4,8 @@ var NAVTREE =
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -19,20 +18,17 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Macros", "globals_defs.html", "globals_defs" ]
+        [ "All", "globals.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -41,16 +37,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "admin__rights_8cpp.html",
-"classlog4cplus_1_1Logger.html#adb8eb1c3ad5dd2ef5a4f7fcf442f19eb",
-"classlog4cplus_1_1helpers_1_1LogLog.html#aeb05fae49010165510c40cfa1bafd956",
-"classlog4cplus_1_1spi_1_1ObjectRegistryBase.html#ad4d253e58cfd4c7d5f688e9a300393db",
-"classpion_1_1http_1_1message_1_1content__buffer__t.html#ad4b7e8e9c83c928800d06d78708c1c21",
-"classpion_1_1http_1_1writer.html#a1001000ab1c48af56e1de38d0b92e22f",
-"classpion_1_1tcp_1_1connection.html#ad123ec22701e50c2c39d4a6cdbea3e92aac7c4dbea8f7fc8b471d7fcabf619221",
-"defines_8hxx.html#ad25f47c10f06b27868acc47e83807e33",
-"internal_8h.html#a0ced3ade2dc441c0b760f5be69ea0ba7",
-"spdy_2types_8hpp.html#ab7a70c2d0463bc6aac7a474e47632e22",
-"structpion_1_1logger.html#a028e0caa7e4d190f0bbf629cd15456b8aa3d4b8849e02f23d00e081703280a9e7"
+"classpion_1_1http_1_1parser.html#aed8cfd92c078205e38294bd8109eb2d3",
+"classpion_1_1plugin__manager.html#a6022dd5905f5079523844d68cd89977d",
+"classpion_1_1tcp_1_1timer.html#a8111536240a1ae4f3fcd0e82b407ae5b",
+"spdy_2types_8hpp.html#af40abbf7914820c340e014e7d2fd6098"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

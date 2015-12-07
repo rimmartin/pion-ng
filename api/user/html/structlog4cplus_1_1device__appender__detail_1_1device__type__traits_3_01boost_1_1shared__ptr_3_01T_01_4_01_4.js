@@ -1,5 +1,0 @@
-var structlog4cplus_1_1device__appender__detail_1_1device__type__traits_3_01boost_1_1shared__ptr_3_01T_01_4_01_4 =
-[
-    [ "device_type", "structlog4cplus_1_1device__appender__detail_1_1device__type__traits_3_01boost_1_1shared__ptr_3_01T_01_4_01_4.html#a41f46a979cd499527581edd3cf2c1f98", null ],
-    [ "unwrap", "structlog4cplus_1_1device__appender__detail_1_1device__type__traits_3_01boost_1_1shared__ptr_3_01T_01_4_01_4.html#abd7b274cd839584a58c9d66891dc917f", null ]
-];

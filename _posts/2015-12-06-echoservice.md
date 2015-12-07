@@ -6,7 +6,7 @@ date: 2015-12-06 13:31:10
 ---
 
 
-### Basics of a plugin
+#### Basics of a plugin
 
 Developing an http service starts with deriving a class from [pion::http::plugin_service]({{site.baseurl}}/api/user/html/classpion_1_1http_1_1plugin__service.html) and implementing the () operator. Then spending time with
 the two arguments: const [pion::http::request_ptr]({{site.baseurl}}/api/user/html/classpion_1_1http_1_1request.html)& http_request_ptr and const [pion::tcp::connection_ptr]({{site.baseurl}}/api/user/html/classpion_1_1tcp_1_1connection.html)& tcp_conn [#1](#note1).  You have all you need to stand up a service.
@@ -32,6 +32,8 @@ void EchoService::operator()(const http::request_ptr& http_request_ptr, const tc
 }
 ```
 
+#### Writing a Response
+
 This example assumes the REST method is a GET. You can return anything with [http::response_writer_ptr]({{site.baseurl}}/api/user/html/classpion_1_1http_1_1writer.html) you want or build the echo service that comes with pion and start it with piond.  The key is instantiating
 a writer bound to the tcp connection, fill it in with some '<<' streaming and finally call writer->[send()]({{site.baseurl}}/api/user/html/classpion_1_1http_1_1writer.html#a6c96aa95d710babcf5096d8294f703d5)
 
@@ -42,6 +44,18 @@ a writer bound to the tcp connection, fill it in with some '<<' streaming and fi
     writer->get_response().set_content_type(http::types::CONTENT_TYPE_TEXT);
     
 ```
+
+Have different content then change to your type:
+
+* CONTENT_TYPE_TEXT
+* CONTENT_TYPE_XML
+* CONTENT_TYPE_HTML
+* CONTENT_TYPE_MULTIPART_FORM_DATA
+* CONTENT_TYPE_URLENCODED
+
+or to a MIME matching your content(e.g. "application/json")
+
+#### Standing It Up
 
 An important section at the tail of [EchoService.cpp](https://github.com/splunk/pion/blob/develop/services/EchoService.cpp) after the namespaces close scope tells the pion daemon about the plugin and when you start making your own services
 imitating it is where you either see it stand up or face quizzical nothing
@@ -75,7 +89,7 @@ options: [-ssl PEM_FILE] [-i IP] [-p PORT] [-d PLUGINS_DIR] [-o OPTION=VALUE] [-
 $PION_PATH/bin/piond -v -p 8080 -d $PION_PATH/share/pion/plugins /echo EchoService
 ```
 
-and go to browser uri http://localhost:8080/echo to test and view the returned data/document. When you make your own on linux make sure the service shared library is missing the lib prefix by sym linking for example:
+and go to browser uri http://localhost:8080/echo to test and view the returned data/document. When you make your own on linux make sure the service's shared library is missing the lib prefix by sym linking for example:
 
 ```bash
 ln -sf ./libDescriptionLogicsService.so ./DescriptionLogicsService.so
@@ -84,5 +98,5 @@ ln -sf ./libDescriptionLogicsService.so ./DescriptionLogicsService.so
 or the daemon won't know it.
 
 ____
-Note **<span id="note1">#1</span>**: the links to components point to the template X class reference documentation the typedefs like pion::http::request_ptr throughout pion code alias for boost::shared_ptr\<X\>'s.
+Note **<span id="note1">#1</span>**: the links to components point to the template X class reference documentation the typedefs like pion::http::request_ptr throughout pion code alias to boost::shared_ptr\<X\>'s.
 

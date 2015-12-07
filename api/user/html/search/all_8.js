@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['h',['h',['../classlog4cplus_1_1PropertyConfigurator.html#ae80f772be9d4eb67922d34f4e2dd71d1',1,'log4cplus::PropertyConfigurator']]],
   ['handle_5fbad_5frequest',['handle_bad_request',['../classpion_1_1http_1_1server.html#a32e2b0b6936fe56f78bc8bdc4b03786c',1,'pion::http::server']]],
   ['handle_5fconnection',['handle_connection',['../classpion_1_1http_1_1server.html#a7f15a7abd45216a7e03e3f3b5c0b83c1',1,'pion::http::server::handle_connection()'],['../classpion_1_1tcp_1_1server.html#a1e8ae789868cd0b8eb08e5c3da9b33a4',1,'pion::tcp::server::handle_connection()']]],
   ['handle_5fforbidden_5frequest',['handle_forbidden_request',['../classpion_1_1http_1_1server.html#aa3b21b862df05cd2d0ccb12ae9659d68',1,'pion::http::server']]],
@@ -44,14 +43,6 @@ var searchData=
   ['header_5fuser_5fagent',['HEADER_USER_AGENT',['../structpion_1_1http_1_1types.html#af910e9d9d8748d77d5f3a5b79c459b77',1,'pion::http::types']]],
   ['header_5fvalue_5fmax',['HEADER_VALUE_MAX',['../classpion_1_1http_1_1parser.html#a803490d20fadf6ee1253dd9d62844dd8',1,'pion::http::parser']]],
   ['header_5fx_5fforwarded_5ffor',['HEADER_X_FORWARDED_FOR',['../structpion_1_1http_1_1types.html#ab9ddd93284acb0162b389e465708fb1d',1,'pion::http::types']]],
-  ['hierarchy',['Hierarchy',['../classlog4cplus_1_1Hierarchy.html',1,'log4cplus']]],
-  ['hierarchy',['Hierarchy',['../classlog4cplus_1_1Hierarchy.html#ade70368f1b18517ad8e0e2a2a5006d92',1,'log4cplus::Hierarchy']]],
-  ['hierarchy_2eh',['hierarchy.h',['../hierarchy_8h.html',1,'']]],
-  ['hierarchylocker',['HierarchyLocker',['../classlog4cplus_1_1HierarchyLocker.html#a459a06f4edb6e72611c957300329c3b5',1,'log4cplus::HierarchyLocker']]],
-  ['hierarchylocker',['HierarchyLocker',['../classlog4cplus_1_1HierarchyLocker.html',1,'log4cplus']]],
-  ['hierarchylocker_2eh',['hierarchylocker.h',['../hierarchylocker_8h.html',1,'']]],
-  ['host',['host',['../classlog4cplus_1_1Log4jUdpAppender.html#a198aeab5fafab8814d17c489e9243722',1,'log4cplus::Log4jUdpAppender::host()'],['../classlog4cplus_1_1SocketAppender.html#a6bdd29292be3aeb572d136e808d0012c',1,'log4cplus::SocketAppender::host()'],['../classlog4cplus_1_1SysLogAppender.html#aac29818cf18aaaaf24158c728500399d',1,'log4cplus::SysLogAppender::host()']]],
-  ['hourly',['HOURLY',['../namespacelog4cplus.html#a8e28400490e25b19a04113f211de4c8fab89e2991c1546428c21f6efe9997d264',1,'log4cplus']]],
   ['http_5fauth_2ecpp',['http_auth.cpp',['../http__auth_8cpp.html',1,'']]],
   ['http_5fbasic_5fauth_2ecpp',['http_basic_auth.cpp',['../http__basic__auth_8cpp.html',1,'']]],
   ['http_5fcookie_5fauth_2ecpp',['http_cookie_auth.cpp',['../http__cookie__auth_8cpp.html',1,'']]],

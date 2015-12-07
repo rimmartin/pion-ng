@@ -1,19 +1,5 @@
 var searchData=
 [
-  ['layoutfactoryregistry',['LayoutFactoryRegistry',['../namespacelog4cplus_1_1spi.html#afcec0afcb2d25a187db1e85feb2d0796',1,'log4cplus::spi']]],
-  ['listtype',['ListType',['../classlog4cplus_1_1helpers_1_1AppenderAttachableImpl.html#ab5d58fc9260395fad281bb2eaea20582',1,'log4cplus::helpers::AppenderAttachableImpl']]],
-  ['localefactoryregistry',['LocaleFactoryRegistry',['../namespacelog4cplus_1_1spi.html#ae93cf5d075d4355919917879db043004',1,'log4cplus::spi']]],
-  ['lockfileguard',['LockFileGuard',['../namespacelog4cplus_1_1helpers.html#adf94dab7f623b7d4d8e7eb2eba4e86bd',1,'log4cplus::helpers']]],
-  ['log4cplus_5fchar_5ft',['log4cplus_char_t',['../clogger_8h.html#a837fd19292f490a90931a383776b3a26',1,'clogger.h']]],
-  ['log4cplus_5flog_5fevent_5fcallback_5ft',['log4cplus_log_event_callback_t',['../clogger_8h.html#a4cde3b53a57e3032534ac0a98f9cbca2',1,'clogger.h']]],
-  ['log4cplus_5flogger_5ft',['log4cplus_logger_t',['../clogger_8h.html#a6b28f9a08139e73d8a53f100b6f0e1d2',1,'clogger.h']]],
-  ['log4cplus_5floglevel_5ft',['log4cplus_loglevel_t',['../clogger_8h.html#af98f2791d7f4e588133b159f169606e5',1,'clogger.h']]],
   ['log_5fappender',['log_appender',['../namespacepion.html#a0ae721a15721415f669eea72b5410bfb',1,'pion']]],
-  ['log_5fappender_5fptr',['log_appender_ptr',['../namespacepion.html#a66164fd1ba2d2866081712f2c82300d5',1,'pion']]],
-  ['logger_5ft',['logger_t',['../clogger_8h.html#a8dd12822877222244490122c0ba4edba',1,'clogger.h']]],
-  ['loggerlist',['LoggerList',['../namespacelog4cplus.html#a9bad705b454c9c31bd84d97837fec22f',1,'log4cplus']]],
-  ['loglevel',['LogLevel',['../namespacelog4cplus.html#abd332cc8c98fefcbbdcf57b6b3867de9',1,'log4cplus']]],
-  ['loglevel_5ft',['loglevel_t',['../clogger_8h.html#a0b8a27fbfba199098b826bacd06173cb',1,'clogger.h']]],
-  ['logleveltostringmethod',['LogLevelToStringMethod',['../namespacelog4cplus.html#affe4873120aa349e25a21f2e0925f3d4',1,'log4cplus']]],
-  ['logleveltostringmethod_5f1_5f0',['LogLevelToStringMethod_1_0',['../namespacelog4cplus.html#adaf78472c00019b22f0da0d2ccecc3ca',1,'log4cplus']]]
+  ['log_5fappender_5fptr',['log_appender_ptr',['../namespacepion.html#a66164fd1ba2d2866081712f2c82300d5',1,'pion']]]
 ];

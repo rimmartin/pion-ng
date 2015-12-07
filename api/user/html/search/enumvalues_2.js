@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connection_5ffailed',['connection_failed',['../namespacelog4cplus_1_1helpers.html#ac57a089674b66ea982e43dff7ff1c78ea20c95268b9882b9d997373a92f142079',1,'log4cplus::helpers']]]
+  ['max_5funcompressed_5fdata_5fbuf_5fsize',['MAX_UNCOMPRESSED_DATA_BUF_SIZE',['../classpion_1_1spdy_1_1decompressor.html#a9fb34f033b4d95e5f23fa9b0d03c4818a44ab53316cb7bd9c9d66621b6e537e08',1,'pion::spdy::decompressor']]]
 ];

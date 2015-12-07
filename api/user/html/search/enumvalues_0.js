@@ -1,5 +1,26 @@
 var searchData=
 [
-  ['accept',['ACCEPT',['../namespacelog4cplus_1_1spi.html#aa910f475d36c00f943ef78e37d11e3f6a222b6ce4c30f1d7d9164b901bb2907a7',1,'log4cplus::spi']]],
-  ['accept_5finterrupted',['accept_interrupted',['../namespacelog4cplus_1_1helpers.html#ac57a089674b66ea982e43dff7ff1c78eae6c22e726f0a31744e41e23dc7497b39',1,'log4cplus::helpers']]]
+  ['error_5fchunk_5fchar',['ERROR_CHUNK_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8abfd2136b613537506493c193b5e8caf1',1,'pion::http::parser']]],
+  ['error_5fdecompression',['ERROR_DECOMPRESSION',['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915ba3fc66c17eb78b99779ab5453dd459596',1,'pion::spdy::parser']]],
+  ['error_5fheader_5fchar',['ERROR_HEADER_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8ae695d24cfd40b5354d5d3def0c7bbefd',1,'pion::http::parser']]],
+  ['error_5fheader_5fname_5fsize',['ERROR_HEADER_NAME_SIZE',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a968de881fea53ccb84f3dc98c380ef53',1,'pion::http::parser']]],
+  ['error_5fheader_5fvalue_5fsize',['ERROR_HEADER_VALUE_SIZE',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8aa713c03b93494671a51a2097cbb9d1b9',1,'pion::http::parser']]],
+  ['error_5finternal_5fspdy_5ferror',['ERROR_INTERNAL_SPDY_ERROR',['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915ba1108f301042c4a8fa94be64f61b7a404',1,'pion::spdy::parser']]],
+  ['error_5finvalid_5fcontent_5flength',['ERROR_INVALID_CONTENT_LENGTH',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8af042c54007443f7919571b2cf6f52d70',1,'pion::http::parser']]],
+  ['error_5finvalid_5fspdy_5fframe',['ERROR_INVALID_SPDY_FRAME',['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915bafb4a6ca9230ef0cb91b5a13b4b3034ab',1,'pion::spdy::parser']]],
+  ['error_5finvalid_5fspdy_5fversion',['ERROR_INVALID_SPDY_VERSION',['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915bab49a657c0123e1417d65286595ee68f0',1,'pion::spdy::parser']]],
+  ['error_5fmethod_5fchar',['ERROR_METHOD_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a0cc5469207de11a5179956d3d17a8ab1',1,'pion::http::parser']]],
+  ['error_5fmethod_5fsize',['ERROR_METHOD_SIZE',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a1462b9df44708776a05f5601f42846a8',1,'pion::http::parser']]],
+  ['error_5fmissing_5fchunk_5fdata',['ERROR_MISSING_CHUNK_DATA',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8ade97f557fc11c10a56c93caa07ff5df2',1,'pion::http::parser']]],
+  ['error_5fmissing_5fheader_5fdata',['ERROR_MISSING_HEADER_DATA',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8ad3c9d5e280da006c16899b1c8a58c8fe',1,'pion::http::parser::ERROR_MISSING_HEADER_DATA()'],['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915ba5c4984c41fd05b4b70fa3491cb663cd7',1,'pion::spdy::parser::ERROR_MISSING_HEADER_DATA()']]],
+  ['error_5fmissing_5ftoo_5fmuch_5fcontent',['ERROR_MISSING_TOO_MUCH_CONTENT',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8aa652e202a02ae20a5fefe8d222d7df67',1,'pion::http::parser']]],
+  ['error_5fprotocol_5ferror',['ERROR_PROTOCOL_ERROR',['../classpion_1_1spdy_1_1parser.html#abaab54ece6835d5763900809a1d6915ba093135ad8a939be1a8533bd244e19966',1,'pion::spdy::parser']]],
+  ['error_5fquery_5fchar',['ERROR_QUERY_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a4f9ae6c0f7de1da68c85795429afda14',1,'pion::http::parser']]],
+  ['error_5fquery_5fsize',['ERROR_QUERY_SIZE',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8aad97a47e56d77fc8d7e46a587e70e0ed',1,'pion::http::parser']]],
+  ['error_5fstatus_5fchar',['ERROR_STATUS_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a1df2c04224d1c647c08e7249bc666317',1,'pion::http::parser']]],
+  ['error_5fstatus_5fempty',['ERROR_STATUS_EMPTY',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a0ee250337cb43c76158f6094f6f273fc',1,'pion::http::parser']]],
+  ['error_5furi_5fchar',['ERROR_URI_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a54942737d9dda2528f9061cabc407fe9',1,'pion::http::parser']]],
+  ['error_5furi_5fsize',['ERROR_URI_SIZE',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8ab567f2418ac85f479280135441a5a390',1,'pion::http::parser']]],
+  ['error_5fversion_5fchar',['ERROR_VERSION_CHAR',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a640437b0cc21cccc547a3f838d9bdd10',1,'pion::http::parser']]],
+  ['error_5fversion_5fempty',['ERROR_VERSION_EMPTY',['../classpion_1_1http_1_1parser.html#a056c791c4b2dda0dd4c2037dd941d5d8a35a28be377bf93eba3edaa51b0ab6a9c',1,'pion::http::parser']]]
 ];

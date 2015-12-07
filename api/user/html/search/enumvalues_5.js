@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['fallowemptyvars',['fAllowEmptyVars',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a790a3e73314389620e539ce951028a31',1,'log4cplus::PropertyConfigurator']]],
-  ['fencodingmask',['fEncodingMask',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a3679d71ba04f47f003a97261a1d94fc0',1,'log4cplus::PropertyConfigurator::fEncodingMask()'],['../classlog4cplus_1_1helpers_1_1Properties.html#a73cc33c3e49e6af9cd8ef12de343ef75a03c446556a2d02171f71a1fc09cd448a',1,'log4cplus::helpers::Properties::fEncodingMask()']]],
-  ['fencodingshift',['fEncodingShift',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a7de75cf48c97010266bf87dcba2a8bcf',1,'log4cplus::PropertyConfigurator::fEncodingShift()'],['../classlog4cplus_1_1helpers_1_1Properties.html#a73cc33c3e49e6af9cd8ef12de343ef75a459a595638b7348a05ff7c460a2b505c',1,'log4cplus::helpers::Properties::fEncodingShift()']]],
-  ['frecursiveexpansion',['fRecursiveExpansion',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a2442d74b57cb67239405b8a5b9e9b703',1,'log4cplus::PropertyConfigurator']]],
-  ['fshadowenvironment',['fShadowEnvironment',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a1ad745f06a7fcce71bb27c4143b040c6',1,'log4cplus::PropertyConfigurator']]],
-  ['funspecencoding',['fUnspecEncoding',['../classlog4cplus_1_1PropertyConfigurator.html#af197ec849dc7460aefe46def3f9d4556a5396937ac33c48bb047838f912369e09',1,'log4cplus::PropertyConfigurator::fUnspecEncoding()'],['../classlog4cplus_1_1helpers_1_1Properties.html#a73cc33c3e49e6af9cd8ef12de343ef75a8ac6fe6de4160df0d1e1fba51809c9fa',1,'log4cplus::helpers::Properties::fUnspecEncoding()']]]
+  ['spdy_5fcontrol_5fframe',['spdy_control_frame',['../namespacepion_1_1spdy.html#ae477ffb44271bac96119422b364435cead0688df35afe5227dfeb2ec6b575412e',1,'pion::spdy']]],
+  ['spdy_5fdata_5fframe',['spdy_data_frame',['../namespacepion_1_1spdy.html#ae477ffb44271bac96119422b364435cea423101817a482a7a03d216a15d9656e5',1,'pion::spdy']]],
+  ['spdy_5finvalid_5fframe',['spdy_invalid_frame',['../namespacepion_1_1spdy.html#ae477ffb44271bac96119422b364435cea22aeb6dab87b25dd07eabbacc2b236e9',1,'pion::spdy']]],
+  ['status_5fnone',['STATUS_NONE',['../classpion_1_1http_1_1message.html#ab71e06f72cacb4945dbf84663b0420e9a857bcfd3cb3884033f73a22e9d5ade05',1,'pion::http::message']]],
+  ['status_5fok',['STATUS_OK',['../classpion_1_1http_1_1message.html#ab71e06f72cacb4945dbf84663b0420e9a5fd3c3fcefd1a51ee076e40708e32674',1,'pion::http::message']]],
+  ['status_5fpartial',['STATUS_PARTIAL',['../classpion_1_1http_1_1message.html#ab71e06f72cacb4945dbf84663b0420e9a4b310a8c8463d24ac0d8073eba11ef4a',1,'pion::http::message']]],
+  ['status_5ftruncated',['STATUS_TRUNCATED',['../classpion_1_1http_1_1message.html#ab71e06f72cacb4945dbf84663b0420e9ab69b544af26550d7cf5b0a795078715c',1,'pion::http::message']]]
 ];

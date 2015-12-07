@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['objectmap',['ObjectMap',['../classlog4cplus_1_1spi_1_1ObjectRegistryBase.html#a5fe808425932ecd49349e063894dd3e6',1,'log4cplus::spi::ObjectRegistryBase']]],
-  ['off_5ftype',['off_type',['../classpion_1_1tcp_1_1stream__buffer.html#ac9b79dc64ad2b3e76c121b00ffc6e951',1,'pion::tcp::stream_buffer::off_type()'],['../classpion_1_1tcp_1_1stream.html#a035e53a0425f0f05a3c3fd6c9c8be55d',1,'pion::tcp::stream::off_type()']]],
-  ['os_5fsocket_5ftype',['os_socket_type',['../namespacelog4cplus_1_1helpers.html#a74064c46dd7651c68c1f58b73a1b14ca',1,'log4cplus::helpers']]]
+  ['parser_5fptr',['parser_ptr',['../namespacepion_1_1spdy.html#aa2cb51d7f3735315fbac9c5823b6b5da',1,'pion::spdy']]],
+  ['payload_5fhandler_5ft',['payload_handler_t',['../classpion_1_1http_1_1parser.html#abff772b79d2a912b0f9a4932d8f03a35',1,'pion::http::parser']]],
+  ['plugin_5fserver_5fptr',['plugin_server_ptr',['../namespacepion_1_1http.html#a6ac91682b45c496ba05545e5f21a3dbd',1,'pion::http']]],
+  ['pluginrunfunction',['PluginRunFunction',['../classpion_1_1plugin__manager.html#a275b88a2c9f7c89d6d737c1b444be8b2',1,'pion::plugin_manager']]],
+  ['pluginstatfunction',['PluginStatFunction',['../classpion_1_1plugin__manager.html#a1e6a4223438c74e4e928401f734d2e0c',1,'pion::plugin_manager']]],
+  ['pos_5ftype',['pos_type',['../classpion_1_1tcp_1_1stream__buffer.html#a3d24ccbacf44098151258b4219f3730c',1,'pion::tcp::stream_buffer::pos_type()'],['../classpion_1_1tcp_1_1stream.html#a9a325595e421119b0e6e6b5972863d98',1,'pion::tcp::stream::pos_type()']]]
 ];

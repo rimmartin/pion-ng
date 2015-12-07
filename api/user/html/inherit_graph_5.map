@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classlog4cplus_1_1helpers_1_1AbstractSocket.html" title="log4cplus::helpers\l::AbstractSocket" alt="" coords="5,38,128,79"/>
-<area shape="rect" id="node2" href="$classlog4cplus_1_1helpers_1_1ServerSocket.html" title="log4cplus::helpers\l::ServerSocket" alt="" coords="176,5,299,46"/>
-<area shape="rect" id="node3" href="$classlog4cplus_1_1helpers_1_1Socket.html" title="log4cplus::helpers\l::Socket" alt="" coords="176,70,299,111"/>
+<area shape="rect" id="node2" href="$structpion_1_1http_1_1message_1_1receive__error__t.html" title="data type for library errors returned during receive() operations " alt="" coords="157,5,288,46"/>
+<area shape="rect" id="node3" href="$classpion_1_1http_1_1parser_1_1error__category__t.html" title="class&#45;specific error category " alt="" coords="162,70,283,111"/>
+<area shape="rect" id="node4" href="$classpion_1_1spdy_1_1parser_1_1error__category__t.html" title="class&#45;specific error category " alt="" coords="162,135,283,177"/>
 </map>

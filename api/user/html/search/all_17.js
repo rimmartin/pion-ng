@@ -1,17 +1,8 @@
 var searchData=
 [
-  ['wait',['wait',['../classlog4cplus_1_1thread_1_1ManualResetEvent.html#a9e11a7bda9793bb272607313b9435293',1,'log4cplus::thread::ManualResetEvent']]],
   ['wait_5ffor_5fshutdown',['wait_for_shutdown',['../classpion_1_1process.html#a0141a4c774af4e4e605230c277cfa4f7',1,'pion::process']]],
-  ['waittofinishasynclogging',['waitToFinishAsyncLogging',['../classlog4cplus_1_1Appender.html#ab11a1eef1ad5934e6425c32aba28b79d',1,'log4cplus::Appender']]],
-  ['warn',['warn',['../classlog4cplus_1_1helpers_1_1LogLog.html#aeb05fae49010165510c40cfa1bafd956',1,'log4cplus::helpers::LogLog::warn(const log4cplus::tstring &amp;msg) const '],['../classlog4cplus_1_1helpers_1_1LogLog.html#aa6438bd8610739a7646336ed5a85104b',1,'log4cplus::helpers::LogLog::warn(tchar const *msg) const ']]],
-  ['warn_5flog_5flevel',['WARN_LOG_LEVEL',['../namespacelog4cplus.html#a042650a0a6fd89ef9b23c39185d438c9',1,'log4cplus']]],
-  ['weekly',['WEEKLY',['../namespacelog4cplus.html#a8e28400490e25b19a04113f211de4c8fa8cf7042e6a95570b60cb5542bd20e788',1,'log4cplus']]],
   ['what',['what',['../classpion_1_1exception.html#a40a62768258b7772de35398177dbd6ce',1,'pion::exception']]],
-  ['win32_2eh',['win32.h',['../win32_8h.html',1,'']]],
-  ['win32consoleappender_2eh',['win32consoleappender.h',['../win32consoleappender_8h.html',1,'']]],
-  ['win32debugappender_2eh',['win32debugappender.h',['../win32debugappender_8h.html',1,'']]],
-  ['windowsh_2dinc_2eh',['windowsh-inc.h',['../windowsh-inc_8h.html',1,'']]],
-  ['write',['write',['../classpion_1_1http_1_1message.html#a4a3911ad03031a1ddacfa4cedeb125a2',1,'pion::http::message::write()'],['../classpion_1_1http_1_1writer.html#a5959a2c14149da804ce62fe52b009596',1,'pion::http::writer::write(const T &amp;data)'],['../classpion_1_1http_1_1writer.html#aaa847dd2364e85844395fc4815a654ca',1,'pion::http::writer::write(std::ostream &amp;(*iomanip)(std::ostream &amp;))'],['../classpion_1_1http_1_1writer.html#a8b0b29526fb03597934145eb9f21e932',1,'pion::http::writer::write(const void *data, size_t length)'],['../classpion_1_1tcp_1_1connection.html#a80f286832ed69151923837713e582709',1,'pion::tcp::connection::write()'],['../classlog4cplus_1_1helpers_1_1Socket.html#a7bef445e62933ce96171f40185ef532c',1,'log4cplus::helpers::Socket::write(const SocketBuffer &amp;buffer)'],['../classlog4cplus_1_1helpers_1_1Socket.html#a796161e1b8c3743bd287347986b78f30',1,'log4cplus::helpers::Socket::write(const std::string &amp;buffer)'],['../namespacelog4cplus_1_1helpers.html#adf5c3e3ef3b2737e0dcf4dcb9cca2a41',1,'log4cplus::helpers::write(SOCKET_TYPE sock, const SocketBuffer &amp;buffer)'],['../namespacelog4cplus_1_1helpers.html#acb89fc8734cd72457defd8c9e7c85f19',1,'log4cplus::helpers::write(SOCKET_TYPE sock, const std::string &amp;buffer)']]],
+  ['write',['write',['../classpion_1_1http_1_1message.html#a4a3911ad03031a1ddacfa4cedeb125a2',1,'pion::http::message::write()'],['../classpion_1_1http_1_1writer.html#a5959a2c14149da804ce62fe52b009596',1,'pion::http::writer::write(const T &amp;data)'],['../classpion_1_1http_1_1writer.html#aaa847dd2364e85844395fc4815a654ca',1,'pion::http::writer::write(std::ostream &amp;(*iomanip)(std::ostream &amp;))'],['../classpion_1_1http_1_1writer.html#a8b0b29526fb03597934145eb9f21e932',1,'pion::http::writer::write(const void *data, size_t length)'],['../classpion_1_1tcp_1_1connection.html#a80f286832ed69151923837713e582709',1,'pion::tcp::connection::write()']]],
   ['write_5fbuffer_5fsize',['WRITE_BUFFER_SIZE',['../classpion_1_1tcp_1_1stream__buffer.html#a25df9358691ed8b70684d53efb186928ae78f66502c67c6dea5194a4b86c41871',1,'pion::tcp::stream_buffer']]],
   ['write_5fbuffers_5ft',['write_buffers_t',['../classpion_1_1http_1_1message.html#aacf9a6a7677c32e4ab764ac97d0b5e7b',1,'pion::http::message']]],
   ['write_5fhandler_5ft',['write_handler_t',['../classpion_1_1http_1_1writer.html#a36fa31c850362d907559a0c1157a1bf3',1,'pion::http::writer']]],
@@ -19,7 +10,5 @@ var searchData=
   ['writer',['writer',['../classpion_1_1http_1_1writer.html#abfa160a7e4fbbe09db12ab5c68d886ae',1,'pion::http::writer']]],
   ['writer',['writer',['../classpion_1_1http_1_1writer.html',1,'pion::http']]],
   ['writer_2ehpp',['writer.hpp',['../writer_8hpp.html',1,'']]],
-  ['writer_5fptr',['writer_ptr',['../namespacepion_1_1http.html#ab8e875e702aba19923014f31d69762df',1,'pion::http']]],
-  ['wrlock',['wrlock',['../classlog4cplus_1_1thread_1_1impl_1_1SharedMutex.html#a0afa6ac1c1e9aa1c1f1eec64d1ca9568',1,'log4cplus::thread::impl::SharedMutex::wrlock()'],['../classlog4cplus_1_1thread_1_1SharedMutex.html#a02ee0f845373d648e8b329b557291f92',1,'log4cplus::thread::SharedMutex::wrlock()']]],
-  ['wrunlock',['wrunlock',['../classlog4cplus_1_1thread_1_1impl_1_1SharedMutex.html#a0e36032cb9825b287011f866260daaf6',1,'log4cplus::thread::impl::SharedMutex::wrunlock()'],['../classlog4cplus_1_1thread_1_1SharedMutex.html#ac0355fe97fdd3dfd89d5716f3326fce7',1,'log4cplus::thread::SharedMutex::wrunlock()']]]
+  ['writer_5fptr',['writer_ptr',['../namespacepion_1_1http.html#ab8e875e702aba19923014f31d69762df',1,'pion::http']]]
 ];

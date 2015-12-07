@@ -18,7 +18,5 @@ var searchData=
   ['has_5fdata_5fafter_5fmissing_5fpackets',['has_data_after_missing_packets',['../classpion_1_1http_1_1message.html#a52fd51aca9d5a37f41a0ad18d577ddec',1,'pion::http::message']]],
   ['has_5fheader',['has_header',['../classpion_1_1http_1_1message.html#ac6667e7a771b157e24858700b4777223',1,'pion::http::message']]],
   ['has_5fmissing_5fpackets',['has_missing_packets',['../classpion_1_1http_1_1message.html#a0ab661db865a6d018e8487a1b4f6932b',1,'pion::http::message']]],
-  ['has_5fquery',['has_query',['../classpion_1_1http_1_1request.html#ac0da1fdcb02cf58ab0391d9f7955aeab',1,'pion::http::request']]],
-  ['hierarchy',['Hierarchy',['../classlog4cplus_1_1Hierarchy.html#ade70368f1b18517ad8e0e2a2a5006d92',1,'log4cplus::Hierarchy']]],
-  ['hierarchylocker',['HierarchyLocker',['../classlog4cplus_1_1HierarchyLocker.html#a459a06f4edb6e72611c957300329c3b5',1,'log4cplus::HierarchyLocker']]]
+  ['has_5fquery',['has_query',['../classpion_1_1http_1_1request.html#ac0da1fdcb02cf58ab0391d9f7955aeab',1,'pion::http::request']]]
 ];

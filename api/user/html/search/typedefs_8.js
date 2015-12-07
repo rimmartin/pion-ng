@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['mappeddiagnosticcontextmap',['MappedDiagnosticContextMap',['../namespacelog4cplus.html#a8b5b860e781a3d8d5c3d7d743a630b8a',1,'log4cplus']]],
-  ['msttsappenderptr',['MSTTSAppenderPtr',['../namespacelog4cplus.html#a87109c16bf25081e70e4ad3d4c799964',1,'log4cplus']]],
-  ['mutexguard',['MutexGuard',['../namespacelog4cplus_1_1thread.html#a8ce7cde94c7a54f5b9e592eb1d4229c2',1,'log4cplus::thread']]]
+  ['off_5ftype',['off_type',['../classpion_1_1tcp_1_1stream__buffer.html#ac9b79dc64ad2b3e76c121b00ffc6e951',1,'pion::tcp::stream_buffer::off_type()'],['../classpion_1_1tcp_1_1stream.html#a035e53a0425f0f05a3c3fd6c9c8be55d',1,'pion::tcp::stream::off_type()']]]
 ];

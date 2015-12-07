@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['semaphoreguard',['SemaphoreGuard',['../namespacelog4cplus_1_1thread.html#af6c3058cbd378ff5317290189cb822f3',1,'log4cplus::thread']]],
-  ['server_5fptr',['server_ptr',['../namespacepion_1_1http.html#a3c92c485d7cc919d4fcaa2128b096382',1,'pion::http::server_ptr()'],['../namespacepion_1_1tcp.html#abdb69244f6c6f16c8c5f9b759819df8f',1,'pion::tcp::server_ptr()']]],
-  ['service_5fpool_5ftype',['service_pool_type',['../classpion_1_1one__to__one__scheduler.html#ac41a2d4f38f49673139a77e609b1d084',1,'pion::one_to_one_scheduler']]],
-  ['sharedappenderptr',['SharedAppenderPtr',['../namespacelog4cplus.html#a12d841b842c72396be9219ce67a0c215',1,'log4cplus']]],
-  ['sharedappenderptrlist',['SharedAppenderPtrList',['../namespacelog4cplus.html#a97158ac12736f649c5477d7b63f51ede',1,'log4cplus']]],
-  ['shareddailyrollingfileappenderptr',['SharedDailyRollingFileAppenderPtr',['../namespacelog4cplus.html#a2a06b80823a63d74c784b75f494853ed',1,'log4cplus']]],
-  ['sharedfileappenderptr',['SharedFileAppenderPtr',['../namespacelog4cplus.html#a9eb9b1a5e546194d616f5efca5f00de7',1,'log4cplus']]],
-  ['sharedloggerimplptr',['SharedLoggerImplPtr',['../classlog4cplus_1_1spi_1_1LoggerImpl.html#a714f4769a8d2b7f954eb193df7bcd256',1,'log4cplus::spi::LoggerImpl::SharedLoggerImplPtr()'],['../namespacelog4cplus_1_1spi.html#ab9e7a34d7e6dad613cfc4f5d5bef028c',1,'log4cplus::spi::SharedLoggerImplPtr()']]],
-  ['sharedmutexreaderguard',['SharedMutexReaderGuard',['../namespacelog4cplus_1_1thread.html#a8bd093553b9a56ba1e032ebf07265da0',1,'log4cplus::thread']]],
-  ['sharedmutexwriterguard',['SharedMutexWriterGuard',['../namespacelog4cplus_1_1thread.html#adf498119742efc3efc3df947998f36d5',1,'log4cplus::thread']]],
-  ['sharedrollingfileappenderptr',['SharedRollingFileAppenderPtr',['../namespacelog4cplus.html#a157dfdb199434cd2ace269a933b706b1',1,'log4cplus']]],
-  ['socket_5ftype',['socket_type',['../classpion_1_1tcp_1_1connection.html#a353c4d500505d51924d165c28b04641c',1,'pion::tcp::connection::socket_type()'],['../namespacelog4cplus_1_1helpers.html#afe2a1567866b6a9e0bfd5d425c3323f2',1,'log4cplus::helpers::SOCKET_TYPE()']]],
-  ['spdy_5fcontrol_5fframe_5finfo',['spdy_control_frame_info',['../namespacepion_1_1spdy.html#af27b192d1db7a013f86914a93c5e1904',1,'pion::spdy']]],
-  ['spdy_5fheader_5finfo',['spdy_header_info',['../namespacepion_1_1spdy.html#a74229af785f47c8b3f3d29822086603a',1,'pion::spdy']]],
-  ['ssl_5fcontext_5ftype',['ssl_context_type',['../classpion_1_1tcp_1_1connection.html#a8587c35bbf48a119aa82f228e779a30e',1,'pion::tcp::connection']]],
-  ['stringmap',['StringMap',['../classlog4cplus_1_1helpers_1_1Properties.html#a2e9fc9f64f8bc7de9f22021aedd25f1d',1,'log4cplus::helpers::Properties']]],
-  ['stringtologlevelmethod',['StringToLogLevelMethod',['../namespacelog4cplus.html#a8c44b16c1c39b70a117adea176b77275',1,'log4cplus']]]
+  ['user_5fcache_5ftype',['user_cache_type',['../classpion_1_1http_1_1auth.html#a57a2002495d45ac3ea508ee4186356b5',1,'pion::http::auth']]],
+  ['user_5fmanager_5fptr',['user_manager_ptr',['../namespacepion.html#a20602680730b88b8efd08b3730d601af',1,'pion']]],
+  ['user_5fmap_5ft',['user_map_t',['../classpion_1_1user__manager.html#a6e856c85929ffbf1a558f61fd7e0b557',1,'pion::user_manager']]],
+  ['user_5fptr',['user_ptr',['../namespacepion.html#afd2ae32f926db1286ba2e83011456e11',1,'pion']]]
 ];

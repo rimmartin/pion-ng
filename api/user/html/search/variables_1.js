@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['buffer',['buffer',['../classlog4cplus_1_1FileAppender.html#a420584c8cc879174341da03822d4ed35',1,'log4cplus::FileAppender::buffer()'],['../structlog4cplus_1_1internal_1_1gft__scratch__pad.html#a7b80e1e61afb50f10c3e1709f42d6aa9',1,'log4cplus::internal::gft_scratch_pad::buffer()']]],
-  ['buffersize',['bufferSize',['../classlog4cplus_1_1FileAppender.html#af22fb2b65a82077a6948ba789b9b12de',1,'log4cplus::FileAppender']]]
+  ['data_5foffset',['data_offset',['../structpion_1_1spdy_1_1__http__protocol__info__t.html#ac7eaf2e8f75959697589437fa27dff9a',1,'pion::spdy::_http_protocol_info_t']]],
+  ['data_5fsize',['data_size',['../structpion_1_1spdy_1_1__http__protocol__info__t.html#a9f92f9f33b30a85ed7fd1758206d632e',1,'pion::spdy::_http_protocol_info_t']]],
+  ['default_5fcontent_5fmax',['DEFAULT_CONTENT_MAX',['../classpion_1_1http_1_1parser.html#a77d2e93061f62e1b7028c783145adf22',1,'pion::http::parser']]],
+  ['default_5fnum_5fthreads',['DEFAULT_NUM_THREADS',['../classpion_1_1scheduler.html#ab8d6ac8ea6a3946abe86cbd20f0783e0',1,'pion::scheduler']]]
 ];
