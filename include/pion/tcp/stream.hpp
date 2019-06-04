@@ -62,12 +62,12 @@ public:
     /**
      * constructs a TCP stream buffer object for a new TCP connection
      *
-     * @param io_service asio service associated with the connection
+     * @param io_context asio context associated with the connection
      * @param ssl_flag if true then the connection will be encrypted using SSL 
      */
-    explicit stream_buffer(boost::asio::io_service& io_service,
+    explicit stream_buffer(boost::asio::io_context& io_context,
                              const bool ssl_flag = false)
-        : m_conn_ptr(new connection(io_service, ssl_flag)),
+        : m_conn_ptr(new connection(io_context, ssl_flag)),
         m_read_buf(m_conn_ptr->get_read_buffer().c_array())
     {
         setup_buffers();
@@ -76,12 +76,12 @@ public:
     /**
      * constructs a TCP stream buffer object for a new SSL/TCP connection
      *
-     * @param io_service asio service associated with the connection
+     * @param io_context asio context associated with the connection
      * @param ssl_context asio ssl context associated with the connection
      */
-    stream_buffer(boost::asio::io_service& io_service,
+    stream_buffer(boost::asio::io_context& io_context,
                     connection::ssl_context_type& ssl_context)
-        : m_conn_ptr(new connection(io_service, ssl_context)),
+        : m_conn_ptr(new connection(io_context, ssl_context)),
         m_read_buf(m_conn_ptr->get_read_buffer().c_array())
     {
         setup_buffers();
@@ -348,12 +348,12 @@ public:
     /**
      * constructs a TCP stream object for a new TCP connection
      *
-     * @param io_service asio service associated with the connection
+     * @param io_context asio context associated with the connection
      * @param ssl_flag if true then the connection will be encrypted using SSL 
      */
-    explicit stream(boost::asio::io_service& io_service,
+    explicit stream(boost::asio::io_context& io_context,
                        const bool ssl_flag = false)
-        : std::basic_iostream<char, std::char_traits<char> >(NULL), m_tcp_buf(io_service, ssl_flag)
+        : std::basic_iostream<char, std::char_traits<char> >(NULL), m_tcp_buf(io_context, ssl_flag)
     {
         // initialize basic_iostream with pointer to the stream buffer
         std::basic_ios<char,std::char_traits<char> >::init(&m_tcp_buf);
@@ -362,12 +362,12 @@ public:
     /**
      * constructs a TCP stream object for a new SSL/TCP connection
      *
-     * @param io_service asio service associated with the connection
+     * @param io_context asio service associated with the connection
      * @param ssl_context asio ssl context associated with the connection
      */
-    stream(boost::asio::io_service& io_service,
+    stream(boost::asio::io_context& io_context,
               connection::ssl_context_type& ssl_context)
-        : std::basic_iostream<char, std::char_traits<char> >(NULL), m_tcp_buf(io_service, ssl_context)
+        : std::basic_iostream<char, std::char_traits<char> >(NULL), m_tcp_buf(io_context, ssl_context)
     {
         // initialize basic_iostream with pointer to the stream buffer
         std::basic_ios<char,std::char_traits<char> >::init(&m_tcp_buf);

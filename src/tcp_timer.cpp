@@ -18,7 +18,7 @@ namespace tcp {     // begin namespace tcp
 // timer member functions
 
 timer::timer(const tcp::connection_ptr& conn_ptr)
-    : m_conn_ptr(conn_ptr), m_timer(conn_ptr->get_io_service()),
+    : m_conn_ptr(conn_ptr), m_timer(conn_ptr->get_io_context()),
     m_timer_active(false), m_was_cancelled(false)
 {
 }

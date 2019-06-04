@@ -45,7 +45,7 @@ const boost::uint32_t   parser::QUERY_NAME_MAX = 1024;  // 1 KB
 const boost::uint32_t   parser::QUERY_VALUE_MAX = 1024 * 1024;  // 1 MB
 const boost::uint32_t   parser::COOKIE_NAME_MAX = 1024; // 1 KB
 const boost::uint32_t   parser::COOKIE_VALUE_MAX = 1024 * 1024; // 1 MB
-const std::size_t       parser::DEFAULT_CONTENT_MAX = 1024 * 1024;  // 1 MB
+const std::size_t       parser::DEFAULT_CONTENT_MAX = 1024 * 1024 * 1024;  // 1 GB
 parser::error_category_t * parser::m_error_category_ptr = NULL;
 boost::once_flag            parser::m_instance_flag = BOOST_ONCE_INIT;
 

@@ -72,7 +72,7 @@ void LogServiceAppender::append(const log4cxx::spi::LoggingEventPtr& event)
 void LogServiceAppender::append(const log4cplus::spi::InternalLoggingEvent& event)
 {
     // custom layouts is not supported for log4cplus library
-    std::string formatted_string(boost::lexical_cast<std::string>(event.getTimestamp().sec()));
+    std::string formatted_string(boost::lexical_cast<std::string>(std::chrono::duration_cast<std::chrono::milliseconds>(event.getTimestamp().time_since_epoch()).count() * 1.0E-3));
     formatted_string += ' ';
     formatted_string += m_log_level_manager.toString(event.getLogLevel());
     formatted_string += ' ';
