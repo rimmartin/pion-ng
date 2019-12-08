@@ -812,10 +812,12 @@ bool DiskFile::checkUpdated(void)
 
 DiskFileSender::DiskFileSender(DiskFile& file, const pion::http::request_ptr& http_request_ptr,
                                const pion::tcp::connection_ptr& tcp_conn,
-                               unsigned long max_chunk_size)
+                               unsigned long max_chunk_size,
+                               std::string cache_control_value)
     : m_logger(PION_GET_LOGGER("pion.FileService.DiskFileSender")), m_disk_file(file),
     m_writer(pion::http::response_writer::create(tcp_conn, *http_request_ptr, boost::bind(&tcp::connection::finish, tcp_conn))),
-    m_max_chunk_size(max_chunk_size), m_file_bytes_to_send(0), m_bytes_sent(0)
+    m_max_chunk_size(max_chunk_size), m_cache_control_value(move(cache_control_value)),
+    m_file_bytes_to_send(0), m_bytes_sent(0)
 {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
     PION_LOG_DEBUG(m_logger, "Preparing to send file"
@@ -829,6 +831,11 @@ DiskFileSender::DiskFileSender(DiskFile& file, const pion::http::request_ptr& ht
 
         // set the Content-Type HTTP header using the file's MIME type
     m_writer->get_response().set_content_type(m_disk_file.getMimeType());
+
+    if (!m_cache_control_value.empty()) {
+        m_writer->get_response().add_header(http::types::HEADER_CACHE_CONTROL,
+                                        m_cache_control_value);
+    }
 
     // set Last-Modified header to enable client-side caching
     m_writer->get_response().add_header(http::types::HEADER_LAST_MODIFIED,

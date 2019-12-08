@@ -147,10 +147,11 @@ public:
         create(DiskFile& file,
                const pion::http::request_ptr& http_request_ptr,
                const pion::tcp::connection_ptr& tcp_conn,
-               unsigned long max_chunk_size = 0) 
+               unsigned long max_chunk_size = 0,
+               std::string cache_control_value = {}) 
     {
         return boost::shared_ptr<DiskFileSender>(new DiskFileSender(file, http_request_ptr,
-                                                                    tcp_conn, max_chunk_size));
+                                                                    tcp_conn, max_chunk_size, cache_control_value));
     }
 
     /// default virtual destructor 
@@ -181,7 +182,8 @@ protected:
     DiskFileSender(DiskFile& file,
                    const pion::http::request_ptr& http_request_ptr,
                    const pion::tcp::connection_ptr& tcp_conn,
-                   unsigned long max_chunk_size);
+                   unsigned long max_chunk_size,
+                   std::string cache_control_value);
 
     /**
      * handler called after a send operation has completed
@@ -217,6 +219,8 @@ private:
      * zero means that the size is unlimited (chunking is disabled).
      */
     unsigned long                           m_max_chunk_size;
+
+    std::string                             m_cache_control_value;
 
     /// the number of file bytes send in the last operation
     unsigned long                           m_file_bytes_to_send;
