@@ -44,14 +44,33 @@ const std::string   types::HEADER_AUTHORIZATION("Authorization");
 const std::string   types::HEADER_REFERER("Referer");
 const std::string   types::HEADER_USER_AGENT("User-Agent");
 const std::string   types::HEADER_X_FORWARDED_FOR("X-Forwarded-For");
+const std::string   types::HEADER_X_POWERED_BY("X-Powered-By");
+const std::string   types::HEADER_X_REQUESTED_WITH("X-Requested-With");
+const std::string   types::HEADER_X_UA_COMPATIBLE("X-UA-Compatible");
 const std::string   types::HEADER_CLIENT_IP("Client-IP");
+const std::string   types::HEADER_CACHE_CONTROL("Cache-Control");
+const std::string   types::HEADER_ORIGIN("Origin");
+const std::string   types::HEADER_ACCEPT("Accept");
+const std::string   types::HEADER_ALLOW("Allow");
+const std::string   types::HEADER_CORS_ALLOW_ORIGIN("Access-Control-Allow-Origin");
+const std::string   types::HEADER_CORS_ALLOW_CREDENTIALS("Access-Control-Allow-Credentials");
+const std::string   types::HEADER_CORS_ALLOW_METHODS("Access-Control-Allow-Methods");
+const std::string   types::HEADER_CORS_ALLOW_HEADERS("Access-Control-Allow-Headers");
+const std::string   types::HEADER_CORS_REQUEST_METHOD("Access-Control-Request-Method");
 
 // common HTTP content types
 const std::string   types::CONTENT_TYPE_HTML("text/html");
 const std::string   types::CONTENT_TYPE_TEXT("text/plain");
 const std::string   types::CONTENT_TYPE_XML("text/xml");
+const std::string   types::CONTENT_TYPE_APP_JSON("application/json");
+const std::string   types::CONTENT_TYPE_APP_XHTML_XML("application/xhtml+xml");
 const std::string   types::CONTENT_TYPE_URLENCODED("application/x-www-form-urlencoded");
 const std::string   types::CONTENT_TYPE_MULTIPART_FORM_DATA("multipart/form-data");
+const std::string   types::CONTENT_TYPE_HTML_UTF8("text/html" "; charset=utf-8");
+const std::string   types::CONTENT_TYPE_TEXT_UTF8("text/plain" "; charset=utf-8");
+const std::string   types::CONTENT_TYPE_XML_UTF8("text/xml" "; charset=utf-8");
+const std::string   types::CONTENT_TYPE_APP_JSON_UTF8("application/json" "; charset=utf-8");
+const std::string   types::CONTENT_TYPE_APP_XHTML_XML_UTF8("application/xhtml+xml" "; charset=utf-8");
 
 // common HTTP request methods
 const std::string   types::REQUEST_METHOD_HEAD("HEAD");

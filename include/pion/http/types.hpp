@@ -52,14 +52,33 @@ struct PION_API types
     static const std::string    HEADER_REFERER;
     static const std::string    HEADER_USER_AGENT;
     static const std::string    HEADER_X_FORWARDED_FOR;
+    static const std::string    HEADER_X_POWERED_BY;
+    static const std::string    HEADER_X_REQUESTED_WITH;
+    static const std::string    HEADER_X_UA_COMPATIBLE;
     static const std::string    HEADER_CLIENT_IP;
+    static const std::string    HEADER_CACHE_CONTROL;
+    static const std::string    HEADER_ORIGIN;
+    static const std::string    HEADER_ACCEPT;
+    static const std::string    HEADER_ALLOW;
+    static const std::string    HEADER_CORS_ALLOW_ORIGIN;
+    static const std::string    HEADER_CORS_ALLOW_CREDENTIALS;
+    static const std::string    HEADER_CORS_ALLOW_METHODS;
+    static const std::string    HEADER_CORS_ALLOW_HEADERS;
+    static const std::string    HEADER_CORS_REQUEST_METHOD;
 
     // common HTTP content types
     static const std::string    CONTENT_TYPE_HTML;
     static const std::string    CONTENT_TYPE_TEXT;
     static const std::string    CONTENT_TYPE_XML;
+    static const std::string    CONTENT_TYPE_APP_JSON;
+    static const std::string    CONTENT_TYPE_APP_XHTML_XML;
     static const std::string    CONTENT_TYPE_URLENCODED;
     static const std::string    CONTENT_TYPE_MULTIPART_FORM_DATA;
+    static const std::string    CONTENT_TYPE_HTML_UTF8;
+    static const std::string    CONTENT_TYPE_TEXT_UTF8;
+    static const std::string    CONTENT_TYPE_XML_UTF8;
+    static const std::string    CONTENT_TYPE_APP_JSON_UTF8;
+    static const std::string    CONTENT_TYPE_APP_XHTML_XML_UTF8;
     
     // common HTTP request methods
     static const std::string    REQUEST_METHOD_HEAD;
