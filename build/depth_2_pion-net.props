@@ -4,16 +4,12 @@
     <Import Project="pion-net.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
-    <PION_COMMON_HOME>..\..\common</PION_COMMON_HOME>
     <PION_NET_HOME>..</PION_NET_HOME>
   </PropertyGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
   </PropertyGroup>
   <ItemGroup>
-    <BuildMacro Include="PION_COMMON_HOME">
-      <Value>$(PION_COMMON_HOME)</Value>
-    </BuildMacro>
     <BuildMacro Include="PION_NET_HOME">
       <Value>$(PION_NET_HOME)</Value>
     </BuildMacro>
