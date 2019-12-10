@@ -8,7 +8,7 @@ addons:
     - boost-latest
     packages:
     - cmake
-    - libboost1.55-all-dev
+    - libboost1.70-all-dev
 
 language: cpp
 
