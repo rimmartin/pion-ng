@@ -46,7 +46,7 @@ install:
 before_script:
   - mkdir build.ci
   - cd build.ci
-  - cmake .. -DBUILD_UT=ON -DCMAKE_BUILD_TYPE=$BUILD_CONFIG -DBoost_DIR=`pwd`/../boost_1_71_0 -DBoost_INCLUDE_DIR=`pwd`/boost1.71.0/include
+  - cmake .. -DBUILD_UT=ON -DCMAKE_BUILD_TYPE=$BUILD_CONFIG -DBoost_DIR=`pwd`/../boost_1_71_0 -DBoost_INCLUDE_DIR=`pwd`/../boost1.71.0/include -DBOOST_LIBRARYDIR=`pwd`/../boost1.71.0/lib
 
 script:
   - cmake --build .
