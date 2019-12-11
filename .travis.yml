@@ -29,9 +29,10 @@ matrix:
     - compiler: clang
 
 before_install:
+  - sudo apt-cache search libboost
+  - locate libboost_system.so
 
 install:
-  - sudo apt-cache search libboost
 
 before_script:
   - mkdir build.ci
