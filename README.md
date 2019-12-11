@@ -3,14 +3,16 @@ Pion Network Library
 
 C++ framework for building lightweight HTTP interfaces
 
-[![Build Status](https://travis-ci.org/splunk/pion.svg?branch=develop)](https://travis-ci.org/splunk/pion)
+[![Build Status](https://travis-ci.org/rimmartin/pion-ng.svg?branch=develop)](https://travis-ci.org/rimmartin/pion-ng)
 
-**Project Home:** https://github.com/splunk/pion
+**Project Home:** https://github.com/rimmartin/pion-ng
+
+[Documentation](https://rimmartin.github.io/pion-ng/)
 
 Retrieving the code
 -------------------
 
-    git clone https://github.com/splunk/pion.git
+    git clone https://github.com/rimmartin/pion-ng.git
     cd pion
 
 
