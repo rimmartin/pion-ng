@@ -8,7 +8,7 @@ addons:
     - boost-latest
     packages:
     - cmake
-    - libboost1.71-all-dev
+    - libboost-dev
 
 language: cpp
 
@@ -31,6 +31,7 @@ matrix:
 before_install:
 
 install:
+  - sudo apt-cache search libboost
 
 before_script:
   - mkdir build.ci
