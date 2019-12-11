@@ -15,10 +15,15 @@
 // Other libraries should be added here as they become part of the configuration 
 // used for binary releases.
 #ifdef PION_FULL
-#define PION_USE_LOG4CPLUS
-#define PION_HAVE_SSL
+#define PION_USE_LOG4CXX
+#define PION_HAVE_SSL 10
 #define PION_HAVE_JSON
 #define PION_HAVE_PYTHON
+#endif
+// Usually you don't need (and want) to debug openssl, but link to openssl in
+// the 'Release' configuration (though we leave it on for historical reasons)
+#if defined _DEBUG
+    #define PION_USE_SSL_DEBUG
 #endif
 
 /* Define to the version number of pion. */
@@ -90,7 +95,13 @@
 //#define PION_HAVE_SSL
 
 #if defined(PION_HAVE_SSL) && !defined(PION_CMAKE_BUILD)
-    #if defined _DEBUG
+    #if PION_HAVE_SSL == 11 && defined PION_USE_SSL_DEBUG
+        #pragma comment(lib, "libssld")
+        #pragma comment(lib, "libcryptod")
+    #elif PION_HAVE_SSL == 11
+        #pragma comment(lib, "libssl")
+        #pragma comment(lib, "libcrypto")
+    #elif defined PION_USE_SSL_DEBUG
         #pragma comment(lib, "ssleay32d")
         #pragma comment(lib, "libeay32d")
     #else

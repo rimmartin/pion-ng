@@ -308,7 +308,7 @@ public:
         m_sync_server_ptr->stop();
     }
     inline boost::shared_ptr<MockSyncServer>& getServerPtr(void) { return m_sync_server_ptr; }
-    inline boost::asio::io_service& get_io_service(void) { return m_scheduler.get_io_service(); }
+    inline boost::asio::io_service& get_executor(void) { return m_scheduler.get_executor(); }
 
 private:
     single_service_scheduler          m_scheduler;
@@ -421,7 +421,7 @@ BOOST_AUTO_TEST_CASE(checkReceivedRequestUsingExtraWhiteSpaceAroundChunkSizes) {
 
 BOOST_AUTO_TEST_CASE(checkReceivedRequestUsingRequestObject) {
     // open a connection
-    pion::tcp::connection tcp_conn(get_io_service());
+    pion::tcp::connection tcp_conn(get_executor());
     boost::system::error_code error_code;
     error_code = tcp_conn.connect(boost::asio::ip::address::from_string("127.0.0.1"), getServerPtr()->get_port());
     BOOST_REQUIRE(!error_code);

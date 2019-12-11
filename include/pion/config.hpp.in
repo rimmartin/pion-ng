@@ -67,7 +67,8 @@
 /* Define to 1 if you have the `bzlib' library. */
 #undef PION_HAVE_BZLIB
 
-/* Define to 1 if you have the `OpenSSL' library. */
+/* Define to 10 if you have the `OpenSSL 1.0' library. */
+/* Define to 11 if you have the `OpenSSL 1.1' library. */
 #undef PION_HAVE_SSL
 
 /* This is used by Windows projects to flag exported symbols */

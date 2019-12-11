@@ -109,7 +109,7 @@ public:
         boost::filesystem::remove_all("sandbox");
     }
     
-    inline boost::asio::io_service& get_io_service(void) { return m_scheduler.get_io_service(); }
+    inline boost::asio::io_service& get_executor(void) { return m_scheduler.get_executor(); }
     
     single_service_scheduler	m_scheduler;
 	http::plugin_server			m_server;
@@ -667,7 +667,7 @@ BOOST_AUTO_TEST_CASE(checkResponseToHTTP_1_1_Request) {
 
 BOOST_AUTO_TEST_CASE(checkHTTPMessageReceive) {
     // open (another) connection
-    pion::tcp::connection tcp_conn(get_io_service());
+    pion::tcp::connection tcp_conn(get_executor());
     boost::system::error_code error_code;
     error_code = tcp_conn.connect(boost::asio::ip::address::from_string("127.0.0.1"), m_server.get_port());
     BOOST_REQUIRE(!error_code);
