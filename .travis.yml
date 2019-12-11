@@ -37,7 +37,7 @@ before_install:
   - cd ../
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
     else
-      export LD_LIBRARY_PATH=pwd`/boost1.71.0/lib:${LD_LIBRARY_PATH};
+      export LD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${LD_LIBRARY_PATH};
     fi
 
 install:
