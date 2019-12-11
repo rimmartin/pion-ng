@@ -29,10 +29,15 @@ matrix:
     - compiler: clang
 
 before_install:
+  - wget https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz .
+  - tar zxf boost_1_71_0.tar.gz
+  - cd boost_1_71_0
+  - ./bootstrap.sh --prefix=../boost1.71.0
+  - ./b2 install
+  - cd ../
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
     else
-      sudo apt-cache search libboost;
-      sudo locate libboost_system.so;
+      export LD_LIBRARY_PATH=pwd`/boost1.71.0/lib:${LD_LIBRARY_PATH};
     fi
 
 install:
