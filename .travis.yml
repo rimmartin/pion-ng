@@ -29,8 +29,11 @@ matrix:
     - compiler: clang
 
 before_install:
-  - sudo apt-cache search libboost
-  - locate libboost_system.so
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
+    else
+      sudo apt-cache search libboost;
+      sudo locate libboost_system.so;
+    fi
 
 install:
 
