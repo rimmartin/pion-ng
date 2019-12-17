@@ -32,8 +32,8 @@ before_install:
   - wget https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz
   - tar zxf boost_1_71_0.tar.gz
   - cd boost_1_71_0
-  - ./bootstrap.sh --prefix=../boost1.71.0
-  - ./b2 install
+  - ./bootstrap.sh --prefix=../boost1.71.0 --with-libraries=thread,system,filesystem,regex,unit_test_framework
+  - ./b2 cxxflags="-std=c++11" -j2 -d+2 install
   - cd ../
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
      export DYLD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${DYLD_LIBRARY_PATH};
