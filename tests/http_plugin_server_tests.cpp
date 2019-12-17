@@ -1120,8 +1120,8 @@ public:
     }
     
     /// checks the validity of the HTTP response
-    void checkResponse(http::response_ptr& http_response_ptr,
-        tcp::connection_ptr& /* conn_ptr */, const boost::system::error_code& /* ec */)
+    void checkResponse(http::response_ptr http_response_ptr,
+        tcp::connection_ptr /* conn_ptr */, const boost::system::error_code /* ec */)
     {
         checkResponse(*http_response_ptr);
         boost::mutex::scoped_lock async_lock(m_mutex);

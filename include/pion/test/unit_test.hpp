@@ -16,10 +16,13 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/condition.hpp>
+#include <boost/exception/all.hpp>
+#include <boost/test/framework.hpp>
+#include <boost/test/execution_monitor.hpp>
 #include <boost/test/unit_test.hpp>
 #include <boost/test/unit_test_log.hpp>
 #include <boost/test/unit_test_log_formatter.hpp>
-#include <boost/test/test_case_template.hpp>
+#include <boost/test/tree/test_case_template.hpp>
 #include <boost/test/utils/xml_printer.hpp>
 #include <pion/logger.hpp>
 
@@ -55,19 +58,19 @@ namespace test {    // begin namespace test
     
         /// wrapper to flush output for xml_log_formatter::log_start
         virtual void log_start(std::ostream& ostr,
-                               boost::unit_test::counter_t /* test_cases_amount */)
+                               boost::unit_test::counter_t /* test_cases_amount */) override
         {
             ostr << "<TestLog>" << std::endl;
         }
     
         /// wrapper to flush output for xml_log_formatter::log_finish
-        virtual void log_finish(std::ostream& ostr)
+        virtual void log_finish(std::ostream& ostr) override
         {
             ostr << "</TestLog>" << std::endl;
         }
     
         /// wrapper to flush output for xml_log_formatter::log_build_info
-        virtual void log_build_info(std::ostream& ostr)
+        virtual void log_build_info(std::ostream& ostr, bool log_build_info) override
         {
             ostr  << "<BuildInfo"
                 << " platform"  << attr_value() << BOOST_PLATFORM
@@ -81,7 +84,7 @@ namespace test {    // begin namespace test
     
         /// wrapper to flush output for xml_log_formatter::test_unit_start
         virtual void test_unit_start(std::ostream& ostr,
-                                     boost::unit_test::test_unit const& tu )
+                                     boost::unit_test::test_unit const& tu ) override
         {
             ostr << "<" << tu_type_name( tu ) << " name" << attr_value() << tu.p_name.get() << ">" << std::endl;
         }
@@ -89,16 +92,16 @@ namespace test {    // begin namespace test
         /// wrapper to flush output for xml_log_formatter::test_unit_finish
         virtual void test_unit_finish(std::ostream& ostr,
                                       boost::unit_test::test_unit const& tu,
-                                      unsigned long elapsed )
+                                      unsigned long elapsed ) override
         {
-            if ( tu.p_type == boost::unit_test::tut_case )
+            if ( tu.p_type == boost::unit_test::TUT_CASE )
                 ostr << "<TestingTime>" << elapsed << "</TestingTime>";
             ostr << "</" << tu_type_name( tu ) << ">" << std::endl;
         }
     
         /// wrapper to flush output for xml_log_formatter::test_unit_skipped
         virtual void test_unit_skipped(std::ostream& ostr,
-                                       boost::unit_test::test_unit const& tu )
+                                       boost::unit_test::test_unit const& tu ) override
         {
             ostr << "<" << tu_type_name( tu )
                 << " name"    << attr_value() << tu.p_name.get()
@@ -107,9 +110,9 @@ namespace test {    // begin namespace test
         }
     
         /// wrapper to flush output for xml_log_formatter::log_exception
-        virtual void log_exception(std::ostream& ostr,
+        virtual void log_exception_start(std::ostream& ostr,
                                    boost::unit_test::log_checkpoint_data const& checkpoint_data,
-                                   boost::execution_exception const& ex )
+                                   boost::execution_exception const& ex ) override
         {
             boost::execution_exception::location const& loc = ex.where();
             
@@ -119,23 +122,27 @@ namespace test {    // begin namespace test
             if( !loc.m_function.is_empty() )
                 ostr << " function"   << attr_value() << loc.m_function;
             
-            ostr << ">" << boost::unit_test::cdata() << ex.what();
+            ostr << ">" << boost::unit_test::utils::cdata() << ex.what();
             
             if( !checkpoint_data.m_file_name.is_empty() ) {
                 ostr << "<LastCheckpoint file" << attr_value() << checkpoint_data.m_file_name
                     << " line"                << attr_value() << checkpoint_data.m_line_num
                     << ">"
-                    << boost::unit_test::cdata() << checkpoint_data.m_message
+                    << boost::unit_test::utils::cdata() << checkpoint_data.m_message
                     << "</LastCheckpoint>";
             }
             
             ostr << "</Exception>" << std::endl;
         }
+        
+        virtual void        log_exception_finish( std::ostream& os ) override{
+            
+        }
     
         /// thread-safe wrapper for xml_log_formatter::log_entry_start
         virtual void log_entry_start( std::ostream& ostr,
                                      boost::unit_test::log_entry_data const& entry_data,
-                                     log_entry_types let )
+                                     log_entry_types let ) override
         {
             boost::mutex::scoped_lock entry_lock(m_mutex);
             while (m_entry_in_progress) {
@@ -155,7 +162,7 @@ namespace test {    // begin namespace test
     
         /// thread-safe wrapper for xml_log_formatter::log_entry_value
         /// ensures that an entry is in progress
-        virtual void log_entry_value( std::ostream& ostr, boost::unit_test::const_string value )
+        virtual void log_entry_value( std::ostream& ostr, boost::unit_test::const_string value ) override
         {
             boost::mutex::scoped_lock entry_lock(m_mutex);
             if (m_entry_in_progress) {
@@ -166,7 +173,7 @@ namespace test {    // begin namespace test
         
         /// thread-safe wrapper for xml_log_formatter::log_entry_finish
         /// assumes the current thread has control via call to log_entry_start()
-        virtual void log_entry_finish( std::ostream& ostr )
+        virtual void log_entry_finish( std::ostream& ostr ) override
         {
             boost::mutex::scoped_lock entry_lock(m_mutex);
             if (m_entry_in_progress) {
@@ -177,16 +184,28 @@ namespace test {    // begin namespace test
             }
         }
         
+        virtual void        entry_context_start( std::ostream& os, boost::unit_test::log_level l ) override{
+            
+        }
+        
+        virtual void        log_entry_context( std::ostream& os, boost::unit_test::log_level l, boost::unit_test::const_string value ) override{
+            
+        }
+        
+        virtual void entry_context_finish( std::ostream& os, boost::unit_test::log_level l ) override{
+            
+        }
+        
     private:
 
         /// output appropriate xml element name
         static boost::unit_test::const_string tu_type_name( boost::unit_test::test_unit const& tu )
         {
-            return tu.p_type == boost::unit_test::tut_case ? "TestCase" : "TestSuite";
+            return tu.p_type == boost::unit_test::TUT_CASE ? "TestCase" : "TestSuite";
         }
         
         /// re-use attr_value data type from xml_printer.hpp
-        typedef boost::unit_test::attr_value    attr_value;
+        typedef boost::unit_test::utils::attr_value    attr_value;
         
         /// true if a log entry is in progress
         volatile bool       m_entry_in_progress;
@@ -437,8 +456,9 @@ struct BOOST_AUTO_TC_INVOKER( test_name ) {                     \
 BOOST_AUTO_TU_REGISTRAR( test_name )(                           \
     boost::unit_test::ut_detail::template_test_case_gen<        \
         BOOST_AUTO_TC_INVOKER( test_name ),                     \
-        BOOST_AUTO_TEST_CASE_FIXTURE_TYPES >(                   \
-            BOOST_STRINGIZE( test_name ) ) );                   \
+          BOOST_AUTO_TEST_CASE_FIXTURE_TYPES >(                 \
+          BOOST_STRINGIZE( test_name ), __FILE__, __LINE__ ),   \
+    boost::unit_test::decorator::collector_t::instance() );     \
                                                                 \
 template<typename F>                                            \
 void test_name<F>::test_method()                                \

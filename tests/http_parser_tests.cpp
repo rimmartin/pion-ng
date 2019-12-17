@@ -469,7 +469,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserSimpleRequest)
 
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(request_parser.parse(http_request, ec));
+    BOOST_CHECK(static_cast<bool>(request_parser.parse(http_request, ec)));
     BOOST_CHECK(!ec);
 
     BOOST_CHECK_EQUAL(http_request.get_content_length(), 0UL);
@@ -484,7 +484,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserSimpleResponse)
 
     http::response http_response;
     boost::system::error_code ec;
-    BOOST_CHECK(response_parser.parse(http_response, ec));
+    BOOST_CHECK(static_cast<bool>(response_parser.parse(http_response, ec)));
     BOOST_CHECK(!ec);
 
     BOOST_CHECK_EQUAL(http_response.get_content_length(), 117UL);
@@ -502,7 +502,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserBadRequest)
 
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(!request_parser.parse(http_request, ec));
+    BOOST_CHECK(!static_cast<bool>(request_parser.parse(http_request, ec)));
     BOOST_CHECK_EQUAL(ec.value(), http::parser::ERROR_VERSION_CHAR);
     BOOST_CHECK_EQUAL(ec.message(), "invalid version character");
 }
@@ -515,7 +515,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserSimpleResponseWithSmallerMaxSize)
 
     http::response http_response;
     boost::system::error_code ec;
-    BOOST_CHECK(response_parser.parse(http_response, ec));
+    BOOST_CHECK(static_cast<bool>(response_parser.parse(http_response, ec)));
     BOOST_CHECK(!ec);
 
     BOOST_CHECK_EQUAL(http_response.get_content_length(), 4UL);
@@ -534,7 +534,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserSimpleResponseWithZeroMaxSize)
 
     http::response http_response;
     boost::system::error_code ec;
-    BOOST_CHECK(response_parser.parse(http_response, ec));
+    BOOST_CHECK(static_cast<bool>(response_parser.parse(http_response, ec)));
     BOOST_CHECK(!ec);
 
     BOOST_CHECK_EQUAL(http_response.get_content_length(), 0UL);
@@ -567,7 +567,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParser_MultipleResponseFrames)
     }
 
     response_parser.set_read_buffer((const char*)frames[frame_cnt - 1], sizes[frame_cnt - 1]);
-    BOOST_CHECK( response_parser.parse(http_response, ec) );
+    BOOST_CHECK( static_cast<bool>(response_parser.parse(http_response, ec)) );
         BOOST_CHECK(!ec);
     total_bytes += sizes[frame_cnt - 1];
 
@@ -587,7 +587,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserWithSemicolons)
     
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(request_parser.parse(http_request, ec));
+    BOOST_CHECK(static_cast<bool>(request_parser.parse(http_request, ec)));
     BOOST_CHECK(!ec);
     
     // The content length should be 15 and the ignored data after ';'
@@ -606,7 +606,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserWithFooters)
     
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(request_parser.parse(http_request, ec));
+    BOOST_CHECK(static_cast<bool>(request_parser.parse(http_request, ec)));
     BOOST_CHECK(!ec);
     
     BOOST_CHECK_EQUAL(http_request.get_content_length(), 15UL);
@@ -630,7 +630,7 @@ BOOST_AUTO_TEST_CASE(testHTTPParserWithErrorInFooters)
     
     // The HTTP Packet does not contain any footer value associated with the footer key
     // This will lead to any error within the parse_headers() method
-    BOOST_CHECK_EQUAL(request_parser.parse(http_request, ec), false);
+    BOOST_CHECK_EQUAL(static_cast<bool>(request_parser.parse(http_request, ec)), false);
     
     // Check if there is an error generated
     BOOST_CHECK_EQUAL(ec.value(), http::parser::ERROR_HEADER_CHAR);
@@ -652,7 +652,7 @@ BOOST_AUTO_TEST_CASE(testHTTP_0_9_RequestParser)
     
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(request_parser.parse(http_request, ec));
+    BOOST_CHECK(static_cast<bool>(request_parser.parse(http_request, ec)));
 
     BOOST_CHECK(!ec);
     
@@ -669,7 +669,7 @@ BOOST_AUTO_TEST_CASE(testHTTP_0_9_ResponseParser)
     
     http::request http_request;
     boost::system::error_code ec;
-    BOOST_CHECK(request_parser.parse(http_request, ec));
+    BOOST_CHECK(static_cast<bool>(request_parser.parse(http_request, ec)));
     BOOST_CHECK(!ec);
 
     http::parser response_parser(false);
