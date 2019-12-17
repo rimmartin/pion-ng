@@ -15,6 +15,7 @@ language: cpp
 os:
   - linux
   - osx
+  - windows
 
 compiler:
   - gcc
@@ -37,6 +38,8 @@ before_install:
   - cd ../
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
      export DYLD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${DYLD_LIBRARY_PATH};
+    elif [[ "$TRAVIS_OS_NAME" == "windows" ]] ; then
+     export PATH=`pwd`/boost1.71.0/lib:${PATH};
     else
       export LD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${LD_LIBRARY_PATH};
     fi
