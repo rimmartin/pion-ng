@@ -34,7 +34,7 @@ before_install:
   - tar zxf boost_1_71_0.tar.gz
   - cd boost_1_71_0
   - ./bootstrap.sh --prefix=../boost1.71.0 --with-libraries=thread,system,filesystem,regex,test
-  - ./b2 cxxflags="-std=c++11" -j2 install variant=release
+  - ./b2 cxxflags="-std=c++11" -j2 install variant=release link=shared runtime-link=shared
   - cd ../
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
      export DYLD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${DYLD_LIBRARY_PATH};
