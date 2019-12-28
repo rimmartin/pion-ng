@@ -34,7 +34,11 @@ namespace plugins {     // begin namespace plugins
 ///
 /// DiskFile: class used to represent files stored on disk
 /// 
-class PION_API DiskFile {
+#if defined FILESERVICE_EXPORTS
+class PION_PLUGIN DiskFile {
+#else
+class DiskFile {
+#endif
 public:
     /// default constructor
     DiskFile(void)
@@ -130,7 +134,11 @@ protected:
 ///
 /// DiskFileSender: class used to send files to clients using HTTP responses
 /// 
-class PION_API DiskFileSender :
+#if defined FILESERVICE_EXPORTS
+class PION_PLUGIN DiskFileSender:
+#else
+class DiskFileSender:
+#endif
     public boost::enable_shared_from_this<DiskFileSender>,
     private boost::noncopyable
 {
