@@ -1,35 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
-    <BOOST_INC>C:\boost\include\boost-1_51</BOOST_INC>
-    <BOOST_LIB>C:\boost\lib</BOOST_LIB>
-    <BZIP2_INC>C:\bzip2-1.0.6\include</BZIP2_INC>
-    <BZIP2_LIB>C:\bzip2-1.0.6\lib</BZIP2_LIB>
-    <ICONV_INC>C:\iconv-1.9.2\include</ICONV_INC>
-    <ICONV_LIB>C:\iconv-1.9.2\lib</ICONV_LIB>
-    <ICONV_BIN>C:\iconv-1.9.2\bin</ICONV_BIN>
-    <ICU_INC>C:\icu4c-49_1_2\icu\include</ICU_INC>
-    <ICU_LIB>C:\icu4c-49_1_2\icu\lib</ICU_LIB>
-    <ICU_BIN>C:\icu4c-49_1_2\icu\bin</ICU_BIN>
-    <LIBXML_INC>C:\libxml2-2.9.0\include</LIBXML_INC>
-    <LIBXML_LIB>C:\libxml2-2.9.0\lib</LIBXML_LIB>
-    <LIBXML_BIN>C:\libxml2-2.9.0\bin</LIBXML_BIN>
-    <LOG4CPLUS_INC>C:\log4cplus-1.0.4.1\include</LOG4CPLUS_INC>
-    <LOG4CPLUS_LIB>C:\log4cplus-1.0.4.1\bin</LOG4CPLUS_LIB>
-    <LOG4CXX_INC>C:\apache\apache-log4cxx-0.10.0\src\main\include</LOG4CXX_INC>
-    <LOG4CXX_LIB>C:\apache\apache-log4cxx-0.10.0\bin</LOG4CXX_LIB>
-    <OPENSSL_INC>C:\openssl-1.0.1j\inc32</OPENSSL_INC>
-    <OPENSSL_LIB>C:\openssl-1.0.1j\bin</OPENSSL_LIB>
-    <PYTHON_INC>C:\Python26\include</PYTHON_INC>
-    <PYTHON_LIB>C:\Python26\libs</PYTHON_LIB>
-    <YAJL_INC>C:\yajl-2.0.5\include</YAJL_INC>
-    <YAJL_LIB>C:\yajl-2.0.5\lib\Release</YAJL_LIB>
-    <ZLIB_INC>C:\zlib-1.2.7\include</ZLIB_INC>
-    <ZLIB_LIB>C:\zlib-1.2.7\lib</ZLIB_LIB>
-    <ZLIB_BIN>C:\zlib-1.2.7\bin</ZLIB_BIN>
+    <LIB_ROOT>C:\vc12</LIB_ROOT>
+    <BOOST_INC>$(LIB_ROOT)\boost\include\boost-1_51</BOOST_INC>
+    <BOOST_LIB>$(LIB_ROOT)\boost\lib</BOOST_LIB>
+    <BZIP2_INC>$(LIB_ROOT)\bzip2-1.0.6\include</BZIP2_INC>
+    <BZIP2_LIB>$(LIB_ROOT)\bzip2-1.0.6\lib</BZIP2_LIB>
+    <ICONV_INC>$(LIB_ROOT)\iconv-1.9.2\include</ICONV_INC>
+    <ICONV_LIB>$(LIB_ROOT)\iconv-1.9.2\lib</ICONV_LIB>
+    <ICONV_BIN>$(LIB_ROOT)\iconv-1.9.2\bin</ICONV_BIN>
+    <ICU_INC>$(LIB_ROOT)\icu4c-49_1_2\icu\include</ICU_INC>
+    <ICU_LIB>$(LIB_ROOT)\icu4c-49_1_2\icu\lib</ICU_LIB>
+    <ICU_BIN>$(LIB_ROOT)\icu4c-49_1_2\icu\bin</ICU_BIN>
+    <LIBXML_INC>$(LIB_ROOT)\libxml2-2.9.0\include</LIBXML_INC>
+    <LIBXML_LIB>$(LIB_ROOT)\libxml2-2.9.0\lib</LIBXML_LIB>
+    <LIBXML_BIN>$(LIB_ROOT)\libxml2-2.9.0\bin</LIBXML_BIN>
+    <LOG4CPLUS_INC>$(LIB_ROOT)\log4cplus-1.0.4.1\include</LOG4CPLUS_INC>
+    <LOG4CPLUS_LIB>$(LIB_ROOT)\log4cplus-1.0.4.1\bin</LOG4CPLUS_LIB>
+    <LOG4CXX_INC>$(LIB_ROOT)\apache\apache-log4cxx-0.10.0\src\main\include</LOG4CXX_INC>
+    <LOG4CXX_LIB>$(LIB_ROOT)\apache\apache-log4cxx-0.10.0\bin</LOG4CXX_LIB>
+    <OPENSSL_INC>$(LIB_ROOT)\openssl-1.0.1j\inc32</OPENSSL_INC>
+    <OPENSSL_LIB>$(LIB_ROOT)\openssl-1.0.1j\bin</OPENSSL_LIB>
+    <PYTHON_INC>$(LIB_ROOT)\Python26\include</PYTHON_INC>
+    <PYTHON_LIB>$(LIB_ROOT)\Python26\libs</PYTHON_LIB>
+    <YAJL_INC>$(LIB_ROOT)\yajl-2.0.5\include</YAJL_INC>
+    <YAJL_LIB>$(LIB_ROOT)\yajl-2.0.5\libRelease</YAJL_LIB>
+    <ZLIB_INC>$(LIB_ROOT)\zlib-1.2.7\include</ZLIB_INC>
+    <ZLIB_LIB>$(LIB_ROOT)\zlib-1.2.7\lib</ZLIB_LIB>
+    <ZLIB_BIN>$(LIB_ROOT)\zlib-1.2.7\bin</ZLIB_BIN>
     <PION_PATH>$(BOOST_LIB);$(BZIP2_BIN);$(ICONV_BIN);$(ICU_BIN);$(LIBXML_BIN);$(LOG4CPLUS_LIB);$(LOG4CXX_LIB);$(OPENSSL_LIB);$(PYTHON_LIB);$(YAJL_LIB);$(ZLIB_BIN);$(PATH)</PION_PATH>
-    <SQLITE_INC>C:\sqlite-3.7.14.1\</SQLITE_INC>
-    <SQLITE_LIB>C:\sqlite-3.7.14.1\lib\</SQLITE_LIB>
+    <SQLITE_INC>$(LIB_ROOT)\sqlite-3.7.14.1\</SQLITE_INC>
+    <SQLITE_LIB>$(LIB_ROOT)\sqlite-3.7.14.1\lib\</SQLITE_LIB>
   </PropertyGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
@@ -43,6 +44,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <BuildMacro Include="LIB_ROOT">
+      <Value>$(LIB_ROOT)</Value>
+    </BuildMacro>
     <BuildMacro Include="BOOST_INC">
       <Value>$(BOOST_INC)</Value>
     </BuildMacro>
