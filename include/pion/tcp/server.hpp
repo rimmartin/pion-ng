@@ -10,6 +10,7 @@
 #ifndef __PION_TCP_SERVER_HEADER__
 #define __PION_TCP_SERVER_HEADER__
 
+#include <vector>
 #include <set>
 #include <boost/asio.hpp>
 #include <boost/noncopyable.hpp>
@@ -27,11 +28,62 @@ namespace tcp {     // begin namespace tcp
 
 
 ///
+/// tcp::acceptors_base: base class implementing the switch
+/// between only one acceptor (until C++03) or the ability for
+/// multiple acceptors/endpoints (since C++11)
+/// 
+class PION_API acceptors_base
+{
+public:
+    typedef boost::asio::ip::tcp::acceptor acceptor_t;
+#ifdef BOOST_ASIO_HAS_MOVE
+    using acceptors_t = std::vector<acceptor_t>;
+#else
+    typedef acceptor_t acceptors_t[1];
+#endif
+
+
+protected:
+    acceptors_base(scheduler& sched, size_t n);
+    acceptors_base(size_t n);
+    ~acceptors_base();
+
+#ifdef BOOST_ASIO_HAS_MOVE
+    void resize_acceptors(size_t n);
+#endif
+
+
+private:
+    /// the default scheduler object used to manage worker threads
+    single_service_scheduler m_default_scheduler;
+
+protected:
+    /// reference to the active scheduler object used to manage worker threads
+    scheduler& m_active_scheduler;
+
+
+    /// manages async TCP connections per endpoint
+#ifdef BOOST_ASIO_HAS_MOVE
+    acceptors_t m_tcp_acceptors;
+#else
+    // prevent automatic construction
+    union
+    {
+        acceptors_t m_tcp_acceptors;
+    };
+#endif
+};
+
+///
 /// tcp::server: a multi-threaded, asynchronous TCP server
 /// 
 class PION_API server :
+    private acceptors_base,
     private boost::noncopyable
 {
+public:
+    typedef std::vector<boost::asio::ip::tcp::endpoint> endpoints_t;
+
 public:
 
     /// default destructor
@@ -60,23 +112,31 @@ public:
     /// returns the number of active tcp connections
     std::size_t get_connections(void) const;
 
-    /// returns tcp port number that the server listens for connections on
-    inline unsigned int get_port(void) const { return m_endpoint.port(); }
+    /// returns first tcp port number that the server listens for connections on
+    inline unsigned int get_port(void) const { return m_endpoints.at(0).port(); }
     
-    /// sets tcp port number that the server listens for connections on
-    inline void set_port(unsigned int p) { m_endpoint.port(p); }
+    /// sets first tcp port number that the server listens for connections on
+    inline void set_port(unsigned int p) { m_endpoints.at(0).port(p); }
     
-    /// returns IP address that the server listens for connections on
-    inline boost::asio::ip::address get_address(void) const { return m_endpoint.address(); }
+    /// returns first IP address that the server listens for connections on
+    inline boost::asio::ip::address get_address(void) const { return m_endpoints.at(0).address(); }
     
-    /// sets IP address that the server listens for connections on
-    inline void set_address(const boost::asio::ip::address& addr) { m_endpoint.address(addr); }
+    /// sets first IP address that the server listens for connections on
+    inline void set_address(const boost::asio::ip::address& addr) { m_endpoints.at(0).address(addr); }
     
-    /// returns tcp endpoint that the server listens for connections on
-    inline const boost::asio::ip::tcp::endpoint& get_endpoint(void) const { return m_endpoint; }
-    
-    /// sets tcp endpoint that the server listens for connections on
-    inline void set_endpoint(const boost::asio::ip::tcp::endpoint& ep) { m_endpoint = ep; }
+    /// returns first tcp endpoint that the server listens for connections on
+    inline const boost::asio::ip::tcp::endpoint& get_endpoint(void) const { return m_endpoints.at(0); }
+
+    /// sets first tcp endpoint that the server listens for connections on
+    inline void set_endpoint(const boost::asio::ip::tcp::endpoint& ep) { m_endpoints.at(0) = ep; }
+
+    /// returns tcp endpoints that the server listens for connections on
+    inline const endpoints_t& get_endpoints(void) const { return m_endpoints; }
+
+#ifdef BOOST_ASIO_HAS_MOVE
+    /// sets tcp endpoints that the server listens for connections on
+    inline void set_endpoints(endpoints_t endpoints);
+#endif
 
     /// returns true if the server uses SSL to encrypt connections
     inline bool get_ssl_flag(void) const { return m_ssl_flag; }
@@ -96,11 +156,17 @@ public:
     /// returns the logger currently in use
     inline logger get_logger(void) { return m_logger; }
     
-    /// returns mutable reference to the TCP connection acceptor
-    inline boost::asio::ip::tcp::acceptor& get_acceptor(void) { return m_tcp_acceptor; }
+    /// returns mutable reference to the first TCP connection acceptor
+    inline boost::asio::ip::tcp::acceptor& get_acceptor(void) { return m_tcp_acceptors.at(0); }
 
-    /// returns const reference to the TCP connection acceptor
-    inline const boost::asio::ip::tcp::acceptor& get_acceptor(void) const { return m_tcp_acceptor; }
+    /// returns const reference to the first TCP connection acceptor
+    inline const boost::asio::ip::tcp::acceptor& get_acceptor(void) const { return m_tcp_acceptors.at(0); }
+
+    /// returns mutable reference to the TCP connection acceptors
+    inline acceptors_t& get_acceptors(void) { return m_tcp_acceptors; }
+
+    /// returns const reference to the TCP connection acceptors
+    inline const acceptors_t& get_acceptors(void) const { return m_tcp_acceptors; }
 
     
 protected:
@@ -134,7 +200,24 @@ protected:
      * @param endpoint TCP endpoint used to listen for new connections (see ASIO docs)
      */
     server(scheduler& sched, const boost::asio::ip::tcp::endpoint& endpoint);
-    
+
+#ifdef BOOST_ASIO_HAS_MOVE
+    /**
+     * protected constructor so that only derived objects may be created
+     *
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    explicit server(endpoints_t endpoints);
+
+    /**
+     * protected constructor so that only derived objects may be created
+     *
+     * @param sched the scheduler that will be used to manage worker threads
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    server(scheduler& sched, endpoints_t endpoints);
+#endif
+
     /**
      * handles a new TCP connection; derived classes SHOULD override this
      * since the default behavior does nothing
@@ -200,15 +283,6 @@ private:
     /// data type for a pool of TCP connections
     typedef std::set<tcp::connection_ptr>   ConnectionPool;
     
-    
-    /// the default scheduler object used to manage worker threads
-    single_service_scheduler                m_default_scheduler;
-
-    /// reference to the active scheduler object used to manage worker threads
-    scheduler &                             m_active_scheduler;
-    
-    /// manages async TCP connections
-    boost::asio::ip::tcp::acceptor          m_tcp_acceptor;
 
     /// context used for SSL configuration
     connection::ssl_context_type            m_ssl_context;
@@ -222,8 +296,8 @@ private:
     /// pool of active connections associated with this server 
     ConnectionPool                          m_conn_pool;
 
-    /// tcp endpoint used to listen for new connections
-    boost::asio::ip::tcp::endpoint          m_endpoint;
+    /// tcp endpoints used to listen for new connections
+    endpoints_t                             m_endpoints;
 
     /// true if the server uses SSL to encrypt connections
     bool                                    m_ssl_flag;

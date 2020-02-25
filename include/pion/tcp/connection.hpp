@@ -94,10 +94,12 @@ public:
     static inline boost::shared_ptr<connection> create(boost::asio::io_context& io_context,
                                                           ssl_context_type& ssl_context,
                                                           const bool ssl_flag,
-                                                          connection_handler finished_handler)
+                                                          connection_handler finished_handler,
+                                                          const boost::asio::ip::tcp::endpoint& local_endpoint = boost::asio::ip::tcp::endpoint())
     {
         return boost::shared_ptr<connection>(new connection(io_context, ssl_context,
-                                                                  ssl_flag, finished_handler));
+                                                                  ssl_flag, finished_handler,
+                                                                  local_endpoint));
     }
     
     /**
@@ -656,6 +658,11 @@ public:
     inline unsigned short get_remote_port(void) const {
         return get_remote_endpoint().port();
     }
+
+    /// returns the local endpoint (if it has been provided at construction time)
+    inline const boost::asio::ip::tcp::endpoint& get_local_endpoint(void) const {
+        return m_local_endpoint;
+    }
     
     /// returns reference to the io_context used for async operations
     inline boost::asio::io_context& get_io_context(void) {
@@ -689,7 +696,8 @@ protected:
     connection(boost::asio::io_context& io_context,
                   ssl_context_type& ssl_context,
                   const bool ssl_flag,
-                  connection_handler finished_handler)
+                  connection_handler finished_handler,
+                  const boost::asio::ip::tcp::endpoint& local_endpoint)
         :
 #ifdef PION_HAVE_SSL
         m_ssl_context(boost::asio::ssl::context::sslv23),
@@ -699,7 +707,8 @@ protected:
         m_ssl_socket(io_context), m_ssl_flag(false), 
 #endif
         m_lifecycle(LIFECYCLE_CLOSE),
-        m_finished_handler(finished_handler)
+        m_finished_handler(finished_handler),
+        m_local_endpoint(local_endpoint)
     {
         save_read_pos(NULL, NULL);
     }
@@ -731,6 +740,9 @@ private:
 
     /// function called when a server has finished handling the connection
     connection_handler      m_finished_handler;
+
+    /// optional local endpoint forwarded at construction time
+    const boost::asio::ip::tcp::endpoint m_local_endpoint;
 };
 
 
