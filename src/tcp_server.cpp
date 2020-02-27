@@ -236,7 +236,8 @@ void server::handle_ssl_handshake(const tcp::connection_ptr& tcp_conn,
         // an error occured while trying to establish the SSL connection
         PION_LOG_WARN(m_logger, "SSL handshake failed on port " << get_port()
                       << " (" << handshake_error.message() << ')');
-        finish_connection(tcp_conn);
+        tcp_conn->reset_ssl_flag();
+        handle_ssl_handshake_error(tcp_conn, handshake_error);
     } else {
         // handle the new connection
         PION_LOG_DEBUG(m_logger, "SSL handshake succeeded on port " << get_port());

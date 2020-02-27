@@ -134,7 +134,14 @@ protected:
      * @param endpoint TCP endpoint used to listen for new connections (see ASIO docs)
      */
     server(scheduler& sched, const boost::asio::ip::tcp::endpoint& endpoint);
-    
+
+    virtual void handle_ssl_handshake_error(const tcp::connection_ptr& tcp_conn,
+                                            const boost::system::error_code& handshake_error)
+    {
+        tcp_conn->set_lifecycle(connection::LIFECYCLE_CLOSE); // make sure it will get closed
+        tcp_conn->finish();
+    }
+
     /**
      * handles a new TCP connection; derived classes SHOULD override this
      * since the default behavior does nothing
