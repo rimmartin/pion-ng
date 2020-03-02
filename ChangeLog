@@ -1,3 +1,67 @@
+Version 5.0.7 (2014-10-17)
+==========================
+* Updated Windows build to Visual Studio 2013
+* updated Windows property sheet files to use openssl 1.0.1j log4cplus 1.1.3
+* fixed bug in pion::http::parser cookie header handling
+* password hashing now uses strong hashing algorithm 
+* fixed incorrect usage of CMAKE_MODULE_PATH (thanks camio)
+* added clang++ support in cmake (thanks snikulov)
+
+Version 5.0.6 (2014-03-24)
+==========================
+
+* Updated copyrights and misc files for move from Cloudmeter to Splunk
+* pion::http::parser - added HTTP 0.9 Simple-Request support
+* autoconf - fixed order of library linking for Ubuntu 12.04
+* cmake - make install does not copy headers (thanks snikulov)
+* cmake - patches for Visual Studio 2012 (thanks nullable-type)
+* cmake - disabled in-source build with log message (thanks snikulov)
+* SPDY fix for RST stream status code logging (thanks pmed)
+* PION_DISABLE_LOGGING and PION_USE_OSTREAM_LOGGING fixes (thanks snikulov)
+
+
+Version 5.0.5 (2013-12-16)
+==========================
+
+* Support for automatically generating dump files on Windows
+* FileService was not honoring max file size when file is modified
+* tcp_server tries to gain admin rights for ephemeral ports (thanks jrosser)
+* Fixed bug parsing whitespace before HTTP header names (thanks maksqwe)
+* Fixed bug in http::writer::send_more_data (thanks magnum)
+* Various updates to support Boost 1.55.0 (thanks maysl, snikulov)
+* Various updates to support Visual C++ (thanks pmed, snikulov)
+* Added support for building with CMake (thanks snikulov)
+
+
+Version 5.0.4 (2013-09-16)
+==========================
+
+* Attributes in Set-Cookie headers should not be quoted (thanks sba)
+* Use BOOST_SYSTEM_NOEXCEPT for compatibility with Boost 1.54 (thanks rogerim)
+* Added http::request function to set content given a buffer pointer and size
+
+
+Version 5.0.3 (2013-07-26)
+==========================
+
+* Uninitialized memory error in http::parser with headers-only parsing
+* Infinite loop in http::parser when using a payload handler callback
+* Added algorithm::xml_encode() method; now using it to prevent XSS attacks
+* Improved handling of uncaught exceptions in http::server 
+
+
+Version 5.0.2 (2013-06-02)
+==========================
+
+* parse_multipart_form_data() corrupts binary files (Alexandre Parenteau)
+
+
+Version 5.0.1 (2013-04-15)
+==========================
+
+* Lots of renaming, refactoring, bug fixes, etc.
+
+
 Version 4.0.3 (2011-04-14)
 ==========================
 

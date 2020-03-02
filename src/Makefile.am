@@ -1,18 +1,20 @@
-# ------------------------------------
-# pion-net automake configuration file 
-# ------------------------------------
+# --------------------------------
+# pion automake configuration file
+# --------------------------------
 
-AM_CPPFLAGS = -I@PION_COMMON_HOME@/include -I../include
+AM_CPPFLAGS = -I../include
 
-lib_LTLIBRARIES = libpion-net.la
+lib_LTLIBRARIES = libpion.la
 
-libpion_net_la_SOURCES = TCPServer.cpp HTTPTypes.cpp HTTPMessage.cpp \
-	HTTPParser.cpp HTTPReader.cpp HTTPWriter.cpp HTTPServer.cpp \
-	HTTPAuth.cpp HTTPBasicAuth.cpp HTTPCookieAuth.cpp WebServer.cpp \
-	TCPTimer.cpp
+libpion_la_SOURCES = \
+	admin_rights.cpp algorithm.cpp logger.cpp plugin.cpp process.cpp scheduler.cpp \
+	spdy_decompressor.cpp spdy_parser.cpp \
+	tcp_server.cpp tcp_timer.cpp \
+	http_auth.cpp http_basic_auth.cpp http_cookie_auth.cpp http_message.cpp \
+	http_parser.cpp http_plugin_server.cpp http_reader.cpp http_server.cpp \
+	http_types.cpp http_writer.cpp
 
-libpion_net_la_LDFLAGS = -no-undefined -release $(PION_LIBRARY_VERSION)
-libpion_net_la_LIBADD = @PION_COMMON_LIB@ @PION_EXTERNAL_LIBS@
-libpion_net_la_DEPENDENCIES = @PION_COMMON_LIB@
+libpion_la_LDFLAGS = -no-undefined -release $(PION_LIBRARY_VERSION)
+libpion_la_LIBADD = @PION_EXTERNAL_LIBS@
 
-EXTRA_DIST = *.vcproj
+EXTRA_DIST = *.vcxproj *.vcxproj.filters

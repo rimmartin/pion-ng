@@ -1,0 +1,66 @@
+sudo: false
+
+addons:
+  apt:
+    sources:
+    - kalakris-cmake
+    - kubuntu-backports
+    - boost-latest
+    packages:
+    - cmake
+    - libboost-dev
+
+language: cpp
+
+os:
+  - linux
+  - osx
+  - windows
+
+compiler:
+  - gcc
+  - clang
+
+env:
+  - BUILD_CONFIG=Release
+  - BUILD_CONFIG=Debug
+
+matrix:
+  allow_failures:
+    - compiler: clang
+
+before_install:
+  - wget https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.gz
+  - tar zxf boost_1_71_0.tar.gz
+  - cd boost_1_71_0
+  - ./bootstrap.sh --prefix=../boost1.71.0 --with-libraries=thread,system,filesystem,regex,test
+  - ./b2 cxxflags="-std=c++11" -j2 install variant=release link=shared runtime-link=shared
+  - cd ../
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]] ; then
+     export DYLD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${DYLD_LIBRARY_PATH};
+    elif [[ "$TRAVIS_OS_NAME" == "windows" ]] ; then
+     set PATH=%CD%\boost1.71.0\lib:%PATH%;
+    else
+      export LD_LIBRARY_PATH=`pwd`/boost1.71.0/lib:${LD_LIBRARY_PATH};
+    fi
+
+install:
+
+before_script:
+  - mkdir build-ci
+  - cd build-ci
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]] ; then
+      cmake .. -DBUILD_UT=ON -DCMAKE_BUILD_TYPE=$BUILD_CONFIG -DBoost_DIR=%CD%\..\boost_1_71_0 -DBoost_INCLUDE_DIR=%CD%\..\boost1.71.0/include -DBOOST_LIBRARYDIR=%CD%\..\boost1.71.0/lib;
+    else
+      cmake .. -DBUILD_UT=ON -DCMAKE_BUILD_TYPE=$BUILD_CONFIG -DBoost_DIR=`pwd`/../boost_1_71_0 -DBoost_INCLUDE_DIR=`pwd`/../boost1.71.0/include -DBOOST_LIBRARYDIR=`pwd`/../boost1.71.0/lib;
+    fi
+
+script:
+  - cmake --build .
+  - ctest -VV
+
+notifications:
+  recipients:
+  email:
+    on_success: change
+    on_failure: always
