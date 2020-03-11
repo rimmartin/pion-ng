@@ -180,7 +180,7 @@ void server::start(void)
                 // allow the acceptor to reuse the address (i.e. SO_REUSEADDR)
                 // ...except when running not on Windows - see http://msdn.microsoft.com/en-us/library/ms740621%28VS.85%29.aspx
 #ifndef PION_WIN32
-                acceptor_t::reuse_address(true));
+                acceptor_t::reuse_address(true);
 #endif
                 acceptor.bind(endpoint);
                 if (endpoint.port() == 0) {
