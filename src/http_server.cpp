@@ -51,9 +51,9 @@ void server::handle_request(const http::request_ptr& http_request_ptr,
 
             if (ec == ERRCOND_CANCELED || ec == ERRCOND_EOF) {
                 // don't spam the log with common (non-)errors that happen during normal operation
-                PION_LOG_DEBUG(m_logger, "Lost connection on port " << get_port() << " (" << ec.message() << ")");
+                PION_LOG_DEBUG(m_logger, "Lost connection on endpoint " << tcp_conn->get_local_endpoint() << " (" << ec.message() << ")");
             } else {
-                PION_LOG_INFO(m_logger, "Lost connection on port " << get_port() << " (" << ec.message() << ")");
+                PION_LOG_INFO(m_logger, "Lost connection on endpoint " << tcp_conn->get_local_endpoint() << " (" << ec.message() << ")");
             }
 
             tcp_conn->finish();
