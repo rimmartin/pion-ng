@@ -12,6 +12,7 @@
 
 #include <map>
 #include <string>
+#include <utility> // std::move
 #include <boost/asio.hpp>
 #include <boost/function.hpp>
 #include <boost/function/function2.hpp>
@@ -111,6 +112,39 @@ public:
     { 
         set_logger(PION_GET_LOGGER("pion.http.server"));
     }
+
+#ifdef BOOST_ASIO_HAS_MOVE
+    /**
+     * creates a new server object
+     *
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    explicit server(endpoints_t endpoints) :
+        tcp::server{ move(endpoints) },
+        m_bad_request_handler{ server::handle_bad_request },
+        m_not_found_handler{ server::handle_not_found_request },
+        m_server_error_handler{ server::handle_server_error },
+        m_max_content_length{ http::parser::DEFAULT_CONTENT_MAX }
+    {
+        set_logger(PION_GET_LOGGER("pion.http.server"));
+    }
+
+    /**
+     * creates a new server object
+     *
+     * @param sched the scheduler that will be used to manage worker threads
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    server(scheduler& sched, endpoints_t endpoints) :
+        tcp::server{ sched, move(endpoints) },
+        m_bad_request_handler{ server::handle_bad_request },
+        m_not_found_handler{ server::handle_not_found_request },
+        m_server_error_handler{ server::handle_server_error },
+        m_max_content_length{ http::parser::DEFAULT_CONTENT_MAX }
+    {
+        set_logger(PION_GET_LOGGER("pion.http.server"));
+    }
+#endif
 
     /**
      * adds a new web service to the HTTP server

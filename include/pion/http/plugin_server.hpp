@@ -11,6 +11,7 @@
 #define __PION_PLUGIN_SERVER_HEADER__
 
 #include <string>
+#include <utility> // std::move
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/shared_ptr.hpp>
@@ -82,6 +83,31 @@ public:
     { 
         set_logger(PION_GET_LOGGER("pion.http.plugin_server"));
     }
+
+#ifdef BOOST_ASIO_HAS_MOVE
+    /**
+     * creates a new plugin_server object
+     *
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    explicit plugin_server(endpoints_t endpoints) :
+        http::server{ move(endpoints) }
+    {
+        set_logger(PION_GET_LOGGER("pion.http.plugin_server"));
+    }
+
+    /**
+     * creates a new plugin_server object
+     *
+     * @param sched the scheduler that will be used to manage worker threads
+     * @param endpoints TCP endpoints used to listen for new connections (see ASIO docs)
+     */
+    plugin_server(scheduler& sched, endpoints_t endpoints) :
+        http::server{ sched, move(endpoints) }
+    {
+        set_logger(PION_GET_LOGGER("pion.http.plugin_server"));
+    }
+#endif
 
     /**
      * adds a new web service to the web server
