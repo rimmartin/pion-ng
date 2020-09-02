@@ -601,7 +601,7 @@ public:
     inline bool get_ssl_flag(void) const { return m_ssl_flag; }
 
     /// resets the flag denoting whether the connection is encrypted using SSL
-    inline bool reset_ssl_flag(void) { m_ssl_flag = false; }
+    inline void reset_ssl_flag(void) { m_ssl_flag = false; }
 
     /// sets the lifecycle type for the connection
     inline void set_lifecycle(lifecycle_type t) { m_lifecycle = t; }

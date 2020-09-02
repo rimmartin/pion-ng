@@ -218,6 +218,12 @@ protected:
     server(scheduler& sched, endpoints_t endpoints);
 #endif
 
+    /**
+     * handles an error during an SSL handshake;
+     * the default simply closes the connection
+     *
+     * @param tcp_conn the new TCP connection to handle
+     */
     virtual void handle_ssl_handshake_error(const tcp::connection_ptr& tcp_conn,
                                             const boost::system::error_code& handshake_error)
     {
