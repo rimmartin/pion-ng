@@ -225,7 +225,7 @@ protected:
      * @param tcp_conn the new TCP connection to handle
      */
     virtual void handle_ssl_handshake_error(const tcp::connection_ptr& tcp_conn,
-                                            const boost::system::error_code& handshake_error)
+                                            const boost::system::error_code& /*handshake_error*/)
     {
         tcp_conn->set_lifecycle(connection::LIFECYCLE_CLOSE); // make sure it will get closed
         tcp_conn->finish();
