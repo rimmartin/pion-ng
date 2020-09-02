@@ -201,12 +201,6 @@ protected:
      */
     server(scheduler& sched, const boost::asio::ip::tcp::endpoint& endpoint);
 
-    virtual void handle_ssl_handshake_error(const tcp::connection_ptr& tcp_conn,
-                                            const boost::system::error_code& handshake_error)
-    {
-        tcp_conn->set_lifecycle(connection::LIFECYCLE_CLOSE); // make sure it will get closed
-        tcp_conn->finish();
-    }
 #ifdef BOOST_ASIO_HAS_MOVE
     /**
      * protected constructor so that only derived objects may be created
@@ -223,6 +217,13 @@ protected:
      */
     server(scheduler& sched, endpoints_t endpoints);
 #endif
+
+    virtual void handle_ssl_handshake_error(const tcp::connection_ptr& tcp_conn,
+                                            const boost::system::error_code& handshake_error)
+    {
+        tcp_conn->set_lifecycle(connection::LIFECYCLE_CLOSE); // make sure it will get closed
+        tcp_conn->finish();
+    }
 
     /**
      * handles a new TCP connection; derived classes SHOULD override this
