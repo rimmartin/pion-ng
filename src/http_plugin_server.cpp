@@ -15,6 +15,8 @@
 #include <pion/http/cookie_auth.hpp>
 #include <fstream>
 
+using namespace boost::placeholders;
+
 
 namespace pion {    // begin namespace pion
 namespace http {    // begin namespace http

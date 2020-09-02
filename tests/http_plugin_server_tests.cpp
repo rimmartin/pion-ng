@@ -11,7 +11,7 @@
 #include <pion/config.hpp>
 #include <boost/asio.hpp>
 #include <boost/shared_ptr.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/scoped_array.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/regex.hpp>
@@ -32,6 +32,7 @@
 
 
 using namespace std;
+using namespace boost::placeholders;
 using namespace pion;
 
 PION_DECLARE_PLUGIN(EchoService)

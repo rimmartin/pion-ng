@@ -11,7 +11,7 @@
 #define __PION_HTTP_RESPONSE_READER_HEADER__
 
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/function.hpp>
 #include <boost/function/function2.hpp>
 #include <boost/shared_ptr.hpp>

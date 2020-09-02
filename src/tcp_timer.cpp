@@ -8,7 +8,9 @@
 //
 
 #include <pion/tcp/timer.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
+
+using namespace boost::placeholders;
 
 
 namespace pion {    // begin namespace pion
