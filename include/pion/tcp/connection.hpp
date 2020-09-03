@@ -293,7 +293,11 @@ public:
     {
         // query a list of matching endpoints
         boost::system::error_code ec;
+#if BOOST_ASIO_VERSION >= 101400
         boost::asio::ip::tcp::resolver resolver(m_ssl_socket.lowest_layer().get_executor());
+#else
+        boost::asio::ip::tcp::resolver resolver(m_ssl_socket.lowest_layer().get_executor().context());
+#endif
         boost::asio::ip::tcp::resolver::query query(remote_server,
             boost::lexical_cast<std::string>(remote_port),
             boost::asio::ip::tcp::resolver::query::numeric_service);
