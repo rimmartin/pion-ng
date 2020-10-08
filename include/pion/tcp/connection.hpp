@@ -10,6 +10,8 @@
 #ifndef __PION_TCP_CONNECTION_HEADER__
 #define __PION_TCP_CONNECTION_HEADER__
 
+#include <string>
+#include <pion/config.hpp>
 #ifdef PION_HAVE_SSL
     #if defined(__APPLE__)
         // suppress warnings about OpenSSL being deprecated in OSX
@@ -17,17 +19,15 @@
     #endif
     #include <boost/asio/ssl.hpp>
 #endif
-
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/enable_shared_from_this.hpp>
+#include <boost/asio/version.hpp>
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
 #include <boost/function.hpp>
 #include <boost/function/function1.hpp>
-#include <pion/config.hpp>
-#include <string>
 
 
 namespace pion {    // begin namespace pion

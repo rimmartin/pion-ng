@@ -11,6 +11,7 @@
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/thread/mutex.hpp>
+#include <pion/config.hpp>
 #include <pion/admin_rights.hpp>
 #include <pion/tcp/server.hpp>
 
