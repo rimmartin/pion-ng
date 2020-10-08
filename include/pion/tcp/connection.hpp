@@ -10,6 +10,8 @@
 #ifndef __PION_TCP_CONNECTION_HEADER__
 #define __PION_TCP_CONNECTION_HEADER__
 
+#include <string>
+#include <pion/config.hpp>
 #ifdef PION_HAVE_SSL
     #if defined(__APPLE__)
         // suppress warnings about OpenSSL being deprecated in OSX
@@ -17,17 +19,15 @@
     #endif
     #include <boost/asio/ssl.hpp>
 #endif
-
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/enable_shared_from_this.hpp>
+#include <boost/asio/version.hpp>
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
 #include <boost/function.hpp>
 #include <boost/function/function1.hpp>
-#include <pion/config.hpp>
-#include <string>
 
 
 namespace pion {    // begin namespace pion
@@ -111,7 +111,11 @@ public:
     explicit connection(boost::asio::io_context& io_context, const bool ssl_flag = false)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, m_ssl_context),
         m_ssl_flag(ssl_flag),
 #else
@@ -133,7 +137,11 @@ public:
     connection(boost::asio::io_context& io_context, ssl_context_type& ssl_context)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, ssl_context), m_ssl_flag(true),
 #else
         m_ssl_context(0),
@@ -293,7 +301,11 @@ public:
     {
         // query a list of matching endpoints
         boost::system::error_code ec;
+#if BOOST_ASIO_VERSION >= 101400
         boost::asio::ip::tcp::resolver resolver(m_ssl_socket.lowest_layer().get_executor());
+#else
+        boost::asio::ip::tcp::resolver resolver(m_ssl_socket.lowest_layer().get_executor().context());
+#endif
         boost::asio::ip::tcp::resolver::query query(remote_server,
             boost::lexical_cast<std::string>(remote_port),
             boost::asio::ip::tcp::resolver::query::numeric_service);
@@ -703,7 +715,11 @@ protected:
                   const boost::asio::ip::tcp::endpoint& local_endpoint)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, ssl_context), m_ssl_flag(ssl_flag),
 #else
         m_ssl_context(0),
