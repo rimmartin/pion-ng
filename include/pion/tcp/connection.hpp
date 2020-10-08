@@ -111,7 +111,11 @@ public:
     explicit connection(boost::asio::io_context& io_context, const bool ssl_flag = false)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, m_ssl_context),
         m_ssl_flag(ssl_flag),
 #else
@@ -133,7 +137,11 @@ public:
     connection(boost::asio::io_context& io_context, ssl_context_type& ssl_context)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, ssl_context), m_ssl_flag(true),
 #else
         m_ssl_context(0),
@@ -707,7 +715,11 @@ protected:
                   const boost::asio::ip::tcp::endpoint& local_endpoint)
         :
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+        m_ssl_context(boost::asio::ssl::context::tls),
+#  else
         m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
         m_ssl_socket(io_context, ssl_context), m_ssl_flag(ssl_flag),
 #else
         m_ssl_context(0),

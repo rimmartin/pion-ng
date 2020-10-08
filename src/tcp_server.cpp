@@ -8,6 +8,7 @@
 //
 
 #include <utility>
+#include <boost/asio/version.hpp>
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/thread/mutex.hpp>
@@ -79,7 +80,11 @@ server::server(scheduler& sched, const unsigned int tcp_port) :
     acceptors_base(sched, 1),
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+    m_ssl_context(boost::asio::ssl::context::tls),
+#  else
     m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
 #else
     m_ssl_context(0),
 #endif
@@ -92,7 +97,11 @@ server::server(scheduler& sched, const boost::asio::ip::tcp::endpoint& endpoint)
     acceptors_base(sched, 1),
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+    m_ssl_context(boost::asio::ssl::context::tls),
+#  else
     m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
 #else
     m_ssl_context(0),
 #endif
@@ -105,7 +114,7 @@ server::server(const unsigned int tcp_port) :
     acceptors_base(1),
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
-    m_ssl_context(boost::asio::ssl::context::sslv23),
+    m_ssl_context(boost::asio::ssl::context::tls),
 #else
     m_ssl_context(0),
 #endif
@@ -118,7 +127,11 @@ server::server(const boost::asio::ip::tcp::endpoint& endpoint) :
     acceptors_base(1),
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
+#  if BOOST_ASIO_VERSION >= 101009
+    m_ssl_context(boost::asio::ssl::context::tls),
+#  else
     m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
 #else
     m_ssl_context(0),
 #endif
@@ -132,7 +145,7 @@ server::server(endpoints_t endpoints) :
     acceptors_base{ endpoints.size() },
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
-    m_ssl_context{ boost::asio::ssl::context::sslv23 },
+    m_ssl_context{ boost::asio::ssl::context::tls },
 #else
     m_ssl_context(0),
 #endif
@@ -145,7 +158,11 @@ server::server(scheduler& sched, endpoints_t endpoints) :
     acceptors_base{ sched, endpoints.size() },
     m_logger(PION_GET_LOGGER("pion.tcp.server")),
 #ifdef PION_HAVE_SSL
-    m_ssl_context{ boost::asio::ssl::context::sslv23 },
+#  if BOOST_ASIO_VERSION >= 101009
+    m_ssl_context(boost::asio::ssl::context::tls),
+#  else
+    m_ssl_context(boost::asio::ssl::context::sslv23),
+#  endif
 #else
     m_ssl_context(0),
 #endif
