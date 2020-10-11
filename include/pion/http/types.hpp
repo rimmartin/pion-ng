@@ -99,6 +99,10 @@ struct PION_API types
     static const std::string    RESPONSE_MESSAGE_METHOD_NOT_ALLOWED;
     static const std::string    RESPONSE_MESSAGE_NOT_MODIFIED;
     static const std::string    RESPONSE_MESSAGE_BAD_REQUEST;
+    static const std::string    RESPONSE_MESSAGE_CONFLICT;
+    static const std::string    RESPONSE_MESSAGE_PRECONDITION_FAILED;
+    static const std::string    RESPONSE_MESSAGE_UNSUPPORTED_MEDIA_TYPE;
+    static const std::string    RESPONSE_MESSAGE_UNPROCESSABLE_ENTITY;
     static const std::string    RESPONSE_MESSAGE_UPGRADE_REQUIRED;
     static const std::string    RESPONSE_MESSAGE_SERVER_ERROR;
     static const std::string    RESPONSE_MESSAGE_NOT_IMPLEMENTED;
@@ -116,6 +120,10 @@ struct PION_API types
     static const unsigned int   RESPONSE_CODE_METHOD_NOT_ALLOWED;
     static const unsigned int   RESPONSE_CODE_NOT_MODIFIED;
     static const unsigned int   RESPONSE_CODE_BAD_REQUEST;
+    static const unsigned int   RESPONSE_CODE_CONFLICT;
+    static const unsigned int   RESPONSE_CODE_PRECONDITION_FAILED;
+    static const unsigned int   RESPONSE_CODE_UNSUPPORTED_MEDIA_TYPE;
+    static const unsigned int   RESPONSE_CODE_UNPROCESSABLE_ENTITY;
     static const unsigned int   RESPONSE_CODE_UPGRADE_REQUIRED;
     static const unsigned int   RESPONSE_CODE_SERVER_ERROR;
     static const unsigned int   RESPONSE_CODE_NOT_IMPLEMENTED;
