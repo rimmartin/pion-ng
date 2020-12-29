@@ -74,7 +74,9 @@ namespace pion {    // begin namespace pion
     /// copied from boost.unordered hash_equality documentation
     /// http://www.boost.org/doc/libs/1_50_0/doc/html/unordered/hash_equality.html
     struct iequal_to
+#if __cplusplus < 201703
         : std::binary_function<std::string, std::string, bool>
+#endif
     {
         bool operator()(std::string const& x,
                         std::string const& y) const
@@ -87,7 +89,9 @@ namespace pion {    // begin namespace pion
     /// copied from boost.unordered hash_equality documentation
     /// http://www.boost.org/doc/libs/1_50_0/doc/html/unordered/hash_equality.html
     struct ihash
+#if __cplusplus < 201703
         : std::unary_function<std::string, std::size_t>
+#endif
     {
         std::size_t operator()(std::string const& x) const
         {
@@ -106,7 +110,10 @@ namespace pion {    // begin namespace pion
     
 #if defined(_MSC_VER) && defined(PION_HAVE_EXT_HASH_MAP)
     /// Case-insensitive "less than" predicate
-    template<class _Ty> struct is_iless : public std::binary_function<_Ty, _Ty, bool>
+    template<class _Ty> struct is_iless :
+#if __cplusplus < 201703
+        public std::binary_function<_Ty, _Ty, bool>
+#endif
     {
         /// Constructor
         is_iless( const std::locale& Loc=std::locale() ) : m_Loc( Loc ) {}
