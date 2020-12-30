@@ -14,6 +14,8 @@
 #include <pion/http/request_reader.hpp>
 #include <pion/http/response_writer.hpp>
 
+using namespace boost::placeholders;
+
 
 namespace pion {    // begin namespace pion
 namespace http {    // begin namespace http

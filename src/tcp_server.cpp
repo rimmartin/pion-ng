@@ -10,11 +10,13 @@
 #include <utility>
 #include <boost/asio/version.hpp>
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <boost/thread/mutex.hpp>
 #include <pion/config.hpp>
 #include <pion/admin_rights.hpp>
 #include <pion/tcp/server.hpp>
+
+using namespace boost::placeholders;
 
 
 namespace pion {    // begin namespace pion

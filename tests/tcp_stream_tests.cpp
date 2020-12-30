@@ -8,7 +8,7 @@
 //
 
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 
 // #pragma diagnostic is only supported by GCC >= 4.2.1
 #if __GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ > 2) || (__GNUC__ == 4 && __GNUC_MINOR__ == 2 && __GNUC_PATCHLEVEL__ >= 1)
@@ -26,6 +26,7 @@
 #include <pion/tcp/stream.hpp>
 
 using namespace std;
+using namespace boost::placeholders;
 using namespace pion;
 
 

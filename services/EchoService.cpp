@@ -8,11 +8,12 @@
 //
 
 #include "EchoService.hpp"
-#include <boost/bind.hpp>
+#include <boost/bind/bind.hpp>
 #include <pion/algorithm.hpp>
 #include <pion/http/response_writer.hpp>
 #include <pion/user.hpp>
 
+using namespace boost::placeholders;
 using namespace pion;
 
 namespace pion {        // begin namespace pion
