@@ -184,7 +184,7 @@ public:
     /// note that the asio docs are misleading because close() is not thread-safe,
     /// and the suggested #define statements cause WAY too much trouble and heartache
     inline void cancel(void) {
-#if !defined(_MSC_VER) || (_WIN32_WINNT >= 0x0600)
+#if !defined(_MSC_VER) || (PION_USE_WINAPI_VERSION >= 0x0600)
         boost::system::error_code ec;
         m_ssl_socket.next_layer().cancel(ec);
 #endif

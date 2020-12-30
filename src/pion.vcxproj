@@ -232,7 +232,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_DLL_full|x64'">
     <PreBuildEvent>
       <Message>Copying config.hpp.win -&gt;config.hpp</Message>
-      <Command>copy /Y $(SolutionDir)include\pion\config.hpp.win $(SolutionDir)include\pion\config.hpp</Command>
+      <Command>xcopy $(SolutionDir)include\pion\config.hpp.win $(SolutionDir)include\pion\config.hpp /y /d</Command>
     </PreBuildEvent>
     <Midl>
       <TargetEnvironment>X64</TargetEnvironment>

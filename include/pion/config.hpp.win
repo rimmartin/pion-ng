@@ -122,7 +122,11 @@
 #if defined(_WIN32) || defined(_WINDOWS)
     #define PION_WIN32  1
     #ifndef _WIN32_WINNT
+        #error Please properly define PION_USE_WINAPI_VERSION and/or _WIN32_WINNT
         #define _WIN32_WINNT    0x0501
+    #endif
+    #ifndef PION_USE_WINAPI_VERSION
+        #define PION_USE_WINAPI_VERSION _WIN32_WINNT
     #endif
 #else
     #error PionConfig.hpp.win is for Win32 only.

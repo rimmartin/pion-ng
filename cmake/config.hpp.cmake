@@ -73,6 +73,9 @@
     #ifndef _WIN32_WINNT
         #define _WIN32_WINNT    0x0501
     #endif
+    #ifndef PION_USE_WINAPI_VERSION
+        #define PION_USE_WINAPI_VERSION _WIN32_WINNT
+    #endif
 #endif // _WIN32
 
 #include <boost/config.hpp>
