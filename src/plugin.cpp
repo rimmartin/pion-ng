@@ -211,8 +211,8 @@ bool plugin::check_for_file(std::string& final_path, const std::string& start_pa
 
     // check for existence of file (without extension)
     try {
-        // is_regular may throw if directory is not readable
-        if (boost::filesystem::is_regular(test_path)) {
+        // is_regular_file may throw if directory is not readable
+        if (boost::filesystem::is_regular_file(test_path)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             final_path = test_path.string();
 #else
@@ -236,8 +236,8 @@ bool plugin::check_for_file(std::string& final_path, const std::string& start_pa
 
     // re-check for existence of file (after adding extension)
     try {
-        // is_regular may throw if directory is not readable
-        if (boost::filesystem::is_regular(test_path)) {
+        // is_regular_file may throw if directory is not readable
+        if (boost::filesystem::is_regular_file(test_path)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             final_path = test_path.string();
 #else
@@ -302,7 +302,7 @@ void plugin::open_plugin(const std::string& plugin_file,
 
 std::string plugin::get_plugin_name(const std::string& plugin_file)
 {
-    return boost::filesystem::basename(boost::filesystem::path(plugin_file));
+    return boost::filesystem::path(plugin_file).filename().string();
 }
 
 void plugin::get_all_plugin_names(std::vector<std::string>& plugin_names)
@@ -315,8 +315,8 @@ void plugin::get_all_plugin_names(std::vector<std::string>& plugin_names)
         // Find all shared libraries in the directory and add them to the list of Plugin names.
         boost::filesystem::directory_iterator end;
         for (boost::filesystem::directory_iterator it2(*it); it2 != end; ++it2) {
-            if (boost::filesystem::is_regular(*it2)) {
-                if (boost::filesystem::extension(it2->path()) == plugin::PION_PLUGIN_EXTENSION) {
+            if (boost::filesystem::is_regular_file(*it2)) {
+                if (it2->path().extension().string() == plugin::PION_PLUGIN_EXTENSION) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
                     plugin_names.push_back(plugin::get_plugin_name(it2->path().filename().string()));
 #else

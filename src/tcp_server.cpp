@@ -186,7 +186,7 @@ void server::start(void)
         before_starting();
 
         // configure the acceptor service
-        for (size_t i = 0, n = boost::size(m_tcp_acceptors); i < n; ++i) {
+        for (size_t i = 0, n = m_tcp_acceptors.size(); i < n; ++i) {
             PION_LOG_INFO(m_logger, "Starting server on endpoint " << m_endpoints[i]);
 
             try {
@@ -243,7 +243,7 @@ void server::stop(bool wait_until_finished)
             }
         };
         // this terminates any connections waiting to be accepted
-        std::for_each(boost::rbegin(m_tcp_acceptors), boost::rend(m_tcp_acceptors),
+        std::for_each(m_tcp_acceptors.rbegin(), m_tcp_acceptors.rend(),
             boost::bind(acceptor_closer(), boost::ref(m_logger), _1));
         
         if (! wait_until_finished) {
@@ -302,7 +302,7 @@ void server::listen(void)
         // prune connections that finished uncleanly
         prune_connections();
 
-        for (size_t i = 0, n = boost::size(m_tcp_acceptors); i < n; ++i)
+        for (size_t i = 0, n = m_tcp_acceptors.size(); i < n; ++i)
         {
             // alias
             acceptor_t& acceptor = m_tcp_acceptors[i];
