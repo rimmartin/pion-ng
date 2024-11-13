@@ -302,7 +302,7 @@ void plugin::open_plugin(const std::string& plugin_file,
 
 std::string plugin::get_plugin_name(const std::string& plugin_file)
 {
-    return boost::filesystem::path(plugin_file).filename().string();
+    return boost::filesystem::path(plugin_file).stem().string();
 }
 
 void plugin::get_all_plugin_names(std::vector<std::string>& plugin_names)
