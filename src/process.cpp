@@ -18,7 +18,7 @@
     #include <sys/stat.h>
 #endif
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <boost/date_time.hpp>
 
 namespace pion {    // begin namespace pion
@@ -78,7 +78,7 @@ void process::set_dumpfile_directory(const std::string& dir)
     config_type& cfg = get_config();
     static const TCHAR* DBGHELP_DLL = _T("DBGHELP.DLL");
 
-    if (!dir.empty() && !boost::filesystem::is_directory(dir)) {
+    if (!dir.empty() && !std::filesystem::is_directory(dir)) {
         throw dumpfile_init_exception("Dump file directory doesn't exist: " + dir);
     }
 
@@ -144,7 +144,7 @@ std::string process::generate_dumpfile_name()
     ss << second_clock::universal_time() << ".dmp";
 
     // build the full path
-    boost::filesystem::path p(boost::filesystem::system_complete(cfg.dumpfile_dir));
+    std::filesystem::path p(std::filesystem::system_complete(cfg.dumpfile_dir));
 
     p /= ss.str();
     p.normalize();

@@ -7,7 +7,7 @@
 # See http://www.boost.org/LICENSE_1_0.txt
 # ---------------------------------------------------------------------
 
-cmake_minimum_required(VERSION 2.8.10 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 set(PROJECT_NAME pion_solution)
 project(${PROJECT_NAME} CXX C)
 
@@ -82,7 +82,7 @@ set(Boost_USE_MULTITHREADED ON)
 #set(Boost_USE_STATIC_LIBS ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
 
-find_package(Boost COMPONENTS thread system filesystem regex unit_test_framework REQUIRED)
+find_package(Boost COMPONENTS thread regex unit_test_framework REQUIRED)
 if (Boost_FOUND)
     # disable autolinking feature
     add_definitions(-DBOOST_ALL_NO_LIB)

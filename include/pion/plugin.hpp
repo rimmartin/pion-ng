@@ -17,7 +17,7 @@
 #include <boost/noncopyable.hpp>
 #include <boost/thread/once.hpp>
 #include <boost/thread/mutex.hpp>
-#include <boost/filesystem/path.hpp>
+#include <filesystem>
 #include <pion/config.hpp>
 #include <pion/error.hpp>
 
@@ -76,7 +76,7 @@ public:
      *                   this will be appended to PION_CYGWIN_DIRECTORY to attempt
      *                   attempt correction of final_path for cygwin
      */
-    static void check_cygwin_path(boost::filesystem::path& final_path,
+    static void check_cygwin_path(std::filesystem::path& final_path,
                                 const std::string& path_string);
 
     /// appends a directory to the plug-in search path

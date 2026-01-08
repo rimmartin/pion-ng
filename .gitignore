@@ -46,3 +46,5 @@ pion-*.tar.gz
 pion-*.tar.bz2
 pion-*.zip
 build-ci
+build2/
+dist/

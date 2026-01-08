@@ -7,13 +7,11 @@
 // See http://www.boost.org/LICENSE_1_0.txt
 //
 
+
 #include <boost/asio.hpp>
 #include <boost/bind/bind.hpp>
 #include <boost/assert.hpp>
 #include <boost/lexical_cast.hpp>
-#include <boost/filesystem/operations.hpp>
-#include <boost/filesystem/directory.hpp>
-#include <boost/filesystem/fstream.hpp>
 #include <boost/algorithm/string/case_conv.hpp>
 #include <boost/exception/diagnostic_information.hpp>
 
@@ -58,7 +56,7 @@ void FileService::set_option(const std::string& name, const std::string& value)
         //@todo m_directory.normalize();
         plugin::check_cygwin_path(m_directory, value);
         // make sure that the directory exists
-        if (! boost::filesystem::exists(m_directory) || ! boost::filesystem::is_directory(m_directory)) {
+        if (! std::filesystem::exists(m_directory) || ! std::filesystem::is_directory(m_directory)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             const std::string dir_name = m_directory.string();
 #else
@@ -70,7 +68,7 @@ void FileService::set_option(const std::string& name, const std::string& value)
         m_file = value;
         plugin::check_cygwin_path(m_file, value);
         // make sure that the directory exists
-        if (! boost::filesystem::exists(m_file) || boost::filesystem::is_directory(m_file)) {
+        if (! std::filesystem::exists(m_file) || std::filesystem::is_directory(m_file)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             const std::string file_name = m_file.string();
 #else
@@ -121,7 +119,7 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
     const std::string relative_path(get_relative_resource(http_request_ptr->get_resource()));
 
     // determine the path of the file being requested
-    boost::filesystem::path file_path;
+    std::filesystem::path file_path;
     if (relative_path.empty()) {
         // request matches resource exactly
 
@@ -182,7 +180,7 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
     }
 
     // requests specifying directories are not allowed
-    if (boost::filesystem::is_directory(file_path)) {
+    if (std::filesystem::is_directory(file_path)) {
         PION_LOG_WARN(m_logger, "Request for directory ("
                       << get_resource() << "): " << relative_path);
         static const std::string FORBIDDEN_HTML_START =
@@ -329,7 +327,7 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
 
         if (response_type == RESPONSE_UNDEFINED) {
             // make sure that the file exists
-            if (! boost::filesystem::exists(file_path)) {
+            if (! std::filesystem::exists(file_path)) {
                 PION_LOG_WARN(m_logger, "File not found ("
                               << get_resource() << "): " << relative_path);
                 sendNotFoundResponse(http_request_ptr, tcp_conn);
@@ -445,13 +443,13 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
             if (http_request_ptr->get_method() == http::types::REQUEST_METHOD_POST
                 || http_request_ptr->get_method() == http::types::REQUEST_METHOD_PUT)
             {
-                if (boost::filesystem::exists(file_path)) {
+                if (std::filesystem::exists(file_path)) {
                     writer->get_response().set_status_code(http::types::RESPONSE_CODE_NO_CONTENT);
                     writer->get_response().set_status_message(http::types::RESPONSE_MESSAGE_NO_CONTENT);
                 } else {
                     // The file doesn't exist yet, so it will be created below, unless the
                     // directory of the requested file also doesn't exist.
-                    if (!boost::filesystem::exists(file_path.parent_path())) {
+                    if (!std::filesystem::exists(file_path.parent_path())) {
                         static const std::string NOT_FOUND_HTML_START =
                             "<html><head>\n"
                             "<title>404 Not Found</title>\n"
@@ -487,10 +485,10 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
                 }
                 std::ios_base::openmode mode = http_request_ptr->get_method() == http::types::REQUEST_METHOD_POST?
                                                std::ios::app : std::ios::out;
-                boost::filesystem::ofstream file_stream(file_path, mode);
+                std::ofstream file_stream(file_path, mode);
                 file_stream.write(http_request_ptr->get_content(), http_request_ptr->get_content_length());
                 file_stream.close();
-                if (!boost::filesystem::exists(file_path)) {
+                if (!std::filesystem::exists(file_path)) {
                     static const std::string PUT_FAILED_HTML_START =
                         "<html><head>\n"
                         "<title>500 Server Error</title>\n"
@@ -508,11 +506,11 @@ void FileService::operator()(const http::request_ptr& http_request_ptr, const tc
                 }
                 writer->send();
             } else if (http_request_ptr->get_method() == http::types::REQUEST_METHOD_DELETE) {
-                if (!boost::filesystem::exists(file_path)) {
+                if (!std::filesystem::exists(file_path)) {
                     sendNotFoundResponse(http_request_ptr, tcp_conn);
                 } else {
                     try {
-                        boost::filesystem::remove(file_path);
+                        std::filesystem::remove(file_path);
                         writer->get_response().set_status_code(http::types::RESPONSE_CODE_NO_CONTENT);
                         writer->get_response().set_status_message(http::types::RESPONSE_MESSAGE_NO_CONTENT);
                         writer->send();
@@ -623,7 +621,7 @@ void FileService::stop(void)
     m_cache_map.clear();
 }
 
-void FileService::scanDirectory(const boost::filesystem::path& dir_path)
+void FileService::scanDirectory(const std::filesystem::path& dir_path)
 {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
     PION_LOG_DEBUG(m_logger, "Scanning directory (" << get_resource() << "): "
@@ -634,11 +632,11 @@ void FileService::scanDirectory(const boost::filesystem::path& dir_path)
 #endif
 
     // iterate through items in the directory
-    boost::filesystem::directory_iterator end_itr;
-    for ( boost::filesystem::directory_iterator itr( dir_path );
+    std::filesystem::directory_iterator end_itr;
+    for ( std::filesystem::directory_iterator itr( dir_path );
           itr != end_itr; ++itr )
     {
-        if ( boost::filesystem::is_directory(*itr) ) {
+        if ( std::filesystem::is_directory(*itr) ) {
             // item is a sub-directory
 
             // recursively call scanDirectory()
@@ -664,7 +662,7 @@ void FileService::scanDirectory(const boost::filesystem::path& dir_path)
 
 std::pair<FileService::CacheMap::iterator, bool>
 FileService::addCacheEntry(const std::string& relative_path,
-                           const boost::filesystem::path& file_path,
+                           const std::filesystem::path& file_path,
                            const bool placeholder)
 {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
@@ -760,8 +758,10 @@ void FileService::createMIMETypes(void) {
 void DiskFile::update(void)
 {
     // set file_size and last_modified
-    m_file_size = boost::numeric_cast<std::streamsize>(boost::filesystem::file_size( m_file_path ));
-    m_last_modified = boost::filesystem::last_write_time( m_file_path );
+    m_file_size = boost::numeric_cast<std::streamsize>(std::filesystem::file_size( m_file_path ));
+    std::filesystem::file_time_type file_time = std::filesystem::last_write_time(m_file_path);
+    std::chrono::system_clock::time_point system_time_point = std::chrono::file_clock::to_sys(file_time);
+    m_last_modified = std::chrono::system_clock::to_time_t(system_time_point);
     m_last_modified_string = http::types::get_date_string( m_last_modified );
 }
 
@@ -771,7 +771,7 @@ void DiskFile::read(void)
     m_file_content.reset(new char[m_file_size]);
 
     // open the file for reading
-    boost::filesystem::ifstream file_stream;
+    std::ifstream file_stream;
     file_stream.open(m_file_path, std::ios::in | std::ios::binary);
 
     // read the file into memory
@@ -788,8 +788,10 @@ void DiskFile::read(void)
 bool DiskFile::checkUpdated(void)
 {
     // get current values
-    std::streamsize cur_size = boost::numeric_cast<std::streamsize>(boost::filesystem::file_size( m_file_path ));
-    time_t cur_modified = boost::filesystem::last_write_time( m_file_path );
+    std::streamsize cur_size = boost::numeric_cast<std::streamsize>(std::filesystem::file_size( m_file_path ));
+    std::filesystem::file_time_type file_time = std::filesystem::last_write_time(m_file_path);
+    std::chrono::system_clock::time_point system_time_point = std::chrono::file_clock::to_sys(file_time);
+    time_t cur_modified = std::chrono::system_clock::to_time_t(system_time_point);
 
     // check if file has not been updated
     if (cur_modified == m_last_modified && cur_size == m_file_size)

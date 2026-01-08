@@ -306,23 +306,14 @@ public:
 #else
         boost::asio::ip::tcp::resolver resolver(m_ssl_socket.lowest_layer().get_executor().context());
 #endif
-        boost::asio::ip::tcp::resolver::query query(remote_server,
-            boost::lexical_cast<std::string>(remote_port),
-            boost::asio::ip::tcp::resolver::query::numeric_service);
-        boost::asio::ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query, ec);
+        boost::asio::ip::tcp::resolver::results_type endpoints = resolver.resolve(remote_server, boost::lexical_cast<std::string>(remote_port), ec);
         if (ec)
             return ec;
 
-        // try each one until we are successful
-        ec = boost::asio::error::host_not_found;
-        boost::asio::ip::tcp::resolver::iterator end;
-        while (ec && endpoint_iterator != end) {
-            boost::asio::ip::tcp::endpoint ep(endpoint_iterator->endpoint());
-            ++endpoint_iterator;
-            ec = connect(ep);
-            if (ec)
-                close();
-        }
+        boost::asio::ip::tcp::socket socket(m_ssl_socket.lowest_layer().get_executor());
+
+        // boost::asio::connect tries each endpoint in the range until one succeeds
+        boost::asio::connect(socket, endpoints, ec);
 
         return ec;
     }

@@ -29,7 +29,7 @@ void timer::start(const boost::uint32_t seconds)
 {
     boost::mutex::scoped_lock timer_lock(m_mutex);
     m_timer_active = true;
-    m_timer.expires_from_now(boost::posix_time::seconds(seconds));
+    m_timer.expires_after(boost::chrono::seconds(seconds));
     m_timer.async_wait(boost::bind(&timer::timer_callback,
         shared_from_this(), _1));
 }

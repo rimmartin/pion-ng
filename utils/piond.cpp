@@ -63,7 +63,7 @@ int main (int argc, char *argv[])
                 if (cfg_endpoint.port() == 0) cfg_endpoint.port(DEFAULT_PORT);
             } else if (argv[argnum][1] == 'i' && argv[argnum][2] == '\0' && argnum+1 < argc) {
                 // set ip address
-                cfg_endpoint.address(boost::asio::ip::address::from_string(argv[++argnum]));
+                cfg_endpoint.address(boost::asio::ip::make_address(argv[++argnum]));
             } else if (argv[argnum][1] == 'c' && argv[argnum][2] == '\0' && argnum+1 < argc) {
                 service_config_file = argv[++argnum];
             } else if (argv[argnum][1] == 'd' && argv[argnum][2] == '\0' && argnum+1 < argc) {
@@ -135,10 +135,10 @@ int main (int argc, char *argv[])
         }
 
         // add the directory of the program we're running to our path
-        try { plugin::add_plugin_directory(boost::filesystem::path(argv[0]).parent_path().string()); }
+        try { plugin::add_plugin_directory(std::filesystem::path(argv[0]).parent_path().string()); }
         catch (error::directory_not_found&) {
             PION_LOG_WARN(main_log, "Directory of current executable does not exist: "
-                << boost::filesystem::path(argv[0]).parent_path());
+                << std::filesystem::path(argv[0]).parent_path());
         }
 
         // create a server for HTTP & add the Hello Service

@@ -74,12 +74,12 @@ void scheduler::join(void)
     }
 }
     
-void scheduler::keep_running(boost::asio::io_service& my_service,
-                                boost::asio::deadline_timer& my_timer)
+void scheduler::keep_running(boost::asio::io_context& my_service,
+                                boost::asio::basic_waitable_timer<boost::chrono::steady_clock>& my_timer)
 {
     if (m_is_running) {
         // schedule this again to make sure the service doesn't complete
-        my_timer.expires_from_now(boost::posix_time::seconds(KEEP_RUNNING_TIMER_SECONDS));
+        my_timer.expires_after(boost::chrono::seconds(KEEP_RUNNING_TIMER_SECONDS));
         my_timer.async_wait(boost::bind(&scheduler::keep_running, this,
                                         boost::ref(my_service), boost::ref(my_timer)));
     }
@@ -105,7 +105,7 @@ boost::system_time scheduler::get_wakeup_time(boost::uint32_t sleep_sec,
     return boost::get_system_time() + boost::posix_time::seconds(sleep_sec) + boost::posix_time::microseconds(sleep_nsec / 1000);
 }
                      
-void scheduler::process_service_work(boost::asio::io_service& service) {
+void scheduler::process_service_work(boost::asio::io_context& service) {
     while (m_is_running) {
         try {
             service.run();
@@ -130,7 +130,7 @@ void single_service_scheduler::startup(void)
         m_is_running = true;
         
         // schedule a work item to make sure that the service doesn't complete
-        m_service.reset();
+        m_service.restart();
         keep_running(m_service, m_timer);
         
         // start multiple threads to handle async tasks

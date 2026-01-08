@@ -13,6 +13,7 @@
 #include <vector>
 #include <boost/asio.hpp>
 #include <boost/assert.hpp>
+#include <boost/asio/basic_waitable_timer.hpp>
 #include <boost/bind/bind.hpp>
 #include <boost/function/function0.hpp>
 #include <boost/cstdint.hpp>
@@ -96,7 +97,7 @@ public:
      * @param my_timer deadline timer used to keep the IO service active while running
      */
     void keep_running(boost::asio::io_context& my_service,
-                     boost::asio::deadline_timer& my_timer);
+                     boost::asio::basic_waitable_timer<boost::chrono::steady_clock>& my_timer);
     
     /**
      * puts the current thread to sleep for a specific period of time
@@ -269,14 +270,14 @@ protected:
     virtual void stop_services(void) { m_service.stop(); }
     
     /// finishes all services used to schedule work
-    virtual void finish_services(void) { m_service.reset(); }
+    virtual void finish_services(void) { m_service.restart(); }
 
     
     /// service used to manage async I/O events
     boost::asio::io_context         m_service;
     
     /// timer used to periodically check for shutdown
-    boost::asio::deadline_timer     m_timer;
+    boost::asio::basic_waitable_timer<boost::chrono::steady_clock>     m_timer;
 };
     
 
@@ -342,7 +343,7 @@ protected:
     struct service_pair_type {
         service_pair_type(void) : first(), second(first) {}
         boost::asio::io_context         first;
-        boost::asio::deadline_timer     second;
+        boost::asio::basic_waitable_timer<boost::chrono::steady_clock>     second;
     };
     
     /// typedef for a pool of IO services

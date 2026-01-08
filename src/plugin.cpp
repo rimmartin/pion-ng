@@ -7,8 +7,7 @@
 // See http://www.boost.org/LICENSE_1_0.txt
 //
 
-#include <boost/filesystem.hpp>
-#include <boost/filesystem/operations.hpp>
+#include <filesystem>
 #include <boost/thread/mutex.hpp>
 #include <pion/config.hpp>
 #include <pion/error.hpp>
@@ -45,13 +44,13 @@ void plugin::create_plugin_config(void)
     m_config_ptr = &UNIQUE_PION_PLUGIN_CONFIG;
 }
 
-void plugin::check_cygwin_path(boost::filesystem::path& final_path,
+void plugin::check_cygwin_path(std::filesystem::path& final_path,
                                  const std::string& start_path)
 {
 #if defined(PION_WIN32) && defined(PION_CYGWIN_DIRECTORY)
     // try prepending PION_CYGWIN_DIRECTORY if not complete
     if (! final_path.is_complete() && final_path.has_root_directory()) {
-        final_path = boost::filesystem::path(std::string(PION_CYGWIN_DIRECTORY) + start_path);
+        final_path = std::filesystem::path(std::string(PION_CYGWIN_DIRECTORY) + start_path);
     }
 #else
     (void)final_path;
@@ -61,16 +60,16 @@ void plugin::check_cygwin_path(boost::filesystem::path& final_path,
 
 void plugin::add_plugin_directory(const std::string& dir)
 {
-    boost::filesystem::path plugin_path = boost::filesystem::system_complete(dir);
+    std::filesystem::path plugin_path = std::filesystem::absolute(dir);
     check_cygwin_path(plugin_path, dir);
-    if (! boost::filesystem::exists(plugin_path) )
+    if (! std::filesystem::exists(plugin_path) )
         BOOST_THROW_EXCEPTION( error::directory_not_found() << error::errinfo_dir_name(dir) );
     config_type& cfg = get_plugin_config();
     boost::mutex::scoped_lock plugin_lock(cfg.m_plugin_mutex);
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
     cfg.m_plugin_dirs.push_back(plugin_path.string());
 #else
-    cfg.m_plugin_dirs.push_back(plugin_path.directory_string());
+    cfg.m_plugin_dirs.push_back(plugin_path.native());
 #endif 
     
 }
@@ -201,9 +200,9 @@ bool plugin::check_for_file(std::string& final_path, const std::string& start_pa
                               const std::string& name, const std::string& extension)
 {
     // check for cygwin path oddities
-    boost::filesystem::path cygwin_safe_path(start_path);
+    std::filesystem::path cygwin_safe_path(start_path);
     check_cygwin_path(cygwin_safe_path, start_path);
-    boost::filesystem::path test_path(cygwin_safe_path);
+    std::filesystem::path test_path(cygwin_safe_path);
 
     // if a name is specified, append it to the test path
     if (! name.empty())
@@ -212,11 +211,11 @@ bool plugin::check_for_file(std::string& final_path, const std::string& start_pa
     // check for existence of file (without extension)
     try {
         // is_regular_file may throw if directory is not readable
-        if (boost::filesystem::is_regular_file(test_path)) {
+        if (std::filesystem::is_regular_file(test_path)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             final_path = test_path.string();
 #else
-            final_path = test_path.file_string();
+            final_path = test_path.string();
 #endif 
             return true;
         }
@@ -225,23 +224,23 @@ bool plugin::check_for_file(std::string& final_path, const std::string& start_pa
     // next, try appending the extension
     if (name.empty()) {
         // no "name" specified -> append it directly to start_path
-        test_path = boost::filesystem::path(start_path + extension);
+        test_path = std::filesystem::path(start_path + extension);
         // in this case, we need to re-check for the cygwin oddities
         check_cygwin_path(test_path, start_path + extension);
     } else {
         // name is specified, so we can just re-use cygwin_safe_path
         test_path = cygwin_safe_path /
-            boost::filesystem::path(name + extension);
+            std::filesystem::path(name + extension);
     }
 
     // re-check for existence of file (after adding extension)
     try {
         // is_regular_file may throw if directory is not readable
-        if (boost::filesystem::is_regular_file(test_path)) {
+        if (std::filesystem::is_regular_file(test_path)) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
             final_path = test_path.string();
 #else
-            final_path = test_path.file_string();
+            final_path = test_path.string();
 #endif 
             return true;
         }
@@ -302,7 +301,7 @@ void plugin::open_plugin(const std::string& plugin_file,
 
 std::string plugin::get_plugin_name(const std::string& plugin_file)
 {
-    return boost::filesystem::path(plugin_file).stem().string();
+    return std::filesystem::path(plugin_file).stem().string();
 }
 
 void plugin::get_all_plugin_names(std::vector<std::string>& plugin_names)
@@ -313,14 +312,14 @@ void plugin::get_all_plugin_names(std::vector<std::string>& plugin_names)
     boost::mutex::scoped_lock plugin_lock(cfg.m_plugin_mutex);
     for (it = cfg.m_plugin_dirs.begin(); it != cfg.m_plugin_dirs.end(); ++it) {
         // Find all shared libraries in the directory and add them to the list of Plugin names.
-        boost::filesystem::directory_iterator end;
-        for (boost::filesystem::directory_iterator it2(*it); it2 != end; ++it2) {
-            if (boost::filesystem::is_regular_file(*it2)) {
+        std::filesystem::directory_iterator end;
+        for (std::filesystem::directory_iterator it2(*it); it2 != end; ++it2) {
+            if (std::filesystem::is_regular_file(*it2)) {
                 if (it2->path().extension().string() == plugin::PION_PLUGIN_EXTENSION) {
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
                     plugin_names.push_back(plugin::get_plugin_name(it2->path().filename().string()));
 #else
-                    plugin_names.push_back(plugin::get_plugin_name(it2->path().leaf()));
+                    plugin_names.push_back(plugin::get_plugin_name(it2->path().filename()));
 #endif 
                 }
             }
@@ -348,9 +347,9 @@ void *plugin::load_dynamic_library(const std::string& plugin_file)
     // convert into a full/absolute/complete path since dlopen()
     // does not always search the CWD on some operating systems
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
-    const boost::filesystem::path full_path = boost::filesystem::absolute(plugin_file);
+    const std::filesystem::path full_path = std::filesystem::absolute(plugin_file);
 #else
-    const boost::filesystem::path full_path = boost::filesystem::complete(plugin_file);
+    const std::filesystem::path full_path = std::filesystem::absolute(plugin_file);
 #endif 
     // NOTE: you must load shared libraries using RTLD_GLOBAL on Unix platforms
     // due to a bug in GCC (or Boost::any, depending on which crowd you want to believe).
@@ -358,7 +357,7 @@ void *plugin::load_dynamic_library(const std::string& plugin_file)
 # if defined(BOOST_FILESYSTEM_VERSION) && BOOST_FILESYSTEM_VERSION >= 3
     return dlopen(full_path.string().c_str(), RTLD_LAZY | RTLD_GLOBAL);
 #else
-    return dlopen(full_path.file_string().c_str(), RTLD_LAZY | RTLD_GLOBAL);
+    return dlopen(full_path.string().c_str(), RTLD_LAZY | RTLD_GLOBAL);
 #endif 
 #endif
 }

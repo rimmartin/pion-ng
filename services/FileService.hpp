@@ -10,6 +10,9 @@
 #ifndef __PION_FILESERVICE_HEADER__
 #define __PION_FILESERVICE_HEADER__
 
+#include <filesystem>
+#include <fstream>
+
 #include <boost/shared_ptr.hpp>
 #include <boost/functional/hash.hpp>
 #include <boost/filesystem/path.hpp>
@@ -45,7 +48,7 @@ public:
         : m_file_size(0), m_last_modified(0) {}
 
     /// used to construct new disk file objects
-    DiskFile(const boost::filesystem::path& path,
+    DiskFile(const std::filesystem::path& path,
              char *content, unsigned long size,
              std::time_t modified, const std::string& mime)
         : m_file_path(path), m_file_content(content), m_file_size(size),
@@ -73,7 +76,7 @@ public:
     bool checkUpdated(void);
 
     /// return path to the cached file
-    inline const boost::filesystem::path& getFilePath(void) const { return m_file_path; }
+    inline const std::filesystem::path& getFilePath(void) const { return m_file_path; }
 
     /// returns content of the cached file
     inline char *getFileContent(void) { return m_file_content.get(); }
@@ -94,7 +97,7 @@ public:
     inline const std::string& getMimeType(void) const { return m_mime_type; }
 
     /// sets the path to the cached file
-    inline void setFilePath(const boost::filesystem::path& p) { m_file_path = p; }
+    inline void setFilePath(const std::filesystem::path& p) { m_file_path = p; }
 
     /// appends to the path of the cached file
     inline void appendFilePath(const std::string& p) { m_file_path /= p; }
@@ -112,7 +115,7 @@ public:
 protected:
 
     /// path to the cached file
-    boost::filesystem::path     m_file_path;
+    std::filesystem::path     m_file_path;
 
     /// content of the cached file
     boost::shared_array<char>   m_file_content;
@@ -216,7 +219,7 @@ private:
     pion::http::response_writer_ptr        m_writer;
 
     /// used to read the file from disk if it is not already cached in memory
-    boost::filesystem::ifstream             m_file_stream;
+    std::ifstream             m_file_stream;
 
     /// buffer used to send file content
     boost::shared_array<char>               m_content_buf;
@@ -295,7 +298,7 @@ protected:
      *
      * @param dir_path the directory to scan (sub-directories are included)
      */
-    void scanDirectory(const boost::filesystem::path& dir_path);
+    void scanDirectory(const std::filesystem::path& dir_path);
 
     /**
      * adds a single file to the cache
@@ -309,7 +312,7 @@ protected:
      */
     std::pair<CacheMap::iterator, bool>
         addCacheEntry(const std::string& relative_path,
-                      const boost::filesystem::path& file_path,
+                      const std::filesystem::path& file_path,
                       const bool placeholder);
 
     /**
@@ -356,10 +359,10 @@ private:
 
 
     /// directory containing files that will be made available
-    boost::filesystem::path     m_directory;
+    std::filesystem::path     m_directory;
 
     /// single file served by the web service
-    boost::filesystem::path     m_file;
+    std::filesystem::path     m_file;
 
     /// used to cache file contents and metadata in memory
     CacheMap                    m_cache_map;
